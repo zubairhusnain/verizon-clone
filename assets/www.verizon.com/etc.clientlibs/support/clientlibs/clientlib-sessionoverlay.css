@@ -1,0 +1,59 @@
+.sessionExpire {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .7);
+	overflow: auto;
+	z-index: 1000000;
+	display: none;
+    padding-left: 25%;
+}
+.sessionExpire table {
+	height: 100%;
+}
+
+.sessionExpire table, .sessionExpire tr, .sessionExpire td {
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+.sessionExpireOverlayVCenter {
+	margin: auto;
+	max-width: 812px;
+	z-index: 90000000;
+}
+.sessionExpireOverlay{
+	opacity: 1;
+	background-color:white;
+	display:none;
+	padding: 80px 40px 80px 40px;
+    border-radius: 6px;
+}
+
+*[lang="es"] .sessionExpireOverlay {
+    padding-bottom: 58px !important;
+}
+.sessionExpireOverlay_Footer_BtnContainer_OkBtn{
+    	background: #000;
+	    border: 1px solid #000;
+	    color: #fff !important;
+	    border-radius: 25px;
+	    cursor: pointer;
+	    font-family: NeueHaasGroteskDisplayBold,Helvetica, Arial, sans-serif;
+	    font-size: 20px;
+	    font-weight: bold;
+	    line-height: 1em;
+	    text-align: center;
+	    white-space: nowrap;
+	    margin-left:42%;
+    	padding: 12px 35px;
+    	margin-top: 18px;
+	}
+.sessionExpireAlert, .sessionExpiredMsg{
+	display:none;
+	font-size: 15px;
+    margin-top: 10px;
+	font-family: NeueHaasGroteskText, Helvetica, Arial, sans-serif !important;
+}

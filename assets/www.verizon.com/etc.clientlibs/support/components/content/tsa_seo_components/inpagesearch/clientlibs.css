@@ -1,0 +1,734 @@
+/* InPage Search: reuse Video Gallery search UI classes */
+.inpage-search .optionsWrapper .optionsWrapper-inner {
+  max-width: 1232px;
+  margin: 0;
+  position: relative;
+}
+
+/* Nudge the whole inpage search block slightly left within its column on desktop only */
+@media (min-width: 744px) {
+  .inpage-search {
+    margin-left: -2px;
+  }
+
+  /* Side spacing on desktop */
+  .inpage-search .search-input-container {
+    padding: 0 12px;
+  }
+}
+
+.inpage-search .search-input-container {
+  width: 100%;
+  height: 48px;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.inpage-search .search-input {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 808px;
+  height: 100%;
+  border-radius: 9999px;
+  border: 1px solid #6F7171; /* VDS grey-medium — matches video gallery */
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .inpage-search .search-input {
+    width: 770px;
+  }
+}
+
+.inpage-search .glassicon-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 28px;
+  flex-shrink: 0;
+  margin-top: 0 !important;
+  padding: 0;
+  order: -1;
+  width: 28px;
+  height: 100%;
+  margin-right: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+.inpage-search .inpage-search__input {
+  font-family: Verizon-NHG-eDS, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #000000 !important;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  width: 740px;
+  flex: 1;
+  order: 0;
+  text-align: left;
+}
+
+/* Placeholder text color for SERP inpage search */
+.inpage-search .inpage-search__input::placeholder {
+  color: #716F6D;
+  opacity: 1; /* ensure consistent color across browsers */
+}
+
+/* Remove browser default focus outline on the input */
+.inpage-search .inpage-search__input:focus,
+.inpage-search .inpage-search__input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Search/clear button: suppress :focus ring; restore visible indicator for keyboard-only users */
+.inpage-search .glassicon-search:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.inpage-search .glassicon-search:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+/* Smooth transition for the pre-query lift */
+.inpage-search .search-input {
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-radius 0.2s ease;
+}
+
+/* Focus: no outline, border stays visible */
+.inpage-search .search-input:focus-within {
+  outline: none;
+  border-color: #6F7171;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Pre-query focus state: desktop only — no outline, no shadow */
+@media (min-width: 744px) {
+  .inpage-search .search-input:focus-within:has(.inpage-search__input:placeholder-shown) {
+    border-radius: 9999px;
+    border-color: #6F7171;
+    background-color: transparent;
+    box-shadow: none;
+    transform: none;
+    outline: none;
+  }
+
+  .inpage-search .search-input:focus-within:has(.inpage-search__input:placeholder-shown)
+  .inpage-search__input {
+    border-bottom: none;
+  }
+}
+
+.inpage-search .search-hints-container {
+  position: absolute;
+  top: calc(100% + 6px); /* clear the pill + outline-offset */
+  left: 16px;
+  max-width: 808px;
+  width: calc(100% - 32px); /* subtract left + right padding (16px each) */
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+
+/* On desktop, match the pill's 12px side padding */
+@media (min-width: 744px) {
+  .inpage-search .search-hints-container {
+    left: 12px;
+    width: calc(100% - 24px); /* matches .search-input-container padding: 0 12px */
+    margin-top: -7px;
+  }
+}
+
+/*
+ * Tablet / desktop overlay: when the search bar is fixed (.tsa-search-box-container gives it
+ * position:fixed at top:0 with 16px top-pad + 48px input + 12px bottom-pad = 76px height),
+ * the .search-hints-container must also be fixed so it appears directly below the bar instead
+ * of at the component's document-flow position.
+ */
+@media (min-width: 744px) {
+  .inpage-search.searchBoxModal .search-hints-container {
+    position: fixed;
+    top: 82px; /* 76px bar height + 6px visual gap */
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    z-index: 1001;
+  }
+
+  .inpage-search.searchBoxModal #typeAheadBox,
+  .inpage-search.searchBoxModal .symptomsOptionsList {
+    max-width: 808px;
+    width: 100%;
+  }
+}
+
+.inpage-search #typeAheadBox {
+  margin: 0;
+  padding: 0;
+  padding-top: 16px;   /* matches video gallery */
+  padding-left: 16px;  /* matches video gallery */
+  list-style: none;
+  border: 1px solid #000;
+  border-radius: 16px;
+  background: #fff;
+  width: 100%;
+  max-width: 808px;
+  min-height: 50px;    /* matches video gallery */
+  max-height: 320px;   /* capped to avoid overflow, video gallery uses 100% */
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: none;
+  margin-top: 2px;
+  /* Scrollbar styles — matches video gallery .scroll-bar-styles() mixin */
+}
+
+.inpage-search #typeAheadBox::-webkit-scrollbar {
+  width: 6px;
+}
+.inpage-search #typeAheadBox::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+.inpage-search #typeAheadBox::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.inpage-search #typeAheadBox li {
+  padding: 0;          /* matches video gallery — li/div { padding: 0 } */
+  cursor: pointer;
+  list-style: none;
+  list-style-type: none;
+}
+
+.inpage-search #typeAheadBox li:focus,
+.inpage-search #typeAheadBox li:focus-visible {
+  outline: 1px dashed #000;
+  outline-offset: 2px;
+}
+
+/* Promo + related questions styles */
+.inpage-search .grayBg {
+  background-color: #F8F3E9; /* vds-color/stone */
+  padding: 16px;
+}
+
+.inpage-search .promoQuestionsSection {
+  margin-top: 16px;
+  border-top: #d8dada 1px solid;
+  padding-top: 10px;
+}
+
+.inpage-search .promoQuestionsSection .top-question-item {
+  min-height: 32px;
+  height: auto;
+  text-align: left;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  font-family: VerizonNHGeDS, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 20px;
+  margin: 0 16px 10px 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.inpage-search .promoQuestionsSection .top-question-item:hover,
+.inpage-search .promoQuestionsSection .top-question-item:focus {
+  outline: 1px dotted #000;
+  outline-offset: 2px;
+}
+
+/* Suggestions */
+.inpage-search .symptomsOptionsList {
+  padding: 0;
+  padding-top: 16px;   /* matches video gallery */
+  padding-left: 16px;  /* matches video gallery */
+  padding-right: 0;
+  width: 100%;
+  max-width: 808px;
+  min-height: 50px;    /* matches video gallery */
+  overflow-x: hidden !important;
+  overflow-y: auto;
+  font-size: 16px;
+  display: block;
+  list-style: none;
+  transition: width 0.3s;
+  margin: 0;
+  max-height: 320px;
+  box-shadow: none;
+  margin-top: 2px;
+  border: 1px solid #000;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.inpage-search .symptomsOptionsList li,
+.inpage-search .symptomsOptionsList div {
+  padding: 0;
+}
+
+.inpage-search .symptomsOptionsList .symptomsOptions {
+  font-family: VerizonNHGeDS, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  line-height: 20px;
+  min-height: 35px;    /* matches video gallery */
+  display: block;
+  text-align: left;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  padding: 8px 16px 8px 0;
+}
+
+.inpage-search .symptomsOptionsList .symptomsOptions mark {
+  color: #000;
+  background: unset;
+  font-weight: 700;
+}
+
+.inpage-search .symptomsOptionsList .symptomsOptions:first-of-type {
+  margin-top: 16px;
+}
+
+.inpage-search .symptomsOptionsList .symptomsOptions:last-child {
+  margin-bottom: 24px;
+}
+
+/* Hover styles apply on desktop only (pointer devices ≥ 744 px) */
+@media (min-width: 744px) {
+  .inpage-search .symptomsOptionsList .symptomsOptions:hover {
+    font-weight: 700;
+    color: #f50a23; /* VDS red — matches video gallery @color-red-verizon */
+  }
+
+  .inpage-search .symptomsOptionsList .symptomsOptions:hover mark {
+    color: inherit;
+  }
+}
+
+.inpage-search .symptomsOptions-NoResult {
+  font-family: VerizonNHGeDS, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+/* Answer box layout */
+#inpageSearchResults {
+  width: var(--bg-width, 100%);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-left: 2px;
+}
+
+.inpage-search .inpage-answerbox {
+  width: var(--bg-width, 100%);
+  max-width: 100%;
+  box-sizing: border-box;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 16px;
+  background-color: #F8F3E9; /* VDS Stone */
+}
+
+/* Suppress focus ring when answer box receives programmatic focus after keyboard Enter */
+.inpage-search .inpage-answerbox:focus,
+.inpage-search .inpage-answerbox:focus-visible {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Add bottom spacing to the summary text so it doesn't run into the helpful divider */
+.inpage-search .inpage-answerbox .faqpromotext {
+  margin-bottom: 12px;
+}
+
+/* Override any global heading/paragraph sizes inside the AI summary */
+.inpage-search .inpage-answerbox .faqpromotext,
+.inpage-search .inpage-answerbox .faqpromotext p,
+.inpage-search .inpage-answerbox .faqpromotext li,
+.inpage-search .inpage-answerbox .faqpromotext span,
+.inpage-search .inpage-answerbox .faqpromotext div,
+.inpage-search #inpagePromoSummaryText,
+.inpage-search #inpagePromoSummaryText p,
+.inpage-search #inpagePromoSummaryText li,
+.inpage-search #inpagePromoSummaryText span,
+.inpage-search #inpagePromoSummaryText div {
+  font-size: 16px !important;
+  line-height: 20px;
+}
+
+.inpage-search .inpage-helpful {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid #d8dada;
+}
+
+.inpage-search .inpage-helpful .ratings_box_text {
+  flex: 0 0 100%;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.inpage-search .inpage-helpful__label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.inpage-search .inpage-helpful__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inpage-search .inpage-helpful .inpage-thumbup,
+.inpage-search .inpage-helpful .inpage-thumbdown {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc8c0;
+  background-color: #e8e3db;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.inpage-search .inpage-helpful .inpage-thumbup svg,
+.inpage-search .inpage-helpful .inpage-thumbdown svg {
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+}
+
+.inpage-search .inpage-helpful .inpage-thumbup:focus-visible,
+.inpage-search .inpage-helpful .inpage-thumbdown:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* Related section */
+.inpage-search .inpage-related {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.inpage-search .inpage-related__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #d8dada;
+  padding: 12px 0;
+  cursor: pointer;
+  text-align: left;
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: VerizonNHGeDS, Arial, Helvetica, sans-serif;
+}
+
+.inpage-search .inpage-related__header:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.inpage-search .inpage-related__title {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+.inpage-search .inpage-related__chevron {
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg);
+  margin-left: 8px;
+}
+
+.inpage-search .inpage-related__header[aria-expanded='true'] .inpage-related__chevron {
+  transform: rotate(-135deg);
+}
+
+.inpage-search .inpage-related__header[aria-expanded='false'] .inpage-related__chevron {
+  transform: rotate(45deg);
+}
+
+.inpage-search .inpage-related .promoQuestionsSection {
+  margin-top: 0;
+}
+
+/* Thumb buttons */
+.inpage-search .inpage-thumbup,
+.inpage-search .inpage-thumbdown {
+  background-color: #e8e3db;
+  border: 1px solid #ccc8c0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.inpage-search .inpage-thumbup:focus-visible,
+.inpage-search .inpage-thumbdown:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* Back button (mobile overlay) */
+.inpage-search #searchBackButton {
+  display: none;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-right: 0;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.inpage-search #searchBackButton svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.inpage-search #searchBackButton polyline,
+.inpage-search #searchBackButton line {
+  fill: none !important;
+  stroke: #000 !important;
+  stroke-opacity: 1;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Mobile search overlay styles */
+.inpage-search .tsa-search-box-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0;
+  padding: 16px 16px 12px;
+  background-color: #fff;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+@media (max-width: 743px) {
+  .inpage-search.searchBoxModal {
+    position: fixed;
+    inset: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
+    z-index: 9999999;
+    padding: 0px 16px 16px;
+    box-sizing: border-box;
+  }
+
+  .inpage-search.searchBoxModal .search-input-container.tsa-search-box-container {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding: 0;
+    position: static;
+    display: block;
+    height: 48px;
+  }
+
+  .inpage-search.searchBoxModal #searchBackButton {
+    display: block !important;
+    float: left;
+    position: relative;
+    font-size: 35px;
+    margin-left: 0;
+    margin-right: 5px;
+    height: 40px;
+    width: 20px;
+  }
+
+  .inpage-search.searchBoxModal .search-input.tsa-search-box {
+    width: 330px !important;
+    max-width: none;
+    height: 44px;
+    overflow: hidden;
+    float: left;
+  }
+
+  .inpage-search.searchBoxModal .inpage-search__input {
+    width: 80%;
+    float: left;
+    font-size: 16px;
+    line-height: 20px;
+    height: 36px;
+  }
+
+  .inpage-search.searchBoxModal .glassicon-search {
+    width: 20px;
+    height: 20px;
+  }
+
+  .inpage-search .search-hints-container {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .inpage-search.searchBoxModal .search-hints-container,
+  .inpage-search.searchBoxModal #typeAheadBox,
+  .inpage-search.searchBoxModal .symptomsOptionsList {
+    margin: 0;
+    padding-top: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .inpage-search.searchBoxModal #typeAheadBox,
+  .inpage-search.searchBoxModal .symptomsOptionsList {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+    padding-left: 10px;
+    padding-right: 0;
+    margin-right: 0;
+    max-height: 100%;
+  }
+
+  .inpage-search.searchBoxModal .symptomsOptionsList .symptomsOptions,
+  .inpage-search.searchBoxModal #typeAheadBox .symptomsOptions {
+    min-height: 44px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 8px 16px 8px 0;
+  }
+
+  .inpage-search.searchBoxModal .symptomsOptionsList .symptomsOptions:first-of-type,
+  .inpage-search.searchBoxModal #typeAheadBox .symptomsOptions:first-of-type {
+    margin-top: 0;
+  }
+
+  .inpage-search.searchBoxModal .optionsWrapper-inner .search-hints-container {
+    overflow-y: scroll;
+    padding-top: 0;
+  }
+
+  .inpage-search.searchBoxModal::before {
+    content: none;
+  }
+}
+
+/* Search modal title not needed */
+.inpage-search .search-modal-title {
+  display: none !important;
+}
+
+/* Hide search label visually but keep accessible to screen readers */
+.inpage-search .searchLabel {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Status live-region — visually hidden but always rendered so aria-live announcements fire;
+   JS sets .html() directly; no show/hide toggling is needed. */
+.inpage-search #myInputDesc {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ── AI subtitle (matches travelpass-faqs page style, scoped to inpagesearch) ── */
+.inpage-search .inpage-ai-subtitle {
+  padding-top: 8px;
+  padding-bottom: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.inpage-search .inpage-ai-subtitle::before {
+  content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik01LjkwMDQ3IDQuMDEzOTZDNi4wNzUyMSAzLjI5MzU0IDYuNzY3IDMuMjkzNTQgNi45NDEzMSA0LjAxMzk2TDcuMjcyNjcgNS45OTYyN0M3LjMzNDk5IDYuMjUzNCA3LjM5MzUyIDYuNjI4MzEgNy42NTA3OCA2LjY5MDc2TDEwLjA5MTIgNy4xNjM2QzEwLjgxMTYgNy4zMzgyOSAxMC44MTE2IDcuOTgyMzQgMTAuMDkxMiA4LjE1NzAzTDcuOTA4ODkgOC42Nzc1OEM3LjY1MTYzIDguNzM5OTggNy4zMzQ5OSA5LjExNDg4IDcuMjcyNjcgOS4zNzIxMUw2Ljk0MTMxIDExLjM1NDRDNi43NjY5OSAxMi4wNzQ4IDYuMDc1MjEgMTIuMDc0OCA1LjkwMDQ3IDExLjM1NDRMNS40NTQ1NyA5LjM3MjExQzUuMzkyMjYgOS4xMTQ4OSA1LjE5MDE1IDguNzM5OTggNC45MzI4OSA4LjY3NzU4TDIuNzUwNTcgOC4xNTcwM0MyLjAzMDE1IDcuOTgyMzQgMi4wMzAxNSA3LjMzODI5IDIuNzUwNTcgNy4xNjM2TDQuOTMyODkgNi42OTA3NkM1LjE5MDE1IDYuNjI4MzYgNS4zOTIyNiA2LjI1MzQ1IDUuNDU0NTcgNS45OTYyN0w1LjkwMDQ3IDQuMDEzOTZaTTIuNzQwNDcgMC40MjkyNEMyLjg0NTMxIC0wLjAwMjc1OTYxIDMuMjU5NjMgLTAuMDAyODAxNzIgMy4zNjQ0NiAwLjQyOTI0TDMuNTYzNjMgMS42MTg4QzMuNjAxMSAxLjc3MzExIDMuNjM2NDYgMS45OTc5MSAzLjc5MDU3IDIuMDM1M0w1LjI1NDk5IDIuMzE5NDdDNS42ODY1NyAyLjQyNDMxIDUuNjg2NTcgMi44MTAzNyA1LjI1NDk5IDIuOTE1MjZMMy45NDUxIDMuMjI3NzZDMy43OTA5OSAzLjI2NTMyIDMuNjAxMSAzLjQ5MDA0IDMuNTYzNjMgMy42NDQyN0wzLjM2NDQ2IDQuODMzODNDMy4yNTk2MyA1LjI2NTc4IDIuODQ1MzEgNS4yNjU3OCAyLjc0MDQ3IDQuODMzODNMMi40NzI2OCAzLjY0NDI3QzIuNDM1MjEgMy40ODk5NiAyLjMxMzUyIDMuMjY1MTUgMi4xNTk0MiAzLjIyNzc2TDAuODUwMzY3IDIuOTE1MjZDMC40MTgzNjcgMi44MTA0MiAwLjQxODM2NyAyLjQyNDMxIDAuODUwMzY3IDIuMzE5NDdMMi4xNTk0MiAyLjAzNTNDMi4zMTM1MiAxLjk5NzkxIDIuNDM1MjEgMS43NzMxMSAyLjQ3MjY4IDEuNjE4OEwyLjc0MDQ3IDAuNDI5MjRaTTkuNTgxMzEgMS4xNjM2QzkuNjUxMjEgMC44NzU0NzIgOS45Mjc0MiAwLjg3NTQ3MiA5Ljk5NzMxIDEuMTYzNkwxMC4xMjk5IDEuOTU2MzZDMTAuMTU0OCAyLjA1OTI2IDEwLjE3ODggMi4yMDg5OSAxMC4yODE1IDIuMjMzOTFMMTEuMjU3MSAyLjQyMzQ3QzExLjU0NTUgMi40OTMzNyAxMS41NDU1IDIuNzUwOCAxMS4yNTcxIDIuODIwN0wxMC4zODQ3IDMuMDI4NzRDMTAuMjgxOSAzLjA1MzcgMTAuMTU0OCAzLjIwMzgxIDEwLjEyOTkgMy4zMDY3MUw5Ljk5NzMxIDQuMDk5NDdDOS45Mjc0MiA0LjM4NzY0IDkuNjUxMjEgNC4zODc2NCA5LjU4MTMxIDQuMDk5NDdMOS40MDI3OCAzLjMwNjcxQzkuMzc3OTQgMy4yMDM4MSA5LjI5NjY4IDMuMDUzNyA5LjE5Mzk0IDMuMDI4NzRMOC4zMjE1MyAyLjgyMDdDOC4wMzMxIDIuNzUwOCA4LjAzMzEgMi40OTMzNyA4LjMyMTUzIDIuNDIzNDdMOS4xOTM5NCAyLjIzMzkxQzkuMjk2NjggMi4yMDg5OSA5LjM3Nzk0IDIuMDU5MjYgOS40MDI3OCAxLjk1NjM2TDkuNTgxMzEgMS4xNjM2WiIgZmlsbD0iYmxhY2siLz4NCjwvc3ZnPg0K");
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  margin-top: 1px;
+  vertical-align: middle;
+}
+
+.inpage-search .inpage-ai-subtitle span {
+  vertical-align: middle;
+}
+
+.inpage-search .inpage-fallback-message p {
+  font-size: 16px;
+}

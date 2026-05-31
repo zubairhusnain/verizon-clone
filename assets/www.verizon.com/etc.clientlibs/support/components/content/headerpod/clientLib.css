@@ -1,0 +1,90 @@
+.smartsetup-headerpod__action-link,
+.smartsetup-headerpod__action-link:hover,
+.smartsetup-headerpod__action-link:focus {
+
+    border-radius: 90px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    font-family: VerizonNHGeDS, Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    padding: 10px 25px;
+    outline: 1.5px solid white;
+
+}
+
+#smartsetup-headerpod {
+    height: 204px;
+}
+
+h1.smartsetup-headerpod__title {
+    margin: 0px !important;
+    font-size: 64px !important;
+    font-family: 'VerizonNHGeDS',NHaasGroteskDSStd-55Rg, sans-serif;
+    font-weight: bold;
+    line-height: 64px;
+}
+
+.smartsetup-headerpod__content {
+    text-align: center;
+    padding-top: 3%;
+}
+
+.smartsetup-headerpod__description {
+    margin: 12px 0 16px 0;
+}
+
+span.smartsetup-headerpod__subdescription,
+.smartsetup-headerpod__description {
+    font-family: 'VerizonNHGeDS',NHaasGroteskDSStd-55Rg, sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+/* mobile responsive css*/
+
+@media (max-width:480px) {
+
+    .smartsetup-headerpod__action-container {
+        margin: 8px 25px 8px 25px;
+    }
+
+    .smartsetup-headerpod__content {
+        padding-top: 6%;
+    }
+
+    .smartsetup-headerpod__description {
+        margin: 12px 25px 8px 25px;
+    }
+
+    h1.smartsetup-headerpod__title {
+        font-size: 40px !important;
+        line-height: 44px;
+    }
+	.smartsetup-headerpod__action-link,
+	.smartsetup-headerpod__action-link:hover,
+	.smartsetup-headerpod__action-link:focus {
+
+    border-radius: 90px;
+	border: 1px solid #000000;
+	font-size: 14px;
+	width: 200px;
+	height: 40px;
+	padding: 10px 25px;
+    outline: 1.5px solid white;
+
+    }
+    span.steps-table-cell.font-large h2 {
+            font-size: 20px;
+        }
+}
+#first_player {
+    video{
+		position: unset !important 
+	 }
+}

@@ -1,0 +1,102 @@
+.relatedtopics-vds .tileletGroup .recommendation,
+.relatedtopics-vds .tileletGroup .no-updates,
+.relatedtopics-vds .tileletGroup .active {
+  width: fit-content;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 6px;
+}
+.relatedtopics-vds .tileletGroup .recommendation {
+  border: solid 1px #000000;
+  background-color: #000000;
+}
+.relatedtopics-vds .tileletGroup .recommendation:after {
+  content: "Recommendation";
+}
+.relatedtopics-vds .tileletGroup .no-updates {
+  border: solid 1px #006fc1;
+  background-color: #006fc1;
+}
+.relatedtopics-vds .tileletGroup .no-updates:after {
+  content: "No Updates";
+}
+.relatedtopics-vds .tileletGroup .active {
+  border: solid 1px #b95319;
+  background-color: #b95319;
+}
+.relatedtopics-vds .tileletGroup .active:after {
+  content: "Active event";
+}
+.relatedtopics-vds .tileletGroup h3 {
+  font-weight: 400 !important;
+}
+.relatedtopics-vds .tileletGroup .bottom-container .subtitle,
+.relatedtopics-vds .tileletGroup .bottom-container p {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  min-height: 32px;
+  font-family: VerizonNHGeTX, Helvetica, Arial, sans-serif;
+}
+.relatedtopics-vds .tileletGroup .bottom-container .bottom-eyebrow-icon {
+  bottom: 24px;
+  position: absolute;
+}
+.relatedtopics-vds .tileletGroup .bottom-container .bottom-eyebrow-icon svg {
+  position: relative;
+  bottom: 0px;
+  float: left;
+}
+.relatedtopics-vds .tileletGroup > div > div > div {
+  padding: 0 !important;
+}
+.relatedtopics-vds .tileletGroup > div > div > div > div {
+  padding: 7px 0;
+}
+@media screen and (max-width: 767px) {
+  .relatedtopics-vds .tileletGroup > div > div {
+    padding-right: 0px;
+    padding-bottom: 16px;
+  }
+  .relatedtopics-vds .tileletGroup > div > div:nth-child(even) {
+    padding-right: 0px;
+    padding-left: 12px;
+  }
+  .relatedtopics-vds .tileletGroup > div > div:nth-child(odd) {
+    padding-right: 12px;
+  }
+  .relatedtopics-vds .tileletGroup .bottom-container .bottom-eyebrow-icon {
+    bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .relatedtopics-vds .tileletGroup > div > div {
+    padding-bottom: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .relatedtopics-vds .tileletGroup > div > div:nth-child(even) {
+    padding-right: 0px;
+    padding-left: 12px;
+  }
+  .relatedtopics-vds .tileletGroup > div > div:nth-child(odd) {
+    padding-right: 12px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1240px) {
+  .relatedtopics-vds .tileletGroup h3 {
+    font-size: 16px !important;
+  }
+  .relatedtopics-vds .tileletGroup .bottom-container .subtitle,
+  .relatedtopics-vds .tileletGroup .bottom-container p {
+    font-size: 11px;
+    line-height: 15px;
+    min-height: 24px;
+  }
+  .relatedtopics-vds .tileletGroup .bottom-container .bottom-eyebrow-icon {
+    bottom: 16px;
+  }
+}

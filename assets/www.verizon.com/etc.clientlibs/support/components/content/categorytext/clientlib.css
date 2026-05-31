@@ -1,0 +1,33 @@
+.content_block_content  table caption {
+	font-size: 15px;
+    font-family: VerizonNHGeDS, Arial, Helvetica, sans-serif;
+    padding-bottom:5px;
+    padding-top:5px;
+}
+.content_block_content  table tbody tr th {
+	background-color: #fff !important;
+    border: unset;
+	border-bottom: 1px solid #000;
+    border-top:1px solid #000;
+    padding:20px !important;
+    font-weight: normal;
+}
+.cath2 {
+font-size:16px;
+margin-bottom: 9px;
+margin-top: 5px;
+}
+
+.software-update-container .content_block_content p {
+    font-size: 16px;
+    line-height: 23px;
+    font-family: VerizonNHGeDS, Arial,Helvetica,sans-serif;
+}
+.categorytext .content_block{
+	max-width: 70vw;
+}
+@media (min-width:1250px){
+.categorytext .content_block{
+	max-width: 60vw;
+}
+}

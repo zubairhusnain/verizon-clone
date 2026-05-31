@@ -1,0 +1,85 @@
+.faq_promo_text .covid_faq_section .faqpromotext ul {
+  padding-bottom: 15px;
+}
+.faq_promo_text .covid_faq_section .faqpromotext ul li {
+  font-size: 16px;
+  line-height: 20px;
+  padding-bottom: 5px;
+}
+.faq_promo_text .covid_faq_section .faqpromotext p {
+  font-size: 16px;
+  line-height: 20px;
+}
+.faq_promo_text .covid_faq_section .full-summary-link-container {
+  margin: 0px;
+}
+.faq_promo_text .covid_faq_section .full-summary-link-container .full-summary-link {
+  font-size: 16px;
+}
+.faq_promo_text .covid_faq_section .promoQuestionsSection {
+  margin-top: 16px;
+  border-top: #d8dada 1px solid;
+  padding-top: 10px;
+  display: block;
+}
+.faq_promo_text .covid_faq_section .promoQuestionsSection .top-question-item {
+  min-height: 32px;
+  height: auto;
+  text-align: left;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  font-family: VerizonNHGeDS, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 16px;
+}
+.faq_promo_text .covid_faq_section .promoQuestionsSection .top-question-item:hover {
+  outline: 1px dotted #000000;
+  outline-offset: 2px;
+}
+.faq_promo_text .covid_faq_section .promoQuestionsSection .top-question-expand {
+  font-size: 16px;
+  display: block;
+  width: fit-content;
+}
+.faq_promo_text .grayBg {
+  background-color: #f8f7f5;
+  padding: 16px;
+}
+.faq_promo_text .ai-subtitle {
+  padding-top: 8px;
+  padding-bottom: 16px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+.faq_promo_text .ai-subtitle::before {
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik01LjkwMDQ3IDQuMDEzOTZDNi4wNzUyMSAzLjI5MzU0IDYuNzY3IDMuMjkzNTQgNi45NDEzMSA0LjAxMzk2TDcuMjcyNjcgNS45OTYyN0M3LjMzNDk5IDYuMjUzNCA3LjM5MzUyIDYuNjI4MzEgNy42NTA3OCA2LjY5MDc2TDEwLjA5MTIgNy4xNjM2QzEwLjgxMTYgNy4zMzgyOSAxMC44MTE2IDcuOTgyMzQgMTAuMDkxMiA4LjE1NzAzTDcuOTA4ODkgOC42Nzc1OEM3LjY1MTYzIDguNzM5OTggNy4zMzQ5OSA5LjExNDg4IDcuMjcyNjcgOS4zNzIxMUw2Ljk0MTMxIDExLjM1NDRDNi43NjY5OSAxMi4wNzQ4IDYuMDc1MjEgMTIuMDc0OCA1LjkwMDQ3IDExLjM1NDRMNS40NTQ1NyA5LjM3MjExQzUuMzkyMjYgOS4xMTQ4OSA1LjE5MDE1IDguNzM5OTggNC45MzI4OSA4LjY3NzU4TDIuNzUwNTcgOC4xNTcwM0MyLjAzMDE1IDcuOTgyMzQgMi4wMzAxNSA3LjMzODI5IDIuNzUwNTcgNy4xNjM2TDQuOTMyODkgNi42OTA3NkM1LjE5MDE1IDYuNjI4MzYgNS4zOTIyNiA2LjI1MzQ1IDUuNDU0NTcgNS45OTYyN0w1LjkwMDQ3IDQuMDEzOTZaTTIuNzQwNDcgMC40MjkyNEMyLjg0NTMxIC0wLjAwMjc1OTYxIDMuMjU5NjMgLTAuMDAyODAxNzIgMy4zNjQ0NiAwLjQyOTI0TDMuNTYzNjMgMS42MTg4QzMuNjAxMSAxLjc3MzExIDMuNjM2NDYgMS45OTc5MSAzLjc5MDU3IDIuMDM1M0w1LjI1NDk5IDIuMzE5NDdDNS42ODY1NyAyLjQyNDMxIDUuNjg2NTcgMi44MTAzNyA1LjI1NDk5IDIuOTE1MjZMMy45NDUxIDMuMjI3NzZDMy43OTA5OSAzLjI2NTMyIDMuNjAxMSAzLjQ5MDA0IDMuNTYzNjMgMy42NDQyN0wzLjM2NDQ2IDQuODMzODNDMy4yNTk2MyA1LjI2NTc4IDIuODQ1MzEgNS4yNjU3OCAyLjc0MDQ3IDQuODMzODNMMi40NzI2OCAzLjY0NDI3QzIuNDM1MjEgMy40ODk5NiAyLjMxMzUyIDMuMjY1MTUgMi4xNTk0MiAzLjIyNzc2TDAuODUwMzY3IDIuOTE1MjZDMC40MTgzNjcgMi44MTA0MiAwLjQxODM2NyAyLjQyNDMxIDAuODUwMzY3IDIuMzE5NDdMMi4xNTk0MiAyLjAzNTNDMi4zMTM1MiAxLjk5NzkxIDIuNDM1MjEgMS43NzMxMSAyLjQ3MjY4IDEuNjE4OEwyLjc0MDQ3IDAuNDI5MjRaTTkuNTgxMzEgMS4xNjM2QzkuNjUxMjEgMC44NzU0NzIgOS45Mjc0MiAwLjg3NTQ3MiA5Ljk5NzMxIDEuMTYzNkwxMC4xMjk5IDEuOTU2MzZDMTAuMTU0OCAyLjA1OTI2IDEwLjE3ODggMi4yMDg5OSAxMC4yODE1IDIuMjMzOTFMMTEuMjU3MSAyLjQyMzQ3QzExLjU0NTUgMi40OTMzNyAxMS41NDU1IDIuNzUwOCAxMS4yNTcxIDIuODIwN0wxMC4zODQ3IDMuMDI4NzRDMTAuMjgxOSAzLjA1MzcgMTAuMTU0OCAzLjIwMzgxIDEwLjEyOTkgMy4zMDY3MUw5Ljk5NzMxIDQuMDk5NDdDOS45Mjc0MiA0LjM4NzY0IDkuNjUxMjEgNC4zODc2NCA5LjU4MTMxIDQuMDk5NDdMOS40MDI3OCAzLjMwNjcxQzkuMzc3OTQgMy4yMDM4MSA5LjI5NjY4IDMuMDUzNyA5LjE5Mzk0IDMuMDI4NzRMOC4zMjE1MyAyLjgyMDdDOC4wMzMxIDIuNzUwOCA4LjAzMzEgMi40OTMzNyA4LjMyMTUzIDIuNDIzNDdMOS4xOTM5NCAyLjIzMzkxQzkuMjk2NjggMi4yMDg5OSA5LjM3Nzk0IDIuMDU5MjYgOS40MDI3OCAxLjk1NjM2TDkuNTgxMzEgMS4xNjM2WiIgZmlsbD0iYmxhY2siLz4NCjwvc3ZnPg0K);
+  display: inline-block;
+  margin-right: 2px;
+  height: 1rem;
+  width: 1rem;
+}
+.faq_promo_text .ai-subtitle span {
+  vertical-align: top;
+}
+.faq_promo_text .ai-title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.faq_promo_text .ai-tab-title {
+  font-size: 16px;
+  line-height: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .seo-faq-container .aem-Grid.aem-Grid--12 .aem-GridColumn .faq_promo_text {
+    padding: 0 !important;
+  }
+}

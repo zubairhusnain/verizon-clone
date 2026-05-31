@@ -1,0 +1,1 @@
+#map-wrap iframe{border:0;height:100%;width:100%}#vzMapModal .Modal{border-radius:8px;height:100dvh;max-height:100%;max-width:550px;min-width:100%;padding:0}#vzMapModal .Modal div:has(iframe){display:flex;height:100%}#vzMapModal iframe{width:100%}@media screen and (min-width:768px){#vzMapModal{display:none}}

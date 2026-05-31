@@ -1,0 +1,212 @@
+.Container {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important
+}
+
+#quick-links .Button.Button--cta {
+    font-size: 16px
+}
+
+#devices-services .Accordion .Accordion-summary .Accordion-button {
+    font-size: 13px;
+    font-weight: 400
+}
+
+#devices-services .Accordion .Accordion-summary {
+    margin-top: 16px
+}
+
+#devices-services .Accordion .Accordion-group {
+    margin-bottom: 20px
+}
+
+#devices-services .Accordion .Accordion-summary p {
+    margin-top: 12px
+}
+
+#devices-services .Accordion .Accordion-group:first-of-type {
+    border-top-width: 2px !important
+}
+
+#devices-services .Accordion .Accordion-summary a {
+    text-decoration: none
+}
+
+#devices-services .Accordion .Accordion-summary .Accordion-button:after {
+    font-size: 24px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+    border-right: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
+    -webkit-transform: rotate(-45deg) translateY(-5px);
+    -moz-transform: rotate(-45deg) translateY(-5px);
+    -ms-transform: rotate(-45deg) translateY(-5px);
+    -o-transform: rotate(-45deg) translateY(-5px);
+    content: "";
+    margin-right: 5px
+}
+
+#faqs .Accordion .Accordion-summary {
+    margin-top: 36px
+}
+
+#faqs .Accordion .Accordion-group {
+    margin-bottom: 36px
+}
+
+#faqs .Accordion .Accordion-summary .Accordion-button {
+    font-size: 16px
+}
+
+#faqs .Accordion .Accordion-group.is-expanded .Accordion-summary .Accordion-button:after {
+    font-size: 44px;
+    font-weight: 400
+}
+
+#faqs .Accordion .Accordion-group .Accordion-summary .Accordion-button:after {
+    font-size: 44px;
+    font-weight: 400
+}
+
+.Accordion .Accordion-group,
+.Accordion .Accordion-group.is-expanded,
+.Accordion .Accordion-group.is-expanded+.Accordion-group {
+    border-top-color: #d8dada
+}
+
+#faqs .Accordion .Accordion-group,
+.Accordion .Accordion-group.is-expanded,
+.Accordion .Accordion-group.is-expanded+.Accordion-group {
+    border-top-color: #747676
+}
+
+#faqs .Accordion .Accordion-group:first-of-type {
+    border-width: 1px
+}
+
+.notification-banner {
+    max-width: 1440px;
+    margin: 0 auto
+}
+
+.notification-banner {
+    background-color: #d6eefb
+}
+
+.notification-banner .icon-info {
+    width: 16px;
+    height: 16px
+}
+
+#download-app-modal.Modal-container .Modal {
+    max-height: 100%;
+    min-height: 592px
+}
+
+#download-app-modal .QR-image {
+    max-width: 290px
+}
+
+#download-app-modal .app-store,
+#download-app-modal .button-cta-group {
+    gap: 12px
+}
+
+.shop-top-seller-carousel .eyebrow {
+    padding: 2px 4px !important;
+    border-radius: 2px
+}
+
+@media screen and (max-width:544px) {
+    #quick-links .Button.Button--cta {
+        font-size: 0;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-top: 6px;
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 24px
+    }
+
+    #quick-links .Grid .Col p {
+        border-bottom: 1px solid #000;
+        padding-bottom: 24px
+    }
+
+    #quick-links .Grid:nth-child(2) .Col:nth-child(2) p {
+        border-bottom: none !important;
+        padding-bottom: 0
+    }
+
+    #quick-links .Grid .Col p:nth-child(2) {
+        padding-bottom: 0
+    }
+
+    #quick-links .Button.Button--cta:after {
+        width: 12px;
+        height: 12px;
+        border-right: 1.5px solid #000;
+        border-bottom: 1.5px solid #000;
+        -webkit-transform: rotate(-45deg) translateY(-5px);
+        -moz-transform: rotate(-45deg) translateY(-5px);
+        -ms-transform: rotate(-45deg) translateY(-5px);
+        -o-transform: rotate(-45deg) translateY(-5px);
+        content: "";
+        background-image: none
+    }
+
+    #faqs .Accordion .Accordion-summary .Accordion-button {
+        font-size: 13px
+    }
+
+    #faqs .Accordion .Accordion-group.is-expanded .Accordion-summary .Accordion-button:after {
+        font-size: 32px
+    }
+
+    #devices-services>.Container>div.grid>.Grid>.Col:first-of-type p {
+        border-bottom: 1px solid #747676;
+        padding-bottom: 24px
+    }
+
+    #shop-col {
+        border-bottom: 1px solid #747676
+    }
+
+    #devices-services .Grid .Col:nth-child(2) .Grid .Col:first-child {
+        margin-bottom: 24px
+    }
+}
+
+@media screen and (min-width:768px) {
+    .notification-banner .icon-info {
+        width: 20px;
+        height: 20px
+    }
+
+    #download-app-modal.Modal-container .Modal {
+        min-width: 560px;
+        min-height: 492px
+    }
+}
+
+
+@media screen and (min-width:1024px) {
+    #download-app-modal.Modal-container .Modal {
+        min-height: 592px
+    }
+
+    .shop-top-seller-carousel [data-slick] .promo-tile-section.promo-tile {
+        height: 456px !important;
+        width: 304px !important
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .notification-banner .Container {
+        padding-left: 30px !important
+    }
+}

@@ -1,0 +1,265 @@
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .slick-list .slick-track {
+    -webkit-box-align: unset;
+    -webkit-align-items: unset;
+    -moz-box-align: unset;
+    -ms-flex-align: unset;
+    align-items: unset
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .slick-list .slick-track .slick-slide:first-child {
+    padding-left: 0 !important
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .slick-list .slick-track .slick-slide:not(.slick-slide:first-child) {
+    padding-left: 4px !important
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner {
+    min-height: 480px !important
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .image-col img {
+    width: 100%;
+    max-width: 100%
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .content-col {
+    width: 100%;
+    height: auto !important;
+    position: relative
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .content-col .Button {
+    width: 100%
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .content-col .decorator {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .content-col .decorator img {
+    max-width: 100%
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .progress-bar-slider .slick-arrow.slick-next,
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .progress-bar-slider .slick-arrow.slick-prev {
+    top: -moz-calc(50% - 65px);
+    top: calc(50% - 65px)
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .progress-bar-slider .slick-arrow.slick-prev {
+    left: 12px
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .progress-bar-slider .slick-arrow.slick-next {
+    right: -20px
+}
+
+[data-cmp=vzrf-promo-tiles-carousel].promo-banners .progress-bar-slider .slick-arrow:before {
+    font-size: 12px
+}
+
+[data-cmp=vzrf-promo-tiles-carousel] .progress-wrap {
+    height: auto;
+    margin-top: 32px
+}
+
+.modal-btn {
+    vertical-align: unset;
+    font-weight: 400;
+    text-decoration: underline
+}
+
+.has-border {
+    border-top: 1px solid #d8dada;
+    padding-top: 16px
+}
+
+.Button.Button--cta,
+a.Button.Button--cta,
+button.Button--cta {
+    font-size: 16px
+}
+
+.background-positionY--xs0 {
+    background-position-y: 0
+}
+
+/* .hero-prepaid, */
+.notification-banner {
+    max-width: 1440px;
+    margin: 0 auto
+}
+
+/* .hero-prepaid {
+    margin-top: 1px
+}
+
+.hero-prepaid video {
+    max-width: 100%
+}
+
+.hero-prepaid .Button {
+    width: 100%
+}
+
+.hero-prepaid #hero-text-container p {
+    letter-spacing: .5px
+}
+
+.hero-prepaid #hero-text-img {
+    max-width: 80%;
+    display: block
+} */
+
+.Container-promo-banners {
+    padding-left: 16px;
+    padding-right: 10px
+}
+
+.plan-prepaid .spliter-plan-prepaid.u-flex .feature-item {
+    gap: 12px
+}
+
+.plan-prepaid .spliter-plan-prepaid.u-flex .feature-item svg {
+    width: 16px
+}
+
+.plan-prepaid .content-summary-plan,
+.plan-prepaid .legal-summary-plan {
+    border: 1px solid #d8dada
+}
+
+#connect-smartwatch-modal.Modal-container .Modal {
+    max-height: 100%
+}
+
+#connect-smartwatch-modal .button-cta-group {
+    gap: 12px
+}
+
+.getting-connecting-easy .connect-steps-wrapper-splitter {
+    gap: 24px
+}
+
+.getting-connecting-easy .connect-steps-wrapper-splitter .button-cta-group.u-flex {
+    gap: 12px;
+    max-width: 414px
+}
+
+.getting-connecting-easy .connect-steps-wrapper-splitter .button-cta-group.u-flex a {
+    line-height: 1.2
+}
+
+.getting-connecting-easy .connect-steps-wrapper-splitter .connecting-steps ul li.has-border {
+    counter-increment: steps-counter;
+    padding-top: 20px;
+    gap: 8px
+}
+
+.getting-connecting-easy .connect-steps-wrapper-splitter .connecting-steps ul li.has-border:before {
+    content: "0" counter(steps-counter);
+    position: relative;
+    min-width: 36px;
+    font-weight: 700;
+    font-size: 14px;
+    padding-top: 6px
+}
+
+.shop-top-seller-carousel .eyebrow {
+    padding: 2px 4px !important;
+    border-radius: 2px
+}
+
+/* @media screen and (min-width:544px) {
+    .hero-prepaid .Button {
+        font-size: 16px;
+        width: 201px;
+        padding: 12px 24px;
+        display: inline !important
+    }
+} */
+
+@media screen and (min-width:768px) {
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .slick-list .slick-track .slick-slide:not(.slick-slide:first-child) {
+        padding-left: 40px !important
+    }
+
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner {
+        min-height: 0 !important
+    }
+
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .content-col .Button {
+        width: auto
+    }
+
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .content-col .decorator {
+        top: unset;
+        bottom: 0;
+        right: 0
+    }
+
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .content-col .decorator img {
+        max-width: 90px
+    }
+
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .progress-bar-slider .slick-arrow.slick-next,
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .progress-bar-slider .slick-arrow.slick-prev {
+        top: -moz-calc(50% - 50px);
+        top: calc(50% - 50px)
+    }
+
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .progress-bar-slider .slick-arrow:before {
+        font-size: 16px
+    }
+
+    #connect-smartwatch-modal.Modal-container .Modal {
+        max-width: 560px
+    }
+
+    .getting-connecting-easy .connect-steps-wrapper-splitter {
+        gap: 40px
+    }
+}
+
+/* @media screen and (min-width:544px) and (max-width:991px) {
+    .hero-prepaid .Button {
+        display: inline !important
+    }
+} */
+
+@media screen and (min-width:992px) {
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .image-col img {
+        width: auto;
+    }
+
+    /* .hero-prepaid video {
+        max-width: 400px;
+    } */
+}
+
+@media screen and (min-width:1024px) {
+    .shop-top-seller-carousel [data-slick] .promo-tile-section.promo-tile {
+        height: 456px !important;
+        width: 304px !important
+    }
+}
+
+@media screen and (min-width:1200px) {
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .image-col img {
+        width: auto
+    }
+
+    [data-cmp=vzrf-promo-tiles-carousel].promo-banners .promo-banner .content-col .decorator img {
+        max-width: 140px
+    }
+}
+
+@media screen and (min-width:1272px) {
+    [data-cmp=vzrf-promo-tiles-carousel] .progress-wrap {
+        margin-top: 48px
+    }
+}
+

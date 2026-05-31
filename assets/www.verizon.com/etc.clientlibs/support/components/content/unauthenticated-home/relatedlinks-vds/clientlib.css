@@ -1,0 +1,11 @@
+.relatedlinks-vds .linkGroup .grid-column {
+  padding-left: 0px!important;
+}
+@media screen and (max-width: 767px) {
+  .relatedlinks-vds .linkGroup .grid-row {
+    display: block;
+  }
+  .relatedlinks-vds .linkGroup .grid-row .grid-column {
+    max-width: 100%;
+  }
+}

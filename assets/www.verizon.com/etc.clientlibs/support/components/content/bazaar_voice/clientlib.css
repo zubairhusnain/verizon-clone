@@ -1,0 +1,12 @@
+.alignRight {
+  text-align: right;
+  max-width: 1365px;
+  padding-right: 15px;
+}
+@media only screen and (max-width: 767px) {
+  #oned_bazaar_voice,
+  .ratings_text {
+    display: inline;
+    padding-top: 5px;
+  }
+}
