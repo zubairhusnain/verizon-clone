@@ -1,15 +1,37 @@
-<!DOCTYPE html><html lang="en-US"><head><style id="offline-hide-lang">
-.gnav20-localization { display: none !important; }
-</style><style id="offline-layout-fixes">
-  main[role="main"], #mainGWSection, #SupportContentWrapper, #page {
-    display: block;
-    clear: both;
-    position: relative;
-    z-index: 1;
+<!DOCTYPE html><html lang="en-US"><head>
+<!-- offline: marketing stripped -->
+
+<style id="offline-unified-chrome">
+  html { scroll-padding-top: 180px; }
+  body { margin: 0; overflow-x: auto; }
+  .gnav20.gnav20-sticky > div.gnav20-sticky-content {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
   }
-  .gnav20-sticky-header { pointer-events: none; }
+  .gnav20-sticky-header {
+    pointer-events: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+  .gnav20-sticky-content .gnav20-apicomponentnewdesign,
+  .gnav20-apicomponentnewdesign {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  style#gnav20-preload,
+  #gnav20-preload { display: none !important; }
+  #vz-gh20, #vz-gf20, header#vz-gh20, footer#vz-gf20 {
+    display: block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 10;
+  }
   #offline-l2-links {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     gap: 8px 20px;
     justify-content: center;
@@ -19,6 +41,8 @@
     background: #f6f6f6;
     border-bottom: 1px solid #d8dada;
     font-size: 14px;
+    position: relative;
+    z-index: 11;
   }
   #offline-l2-links a {
     color: #000;
@@ -30,6 +54,33 @@
   @media (max-width: 1020px) {
     #offline-l2-links { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
   }
+</style><style id="offline-hide-lang">
+.gnav20-localization { display: none !important; }
+</style><style id="offline-layout-fixes">
+  main[role="main"], [role="main"], #mainGWSection, #SupportContentWrapper, #page,
+  #__next, main, [data-testid="Gridwall"], [data-testid="reviewWrapper"] {
+    display: block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    min-height: 40vh;
+  }
+  #mainGWSection, [data-testid="Gridwall"], [class*="GridWall__GWWrapper"],
+  #productListContainer, #gridwall-filter-buttons {
+    width: 100%;
+  }
+  #productListContainer, #gridwall-filter-buttons { visibility: visible !important; }
+  .gnav20-click-div { display: none !important; }
+  main > header#vz-gh20 {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  header.cta > header#vz-gh20 { display: none !important; }
+  .prescr + header.cta, header.cta { display: block !important; }
+  div[role="main"].min-h-\[300px\] { min-height: 50vh !important; max-width: 100% !important; }
 </style><style id="nav-simplify-offline">
 .gnav20-sticky-content .gnav20-apicomponentnewdesign,
 .gnav20-apicomponentnewdesign { opacity: 1 !important; }
@@ -107,7 +158,7 @@
   <meta name="description" content="Shop Verizon smartphone deals and wireless plans on the largest 4G LTE network. First to 5G. Get Fios for the fastest internet, TV and phone service.">
   <meta name="template" content="page-content">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.verizon.com/">
+  
   <meta property="og:title" content="Verizon: Wireless, Internet, TV and Phone Services | Official Site">
   <meta property="og:site_name" content="Verizon">
   <meta property="og:url" content="https://www.verizon.com/?cmp=ORG-C-HQ-NON-A-EN-NONE-dksoc2020-2S0OM0-VZ">
@@ -116,44 +167,44 @@
 
   
   
-  <link rel="preconnect" href="https://ss7.vzw.com">
-  <link rel="preconnect" href="https://scache1.vzw.com" crossorigin="">
-  <link rel="preconnect" href="https://scache2.vzw.com" crossorigin="">
-  <link rel="preconnect" href="https://assets.adobedtm.com">
-  <link rel="preconnect" href="https://scache-ws.vzw.com">
-  <link rel="preconnect" href="https://sanalytics.verizon.com">
-  <link rel="preconnect" href="https://cdn.quantummetric.com">
-  <link rel="dns-prefetch" href="https://scache.vzw.com">
-  <link rel="dns-prefetch" href="https://comm.verizon.com">
-  <link rel="dns-prefetch" href="https://analytics.google.com">
-  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
-  <link rel="dns-prefetch" href="https://googletagmanager.com">
-  <link rel="dns-prefetch" href="https://chatbot-exp.verizon.com">
-  <link rel="dns-prefetch" href="https://media.evolv.ai">
-  <link rel="dns-prefetch" href="https://participants.evolv.ai">
-  <link rel="dns-prefetch" href="https://siteintercept.qualtrics.com">
-  <link rel="dns-prefetch" href="https://respframework.verizon.com">
-  <link rel="dns-prefetch" href="https://cdn.schemaapp.com">
-  <link rel="dns-prefetch" href="https://tags.pw.adn.cloud">
-  <link rel="dns-prefetch" href="https://lptag.liveperson.net">
-  <link rel="dns-prefetch" href="https://va.v.liveperson.net">
-  <link rel="dns-prefetch" href="https://ingest.quantummetric.com">
-  <link rel="dns-prefetch" href="https://telemetry.us.transcend.io">
-  <link rel="dns-prefetch" href="https://vzh.15gifts.com">
-  <link rel="dns-prefetch" href="https://accdn.lpsnmedia.net">
-
-  <link rel="preload" href="https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
-  <link rel="preload" href="https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.woff2" crossorigin="anonymous" as="font" type="font/woff2">
-  <link rel="preload" href="https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
-  <link rel="preload" href="https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.woff2" crossorigin="anonymous" as="font" type="font/woff2">
   
-  <link rel="preload" href="assets.adobedtm.com/2ea7ee22c8c2/ece9aa9bcf6f/launch-72284e178e44.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
 
 
   <link rel="stylesheet" href="assets/www.verizon.com/etc/designs/vzwcom/gnav20/core.css" type="text/css">
   
   
-  <script type="text/javascript" src="assets/assets.adobedtm.com/2ea7ee22c8c2/ece9aa9bcf6f/launch-72284e178e44.min.js" fetchpriority="high" async=""></script>
+  
 
   <script type="text/javascript">
     (function () {
@@ -521,8 +572,8 @@ window.vzfed.cast.isReady = false;
 
   
   
-  <script type="text/javascript" src="assets/assets.adobedtm.com/2ea7ee22c8c2/ece9aa9bcf6f/launch-72284e178e44.min.js" fetchpriority="high"></script>
-<script type="module" src="assets/www.verizon.com/etc/clientlibs/vcg/aep/pdm/js/pdm.js"></script></head>
+  
+</head>
   <body class="page basicpage" id="page-052b00a1b9">
     
     
@@ -1064,7 +1115,7 @@ end of navigation menu</div>
 
 
      </div>
-	<div class="gnav20-sticky-header gnav20-with-promo gnav20-new-design" style="height: 166px;"></div>
+<div class="gnav20-sticky-header gnav20-with-promo gnav20-new-design" style="height: 166px;"></div>
 </div>
 
 
@@ -3053,6 +3104,7 @@ end of navigation menu</div>
 
 </div>
 </footer>
+</footer>
   
   <script>
     var gnavdl = {
@@ -3110,6 +3162,6 @@ end of navigation menu</div>
    
 
     
-  <script type="text/javascript" src="assets/www.verizon.com/YtJqQh/_/g/3ugzBbIED2ed/pzk16JEwG1Ep/VGdvDFsCOg/SXgke/h08DWd1" defer=""></script>
+  
 
 <div class="gnav20-click-div"></div><div id="vui-tooltip-portal-D4TXxyEkc9NODNjdQT-_a"></div></body></html>

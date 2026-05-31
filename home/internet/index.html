@@ -1,15 +1,37 @@
-<!DOCTYPE html><html lang="en-US" class="wf-verizonnhgetx-n4-active wf-verizonnhgeds-n4-active wf-active"><head><style id="offline-hide-lang">
-.gnav20-localization { display: none !important; }
-</style><style id="offline-layout-fixes">
-  main[role="main"], #mainGWSection, #SupportContentWrapper, #page {
-    display: block;
-    clear: both;
-    position: relative;
-    z-index: 1;
+<!DOCTYPE html><html lang="en-US" class="wf-verizonnhgetx-n4-active wf-verizonnhgeds-n4-active wf-active"><head>
+<!-- offline: marketing stripped -->
+
+<style id="offline-unified-chrome">
+  html { scroll-padding-top: 180px; }
+  body { margin: 0; overflow-x: auto; }
+  .gnav20.gnav20-sticky > div.gnav20-sticky-content {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
   }
-  .gnav20-sticky-header { pointer-events: none; }
+  .gnav20-sticky-header {
+    pointer-events: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+  .gnav20-sticky-content .gnav20-apicomponentnewdesign,
+  .gnav20-apicomponentnewdesign {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  style#gnav20-preload,
+  #gnav20-preload { display: none !important; }
+  #vz-gh20, #vz-gf20, header#vz-gh20, footer#vz-gf20 {
+    display: block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 10;
+  }
   #offline-l2-links {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     gap: 8px 20px;
     justify-content: center;
@@ -19,6 +41,8 @@
     background: #f6f6f6;
     border-bottom: 1px solid #d8dada;
     font-size: 14px;
+    position: relative;
+    z-index: 11;
   }
   #offline-l2-links a {
     color: #000;
@@ -30,6 +54,33 @@
   @media (max-width: 1020px) {
     #offline-l2-links { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
   }
+</style><style id="offline-hide-lang">
+.gnav20-localization { display: none !important; }
+</style><style id="offline-layout-fixes">
+  main[role="main"], [role="main"], #mainGWSection, #SupportContentWrapper, #page,
+  #__next, main, [data-testid="Gridwall"], [data-testid="reviewWrapper"] {
+    display: block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    min-height: 40vh;
+  }
+  #mainGWSection, [data-testid="Gridwall"], [class*="GridWall__GWWrapper"],
+  #productListContainer, #gridwall-filter-buttons {
+    width: 100%;
+  }
+  #productListContainer, #gridwall-filter-buttons { visibility: visible !important; }
+  .gnav20-click-div { display: none !important; }
+  main > header#vz-gh20 {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  header.cta > header#vz-gh20 { display: none !important; }
+  .prescr + header.cta, header.cta { display: block !important; }
+  div[role="main"].min-h-\[300px\] { min-height: 50vh !important; max-width: 100% !important; }
 </style><style id="nav-simplify-offline">
 .gnav20-sticky-content .gnav20-apicomponentnewdesign,
 .gnav20-apicomponentnewdesign { opacity: 1 !important; }
@@ -107,7 +158,7 @@
   <meta name="description" content="See if you qualify for Fios, 5G Home Internet, or LTE Home Internet with Verizon. View plans, promos, and deals. Plans start at $35/mo.">
   <meta name="template" content="page-content">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.verizon.com/home/internet/">
+  
   <meta property="og:title" content="Verizon Home Internet Plans with my Home | Verizon">
   <meta property="og:site_name" content="Verizon">
   <meta property="og:url" content="https://www.verizon.com/home/internet/?cmp=ORG-C-HQ-NON-A-EN-NONE-dksoc2020-2S0OM0-VZ">
@@ -116,44 +167,44 @@
 
   
   
-  <link rel="preconnect" href="https://ss7.vzw.com">
-  <link rel="preconnect" href="https://scache1.vzw.com" crossorigin="">
-  <link rel="preconnect" href="https://scache2.vzw.com" crossorigin="">
-  <link rel="preconnect" href="https://assets.adobedtm.com">
-  <link rel="preconnect" href="https://scache-ws.vzw.com">
-  <link rel="preconnect" href="https://sanalytics.verizon.com">
-  <link rel="preconnect" href="https://cdn.quantummetric.com">
-  <link rel="dns-prefetch" href="https://scache.vzw.com">
-  <link rel="dns-prefetch" href="https://comm.verizon.com">
-  <link rel="dns-prefetch" href="https://analytics.google.com">
-  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
-  <link rel="dns-prefetch" href="https://googletagmanager.com">
-  <link rel="dns-prefetch" href="https://chatbot-exp.verizon.com">
-  <link rel="dns-prefetch" href="https://media.evolv.ai">
-  <link rel="dns-prefetch" href="https://participants.evolv.ai">
-  <link rel="dns-prefetch" href="https://siteintercept.qualtrics.com">
-  <link rel="dns-prefetch" href="https://respframework.verizon.com">
-  <link rel="dns-prefetch" href="https://cdn.schemaapp.com">
-  <link rel="dns-prefetch" href="https://tags.pw.adn.cloud">
-  <link rel="dns-prefetch" href="https://lptag.liveperson.net">
-  <link rel="dns-prefetch" href="https://va.v.liveperson.net">
-  <link rel="dns-prefetch" href="https://ingest.quantummetric.com">
-  <link rel="dns-prefetch" href="https://telemetry.us.transcend.io">
-  <link rel="dns-prefetch" href="https://vzh.15gifts.com">
-  <link rel="dns-prefetch" href="https://accdn.lpsnmedia.net">
-
-  <link rel="preload" href="https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
-  <link rel="preload" href="https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.woff2" crossorigin="anonymous" as="font" type="font/woff2">
-  <link rel="preload" href="https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
-  <link rel="preload" href="https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.woff2" crossorigin="anonymous" as="font" type="font/woff2">
   
-  <link rel="preload" href="assets.adobedtm.com/2ea7ee22c8c2/fee1b09a7b1e/launch-e7ddfa510cc0.min.js" as="script">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
 
 
   <link rel="stylesheet" href="assets/www.verizon.com/etc/designs/vzwcom/gnav20/core.css" type="text/css">
   
   
-  <script type="text/javascript" src="assets/assets.adobedtm.com/2ea7ee22c8c2/fee1b09a7b1e/launch-e7ddfa510cc0.min.js" fetchpriority="high" async=""></script>
+  
 
   <script type="text/javascript">
     (function () {
@@ -441,7 +492,7 @@ window.coreData.push({
 
   
   
-  <script type="text/javascript" src="assets/assets.adobedtm.com/2ea7ee22c8c2/fee1b09a7b1e/launch-e7ddfa510cc0.min.js" fetchpriority="high"></script>
+  
 <style>.menu-list-item {
   border-bottom: 0.0625rem solid #ccc;
   border-bottom-width: 0.0625rem;
@@ -1797,7 +1848,7 @@ body.vz-gpt-flare-right-content-column {
 
 #webpack-dev-server-client-overlay{
   display: none;
-}</style><link rel="stylesheet" href="assets/respframework.verizon.com/verizon-nhg.css" media="all"><link rel="stylesheet" href="assets/respframework.verizon.com/verizon-nhg.css" media="all"><link rel="stylesheet" href="assets/respframework.verizon.com/verizon-nhg.css" media="all"><link rel="stylesheet" href="assets/respframework.verizon.com/verizon-nhg.css" media="all"><link rel="stylesheet" href="assets/respframework.verizon.com/verizon-nhg.css" media="all"><link rel="stylesheet" href="assets/respframework.verizon.com/verizon-nhg.css" media="all"><link rel="stylesheet" href="assets/respframework.verizon.com/verizon-nhg.css" media="all"><style data-styled="active" data-styled-version="5.3.11"></style><style type="text/css">.H_l_right .venues-ui__drawings .trigger.button--active .arrow {
+}</style><style data-styled="active" data-styled-version="5.3.11"></style><style type="text/css">.H_l_right .venues-ui__drawings .trigger.button--active .arrow {
   transform: rotate(90deg);
 }
 .H_l_right .venues-ui__drawings .drawings {
@@ -1964,7 +2015,7 @@ body.vz-gpt-flare-right-content-column {
 .venues-ui__directory .directory__trigger--active .arrow {
   transform: rotate(-180deg);
   transition: 0.4s;
-}</style><script async="" src="assets/comm.verizon.com/comm/includes/scripts/le-mtaconfig-prod.js" type="text/javascript"></script><script charset="UTF-8" src="assets/lptag.liveperson.net/tag/tag.js"></script><script charset="UTF-8" id="_lpTagScriptId_0" src="assets/lptag.liveperson.net/lptag/api/account/23979466/configuration/applications/taglets/.jsonp"></script><script type="text/javascript" charset="iso-8859-1" src="assets/static-assets.fs.liveperson.com/nasa/js/html_embed_accessibility_fix.js"></script><script async="" id="lp-ui-framework" src="assets/lpcdn.lpsnmedia.net/le_unified_window/10.47.1-release_2444961349/ui-framework.js" charset="utf-8"></script><script async="" id="lp-survey-logic" src="assets/lpcdn.lpsnmedia.net/le_unified_window/10.47.1-release_2444961349/surveylogicinstance.min.js" charset="utf-8"></script><style type="text/css">div[id^=LPM].LPMcontainer.LPMoverlay{cursor:pointer !important; z-index: 996!important; margin-bottom: 0px !important; padding-bottom: 0px !important;}#lpChat .lp_maximized.lpmx.lpc_window.lpc_window_maximized.lpc_desktop{width: 350px!important; height: 461px!important; z-index: 998!important;}#lpChat .lp_maximized.lpmx.lpc_window.lpc_window_maximized.lpc_desktop.lp_floating.lp_maximized_large{width: 350px!important; height: 461px!important;}#lpChat .lp_header.lpc_maximized-header.lpc_desktop{background-color:white!important; border-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_desktop{font-weight:bold!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_desktop{background-color:white!important;}#lpChat .lp_lpview_mp.lp_main_area{background-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_desktop{color:black!important;}#lpChat .lpc_message.lpc_message_agent.lpc_message_avatar-hidden.lpc_desktop.lp_new_chat_line{border:unset!important; background-color:#F6F6F6!important;}#lpChat .lpc_message.lpc_message_visitor.lpc_desktop.lp_new_chat_line{border:unset!important; background-color:#747676!important;}#lpChat .lpc_desktop.lpc_message_agent{font-size:14px!important;}#lpChat .lpc_desktop.lpc_message_visitor{font-size:14px!important;}#lpChat .lp_title_text.lpc_message__text.lpc_message__text_visitor.lpc_desktop.lp_ltr{color:#ffffff!important;}#lpChat .lpc_banner-image-area.lpc_banner-image-area_maximized.lpc_desktop{display:none!important;}#lpChat .lp_header.lpc_maximized-header.lpc_mobile{background-color:white!important; border-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_mobile{font-weight:bold!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_desktop{background-color:white!important;}#lpChat .lp_lpview_mp.lp_main_area{background-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_mobile{color:black!important;}#lpChat .lpc_message.lpc_message_agent.lpc_message_avatar-hidden.lpc_mobile.lp_new_chat_line{border:unset!important; background-color:#F6F6F6!important;}#lpChat .lpc_message.lpc_message_visitor.lpc_mobile.lp_new_chat_line{border:unset!important; background-color:#747676!important;}#lpChat .lp_title_text.lpc_message__text.lpc_message__text_visitor.lpc_mobile.lp_ltr{color:#ffffff!important;}#lpChat .lp_maximized.lpmx.lpc_window.lpc_window_maximized.lpc_mobile{opacity:1!important;}#lpChat .lp_main.lpc_body.lpc_mobile{background-color:white!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_mobile{background-color:white!important;}#lpChat .lpc_banner-image-area.lpc_banner-image-area_maximized.lpc_mobile{display:none!important;}#lpChat .lp_header-content-wrapper div[role="button"]:focus{outline: #3a61d4 solid 2px;}#lpChat .lp_header.lpc_maximized-header.lpc_tablet{background-color:white!important; border-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_tablet{font-weight:bold!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_tablet{background-color:white!important;}#lpChat .lp_lpview_mp.lp_main_area{background-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_tablet{color:black!important;}#lpChat .lpc_message.lpc_message_agent.lpc_message_avatar-hidden.lpc_tablet.lp_new_chat_line{border:unset!important; background-color:#F6F6F6!important;}#lpChat .lpc_message.lpc_message_visitor.lpc_tablet.lp_new_chat_line{border:unset!important; background-color:#747676!important;}#lpChat .lp_title_text.lpc_message__text.lpc_message__text_visitor.lpc_tablet.lp_ltr{color:#ffffff!important;}#lpChat .lp_maximized.lpmx.lpc_window.lpc_window_maximized.lpc_tablet{opacity:1!important;}#lpChat .lp_main.lpc_body.lpc_tablet{background-color:white!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_tablet{background-color:white!important;}#lpChat .lpc_banner-image-area.lpc_banner-image-area_maximized.lpc_tablet{display:none!important;}#lpChat .lp_header-content-wrapper div[role="button"]:focus{outline: #3a61d4 solid 2px;}#lpChat div.lp_weekDay.selected .lp_weekDay__count{color: #ad0303 !important;}#lpChat button.lpc_scheduleList_choose-button.lp_choose-button{color: black !important;}#lpChat div.lpc_scheduleList_choose-area.lp_scheduleList_choose-area{background-color: black !important;}#lpChat div.lp_slot.selected, #lpChat div.lp_weekDay.selected, #lpChat div.lp_weekDay:not(.selected) .lp_weekDay__count{background-color: #ad0303 !important;}#lpChat div.lp_weekDay:not(.selected):hover{background-color: rgba(173, 3, 3, 0.2) !important;}#lpChat div.lp_weekDay:not(.selected), #lpChat div.lp_slot:not(.selected):hover, #lpChat button.lpc_scheduleList_navigate__previous-week-button:hover, #lpChat button.lpc_scheduleList_navigate__next-week-button:hover{background-color: rgba(173, 3, 3, 0.1) !important;}#lpChat button.lpc_scheduleList_navigate__previous-week-button:not(.disable), #lpChat button.lpc_scheduleList_navigate__next-week-button:not(.disable), #lpChat button.lpc_flutter-header__close-button.lp_close{filter: brightness(0) saturate(100%) invert(12%) sepia(74%) saturate(3423%)hue-rotate(350deg) brightness(110%) contrast(119%) !important;}#lpChat button.chips-item:hover, #lpChat div.lp-json-pollock-element-button-button.class-button:hover{background-color: #d8d8d8 !important;}#lpChat div.lp-json-pollock-element-button-button.class-button{border-color: black !important;font-size: 14px !important;font-weight: bold !important;}#lpChat button.chips-item{font-size: 14px !important;font-weight: bold !important;border-color: black !important;}#lpChat div.lp-json-pollock-element-text.lpc_card__text{background-color: #f4f4f4 !important;border-radius: 14px 14px 14px 0px !important;font-size: 14px !important;font-weight: normal !important;}[id^='LPMcontainer']:focus{outline: 2px dashed #747676 !important;outline-offset: 5px;}[id^='LPMcontainer'] > [role='button']:focus{outline: 2px dashed #747676 !important;outline-offset: 5px;}</style><script async="" id="lp-uw-embedded" src="assets/lpcdn.lpsnmedia.net/le_unified_window/10.47.1-release_2444961349/desktopEmbedded.js" charset="utf-8"></script><script type="text/javascript" charset="UTF-8" src="assets/va.v.liveperson.net/api/js/23979466" id="scr886111161_909097610"></script></head>
+}</style><script async="" src="assets/comm.verizon.com/comm/includes/scripts/le-mtaconfig-prod.js" type="text/javascript"></script><script type="text/javascript" charset="iso-8859-1" src="assets/static-assets.fs.liveperson.com/nasa/js/html_embed_accessibility_fix.js"></script><style type="text/css">div[id^=LPM].LPMcontainer.LPMoverlay{cursor:pointer !important; z-index: 996!important; margin-bottom: 0px !important; padding-bottom: 0px !important;}#lpChat .lp_maximized.lpmx.lpc_window.lpc_window_maximized.lpc_desktop{width: 350px!important; height: 461px!important; z-index: 998!important;}#lpChat .lp_maximized.lpmx.lpc_window.lpc_window_maximized.lpc_desktop.lp_floating.lp_maximized_large{width: 350px!important; height: 461px!important;}#lpChat .lp_header.lpc_maximized-header.lpc_desktop{background-color:white!important; border-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_desktop{font-weight:bold!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_desktop{background-color:white!important;}#lpChat .lp_lpview_mp.lp_main_area{background-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_desktop{color:black!important;}#lpChat .lpc_message.lpc_message_agent.lpc_message_avatar-hidden.lpc_desktop.lp_new_chat_line{border:unset!important; background-color:#F6F6F6!important;}#lpChat .lpc_message.lpc_message_visitor.lpc_desktop.lp_new_chat_line{border:unset!important; background-color:#747676!important;}#lpChat .lpc_desktop.lpc_message_agent{font-size:14px!important;}#lpChat .lpc_desktop.lpc_message_visitor{font-size:14px!important;}#lpChat .lp_title_text.lpc_message__text.lpc_message__text_visitor.lpc_desktop.lp_ltr{color:#ffffff!important;}#lpChat .lpc_banner-image-area.lpc_banner-image-area_maximized.lpc_desktop{display:none!important;}#lpChat .lp_header.lpc_maximized-header.lpc_mobile{background-color:white!important; border-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_mobile{font-weight:bold!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_desktop{background-color:white!important;}#lpChat .lp_lpview_mp.lp_main_area{background-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_mobile{color:black!important;}#lpChat .lpc_message.lpc_message_agent.lpc_message_avatar-hidden.lpc_mobile.lp_new_chat_line{border:unset!important; background-color:#F6F6F6!important;}#lpChat .lpc_message.lpc_message_visitor.lpc_mobile.lp_new_chat_line{border:unset!important; background-color:#747676!important;}#lpChat .lp_title_text.lpc_message__text.lpc_message__text_visitor.lpc_mobile.lp_ltr{color:#ffffff!important;}#lpChat .lp_maximized.lpmx.lpc_window.lpc_window_maximized.lpc_mobile{opacity:1!important;}#lpChat .lp_main.lpc_body.lpc_mobile{background-color:white!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_mobile{background-color:white!important;}#lpChat .lpc_banner-image-area.lpc_banner-image-area_maximized.lpc_mobile{display:none!important;}#lpChat .lp_header-content-wrapper div[role="button"]:focus{outline: #3a61d4 solid 2px;}#lpChat .lp_header.lpc_maximized-header.lpc_tablet{background-color:white!important; border-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_tablet{font-weight:bold!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_tablet{background-color:white!important;}#lpChat .lp_lpview_mp.lp_main_area{background-color:white!important;}#lpChat .lp_top-text.lpc_maximized-header__text.lpc_tablet{color:black!important;}#lpChat .lpc_message.lpc_message_agent.lpc_message_avatar-hidden.lpc_tablet.lp_new_chat_line{border:unset!important; background-color:#F6F6F6!important;}#lpChat .lpc_message.lpc_message_visitor.lpc_tablet.lp_new_chat_line{border:unset!important; background-color:#747676!important;}#lpChat .lp_title_text.lpc_message__text.lpc_message__text_visitor.lpc_tablet.lp_ltr{color:#ffffff!important;}#lpChat .lp_maximized.lpmx.lpc_window.lpc_window_maximized.lpc_tablet{opacity:1!important;}#lpChat .lp_main.lpc_body.lpc_tablet{background-color:white!important;}#lpChat .lp_transcript_widget.lp_lpview_widgetContent.transcript_scroll.lpc_layout.lpc_layout_maximized.lpc_tablet{background-color:white!important;}#lpChat .lpc_banner-image-area.lpc_banner-image-area_maximized.lpc_tablet{display:none!important;}#lpChat .lp_header-content-wrapper div[role="button"]:focus{outline: #3a61d4 solid 2px;}#lpChat div.lp_weekDay.selected .lp_weekDay__count{color: #ad0303 !important;}#lpChat button.lpc_scheduleList_choose-button.lp_choose-button{color: black !important;}#lpChat div.lpc_scheduleList_choose-area.lp_scheduleList_choose-area{background-color: black !important;}#lpChat div.lp_slot.selected, #lpChat div.lp_weekDay.selected, #lpChat div.lp_weekDay:not(.selected) .lp_weekDay__count{background-color: #ad0303 !important;}#lpChat div.lp_weekDay:not(.selected):hover{background-color: rgba(173, 3, 3, 0.2) !important;}#lpChat div.lp_weekDay:not(.selected), #lpChat div.lp_slot:not(.selected):hover, #lpChat button.lpc_scheduleList_navigate__previous-week-button:hover, #lpChat button.lpc_scheduleList_navigate__next-week-button:hover{background-color: rgba(173, 3, 3, 0.1) !important;}#lpChat button.lpc_scheduleList_navigate__previous-week-button:not(.disable), #lpChat button.lpc_scheduleList_navigate__next-week-button:not(.disable), #lpChat button.lpc_flutter-header__close-button.lp_close{filter: brightness(0) saturate(100%) invert(12%) sepia(74%) saturate(3423%)hue-rotate(350deg) brightness(110%) contrast(119%) !important;}#lpChat button.chips-item:hover, #lpChat div.lp-json-pollock-element-button-button.class-button:hover{background-color: #d8d8d8 !important;}#lpChat div.lp-json-pollock-element-button-button.class-button{border-color: black !important;font-size: 14px !important;font-weight: bold !important;}#lpChat button.chips-item{font-size: 14px !important;font-weight: bold !important;border-color: black !important;}#lpChat div.lp-json-pollock-element-text.lpc_card__text{background-color: #f4f4f4 !important;border-radius: 14px 14px 14px 0px !important;font-size: 14px !important;font-weight: normal !important;}[id^='LPMcontainer']:focus{outline: 2px dashed #747676 !important;outline-offset: 5px;}[id^='LPMcontainer'] > [role='button']:focus{outline: 2px dashed #747676 !important;outline-offset: 5px;}</style></head>
   <body class="page basicpage hide-focus-outline" id="page-ec3cb53783">
     
     
@@ -2506,7 +2557,7 @@ end of navigation menu</div>
 
 
      </div>
-	<div class="gnav20-sticky-header gnav20-with-promo gnav20-new-design" style="height: 166px;"></div>
+<div class="gnav20-sticky-header gnav20-with-promo gnav20-new-design" style="height: 166px;"></div>
 </div>
 
 
@@ -4573,6 +4624,7 @@ Verizon Whole-Home Wi-Fi<sup>3</sup> and Verizon Whole-Home Wi-Fi Plus<sup>3</su
 
 </div>
 </footer>
+</footer>
   
   <script>
     var gnavdl = {
@@ -4785,6 +4837,6 @@ Verizon Whole-Home Wi-Fi<sup>3</sup> and Verizon Whole-Home Wi-Fi Plus<sup>3</su
    
 
     
-  <script type="text/javascript" src="assets/www.verizon.com/YtJqQh/_/g/3ugzBbIED2ed/pzk16JEwG1EprGaN9h/Ty5sDFsCOg/AkNPY/3ole2cB"></script><script type="text/javascript" src="assets/www.verizon.com/YtJqQh/_/g/3ugzBbIED2ed/pzk16JEwG1Ep/VGdvDFsCOg/SgA6H/kFRFGh1" defer=""></script>
+  
 
-<div class="gnav20-click-div"></div><div id="vui-tooltip-portal-yKn6KMNGV22Zae3VJBN_s"></div><div id="portalModal"></div><iframe tabindex="-1" aria-hidden="true" role="presentation" title="Intentionally blank" name="lpSS_5761420948" id="lpSS_5761420948" src="https://lpcdn.lpsnmedia.net/le_secure_storage/3.36.1-release_2314911046/storage.secure.min.html?loc=https%3A%2F%2Fwww.verizon.com&amp;site=23979466&amp;env=prod&amp;isCrossDomain=true&amp;accdn=accdn.lpsnmedia.net&amp;isFetchEnabled=true" style="width: 0px; height: 0px; position: absolute; top: -1000px; left: -1000px; display: none;"></iframe><script id="lpSS_54424936666" src="assets/lpcdn.lpsnmedia.net/le_secure_storage/3.36.1-release_2314911046/storage.secure.min.js"></script></body></html>
+<div class="gnav20-click-div"></div><div id="vui-tooltip-portal-yKn6KMNGV22Zae3VJBN_s"></div><div id="portalModal"></div></body></html>
