@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Large scraped videos (keep locally for offline browsing; do not push to GitHub)
+assets/ss7.vzw.com/is/content/
+
+# Playwright / npm (if ever added here)
+node_modules/

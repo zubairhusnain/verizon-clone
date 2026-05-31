@@ -1,9 +1,62 @@
 <!DOCTYPE html><html lang="en-US"><head><style id="offline-hide-lang">
 .gnav20-localization { display: none !important; }
 </style><style id="offline-layout-fixes">
-        body { overflow-x: hidden; }
-        #__next, main { min-height: 50vh; }
-      </style><style id="nav-simplify-offline">
+  body { overflow-x: auto !important; margin: 0; }
+  #__next, main, #mainGWSection, [data-testid="Gridwall"] {
+    display: block !important;
+    visibility: visible !important;
+    min-height: 50vh;
+  }
+  #mainGWSection, [data-testid="Gridwall"], [class*="GridWall__GWWrapper"] {
+    position: relative !important;
+    z-index: 1;
+    clear: both;
+    width: 100%;
+  }
+  /* Un-fix sticky nav so content is not covered */
+  .gnav20.gnav20-sticky > div.gnav20-sticky-content {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+  }
+  .gnav20-sticky-header {
+    pointer-events: none;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+  .gnav20-sticky-content .gnav20-apicomponentnewdesign,
+  .gnav20-apicomponentnewdesign { opacity: 1 !important; visibility: visible !important; }
+  style#gnav20-preload + style,
+  #gnav20-preload { display: none !important; }
+  #offline-l2-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    justify-content: center;
+    max-width: 1272px;
+    margin: 0 auto;
+    padding: 10px 20px 14px;
+    background: #f6f6f6;
+    border-bottom: 1px solid #d8dada;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+  }
+  #offline-l2-links a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  #offline-l2-links a:hover { color: #cd040b; text-decoration: underline; }
+  #productListContainer, #gridwall-filter-buttons { visibility: visible !important; }
+  @media (max-width: 1020px) {
+    #offline-l2-links { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+  }
+</style><style id="nav-simplify-offline">
 .gnav20-sticky-content .gnav20-apicomponentnewdesign,
 .gnav20-apicomponentnewdesign { opacity: 1 !important; }
 .gnav20-sub-header-menu,
@@ -999,6 +1052,7 @@ END
 	</div>
 </div>
 <div name="headerEnd" id="gnav20-header-end" role="none" aria-hidden="true" tabindex="-1" aria-label="end of navigation menu">
+end of navigation menu</div>
 <nav id="offline-l2-links" aria-label="Quick shop links">
   <a href="smartphones/index.html">Phones</a>
   <a href="tablets/index.html">Tablets</a>
@@ -1011,7 +1065,6 @@ END
   <a href="support/contact-us/index.html">Contact us</a>
   <a href="stores/index.html">Stores</a>
 </nav>
-end of navigation menu</div>
 <style id="gnav20-preload">
      .gnav20{
      max-height: 165px;
@@ -2794,4 +2847,16 @@ max-width: 255px !important;
         
     <script type="text/javascript" src="assets/www.verizon.com/YtJqQh/_/g/3ugzBbIED2ed/pzk16JEwG1Ep/VGdvDFsCOg/SgA6H/kFRFGh1" defer=""></script>
 
+<script id="offline-gridwall-stubs">
+(function(){
+  if (typeof window.getPersonalizedResults === 'function') {
+    var orig = window.getPersonalizedResults;
+    window.getPersonalizedResults = function() {
+      try { return orig.apply(this, arguments); } catch (e) { return; }
+    };
+  } else {
+    window.getPersonalizedResults = function(){};
+  }
+})();
+</script>
 </body></html>
