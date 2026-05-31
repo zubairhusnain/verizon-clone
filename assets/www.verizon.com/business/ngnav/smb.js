@@ -4967,7 +4967,7 @@ vzNav.json = {"uid":"blt6d6baf7e56cd8fd1","_version":79,"locale":"en-us","ACL":{
 		  gglScript.type = 'text/javascript';
 		  gglScript.rel = 'stylesheet';
 		  gglScript.async = 'true';
-		  gglScript.src = 'https://maps.googleapis.com/maps/api/js?client=gme-verizonwireless2&channel=vzw-' + channel + '&libraries=places&callback=initGoogleSearch';
+		  gglScript.src="" + channel + '&libraries=places&callback=initGoogleSearch';
 		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gglScript);
 		  //console.log('loaded googlemaps script')
 	  } else if (!googleSearchInitialized) {
