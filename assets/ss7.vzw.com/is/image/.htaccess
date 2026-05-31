@@ -1,5 +1,0 @@
-# Scene7 cache: extensionless files are usually WebP; .jpg/.jpeg are JPEG.
-<IfModule mod_mime.c>
-  AddType image/jpeg .jpg .jpeg
-  AddType image/webp .webp
-</IfModule>
