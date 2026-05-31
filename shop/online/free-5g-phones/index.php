@@ -1,0 +1,5429 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/../../../base-url.php';
+vz_start_output_rewrite();
+?>
+<!DOCTYPE html><html lang="en-US" class="wf-verizonnhgetx-n4-active wf-verizonnhgeds-n4-active wf-active"><head>
+<!-- offline: marketing stripped -->
+
+
+
+
+<style id="offline-gridwall-browse-layout">
+  header#vz-gh20 {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  [data-testid="Gridwall"],
+  #mainGWSection {
+    display: block !important;
+    width: 100%;
+    clear: both;
+    position: relative;
+    z-index: 1;
+  }
+  #breadCrumb,
+  [data-testid="breadcrumbId"] {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    width: 100%;
+    max-width: 1272px;
+    margin: 0 auto;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    z-index: 2;
+  }
+  #breadCrumb nav[aria-label="Breadcrumb"],
+  #breadCrumb [class*="BreadCrumbChatWrapper"] {
+    display: block !important;
+    width: 100%;
+  }
+  #breadCrumb ol[class*="StyledBreadcrumbList"],
+  #breadCrumb ol {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0;
+  }
+  #breadCrumb ol > li {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  #breadCrumb [class*="SlashWrapper"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 6px !important;
+    flex-shrink: 0;
+  }
+  #breadCrumb [class*="SlashWrapper"] span,
+  #breadCrumb [class*="StyledSlash"] {
+    display: inline !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+  }
+  #breadCrumb a[class*="StyledAnchor"] {
+    color: #000 !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  #breadCrumb a[class*="StyledAnchor"]:hover {
+    color: #cd040b !important;
+    text-decoration: underline !important;
+  }
+  #breadCrumb [aria-current="page"],
+  #breadCrumb li:last-child [class*="StyledTypography"] {
+    font-size: 14px;
+    color: #6f7171;
+    white-space: nowrap;
+  }
+  #breadCrumb h1,
+  #breadCrumb [class*="StyledTitle"] {
+    display: block !important;
+    margin: 16px 0 0 0 !important;
+    padding: 0 !important;
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    color: #000 !important;
+  }
+  @media (min-width: 768px) {
+    #breadCrumb h1,
+    #breadCrumb [class*="StyledTitle"] {
+      font-size: 1.875rem !important;
+    }
+  }
+  #productListContainer > #grid > #row.flex {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    flex-wrap: nowrap !important;
+    gap: 24px;
+  }
+  #productListContainer > #grid > #row.flex > :not(#leftRailContainer) {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto !important;
+  }
+  #leftRailContainer {
+    display: none;
+    flex: 0 0 280px;
+    width: 280px;
+    max-width: 326px;
+    min-width: 240px;
+  }
+  @media (min-width: 924px) {
+    #leftRailContainer {
+      display: flex !important;
+      flex-direction: column !important;
+      visibility: visible !important;
+      align-items: stretch !important;
+    }
+    #filter-wrap > .block.min-\[924px\]\:hidden,
+    #filters .btn-container.block.min-\[924px\]\:hidden {
+      display: none !important;
+    }
+    div.max-\[924px\]\:hidden.mr-8:empty {
+      display: none !important;
+    }
+  }
+  [data-testid="left-rail-filter-container"] {
+    display: flex !important;
+    flex-direction: column !important;
+    position: sticky !important;
+    top: 12px;
+    align-self: flex-start;
+    width: 100%;
+  }
+  #accordionContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 280px);
+    border-right: none !important;
+    padding-right: 8px;
+  }
+  [data-testid="left-rail-filter-container"] button.accordionButton,
+  [data-testid="left-rail-filter-container"] [class*="StyledAccordionButton-VDS"] {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 14px 4px 14px 0 !important;
+    margin: 0 !important;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+  }
+  [data-testid="left-rail-filter-container"] [class*="TitleWrapper-VDS"],
+  [data-testid="left-rail-filter-container"] [class*="TriggerIconWrapper-VDS"] {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0;
+  }
+  [data-testid="left-rail-filter-container"] [class*="TriggerIconWrapper-VDS"] {
+    margin-left: 8px;
+  }
+  [data-testid="left-rail-filter-container"] svg {
+    width: 21.6px !important;
+    height: 21.6px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+    display: block !important;
+    flex-shrink: 0;
+  }
+  [data-testid="left-rail-filter-container"] [class*="CheckboxLabelWrapper-VDS"],
+  [data-testid="left-rail-filter-container"] label[class*="CheckboxLabelWrapper"] {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 10px;
+    width: 100%;
+    margin: 0 0 12px 0;
+    cursor: pointer;
+  }
+  [data-testid="left-rail-filter-container"] [class*="CheckWrapper-VDS"],
+  [data-testid="left-rail-filter-container"] [class*="CheckboxWrapper-VDS"] {
+    flex-shrink: 0;
+  }
+  [data-testid="left-rail-filter-container"] [class*="ChildWrapper-VDS"] {
+    display: block !important;
+    line-height: 1.4;
+  }
+  [data-testid="left-rail-filter-container"] [class*="StyledAccordionItem-VDS"] {
+    border-bottom: 1px solid #d8dada;
+  }
+  [data-testid="left-rail-filter-container"] [class*="AccordionList-VDS"] {
+    width: 100%;
+  }
+  [data-testid="left-rail-filter-container"] [role="group"][aria-label="Filter"] {
+    width: 100%;
+  }
+  #gridwall-filter-buttons {
+    display: grid !important;
+  }
+  nav[aria-label="Pagination"] {
+    display: block !important;
+    width: 100%;
+    margin: 24px auto !important;
+    text-align: center;
+  }
+  nav[aria-label="Pagination"] ul,
+  nav[aria-label="Pagination"] [class*="StyledList-VDS"] {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px 12px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+  nav[aria-label="Pagination"] li,
+  nav[aria-label="Pagination"] [class*="PaginationListItem-VDS"] {
+    display: flex !important;
+    align-items: center !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  nav[aria-label="Pagination"] a,
+  nav[aria-label="Pagination"] [class*="StyledLink-VDS"] {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 6px !important;
+    white-space: nowrap;
+  }
+  nav[aria-label="Pagination"] [class*="IconWrapper-VDS"],
+  nav[aria-label="Pagination"] [class*="IconSVGWrapper-VDS"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    flex-shrink: 0;
+  }
+  nav[aria-label="Pagination"] svg {
+    width: 18px !important;
+    height: 18px !important;
+    display: block !important;
+  }
+  [class*="ScreenReaderText-VDS"] {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+</style><style id="offline-unified-chrome">
+  html { scroll-padding-top: 180px; }
+  body { margin: 0; overflow-x: auto; }
+  .gnav20.gnav20-sticky > div.gnav20-sticky-content {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+  }
+  .gnav20-sticky-header {
+    pointer-events: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+  .gnav20-sticky-content .gnav20-apicomponentnewdesign,
+  .gnav20-apicomponentnewdesign {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  style#gnav20-preload,
+  #gnav20-preload { display: none !important; }
+  #vz-gh20, #vz-gf20, header#vz-gh20, footer#vz-gf20 {
+    display: block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 10;
+  }
+  footer#vz-gf20 .gnav20,
+  footer#vz-gf20 .gnav20 .gnav20-sticky-content,
+  footer#vz-gf20 .xf-page-unified {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  #offline-l2-links {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    justify-content: center;
+    max-width: 1272px;
+    margin: 0 auto;
+    padding: 10px 20px 14px;
+    background: #f6f6f6;
+    border-bottom: 1px solid #d8dada;
+    font-size: 14px;
+    position: relative;
+    z-index: 11;
+  }
+  #offline-l2-links a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  #offline-l2-links a:hover { color: #cd040b; text-decoration: underline; }
+  @media (max-width: 1020px) {
+    #offline-l2-links { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+  }
+</style><style id="offline-hide-lang">
+.gnav20-localization { display: none !important; }
+</style><style id="offline-layout-fixes">
+  main[role="main"], [role="main"], #mainGWSection, #SupportContentWrapper, #page,
+  #__next, main, [data-testid="Gridwall"], [data-testid="reviewWrapper"] {
+    display: block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    min-height: 40vh;
+  }
+  #mainGWSection, [data-testid="Gridwall"], [class*="GridWall__GWWrapper"],
+  #productListContainer, #gridwall-filter-buttons {
+    width: 100%;
+  }
+  #productListContainer, #gridwall-filter-buttons { visibility: visible !important; }
+  .gnav20-click-div { display: none !important; }
+  main > header#vz-gh20 {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  header.cta > header#vz-gh20 { display: none !important; }
+  .prescr + header.cta, header.cta { display: block !important; }
+  div[role="main"].min-h-\[300px\] { min-height: 50vh !important; max-width: 100% !important; }
+</style><style id="nav-simplify-offline">
+.gnav20-sticky-content .gnav20-apicomponentnewdesign,
+.gnav20-apicomponentnewdesign { opacity: 1 !important; }
+.gnav20-sub-header-menu,
+.gnav20-vzhmoverlay,
+.gnav20-mega-drawer,
+.gnav20-nav-mask { display: none !important; }
+.gnav20-search-utility,
+.gnav20-account-utility,
+.gnav20-unifiedcart,
+.gnav20-localization { display: none !important; }
+.gnav20-primary-menu button.gnav20-menu-label-button { display: none !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation,
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility { opacity: 1 !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two { display: block !important; width: 100% !important; height: 88px !important; padding: 0 20px !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-grid1-wrapper { position: absolute !important; width: auto !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation { width: 100% !important; height: 88px !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation { padding: 34px 0 !important; margin: 0 !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-navigation-list {
+  width: 80% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+}
+.gnav20 .gnav20-new-search-style .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-navigation-list {
+  margin: 0 auto 0 145px !important;
+  justify-content: flex-start !important;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation-item .gnav20-primary-menu { margin: 0 8px !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation a.gnav20-menu-label-button {
+  visibility: visible !important;
+  color: #000 !important;
+  display: inline !important;
+  position: relative !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  padding: 0 0 2px !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  font-weight: bold !important;
+  z-index: 4502 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility { display: none !important; }
+.gnav20 .gnav20-mobile .gnav20-menu-label-link { display: none !important; }
+.gnav20 .gnav20-mobile a.gnav20-menu-label-button,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item a.gnav20-menu-label-button {
+  display: block !important;
+  visibility: visible !important;
+  color: #000 !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  padding: 18px 16px !important;
+  border-bottom: 1px solid #d8dada !important;
+  text-decoration: none !important;
+  position: relative !important;
+  opacity: 1 !important;
+}
+</style><style id="offline-pdp-fix">
+    nextjs-portal, [data-nextjs-dialog] { display: none !important; }
+    body { overflow: auto !important; }
+  </style><base href="/verizon-clone/verizon_offline/">
+
+<!-- Sun May 31 2026 11:08:47 GMT+0000 (Coordinated Universal Time) -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta charset="UTF-8">
+<meta name="template" content="page-template">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1"/>-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="user-scalable=yes, initial-scale=1, minimum-scale=1, width=device-width, height=device-height, ">
+<meta name="description" content="Verizon has great free smartphone after promo credit offers, including iPhone, Samsung Galaxy, and Google Pixel. Get a free cell phone today.">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+
+<meta name="apple-itunes-app" content="app-id=416023011">
+
+<title>Free 5G Smartphones After Promo Credit: iPhone, Android | Verizon</title><style>
+.navbar-on-scroll #renderSelectedFiltersAccessory {
+  @media only screen and (max-width: 923px){
+    display: none;
+  }
+}
+.navbar-on-scroll #renderSelectedFilters {
+  @media only screen and (max-width: 923px){
+    display: none;
+  }
+}
+.filter-chips-on-scroll {
+  @media (max-width: 923px),
+    only screen and (min-device-width: 768px) and (max-device-width: 923px) {
+    position: fixed;
+    top: 43px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+  }
+}
+.filter-chips-on-scroll #renderSelectedFilters {
+  display: none;
+}
+.filter-chips-on-scroll #renderSelectedFiltersAccessory {
+  display: none;
+}
+
+#header-container div[class*='TabsWrapper-VDS'] {
+ width: 100%;
+}
+#button-header-container .buttonBackground {
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL0dyaWRXYWxsL0J1dHRvbkZpbHRlci9idXR0b25GaWx0ZXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtFQUNFO0lBQ0UsYUFBYTtFQUNmO0FBQ0Y7QUFDQTtFQUNFO0lBQ0UsYUFBYTtFQUNmO0FBQ0Y7QUFDQTtFQUNFOztJQUVFLGVBQWU7SUFDZixTQUFTO0lBQ1QsT0FBTztJQUNQLFFBQVE7SUFDUixzQkFBc0I7RUFDeEI7QUFDRjtBQUNBO0VBQ0UsYUFBYTtBQUNmO0FBQ0E7RUFDRSxhQUFhO0FBQ2Y7O0FBRUE7Q0FDQyxXQUFXO0FBQ1o7QUFDQTtFQUNFLHlEQUF5RDtBQUMzRCIsInNvdXJjZVJvb3QiOiIifQ== */</style>
+<link rel="canonical" href="/shop/online/free-5g-phones/shop/online/free-5g-phones/">
+<link rel="alternate" href="/shop/online/free-5g-phones/shop/online/free-5g-phones/" id="desktop" media="only screen and (hover: 1) and (pointer: fine)">
+<link rel="alternate" href="/shop/online/free-5g-phones/shop/online/free-5g-phones/" id="smartphone" media="only screen and (max-device-width: 650px)">
+<link rel="alternate" href="/shop/online/free-5g-phones/shop/online/free-5g-phones/" id="tablet" media="only screen and (min-device-width: 651px)">
+<link rel="icon" href="/shop/online/free-5g-phones/favicon.ico">
+<meta property="og:title" content="Free 5G Smartphones After Promo Credit: iPhone, Android | Verizon">
+<meta property="og:site_name" content="Verizon">
+<meta property="og:url" content="shop/online/free-5g-phones/index.html">
+<meta property="og:description" content="Verizon has great free smartphone after promo credit offers, including iPhone, Samsung Galaxy, and Google Pixel. Get a free cell phone today.">
+<meta property="og:type" content="product.group">
+<meta property="og:image" content="">
+
+
+<script>
+(function(){
+var jsNotifyApiPath = "/soe/digital/prospect/peripheralsservice/jsNotifyAsDynamic";
+var staticPath = "https://scache-ws.vzw.com/w/ssr-digital/static/";
+var hasRedirected = false;
+var REDIRECT_COOKIE = 'redirect_to';
+var REDIRECT_VALUE = 'tdc_nocache';
+function getCookieVal(name) {
+try {
+if (typeof document === 'undefined' || !document.cookie || !name) return '';
+var match = document.cookie.match(new RegExp('(?:^|;\\s*)' + name + '=([^;]*)'));
+return match ? match[1] : '';
+} catch (e) { return ''; }
+}
+var alreadyRedirected = getCookieVal(REDIRECT_COOKIE) === REDIRECT_VALUE;
+function getEarlyChannelId() {
+try {
+var ua = (typeof navigator !== 'undefined' && navigator && navigator.userAgent) ? navigator.userAgent : '';
+if (!ua) return 'VZW-DOTCOM';
+if (ua.indexOf('VZW-MFA-IOS') !== -1) return 'VZW-MFA-IOS';
+if (ua.indexOf('VZW-MFA-ANDROID') !== -1) return 'VZW-MFA-ANDROID';
+var uaLower = ua.toLowerCase();
+if ((uaLower.indexOf('windows') !== -1 && uaLower.indexOf('touch') !== -1) || uaLower.indexOf('tablet') !== -1 || uaLower.indexOf('ipad') !== -1) return 'VZW-DOTCOM';
+if (/Android|webOS|iPhone|BlackBerry|Windows Phone|MY_VZW_APP/i.test(ua)) return 'VZW-DOTCOM-MOB';
+return 'VZW-DOTCOM';
+} catch (e) { return 'VZW-DOTCOM'; }
+}
+function isStaticResource(url) {
+if (!staticPath || !url) return false;
+return url.indexOf(staticPath) !== -1;
+}
+var ERROR_PREFIX = '[GW_EARLY_ERROR_HANDLER] ';
+function setCookieAndReload() {
+document.cookie = REDIRECT_COOKIE + '=' + REDIRECT_VALUE + ';path=/';
+window.location.reload();
+}
+function sendNotify(payload, shouldReload) {
+try {
+payload.message = ERROR_PREFIX + (payload.message || '');
+if (alreadyRedirected) payload.message += ' (after reload)';
+var headers = { 'Content-Type': 'application/json' };
+var channelId = getEarlyChannelId();
+if (channelId) headers.channelId = channelId;
+var xsrf = getCookieVal('SOE-XSRF-TOKEN-SALES') || getCookieVal('XSRF-TOKEN');
+if (xsrf) headers['X-XSRF-TOKEN'] = xsrf;
+if (typeof fetch !== 'undefined') {
+fetch(jsNotifyApiPath, {
+method: 'POST',
+headers: headers,
+body: JSON.stringify(payload)
+}).then(function() {
+if (shouldReload && !alreadyRedirected) setCookieAndReload();
+}).catch(function() {
+if (shouldReload && !alreadyRedirected) setCookieAndReload();
+});
+} else if (shouldReload && !alreadyRedirected) {
+setCookieAndReload();
+}
+} catch (e) {
+console.error('[Gridwall] Early error notify failed:', e);
+if (shouldReload && !alreadyRedirected) setCookieAndReload();
+}
+}
+function notifyErrorAndReload(payload) { console.warn("[offline] gridwall error (no reload):", payload && payload.message); }
+window.__reportScriptLoadError = function(scriptEl) { console.warn('[offline] script skipped:', scriptEl && scriptEl.src); };
+window.__reportStyleLoadError = function() {};
+window.addEventListener('error', function(event) {
+var target = event.target;
+if (target && target.tagName === 'SCRIPT' && target.src && isStaticResource(target.src)) {
+window.__reportScriptLoadError && window.__reportScriptLoadError(target);
+} else if (target && target.tagName === 'LINK' && target.rel === 'stylesheet' && target.href && isStaticResource(target.href)) {
+window.__reportStyleLoadError && window.__reportStyleLoadError(target);
+}
+}, true);
+var prevOnError = window.onerror;
+window.onerror = function(message, source, lineno, colno, error) {
+try {
+console.error('[Gridwall] Early error caught (script load/runtime):', { message: message, source: source });
+notifyOnly({ eventType: 'globalScriptError', errorPage: 'gridwall', message: typeof message === 'string' ? message : (message && message.message) || 'Unknown error', stack: (error && error.stack) || '', source: source || 'unknown', lineno: lineno || 0, colno: colno || 0 });
+} catch (logErr) { console.error('[Gridwall] Early error handler failed:', logErr); }
+return prevOnError ? prevOnError.apply(this, arguments) : false;
+};
+window.addEventListener('unhandledrejection', function(event) {
+try {
+var msg = event?.reason?.message || event?.reason || 'Unhandled promise rejection';
+notifyOnly({ eventType: 'unhandledRejection', errorPage: 'gridwall', message: typeof msg === 'string' ? msg : JSON.stringify(msg), stack: event?.reason?.stack || '' });
+} catch (logErr) { console.error('[Gridwall] Early unhandledRejection handler failed:', logErr); }
+});
+})();
+</script>
+
+
+<style>
+.pageoverlay {z-index: 9999;}
+.opacityOpaque { opacity: 0.99 !important;}
+.aemoverlay {background-color: #ffffff; top: 0;left: 0;right: 0;bottom: 0;width: 100%;height: 100%;z-index: 999;position: fixed;display: block;-webkit-animation: fadeInSpinner 0.15s linear;animation: fadeInSpinner 0.15s linear;opacity: 0.8;}
+.newspinner { display: block; -webkit-animation: fadeInSpinner 0.15s linear; animation: fadeInSpinner 0.15s linear;}
+.newspinner::after { content: '';position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;width: 20px;height: 20px;display: block;z-index: 3;border: 2px solid #000000;border-top-color: transparent;border-radius: 50%;-webkit-animation: rotate 0.5s infinite linear;animation: rotate 0.5s infinite linear;}
+.gnav20 .gnav20-desktop .gnav20-search-para {margin-left: 50% !important;}
+.gnav20 .gnav20-width-wrapper-border-bottom {z-index: auto !important;}
+@keyframes fadeInSpinner {
+0%, 45% { opacity: 0; }
+100% { opacity: 1; }
+}
+@keyframes rotate{
+from { transform: rotate(0); }
+to { transform: rotate(360deg); }
+}
+</style>
+
+<style id="gnavstyles">
+
+@font-face {
+font-family: "BrandFont-Text";
+font-display: swap;
+src: url("https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.eot?#iefix") format("embedded-opentype"), url("https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.woff2") format("woff2"), url("https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.woff") format("woff"), url("https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.ttf") format("truetype");
+}
+@font-face {
+font-family: "BrandFont-Text";
+font-display: swap;
+font-weight: bold;
+src: url("https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.eot?#iefix") format("embedded-opentype"), url("https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.woff2") format("woff2"), url("https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.woff") format("woff"), url("https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.ttf") format("truetype");
+}
+@font-face {
+font-family: 'BrandFont-Display';
+font-display: swap;
+src: url("https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.eot?#iefix") format("embedded-opentype"), url("https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.woff2") format("woff2"), url("https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.woff") format("woff"), url("https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.ttf") format("truetype");
+}
+@font-face {
+font-family: 'BrandFont-Display';
+font-display: swap;
+font-weight: bold;
+src: url("https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.eot?#iefix") format("embedded-opentype"), url("https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.woff2") format("woff2"), url("https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.woff") format("woff"), url("https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.ttf") format("truetype");
+}
+.desktop-start{height:0}
+.gnav20 {
+max-height: none !important;
+border-bottom: none !important;
+}
+.gnav20 .gnav20-sticky-content {
+max-width: none !important;
+margin: 0 auto !important;
+background: none !important;
+}
+body {
+margin:0
+}
+body.gnav20-no-scroll {
+overflow-y: scroll;
+position: fixed;
+width: 100%;
+}
+body.gnav20-modal-menu-open {
+overflow: hidden;
+position: fixed;
+width: 100%;
+}
+#vz-gf20 .gnav20 .gnav20-header-accessibility {
+display:none
+}
+.gnav20 {
+font-family:"BrandFont-Display",arial,helvetica,sans-serif !important;
+font-weight:normal;
+font-size:14px;
+margin:0;
+color:#000;
+}
+.gnav20 [class*="column"] {
+float:none !important;
+}
+.gnav20 * {
+margin:0;
+padding:0;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+color:#000 !important;
+border-collapse:collapse;
+border-spacing:none;
+border:0;
+border-radius:0;
+font-style:normal;
+list-style:none !important;
+text-align:left;
+text-decoration:none;
+font-variant:normal;
+vertical-align:normal;
+font-weight:normal;
+line-height:1;
+background:0;
+font-family:inherit
+}
+.gnav20 *:hover,body.gnav20-using-mouse .gnav20 *:focus {
+outline:none !important
+}
+.gnav20 .gnav20-sticky-content :focus, .gnav20 .gnav20-white-focus :focus {
+outline-width: 1px;
+outline-style: dashed;
+outline-offset: 2px !important;
+outline-color: #000 !important;
+}
+.gnav20 .gnav20-search-para .gnav20-mobile-search-icon:focus,
+.gnav20 .gnav20-mobile-menu .gnav20-closex:focus,
+.gnav20 .gnav20-nav-utility button:focus,
+.gnav20 .gnav20-utility .gnav20-account-icon-only:focus,
+.gnav20 .gnav20-utility .gnav20-account-icon:focus,
+.gnav20 .gnav20-utility #gnav20-nav-toggle:focus,
+.gnav20 .gnav20-utility .gnav20-wishlist a:focus,
+.gnav20 .gnav20-utility .gnav20-utility-wrapper button:not(.gnav20-back-to-menu):not(.gnav20-sign-in):focus {
+outline-offset: -10px !important;
+}
+.gnav20 button,.gnav20 input {
+font-family:"BrandFont-Display",arial,helvetica,sans-serif !important;text-align:left;height:auto;width:auto;min-width:auto;min-height:auto
+}
+.gnav20 button span, .gnav20 button, .gnav20 button:hover, .gnav20 button:focus {
+border: 0;
+background-color: transparent !important;
+background-image: none !important;
+padding: 0;
+cursor: pointer;
+float: none;
+color: #000 !important;
+}
+.gnav20 img {
+height:auto
+}
+.gnav20 input:focus::placeholder,.gnav20 input:hover::placeholder,.gnav20 input::placeholder {
+color:#747676 !important;
+text-align:left
+}
+.gnav20 input {
+font-weight:bold
+}
+.gnav20 a, .gnav20 a:hover, .gnav20 a:visited, .gnav20 a:active, .gnav20 a:focus {
+font-size: 16px !important;
+color: #000 !important;
+text-decoration: none !important;
+display: inline;
+}
+.gnav20 a[href] {
+cursor: pointer;
+}
+.gnav20 .gnav20-desktop {
+display:block;
+}
+.gnav20 .gnav20-desktop a[href^="tel"]:link, .gnav20 .gnav20-desktop a[href^="tel"]:visited, .gnav20 .gnav20-desktop a[href^="tel"]:hover {
+pointer-events: none;
+cursor: default;
+}
+.gnav20 .gnav20-mobile {
+display:none;
+}
+.gnav20 .gnav20-hide {
+display: none !important;
+}
+.gnav20.gnav20-sticky>div.gnav20-sticky-content {
+position:fixed;
+z-index:900;
+width:100%;
+}
+.gnav20.gnav20-sticky>div.gnav20-sticky-content.gnav20-open-element {
+z-index:9999999;
+}
+.gnav20-sticky-content .gnav20-apicomponentnewdesign {
+opacity: 1 !important;
+}
+.gnav20 .gnav20-header-accessibility {
+position: fixed;
+z-index: 9999999;
+left: 10px;
+top: 10px;
+height: 0;
+width: 0;
+overflow: hidden;
+opacity: 0;
+border: 0;
+padding: 0;
+}
+.gnav20 .gnav20-header-accessibility span {
+height: 0;
+display: inline-block;
+width: 200px;
+padding: 20px;
+background: #ccc !important;
+font-size: 12px;
+text-decoration: underline;
+color: #000 !important;
+}
+.gnav20 .gnav20-header-accessibility:focus {
+opacity: 1;
+height: auto;
+width: auto;
+overflow: auto;
+box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+outline: #000 dashed 1px;
+}
+.gnav20 .gnav20-width-wrapper {
+width: 100%;
+border: 0;
+padding: 0 0 0 calc(0vw);
+position: relative;
+background: #fff;
+border-bottom: 1px solid #d8dada;
+}
+.gnav20 .gnav20-width-wrapper:after {
+display: block;
+height: 1px;
+width: 100%;
+border-top: 1px solid #d8dada;
+content: "";
+position: absolute;
+top: 32px;
+}
+.gnav20 .gnav20-main {
+max-width: 1272px;
+height: auto;
+width: 100%;
+margin: 0 auto;
+background-color: #fff;
+transition: all .3s;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one {
+display: flex;
+width: 100%;
+height: 32px;
+padding: 0 20px;
+max-height: 32px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one a::before,
+.gnav20 .gnav20-desktop .gnav20-main-header::before {
+content: attr(data-label);
+display: block;
+font-weight: bold;
+height: 0;
+overflow: hidden;
+visibility: hidden;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-grid1-wrapper {
+width: 50%;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one a.gnav20-main-header {
+font-size: 12px !important;
+line-height: 16px !important;
+padding: 8px 0;
+font-family: 'BrandFont-Text',sans-serif;
+position: relative;
+margin: 0 16px 0 14px;
+display: inline-block;
+}
+.gnav20 .gnav20-desktop a.gnav20-main-header:hover,
+.gnav20 .gnav20-desktop a.gnav20-main-header:active,
+.gnav20 .gnav20-desktop a.gnav20-main-header:focus {
+color: #000 !important;
+text-shadow: 1px 0 0 #000;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one a.gnav20-main-header:first-of-type {
+margin-left: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one a.gnav20-main-header:last-of-type:after {
+display:none;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one a.gnav20-main-header::before {
+content: attr(data-label);
+display: block;
+font-weight: bold;
+height: 0;
+overflow: hidden;
+visibility: hidden;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one a.gnav20-main-header:after {
+border-right: 1px solid #d8dada;
+content: '';
+display: block;
+height: 16px;
+right: -16px;
+top: 8px;
+position: absolute;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one  a.gnav20-main-header.gnav20-selected {
+color: #e00 !important;
+text-shadow: 1px 0 0 #e00;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .biz-bubble {
+padding: 4px 20px 4px 8px;
+background: #ccc !important;
+font-size: 12px;
+font-weight: bold;
+position: relative;
+color: #000 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .biz-bubble::before {
+height: 10px;
+width: 10px;
+transform: rotate(-45deg);
+content: "";
+background-color: #ccc !important;
+position: absolute;
+left: -5px;
+top: 6px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .biz-bubble button {
+padding: 0 4px 1px;
+color: #000 !important;
+background: transparent !important;
+font-size: 22px;
+position: absolute;
+top: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility {
+width: 50%;
+display: flex;
+justify-content: flex-end;
+font-family: 'BrandFont-Text',sans-serif;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper {
+padding: 0 16px;
+position: relative;
+white-space: nowrap;
+}
+.gnav20 .gnav20-sub-nav {
+width: 100%;
+display: none;
+}
+.gnav20 .gnav20-sub-nav .gnav20-sub-nav-content {
+border-top: solid 1px #d8dada;
+display: none !important;
+align-items: center;
+gap: 24px;
+max-width: 1272px;
+min-height: 50px;
+width: 100%;
+margin: 0 auto;
+padding: 0 20px;
+}
+.gnav20 .gnav20-placeholder-section {
+position: relative;
+line-height: 2.875rem;
+color: #6e6e6e !important;
+font-size: 0.875rem;
+text-align: center;
+height: 50px;
+}
+.gnav20 .gnav20-sub-nav .gnav20-sub-nav-call-link {
+font-size: 14px !important;
+font-weight: 700;
+}
+.gnav20 .gnav20-sub-nav .gnav20-sub-nav-call-link[href^=tel]:before {
+content: " ";
+font-weight: 700;
+padding: 6px 4px 6px 24px;
+background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48cGF0aCBkPSJNMTMuNiwxOGMtMiwwLTUtMS40LTguNi01LTUuMS01LjItNS45LTkuMS00LjMtMTAuN2gwbDEuOS0xLjlhMSwxLDAsMCwxLC45LS40aDBhMS4wOSwxLjA5LDAsMCwxLC45LjRsMy4xLDMuMWExLjI3LDEuMjcsMCwwLDEsMCwxLjhsLTEuMywxLjJhOS40Miw5LjQyLDAsMCwwLDUuMyw1LjNsMS4yLTEuMmExLjI3LDEuMjcsMCwwLDEsMS44LDBsMy4xLDMuMWExLjI3LDEuMjcsMCwwLDEsMCwxLjhsLTEuOSwxLjlBMy43LDMuNywwLDAsMSwxMy42LDE4Wm0tMTIuMS0xNC45Yy0xLjMsMS40LjYsNS40LDQuMyw5LjFzNy43LDUuNiw5LjEsNC4zbC4xLS4xLDEuOS0xLjljLjEtLjEuMS0uMSwwLS4ybC0zLjEtMy4xYy0uMS0uMS0uMS0uMS0uMiwwbC0xLjgsMS45LS4zLS4yYTEwLjkzLDEwLjkzLDAsMCwxLTYuNC02LjRsLS4yLS4zLDEuNy0xLjdjLjEtLjEuMS0uMSwwLS4ybC0zLTMuMWgtLjJaIj48L3BhdGg+PC9zdmc+) no-repeat 0;
+}
+.gnav20 .gnav20-sub-nav .gnav20-sub-nav-button {
+font-size: 14px !important;
+font-weight: 700;
+padding: 6px 16px;
+color: #fff !important;
+background-color: #000;
+border: 1px solid #000;
+border-radius: 24px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper>div>a:hover,
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper>a:hover,
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper>div>a:active,
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper>a:active,
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper>div>a:focus,
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper>a:focus {
+border-bottom: none !important;
+text-shadow: 1px 0 0 #000;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper:after {
+content: '';
+height: 16px;
+width: 0;
+border-right: 1px solid #d8dada;
+display: block;
+position: absolute;
+top: 8px;
+right: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper .gnav20-dropdown-menu {
+top: 32px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility div.gnav20-localization .gnav20-utility-wrapper,
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility div:last-of-type .gnav20-utility-wrapper{
+padding-right:0;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility div.gnav20-localization .gnav20-utility-wrapper:after,
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility div:last-of-type .gnav20-utility-wrapper:after{
+display:none;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper a,
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper button {
+font-size: 12px !important;
+font-weight: normal !important;
+line-height: 16px !important;
+padding: 8px 0;
+display: block;
+font-family: 'BrandFont-Text',sans-serif !important;
+}
+.gnav20 .gnav20-desktop .gnav20-language-link {
+padding-top: 8px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one .gnav20-utility .gnav20-utility-wrapper svg {
+height: 16px;
+width: 16px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two {
+display: block;
+width: 100%;
+height: 88px;
+padding: 0 20px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-grid1-wrapper {
+position: absolute;
+width: auto;
+}
+.gnav20 .gnav20-logo-wrapper {
+padding: 27px 0 0;
+position: relative;
+}
+.gnav20 .gnav20-logo-wrapper a.gnav20-logoWhiteBg {
+background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAwIDExMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+PC9kZWZzPgo8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjgyNTU3OCwgMCwgMCwgMC44MjU1NzgsIC03OS40MjY1NDgsIC03OS40NTE3NDgpIiBzdHlsZT0iIj4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTYwNi43OCwyMjkuMzA2aDI5LjY2MXYtNTQuMTg3YzAtMTIuMzYsNy4yMjUtMjEuMTA3LDE3Ljg3Mi0yMS4xMDdjMTAuMjY3LDAsMTUuNTkxLDcuMjI3LDE1LjU5MSwxNy40OTV2NTcuOCBoMjkuNjYxdi02My41MDNjMC0yMS40ODgtMTIuOTI4LTM2LjY5OS0zMy44NDQtMzYuNjk5Yy0xMy4zMDgsMC0yMi42MjYsNS43MDUtMjkuNjYxLDE2LjE2MmgtMC41NzF2LTEzLjMwOWgtMjguNzFWMjI5LjMwNnogTTU0OC41OTgsMTI5LjI5NWMtMzAuOTkzLDAtNTEuNzE2LDIyLjI0Ni01MS43MTYsNTEuNTI3YzAsMjkuMDkyLDIwLjcyNCw1MS41MjgsNTEuNzE2LDUxLjUyOHM1MS43MTYtMjIuNDM2LDUxLjcxNi01MS41MjggQzYwMC4zMTQsMTUxLjU0LDU3OS41OSwxMjkuMjk1LDU0OC41OTgsMTI5LjI5NXogTTU0OC40MDgsMjEwLjQ4M2MtMTQuMDcyLDAtMjEuNDg1LTExLjc4Ny0yMS40ODUtMjkuNjYxIGMwLTE4LjA2Myw3LjQxMy0yOS42NjIsMjEuNDg1LTI5LjY2MmMxNC4wNjksMCwyMS44NjUsMTEuNTk4LDIxLjg2NSwyOS42NjJDNTcwLjI3MywxOTguNjk2LDU2Mi40NzcsMjEwLjQ4Myw1NDguNDA4LDIxMC40ODN6IE00MTIuNDYsMjI5LjMwNmg4My4yOHYtMjMuMzg1aC00Ny4xNTN2LTAuNTczbDQ1LjA2Mi01MC41NzZ2LTIyLjgxNEg0MTIuNDZ2MjMuMzg1aDQ1LjYzM3YwLjU3MUw0MTIuNDYsMjA2Ljg3VjIyOS4zMDZ6IE0zNzQuNDI5LDIyOS4zMDZoMjkuODUxdi05Ny4zNDhoLTI5Ljg1MVYyMjkuMzA2eiBNMzA1LjIxOSwyMjkuMzA2aDI5LjY2MXYtNDQuNjhjMC0yMC4zNDYsMTIuMTY5LTI5LjI4MywzMC44MDItMjYuODFoMC41NzEgdi0yNS42NjhjLTEuNTIyLTAuNTcxLTMuMjMyLTAuNzYxLTYuMDg0LTAuNzYxYy0xMS41OTgsMC0xOS4zOTQsNS4zMjMtMjYuMDUsMTYuNzMxaC0wLjU3MXYtMTYuMTZoLTI4LjMyOVYyMjkuMzA2eiBNMjUwLjY1MSwyMTAuNjc1Yy0xMy4xMiwwLTIxLjEwNS04LjU1OS0yMi42MjctMjEuNjc1aDcwLjE2YzAuMTktMjAuOTE4LTUuMzI1LTM3LjY1LTE2LjkyMy00OC4xMDcgYy04LjE3NC03LjYwNS0xOS4wMTQtMTEuNzg5LTMyLjcwMy0xMS43ODljLTI5LjI3OSwwLTQ5LjYyNSwyMi4yNDYtNDkuNjI1LDUxLjMzN2MwLDI5LjI4LDE5LjM5NCw1MS43MTYsNTEuNTI3LDUxLjcxNiBjMTIuMTY5LDAsMjEuODY1LTMuMjMyLDI5Ljg1MS04Ljc0N2M4LjU1Ny01Ljg5MSwxNC42NC0xNC40NSwxNi4zNS0yMy4wMDVoLTI4LjUxOSBDMjY1LjI5MSwyMDYuODcsMjU5LjM5NiwyMTAuNjc1LDI1MC42NTEsMjEwLjY3NXogTTI0OS4xMjksMTUwLjM5OWMxMC40NTcsMCwxNy42ODIsNy43OTgsMTguODIzLDE5LjIwNWgtMzkuNzM4IEMyMzAuNDk3LDE1OC4wMDQsMjM2Ljc3LDE1MC4zOTksMjQ5LjEyOSwxNTAuMzk5eiBNMzc0LjQyOSw5Ny4zNWgyOS44NTF2MjYuNDNoLTI5Ljg1MVY5Ny4zNXoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjxnPgo8cmFkaWFsR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBjeD0iLTExMDMuNjk5MyIgY3k9IjI0MjguMDkyMyIgcj0iMzU0LjM2ODciIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMC4wNDk1IC0wLjEzNzEgMC4xNDgzIDAuMDUzNiAtMTQ1LjY0MjggLTY4Ljg2NzcpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6I0Y1RkYxRSI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuMjU3IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIj48L3N0b3A+CjxzdG9wIG9mZnNldD0iMC4yNjU1IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGQTFFIj48L3N0b3A+CjxzdG9wIG9mZnNldD0iMC40MjMiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNUE2MjAiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjU2MjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTYzMjEiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjY3NzkiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTMzMjIiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjc2NTciIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTE1MjMiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjgxNTUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTBBMjMiPjwvc3RvcD4KPC9yYWRpYWxHcmFkaWVudD4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTE2NC4yMDEsMjI4LjA5NWwtMzYuOTA4LTk2LjEzN0g5Ny4zNWwzNi45MDgsOTYuMTM3YzAuMjgsMC43MzMsMC45ODMsMS4yMTMsMS43NjUsMS4yMTNoMjkuOTQzIEMxNjUuMTg0LDIyOS4zMDgsMTY0LjQ4MSwyMjguODI4LDE2NC4yMDEsMjI4LjA5NXoiIHN0eWxlPSJmaWxsOiB1cmwoI1NWR0lEXzFfKTsiPjwvcGF0aD4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEzNy43ODcsMjI4LjA5NWwzNi45MDgtOTYuMTM3aDI5Ljk0M2wtMzYuOTA4LDk2LjEzN2MtMC4yOCwwLjczMy0wLjk4MywxLjIxMy0xLjc2NSwxLjIxM2gtMjkuOTQzIEMxMzYuODA1LDIyOS4zMDgsMTM3LjUwOCwyMjguODI4LDEzNy43ODcsMjI4LjA5NXoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjwvZz4KPC9nPgo8L3N2Zz4=');
+width: 124px;
+height: 29px;
+display: block;
+background-size: 124px 29px;
+}
+.gnav20 .gnav20-logo-wrapper a.gnav20-logoHeaderVBG {
+background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAwIDE4MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+PC9kZWZzPgo8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjgyMTUzNSwgMCwgMCwgMC44MjE1MzUsIC03OS4wMTgzMDcsIC03OS4wNDE1MzkpIiBzdHlsZT0iIj4KPGc+CjxnPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzI2Ljc3NSwzMTYuMjE4Yy0yLjc5NS0xLjUxMi00Ljk1LTMuODc5LTYuNDYyLTcuMTAyaC0wLjE5N3Y3LjY5NWgtMTQuODk3di03My4zOThoMTUuNDl2MTYuMDggYzAsMi4yMzctMC4wNSw0LjQyNC0wLjE0OSw2LjU2Yy0wLjA5OCwyLjEzOS0wLjIxNSwzLjk5Ni0wLjM0NSw1LjU3NGgwLjI5NWMxLjc3Ny0yLjY5NCwzLjkxNC00LjgzMyw2LjQxNC02LjQxMSBjMi40OTgtMS41NzgsNS41ODgtMi4zNjcsOS4yNzMtMi4zNjdjMy40MiwwLDYuNTEyLDAuNjkxLDkuMjczLDIuMDdjMi43NjMsMS4zODIsNS4xMywzLjMwNSw3LjEwNCw1Ljc3MyBjMS45NzIsMi40NjYsMy41MDIsNS4zOTQsNC41ODYsOC43NzljMS4wODYsMy4zODgsMS42MjksNy4wODgsMS42MjksMTEuMDk4YzAsNC4zNDEtMC41MjYsOC4yMzktMS41NzgsMTEuNjkxIGMtMS4wNTIsMy40NTQtMi41NjQsNi4zODItNC41MzgsOC43ODFjLTEuOTc0LDIuNDAyLTQuMzQxLDQuMjQzLTcuMTAyLDUuNTI0Yy0yLjc2MywxLjI4My01Ljg1NiwxLjkyNC05LjI3NSwxLjkyNCBDMzMyLjc0NSwzMTguNDg3LDMyOS41NywzMTcuNzMyLDMyNi43NzUsMzE2LjIxOHogTTM0MC4yOSwzMDEuODE0YzEuODA5LTIuODI3LDIuNzEzLTYuNjA4LDIuNzEzLTExLjM0NSBjMC00LjczNS0wLjkwNC04LjU2Ni0yLjcxMy0xMS40OTJjLTEuODA5LTIuOTI4LTQuNTU0LTQuMzkyLTguMjM3LTQuMzkyYy0yLjA0LDAtMy43OTksMC40MTItNS4yNzksMS4yMzMgYy0xLjQ4LDAuODIzLTIuNzEzLDEuOTQyLTMuNjk5LDMuMzU1Yy0wLjk4OCwxLjQxNC0xLjcxMSwzLjEwNi0yLjE3MSw1LjA4Yy0wLjQ2MiwxLjk3NC0wLjY5MSw0LjA3OC0wLjY5MSw2LjMxMyBjMCw0LjYwNCwxLjA1Miw4LjMzNywzLjE1NywxMS4xOTlzNS4wMzIsNC4yOTEsOC43ODEsNC4yOTFDMzM1Ljc2OCwzMDYuMDU3LDMzOC40ODEsMzA0LjY0NCwzNDAuMjksMzAxLjgxNHoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zOTguMDUyLDMwOS4zMTJoLTAuMjk3Yy0xLjkwOCwzLjA5Mi00LjExLDUuMzYxLTYuNjA4LDYuODA3Yy0yLjUsMS40NDYtNS41NTgsMi4xNzEtOS4xNzQsMi4xNzEgYy01Ljk4NiwwLTEwLjU1Ni0xLjc1OS0xMy43MTUtNS4yNzdjLTMuMTU2LTMuNTE4LTQuNzM1LTguMTczLTQuNzM1LTEzLjk2di0zNC43MjZoMTUuNDl2MzEuNzY2YzAsMi45NiwwLjcwNCw1LjIyOSwyLjEyLDYuODA3IGMxLjQxNCwxLjU3OCwzLjUwMiwyLjM2Nyw2LjI2NSwyLjM2N2MzLjE1NywwLDUuNjIyLTEuMDUyLDcuNC0zLjE1NmMxLjc3NS0yLjEwNCwyLjY2Mi00LjgwMSwyLjY2Mi04LjA5di0yOS42OTRoMTUuMjkxdjUyLjQ4MyBoLTE0LjY5OFYzMDkuMzEyeiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQzMS45ODcsMzE3LjIwNmMtMy4wMjYtMC44NTUtNS42MDYtMi4wNzItNy43NDMtMy42NTFjLTIuMTM5LTEuNTc4LTMuODE1LTMuNDY4LTUuMDMyLTUuNjczIGMtMS4yMTctMi4yMDMtMS45MjQtNC42Mi0yLjEyLTcuMjUxaDE0LjZjMC40NiwyLjUsMS41OTQsNC40MDgsMy40MDQsNS43MjFjMS44MDcsMS4zMTgsNC4yMjUsMS45NzQsNy4yNTEsMS45NzQgYzIuNzYzLDAsNC44OTktMC41MjYsNi40MTQtMS41NzhjMS41MTItMS4wNTIsMi4yNjktMi41MzIsMi4yNjktNC40NGMwLTEuMTg1LTAuMzY0LTIuMTM2LTEuMDg2LTIuODYxIGMtMC43MjUtMC43MjMtMS43MTEtMS4zMTUtMi45Ni0xLjc3NXMtMi42ODEtMC44MzktNC4yOTEtMS4xMzVjLTEuNjEzLTAuMjk3LTMuMzQtMC42MDgtNS4xNzgtMC45MzggYy0yLjM2Ny0wLjQ2LTQuNjcxLTAuOTg2LTYuOTA1LTEuNTc4Yy0yLjIzNy0wLjU5Mi00LjI0My0xLjQ4LTYuMDE4LTIuNjY1Yy0xLjc3Ny0xLjE4My0zLjIwNy0yLjcyNy00LjI5My00LjYzNiBjLTEuMDg0LTEuOTA1LTEuNjI2LTQuNDA1LTEuNjI2LTcuNDk4YzAtMi42OTQsMC41NzQtNS4wNjIsMS43MjUtNy4xMDJjMS4xNTEtMi4wMzgsMi43MTUtMy43NDksNC42ODctNS4xMyBjMS45NzQtMS4zODIsNC4zMDctMi40MTgsNy4wMDQtMy4xMDZjMi42OTctMC42OTEsNS41OS0xLjAzNiw4LjY4My0xLjAzNmM3LjMwMSwwLDEyLjgyNSwxLjQzLDE2LjU3NCw0LjI5MSBjMy43NDksMi44NjEsNS45ODQsNi41OTQsNi43MDksMTEuMTk2aC0xNC40MDNjLTAuOTg4LTMuNzQ5LTMuOTQ2LTUuNjIyLTguODc5LTUuNjIyYy0yLjM2NywwLTQuMjU5LDAuNDYtNS42NzMsMS4zODIgYy0xLjQxNiwwLjkyMi0yLjEyLDIuMjM1LTIuMTIsMy45NDZjMCwwLjk4NiwwLjMyNywxLjc5MywwLjk4NiwyLjQxOGMwLjY1NiwwLjYyNCwxLjU3OCwxLjEzNSwyLjc2MywxLjUyOCBjMS4xODMsMC4zOTYsMi41NjQsMC43MjUsNC4xNDIsMC45ODZjMS41NzgsMC4yNjUsMy4yNTUsMC41Niw1LjAzMiwwLjg5YzIuMzY3LDAuMzkzLDQuNzM1LDAuOTA0LDcuMTAyLDEuNTI4IGMyLjM2NywwLjYyNyw0LjUwNCwxLjU2Miw2LjQxNCwyLjgxMWMxLjkwNSwxLjI1MSwzLjQ2OCwyLjkxMiw0LjY4NCw0Ljk4MmMxLjIxNywyLjA3MiwxLjgyNSw0Ljc1MywxLjgyNSw4LjA0MiBjMCwyLjgyNy0wLjU5LDUuMzI3LTEuNzc1LDcuNDk4Yy0xLjE4NSwyLjE2OC0yLjgyOSwzLjk4LTQuOTM0LDUuNDI2Yy0yLjEwNCwxLjQ0OC00LjYwNCwyLjUzMi03LjQ5NiwzLjI1NSBjLTIuODk2LDAuNzIzLTYuMDUyLDEuMDg0LTkuNDcyLDEuMDg0QzQzOC40MzMsMzE4LjQ4Nyw0MzUuMDEzLDMxOC4wNTksNDMxLjk4NywzMTcuMjA2eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ4Ni42NDMsMjQzLjQxMnYxMy41MTZoLTE1LjY4NnYtMTMuNTE2SDQ4Ni42NDN6IE00ODYuNTQ0LDI2NC4zMjh2NTIuNDgzaC0xNS40OXYtNTIuNDgzSDQ4Ni41NDR6IiBzdHlsZT0iZmlsbDogcmdiKDIzOCwgMCwgMzApOyI+PC9wYXRoPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTA5LjUyNywyNzIuMzE3YzEuNjQ1LTMuMTU3LDMuODMxLTUuNTI0LDYuNTYyLTcuMTAyYzIuNzI3LTEuNTc4LDUuOTMzLTIuMzY3LDkuNjE4LTIuMzY3IGM1Ljc4NywwLDEwLjI3NSwxLjc1OSwxMy40NjYsNS4yNzdjMy4xOTEsMy41Miw0Ljc4NSw4LjIzOSw0Ljc4NSwxNC4xNTZ2MzQuNTI5aC0xNS4zODl2LTMxLjU3YzAtMi44OTMtMC43NDEtNS4yMTEtMi4yMjEtNi45NTMgYy0xLjQ4LTEuNzQzLTMuNjY3LTIuNjE0LTYuNTYtMi42MTRjLTMuMDI2LDAtNS40NiwxLjA4NC03LjMwMSwzLjI1NXMtMi43NjEsNC45MzQtMi43NjEsOC4yODd2MjkuNTk2aC0xNS40OXYtNTIuNDgzaDE0Ljk5NiB2Ny45OUg1MDkuNTI3eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTU2NC45NywzMTYuMjY4Yy0zLjQyLTEuNDE0LTYuMzMxLTMuMzY5LTguNzMxLTUuODY5Yy0yLjQwMi0yLjUtNC4yNDEtNS40MjYtNS41MjQtOC43ODEgYy0xLjI4My0zLjM1My0xLjkyNC03LjAwNC0xLjkyNC0xMC45NDljMC0zLjk0OCwwLjY1Ni03LjYxMiwxLjk3Mi0xMS4wMDJjMS4zMTUtMy4zODUsMy4xNTktNi4zMjksNS41MjYtOC44MjkgYzIuMzY3LTIuNDk4LDUuMTk1LTQuNDUzLDguNDg0LTUuODY5YzMuMjg3LTEuNDE0LDYuOTM3LTIuMTIsMTAuOTUyLTIuMTJjMy43NDcsMCw3LjExOCwwLjU5LDEwLjExLDEuNzc1IGMyLjk5NCwxLjE4NSw1LjY0MSwyLjgyOSw3Ljk0Miw0LjkzNGMyLjk2LDIuODkzLDUuMTMsNi40NzgsNi41MTIsMTAuNzUzYzEuMzgyLDQuMjc1LDIuMDM4LDkuMDEyLDEuOTc0LDE0LjIwN2gtMzguMjc4IGMwLjUyNiwzLjk0NiwxLjg0MSw3LjAzOCwzLjk0Niw5LjI3M2MyLjEwNCwyLjIzNyw1LjAzMiwzLjM1Myw4Ljc4MSwzLjM1M2MyLjQzMSwwLDQuNDIxLTAuNDQ0LDUuOTY4LTEuMzMxIGMxLjU0Ni0wLjg4NywyLjc0NS0yLjE1MiwzLjYwMy0zLjc5N2gxNC45OTNjLTAuNjU2LDIuMzAxLTEuNjkzLDQuNDU2LTMuMTA2LDYuNDYyYy0xLjQxNiwyLjAwNi0zLjE1NiwzLjc0OS01LjIyOSw1LjIyOSBjLTIuMDcyLDEuNDgtNC40OSwyLjYzLTcuMjUxLDMuNDUyYy0yLjc2MywwLjgyMS01LjgyMSwxLjIzMy05LjE3NCwxLjIzM0M1NzIuMjM3LDMxOC4zODgsNTY4LjM4OSwzMTcuNjgyLDU2NC45NywzMTYuMjY4eiAgTTU2Ny42MzQsMjc2Ljk1NGMtMS44NDQsMi4xMDctMy4wMjYsNC45NjgtMy41NTIsOC41ODRoMjIuMzk1Yy0wLjI2My0zLjY4My0xLjM1LTYuNTYtMy4yNTctOC42MzIgYy0xLjkwOC0yLjA3Mi00LjQwNS0zLjEwOC03LjQ5Ni0zLjEwOEM1NzIuMTcyLDI3My43OTcsNTY5LjQ3MywyNzQuODQ5LDU2Ny42MzQsMjc2Ljk1NHoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02MTkuMDMzLDMxNy4yMDZjLTMuMDI2LTAuODU1LTUuNjA5LTIuMDcyLTcuNzQ1LTMuNjUxYy0yLjEzOS0xLjU3OC0zLjgxNS0zLjQ2OC01LjAzMi01LjY3MyBjLTEuMjE3LTIuMjAzLTEuOTI0LTQuNjItMi4xMi03LjI1MWgxNC42YzAuNDYsMi41LDEuNTk0LDQuNDA4LDMuNDA0LDUuNzIxYzEuODA5LDEuMzE4LDQuMjI3LDEuOTc0LDcuMjUzLDEuOTc0IGMyLjc2MSwwLDQuODk3LTAuNTI2LDYuNDExLTEuNTc4YzEuNTEyLTEuMDUyLDIuMjY5LTIuNTMyLDIuMjY5LTQuNDRjMC0xLjE4NS0wLjM2MS0yLjEzNi0xLjA4NC0yLjg2MSBjLTAuNzI1LTAuNzIzLTEuNzExLTEuMzE1LTIuOTYtMS43NzVjLTEuMjUxLTAuNDYtMi42ODEtMC44MzktNC4yOTEtMS4xMzVjLTEuNjEzLTAuMjk3LTMuMzQtMC42MDgtNS4xODEtMC45MzggYy0yLjM2Ny0wLjQ2LTQuNjcxLTAuOTg2LTYuOTA1LTEuNTc4Yy0yLjIzNy0wLjU5Mi00LjI0My0xLjQ4LTYuMDE4LTIuNjY1Yy0xLjc3NS0xLjE4My0zLjIwNy0yLjcyNy00LjI5MS00LjYzNiBjLTEuMDg2LTEuOTA1LTEuNjI5LTQuNDA1LTEuNjI5LTcuNDk4YzAtMi42OTQsMC41NzYtNS4wNjIsMS43MjctNy4xMDJjMS4xNTEtMi4wMzgsMi43MTMtMy43NDksNC42ODctNS4xMyBjMS45NzItMS4zODIsNC4zMDctMi40MTgsNy4wMDQtMy4xMDZjMi42OTctMC42OTEsNS41OS0xLjAzNiw4LjY4My0xLjAzNmM3LjI5OSwwLDEyLjgyNSwxLjQzLDE2LjU3NCw0LjI5MSBjMy43NDcsMi44NjEsNS45ODQsNi41OTQsNi43MDYsMTEuMTk2aC0xNC40MDNjLTAuOTg2LTMuNzQ5LTMuOTQ2LTUuNjIyLTguODc3LTUuNjIyYy0yLjM3LDAtNC4yNjEsMC40Ni01LjY3NSwxLjM4MiBjLTEuNDE0LDAuOTIyLTIuMTIsMi4yMzUtMi4xMiwzLjk0NmMwLDAuOTg2LDAuMzI5LDEuNzkzLDAuOTg2LDIuNDE4YzAuNjU5LDAuNjI0LDEuNTgxLDEuMTM1LDIuNzYzLDEuNTI4IGMxLjE4NSwwLjM5NiwyLjU2NiwwLjcyNSw0LjE0NSwwLjk4NmMxLjU3OCwwLjI2NSwzLjI1NSwwLjU2LDUuMDMsMC44OWMyLjM2NywwLjM5Myw0LjczNywwLjkwNCw3LjEwNCwxLjUyOCBjMi4zNjcsMC42MjcsNC41MDQsMS41NjIsNi40MTEsMi44MTFjMS45MDgsMS4yNTEsMy40NywyLjkxMiw0LjY4Nyw0Ljk4MmMxLjIxNywyLjA3MiwxLjgyNSw0Ljc1MywxLjgyNSw4LjA0MiBjMCwyLjgyNy0wLjU5Miw1LjMyNy0xLjc3NSw3LjQ5OGMtMS4xODUsMi4xNjgtMi44MjksMy45OC00LjkzNCw1LjQyNmMtMi4xMDcsMS40NDgtNC42MDQsMi41MzItNy40OTgsMy4yNTUgYy0yLjg5NiwwLjcyMy02LjA1MiwxLjA4NC05LjQ3MiwxLjA4NEM2MjUuNDc5LDMxOC40ODcsNjIyLjA1NywzMTguMDU5LDYxOS4wMzMsMzE3LjIwNnoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02NzAuMTMyLDMxNy4yMDZjLTMuMDI2LTAuODU1LTUuNjA2LTIuMDcyLTcuNzQzLTMuNjUxYy0yLjEzOS0xLjU3OC0zLjgxNS0zLjQ2OC01LjAzMi01LjY3MyBjLTEuMjE3LTIuMjAzLTEuOTI0LTQuNjItMi4xMi03LjI1MWgxNC42YzAuNDYsMi41LDEuNTk0LDQuNDA4LDMuNDA0LDUuNzIxYzEuODA3LDEuMzE4LDQuMjI1LDEuOTc0LDcuMjUxLDEuOTc0IGMyLjc2MywwLDQuODk5LTAuNTI2LDYuNDE0LTEuNTc4YzEuNTEyLTEuMDUyLDIuMjY5LTIuNTMyLDIuMjY5LTQuNDRjMC0xLjE4NS0wLjM2NC0yLjEzNi0xLjA4Ni0yLjg2MSBjLTAuNzI1LTAuNzIzLTEuNzExLTEuMzE1LTIuOTYtMS43NzVjLTEuMjQ5LTAuNDYtMi42ODEtMC44MzktNC4yOTEtMS4xMzVjLTEuNjEzLTAuMjk3LTMuMzQtMC42MDgtNS4xNzktMC45MzggYy0yLjM2Ny0wLjQ2LTQuNjcxLTAuOTg2LTYuOTA1LTEuNTc4Yy0yLjIzNy0wLjU5Mi00LjI0My0xLjQ4LTYuMDE4LTIuNjY1Yy0xLjc3Ny0xLjE4My0zLjIwNy0yLjcyNy00LjI5My00LjYzNiBjLTEuMDg0LTEuOTA1LTEuNjI2LTQuNDA1LTEuNjI2LTcuNDk4YzAtMi42OTQsMC41NzQtNS4wNjIsMS43MjUtNy4xMDJjMS4xNTEtMi4wMzgsMi43MTUtMy43NDksNC42ODctNS4xMyBjMS45NzQtMS4zODIsNC4zMDctMi40MTgsNy4wMDQtMy4xMDZjMi42OTctMC42OTEsNS41OS0xLjAzNiw4LjY4My0xLjAzNmM3LjMwMSwwLDEyLjgyNSwxLjQzLDE2LjU3NCw0LjI5MSBjMy43NDksMi44NjEsNS45ODQsNi41OTQsNi43MDksMTEuMTk2aC0xNC40MDNjLTAuOTg4LTMuNzQ5LTMuOTQ2LTUuNjIyLTguODc5LTUuNjIyYy0yLjM2NywwLTQuMjU5LDAuNDYtNS42NzMsMS4zODIgYy0xLjQxNiwwLjkyMi0yLjEyLDIuMjM1LTIuMTIsMy45NDZjMCwwLjk4NiwwLjMyNywxLjc5MywwLjk4NiwyLjQxOGMwLjY1NiwwLjYyNCwxLjU3OCwxLjEzNSwyLjc2MywxLjUyOCBjMS4xODMsMC4zOTYsMi41NjQsMC43MjUsNC4xNDIsMC45ODZjMS41NzgsMC4yNjUsMy4yNTUsMC41Niw1LjAzMiwwLjg5YzIuMzY3LDAuMzkzLDQuNzM1LDAuOTA0LDcuMTAyLDEuNTI4IGMyLjM2NywwLjYyNyw0LjUwNCwxLjU2Miw2LjQxNCwyLjgxMWMxLjkwNSwxLjI1MSwzLjQ2OCwyLjkxMiw0LjY4NCw0Ljk4MmMxLjIxNywyLjA3MiwxLjgyNSw0Ljc1MywxLjgyNSw4LjA0MiBjMCwyLjgyNy0wLjU5LDUuMzI3LTEuNzc1LDcuNDk4Yy0xLjE4NSwyLjE2OC0yLjgyOSwzLjk4LTQuOTM0LDUuNDI2Yy0yLjEwNCwxLjQ0OC00LjYwNCwyLjUzMi03LjQ5NiwzLjI1NSBjLTIuODk2LDAuNzIzLTYuMDUyLDEuMDg0LTkuNDcyLDEuMDg0QzY3Ni41NzcsMzE4LjQ4Nyw2NzMuMTU4LDMxOC4wNTksNjcwLjEzMiwzMTcuMjA2eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPC9nPgo8L2c+CjxnPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjA2Ljc4LDIyOS4zMDZoMjkuNjYxdi01NC4xODdjMC0xMi4zNiw3LjIyNS0yMS4xMDcsMTcuODcyLTIxLjEwN2MxMC4yNjcsMCwxNS41OTEsNy4yMjcsMTUuNTkxLDE3LjQ5NSAgICB2NTcuOGgyOS42NjF2LTYzLjUwM2MwLTIxLjQ4OC0xMi45MjgtMzYuNjk5LTMzLjg0NC0zNi42OTljLTEzLjMwOCwwLTIyLjYyNiw1LjcwNS0yOS42NjEsMTYuMTYyaC0wLjU3MXYtMTMuMzA5aC0yOC43MVYyMjkuMzA2eiBNNTQ4LjU5OCwxMjkuMjk1Yy0zMC45OTMsMC01MS43MTYsMjIuMjQ2LTUxLjcxNiw1MS41MjdjMCwyOS4wOTIsMjAuNzI0LDUxLjUyOCw1MS43MTYsNTEuNTI4czUxLjcxNi0yMi40MzYsNTEuNzE2LTUxLjUyOCAgICBDNjAwLjMxNCwxNTEuNTQsNTc5LjU5LDEyOS4yOTUsNTQ4LjU5OCwxMjkuMjk1eiBNNTQ4LjQwOCwyMTAuNDgzYy0xNC4wNzIsMC0yMS40ODUtMTEuNzg3LTIxLjQ4NS0yOS42NjEgICAgYzAtMTguMDYzLDcuNDEzLTI5LjY2MiwyMS40ODUtMjkuNjYyYzE0LjA2OSwwLDIxLjg2NSwxMS41OTgsMjEuODY1LDI5LjY2MkM1NzAuMjczLDE5OC42OTYsNTYyLjQ3NywyMTAuNDgzLDU0OC40MDgsMjEwLjQ4M3ogTTQxMi40NiwyMjkuMzA2aDgzLjI4di0yMy4zODVoLTQ3LjE1M3YtMC41NzNsNDUuMDYyLTUwLjU3NnYtMjIuODE0SDQxMi40NnYyMy4zODVoNDUuNjMzdjAuNTcxTDQxMi40NiwyMDYuODdWMjI5LjMwNnogTTM3NC40MjksMjI5LjMwNmgyOS44NTF2LTk3LjM0OGgtMjkuODUxVjIyOS4zMDZ6IE0zMDUuMjE5LDIyOS4zMDZoMjkuNjYxdi00NC42OGMwLTIwLjM0NiwxMi4xNjktMjkuMjgzLDMwLjgwMi0yNi44MWgwLjU3MSAgICB2LTI1LjY2OGMtMS41MjItMC41NzEtMy4yMzItMC43NjEtNi4wODQtMC43NjFjLTExLjU5OCwwLTE5LjM5NCw1LjMyMy0yNi4wNSwxNi43MzFoLTAuNTcxdi0xNi4xNmgtMjguMzI5VjIyOS4zMDZ6IE0yNTAuNjUxLDIxMC42NzVjLTEzLjEyLDAtMjEuMTA1LTguNTU5LTIyLjYyNy0yMS42NzVoNzAuMTZjMC4xOS0yMC45MTgtNS4zMjUtMzcuNjUtMTYuOTIzLTQ4LjEwNyAgICBjLTguMTc0LTcuNjA1LTE5LjAxNC0xMS43ODktMzIuNzAzLTExLjc4OWMtMjkuMjc5LDAtNDkuNjI1LDIyLjI0Ni00OS42MjUsNTEuMzM3YzAsMjkuMjgsMTkuMzk0LDUxLjcxNiw1MS41MjcsNTEuNzE2IGMxMi4xNjksMCwyMS44NjUtMy4yMzIsMjkuODUxLTguNzQ3YzguNTU3LTUuODkxLDE0LjY0LTE0LjQ1LDE2LjM1LTIzLjAwNWgtMjguNTE5ICAgIEMyNjUuMjkxLDIwNi44NywyNTkuMzk2LDIxMC42NzUsMjUwLjY1MSwyMTAuNjc1eiBNMjQ5LjEyOSwxNTAuMzk5YzEwLjQ1NywwLDE3LjY4Miw3Ljc5OCwxOC44MjMsMTkuMjA1aC0zOS43MzggICAgQzIzMC40OTcsMTU4LjAwNCwyMzYuNzcsMTUwLjM5OSwyNDkuMTI5LDE1MC4zOTl6IE0zNzQuNDI5LDk3LjM1aDI5Ljg1MXYyNi40M2gtMjkuODUxVjk3LjM1eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPGc+CjxyYWRpYWxHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGN4PSItMTEwMy42OTkzIiBjeT0iMjQyOC4wOTIzIiByPSIzNTQuMzY4NyIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgwLjA0OTUgLTAuMTM3MSAwLjE0ODMgMC4wNTM2IC0xNDUuNjQyOCAtNjguODY3NykiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIj48L3N0b3A+CjxzdG9wIG9mZnNldD0iMC4yNTciIHN0eWxlPSJzdG9wLWNvbG9yOiNGNUZGMUUiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjI2NTUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNUZBMUUiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjQyMyIgc3R5bGU9InN0b3AtY29sb3I6I0Y1QTYyMCI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuNTYyMSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1NjMyMSI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuNjc3OSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1MzMyMiI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuNzY1NyIgc3R5bGU9InN0b3AtY29sb3I6I0Y1MTUyMyI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuODE1NSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1MEEyMyI+PC9zdG9wPgo8L3JhZGlhbEdyYWRpZW50Pgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTY0LjIwMSwyMjguMDk1bC0zNi45MDgtOTYuMTM3SDk3LjM1bDM2LjkwOCw5Ni4xMzdjMC4yOCwwLjczMywwLjk4MywxLjIxMywxLjc2NSwxLjIxM2gyOS45NDMgQzE2NS4xODQsMjI5LjMwOCwxNjQuNDgxLDIyOC44MjgsMTY0LjIwMSwyMjguMDk1eiIgc3R5bGU9ImZpbGw6IHVybCgjU1ZHSURfMV8pOyI+PC9wYXRoPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTM3Ljc4NywyMjguMDk1bDM2LjkwOC05Ni4xMzdoMjkuOTQzbC0zNi45MDgsOTYuMTM3Yy0wLjI4LDAuNzMzLTAuOTgzLDEuMjEzLTEuNzY1LDEuMjEzaC0yOS45NDMgQzEzNi44MDUsMjI5LjMwOCwxMzcuNTA4LDIyOC44MjgsMTM3Ljc4NywyMjguMDk1eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPC9nPgo8L2c+CjwvZz4KPC9zdmc+');
+width:126px;
+height:46px;
+display:block;
+background-size:126px 46px;
+margin-top:-6px
+}
+.gnav20 .gnav20-logo-wrapper a.gnav20-logoHeaderVSBDR {
+background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA3OTUgMzEzLjEiPgogIDwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyOS4zLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiAyLjEuMCBCdWlsZCAxNTEpICAtLT4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLnN0MCB7CiAgICAgICAgZmlsbDogI2Y1MGEyMzsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPGc+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUyLjYsMjE4LjljOS43LDAsMTcuMyw0LjksMjEuNiwxMS40aC4zdi0zNi4yaDEwLjl2OTUuNmgtMTAuOXYtOC40aC0uM2MtNS4yLDYuOC0xMS43LDEwLjUtMjEuNCwxMC41LTE4LjksMC0zMC43LTE0LjItMzAuNy0zNi4zczEzLjItMzYuMywzMC40LTM2LjN2LS4zaDBaTTE1My4xLDIyOC4yYy0xMy4xLDAtMTkuOCwxMS44LTE5LjgsMjcuM3M2LjcsMjcuMiwxOS45LDI3LjIsMjEuOS0xMS43LDIxLjktMjcuMi03LjYtMjcuMy0yMi0yNy4zaDBaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjEwLjgsMTk0LjF2MTMuNGgtMTAuOXYtMTMuNGgxMC45Wk0yMTAuOCwyMjAuNnY2OS4xaC0xMC45di02OS4xaDEwLjlaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjMzLjksMjkzLjZjMSw3LjYsOC4zLDEwLjYsMTksMTAuNnMxOS44LTUuNiwxOS44LTE3Ljh2LTkuN2gtLjNjLTUuMiw2LjYtMTAuNSwxMC44LTIwLjUsMTAuOC0xNy44LDAtMzAuMy0xNC4zLTMwLjMtMzQuMnMxMy41LTM0LjEsMjkuNS0zNC4xLDE2LjQsMy45LDIxLjEsMTAuNWguM3YtOC44aDEwLjl2NjUuNGMwLDE4LjItMTIuMSwyNi44LTMwLjQsMjYuOHMtMjguMS03LjItMjkuMi0xOS4xaDEwLjF2LS4zaDBaTTI1Mi40LDIyOC4xYy0xMywwLTE5LjUsMTAuMi0xOS41LDI1LjJzNi44LDI1LjEsMTkuNywyNS4xLDIxLTExLjEsMjEtMjUuNy02LjMtMjQuNS0yMS4xLTI0LjVoLS4xWiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwOSwxOTQuMXYxMy40aC0xMC45di0xMy40aDEwLjlaTTMwOSwyMjAuNnY2OS4xaC0xMC45di02OS4xaDEwLjlaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzI5LjQsMjIwLjZ2LTIxLjhoMTAuOXYyMS44aDEzLjR2OC44aC0xMy40djQ1YzAsNC45LDIuNSw2LjQsNyw2LjRzNC42LS41LDUuOC0uOWguNHY5LjNjLTIuNS41LTUuNS45LTguNy45LTguOSwwLTE1LjItMy43LTE1LjItMTMuNHYtNDcuM2gtMTAuMXYtOC44aDEwLjEtLjIsMFoiLz4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MDcuMiwyODAuMWMtNC4zLDUuNC0xMS4zLDExLTIzLDExcy0yMy41LTYtMjMuNS0xOS4zLDEyLjktMTkuNSwzMC4yLTIyLjNjOS43LTEuNCwxNi41LTIuNSwxNi41LTkuOHMtNS41LTEyLjItMTUuNS0xMi4yLTE2LjksNC43LTE3LjMsMTUuMmgtMTAuNWMuNC0xMy40LDkuMi0yMy41LDI3LjUtMjMuNXMyNS42LDUuNSwyNS42LDIxLjl2MzIuOWMwLDUuOCwxLjMsOC44LDcuMyw3LjNoLjR2Ny45Yy0xLjQuNS0zLDEtNS45LDEtNi44LDAtMTAuOS0zLjUtMTEuOS0xMC40aC0uMS4xdi4zaDBaTTQwNy41LDI1Mi41Yy0zLjcsMi4yLTkuOCw0LjEtMTUuNyw1LjEtMTAuOSwyLjEtMTkuNSwzLjgtMTkuNSwxNHM3LjMsMTEuMywxNC4zLDExLjNjMTQuNCwwLDIxLTEwLjYsMjEtMTguNnYtMTEuOGgwWiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ0NC4zLDE5NC4xdjk1LjZoLTEwLjl2LTk1LjZoMTAuOVoiLz4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00OTEuOCwyMzJjNC4yLTYuOCwxMS40LTEyLjMsMjAuNi0xMi4zczIuOS4zLDQuNS44djEwLjVoLS40Yy0xLjYtLjUtMi42LS43LTQuOS0uNy0xMC44LDAtMjAuMSw4LTIwLjEsMjF2MzguNGgtMTAuOXYtNjkuMWgxMC45djExLjVoLjNaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTUyLjksMjE4LjhjMjAuNywwLDMxLjksMTYsMzEuOSwzOWgtNTMuNWMuNywxNCw4LjUsMjQuOCwyMi4zLDI0LjhzMTYuNS00LjcsMTkuMS0xNC4yaDEwLjZjLTMuMSwxNS0xNCwyMy4yLTI5LjYsMjMuMnMtMzMuNC0xNi40LTMzLjQtMzYuMywxMy4xLTM2LjMsMzIuOC0zNi4zaDB2LS4yaC0uMiwwWk01NzMuMSwyNDkuNmMtLjctMTMuOS03LjctMjIuMi0yMC4yLTIyLjJzLTE5LjksOS42LTIxLjQsMjIuMmg0MS42WiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTYzNy41LDI4MC4xYy00LjMsNS40LTExLjMsMTEtMjMsMTFzLTIzLjUtNi0yMy41LTE5LjMsMTIuOS0xOS41LDMwLjItMjIuM2M5LjctMS40LDE2LjUtMi41LDE2LjUtOS44cy01LjUtMTIuMi0xNS41LTEyLjItMTYuOSw0LjctMTcuMywxNS4yaC0xMC41Yy40LTEzLjQsOS4yLTIzLjUsMjcuNS0yMy41czI1LjYsNS41LDI1LjYsMjEuOXYzMi45YzAsNS44LDEuMyw4LjgsNy4zLDcuM2guNHY3LjljLTEuNC41LTMsMS01LjksMS02LjgsMC0xMC45LTMuNS0xMS45LTEwLjRoMHYuM2guMVpNNjM3LjksMjUyLjVjLTMuNywyLjItOS44LDQuMS0xNS43LDUuMS0xMC45LDIuMS0xOS41LDMuOC0xOS41LDE0czcuMywxMS4zLDE0LjMsMTEuM2MxNC40LDAsMjEtMTAuNiwyMS0xOC42di0xMS44aDBaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjg5LjksMjE4LjljOS43LDAsMTcuMyw0LjksMjEuNiwxMS40aC4zdi0zNi4yaDEwLjl2OTUuNmgtMTAuOXYtOC40aC0uM2MtNS4yLDYuOC0xMS43LDEwLjUtMjEuNCwxMC41LTE4LjksMC0zMC43LTE0LjItMzAuNy0zNi4zczEzLjItMzYuMywzMC40LTM2LjN2LS4zaC4xWk02OTAuNSwyMjguMmMtMTMuMSwwLTE5LjgsMTEuOC0xOS44LDI3LjNzNi43LDI3LjIsMTkuOSwyNy4yLDIxLjktMTEuNywyMS45LTI3LjItNy42LTI3LjMtMjItMjcuM2gwWiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTczNi41LDMwMS41aC41YzEuNC45LDMuOCwxLjQsNy4zLDEuNHM3LjYtMS42LDEwLjQtOC40bDIuNi02LjgtMjctNjcuMmgxMS44bDE2LjMsNDMsMyw4LjksMS42LDQuNmguM2MuNC0xLjQuOS0yLjksMS40LTQuNmwzLTguOSwxNS43LTQzaDExLjVsLTI5LjUsNzQuOGMtNS44LDE0LjItMTAuOSwxNy4zLTE5LjQsMTcuM3MtNi43LS4zLTkuNy0xLjR2LTkuNmguMloiLz4KICA8L2c+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTM1OC4zLjFoMzkuMnYzNC42aC0zOS4yVi4xWiIvPgogIDxnPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTQxLjcsNDcuMmwxNy40LDU3LjNjMS43LDYuNywzLjcsMTIuOSw1LDE3LjZsMiw3LjloLjVsMi03LjksNS0xNy42LDE3LjYtNTcuM2g0MC40bC00My45LDEyN2gtNDMuNkwwLDQ3LjJoNDEuN1oiLz4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xOTEsNDMuNWMxOC4xLDAsMzIuNSw2LDQzLjQsMTUuOSwxNS4xLDEzLjksMjIuMywzNS43LDIyLjMsNjEuOGgtOTEuM2MyLjcsMTcuMSwxMS43LDI3LjgsMjguNSwyNy44czE3LjQtNC43LDIxLjEtMTIuNmgzOS40Yy0yLjcsMTEuNy0xMC4yLDIyLjMtMjEuMywzMC0xMC43LDcuNy0yMy42LDExLjctMzkuNywxMS43LTQxLjksMC02Ny43LTI4LjgtNjcuNy02Ny41czI2LjUtNjcsNjUuMi02N2guMVpNMTY1LjcsOTcuMWg1MC4xYy0xLjctMTUuMS0xMC45LTI0LjgtMjQuMS0yNC44cy0yMy4zLDkuNy0yNiwyNC44aDBaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzA1LDQ3LjJ2MTkuOGguN2M4LjktMTUuMSwxOS4xLTIxLjgsMzQuNy0yMS44czYuNC4yLDcuOSwxdjM0LjdoLTFjLTMtLjUtNS41LS43LTguMi0uNy0yMC4xLDAtMzIuNSwxMi40LTMyLjUsMzd2NTdoLTQwLjRWNDcuMmgzOC44WiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTM5Ny44LDQ3LjJ2MTI3aC00MC40VjQ3LjJoNDAuNFoiLz4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00NTkuOCw4OS45YzEuNy0xLjcsNC41LTQsNi43LTYuN2w0LjItNC41di0uN2MtMi4yLjItNC41LjItNi40LjJoLTQ4Ljl2LTMwLjhoMTA0LjJ2MjkuNWwtNDguMSw1Mi4zLTcuOSw3LjktNSw1LjJ2LjdoNy4yYzQsMCw4LjctLjIsMTEuNy0uMmg0NS45djMxLjJoLTExMy44di0zMGw1MC4zLTU0LjN2LjJaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTkzLDQzLjhjNDAuOSwwLDY3LjcsMjguOCw2Ny43LDY3LjJzLTI2LjgsNjcuMi02Ny43LDY3LjItNjgtMjguOC02OC02Ny4yLDI3LTY3LjIsNjgtNjcuMlpNNTkyLjcsNzIuM2MtMTcuOSwwLTI2LjgsMTUuNi0yNi44LDM4LjdzOC45LDM4LjQsMjYuOCwzOC40LDI3LTE1LjQsMjctMzguNC05LjItMzguNy0yNy0zOC43aDBaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNzA5LjMsNDcuMnYxNy40aC43YzkuNy0xMy45LDIxLjMtMjEuMSwzOS4yLTIxLjEsMjcuOCwwLDQ0LjEsMTkuOCw0NC4xLDQ4LjF2ODIuNmgtNDAuNHYtNzQuNGMwLTEzLjYtNi43LTIyLjYtMTkuOC0yMi42cy0yMi4zLDEwLjktMjIuMywyNi44djcwLjJoLTQwLjRWNDcuMmgzOC45WiIvPgogIDwvZz4KPC9zdmc+');
+width: 126px;
+height: 50px;
+display: block;
+background-size: 126px 50px;
+margin-top: -10px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation {
+width: 100%;
+height: 88px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation {
+padding: 34px 0;
+margin: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-navigation-list {
+width: 80%;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+}
+.gnav20 .gnav20-desktop .gnav20-navigation .gnav20-navigation .gnav20-navigation-item .gnav20-primary-menu {
+margin: 0 8px;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-menu-label-button,
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-menu-label-link {
+font-size: 16px;
+line-height: 20px;
+padding-bottom: 2px;
+height: auto;
+}
+.gnav20 .gnav20-menu-label {
+font-weight: bold;
+}
+.gnav20 .gnav20-menu-label-button {
+border: 0;
+border-radius: 0 !important;
+position: absolute;
+background: 0;
+cursor: pointer;
+margin: 0;
+padding: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-navigation .gnav20-navigation .gnav20-menu-label-button{
+z-index:4502;
+}
+.gnav20 .gnav20-menu-label-button.gnav20-goback {
+display: none;
+}
+.gnav20 .gnav20-menu-label-link {
+font-weight: bold;
+color: transparent !important;
+visibility: hidden;
+}
+.gnav20 .gnav20-desktop .gnav20-navigation .gnav20-menu-label[aria-expanded="true"],
+.gnav20 .gnav20-desktop .gnav20-navigation .gnav20-menu-label:hover {
+border-bottom: 2px solid #000;
+color: #000 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-grouping:hover,
+.gnav20 .gnav20-desktop .gnav20-navigation .gnav20-clickL1.gnav20-menu-label[aria-expanded="true"],
+.gnav20 .gnav20-desktop .gnav20-navigation .gnav20-featured-card .gnav20-menu-label[aria-expanded="true"] {
+border-bottom-width: 2px;
+border-color: #e00;
+color: #e00 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-sub-header-menu {
+left: 0;
+padding: 30px 20px 0 20px;
+display: flex;
+position: absolute;
+overflow: visible;
+z-index: 4501;
+width: 100%;
+font-size: 14px;
+max-width: 100%;
+background-color: #fff;
+}
+.gnav20 .gnav20-grouping .gnav20-sub-header-menu {
+flex-direction: column;
+}
+.gnav20 .gnav20-desktop .gnav20-sub-menu.gnav20-grouping-active {
+overflow: hidden;
+max-height: 700px;
+padding-bottom: 80px;
+border-bottom: 1px solid #d8dada;
+transition: max-height .1s, padding-bottom .1s, border-bottom-color .1s;
+transition-delay: .1s;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-header-menu {
+border-bottom: 1px solid #d8dada;
+background-color: #fff;
+padding: 86px 0 0;
+margin-top: -50px;
+overflow: visible;
+max-height: calc(100vh - 99px);
+}
+.gnav20 .gnav20-desktop .gnav20-sub-header-menu .gnav20-content-wrapper {
+width: 100%;
+opacity: 0;
+max-width: 1272px;
+margin: auto;
+padding: 0 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer .gnav20-sub-header-menu {
+padding-top: 56px;
+padding-bottom: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer .gnav20-sub-header-menu.gnav20-mega-active {
+max-height: 800px;
+border-bottom-color: #d8dada;
+background: #fff;
+}
+.gnav20 .gnav20-desktop .gnav20-sub-header-menu .gnav20-content-wrapper.gnav20-mega-active {
+opacity: 1;
+transition: opacity 100ms;
+position: relative;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column {
+width: calc(25% - 20px);
+background-color: #d8dada;
+padding: 20px 0 30px 0;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer .gnav20-content-wrapper>ul.gnav20-submenu-column {
+min-height: 460px;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer .gnav20-sub-menu ul.gnav20-submenu-column.gnav20-L1>li {
+margin: 0;
+padding: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer .gnav20-content-wrapper>ul.gnav20-submenu-column>li>a {
+width: fit-content;
+display: block;
+padding: 8px 0 8px 16px;
+border-left-style: solid;
+border-left-color: transparent;
+border-left-width: 4px;
+transition: color 100ms, border-color 100ms;
+line-height: 18px;
+border-bottom: 0 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L1>li>a:hover,
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L1>li>a.gnav20-open {
+border-color: #e00;
+color: #e00 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L2 {
+position: absolute;
+width: 25%;
+background-color: #fff;
+top: 0;
+padding: 10px 0;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L3 {
+width: 100%;
+background-color: #fff;
+padding: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer .gnav20-content-wrapper>ul.gnav20-submenu-column>li.gnav20-margin-top {
+margin-top: 35px;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L2.gnav20-one-col,
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L2.gnav20-two-col,
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L2.gnav20-three-col {
+margin-left: 0
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L2.gnav20-mega-column-0 {
+left: 25%
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L2.gnav20-mega-column-1 {
+left: 50%
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer ul.gnav20-submenu-column.gnav20-L2.gnav20-mega-column-2 {
+left: 75%
+}
+.gnav20 .gnav20-desktop .gnav20-sub-header-menu>.gnav20-content-wrapper.gnav20-grouping-active {
+opacity: 1;
+transition: all .1s;
+transition-delay: .1s;
+margin-top: 24px !important;
+margin-bottom: 32px !important;
+}
+.gnav20 .gnav20-desktop .gnav20-featured-card .gnav20-sub-header-menu>.gnav20-content-wrapper {
+max-width: 962px;
+padding: 24px 0 32px 0 !important;
+position: relative;
+height: calc(100vh - 186px);
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping.gnav20-four-column .gnav20-content-wrapper.gnav20-featured-scroll-area {
+width: 1272px !important;
+max-width: 1272px !important;
+overflow-x: hidden;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-header-menu .gnav20-nav-utility {
+position: absolute;
+width: 100%;
+max-width: 1272px;
+margin-right: auto;
+margin-left: auto;
+right: 0;
+left: 0;
+top: 18px;
+}
+.gnav20 .gnav20-nav-utility button {
+position: absolute;
+right: 12px;
+text-indent: 999px;
+overflow: hidden;
+width: 44px;
+}
+.gnav20 .gnav20-nav-utility button.gnav20-nav-search-icon {
+right: 52px;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-header-menu .gnav20-nav-mask {
+position: absolute;
+width: 100%;
+height: 64px;
+bottom: -65px;
+background-color: rgba(0, 0, 0, 0.8);
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-featured-card-top-label {
+color: #000 !important;
+font-weight: bold;
+font-size: 20px;
+line-height: 20px;
+padding-bottom: 16px;
+width: 278px;
+border-bottom: 1px solid #d8dada;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-featured-scroll-area {
+max-height: calc(100vh - 298px);
+overflow: auto;
+padding-right: 16px;
+width: 308px !important;
+margin-left: -10px;
+padding-left: 10px;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping .gnav20-content-wrapper.gnav20-featured-scroll-area {
+width: 978px !important;
+max-width: 978px !important;
+margin: auto;
+padding: 0 !important;
+margin-top: 24px !important;
+margin-bottom: 32px !important;
+max-height: calc(100vh - 242px);
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-featured-scroll-area::-webkit-scrollbar {
+width:16px;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-featured-scroll-area::-webkit-scrollbar-track {
+background:#fff;
+border-radius:2px;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-featured-scroll-area::-webkit-scrollbar-thumb {
+background:#747676;
+border-radius:8px;
+border:6px solid #fff;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-featured-scroll-area::-webkit-scrollbar-thumb:hover{
+background:#555;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li {
+margin: 0 !important;
+padding: 0 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a {
+font-size: 16px !important;
+line-height: 20px !important;
+font-weight: normal;
+padding: 9px 0 12px 0;
+margin: 3px 0;
+width: 278px;
+display: block;
+position: relative;
+color: #000 !important;
+border-bottom: 1px solid #d8dada !important;
+letter-spacing: .5px;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping.gnav20-four-column .gnav20-sub-menu ul.gnav20-submenu-column li>a {
+width: auto;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a.gnav20-haschild:after {
+position: absolute;
+content: "";
+height: 9px;
+width: 9px;
+border-left: 1px solid #000;
+border-top: 1px solid #000;
+-ms-transform: rotate(135deg);
+-webkit-transform: rotate(135deg);
+transform: rotate(135deg);
+right: 10px;
+margin-top: 5px;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a.gnav20-open, .gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a:hover, .gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a:active, .gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a:focus {
+font-weight: bold;
+color: #e00 !important;
+letter-spacing: normal;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a.gnav20-open.gnav20-haschild:after, .gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a:hover.gnav20-haschild:after, .gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a:active.gnav20-haschild:after, .gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-sub-menu ul.gnav20-submenu-column li>a:focus.gnav20-haschild:after {
+border-left: 2px solid #e00;
+border-top: 2px solid #e00;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-content-wrapper .gnav20-L2-content-wrapper {
+position: absolute;
+top: 24px;
+left: 342px;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-content-wrapper .gnav20-L2-content-wrapper ul.gnav20-submenu-column.gnav20-L3 {
+position: absolute;
+top: 37px;
+left: 342px;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card .gnav20-featured-card-top-label.gnav20-submenu-column.gnav20-L3 {
+position: absolute;
+top: 0;
+left: 342px;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping .gnav20-content-wrapper {
+display: flex;
+justify-content: flex-start;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping .gnav20-content-wrapper>ul.gnav20-submenu-column {
+width: 278px;
+margin-right: 64px !important;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping.gnav20-four-column .gnav20-content-wrapper>ul.gnav20-submenu-column {
+width: calc(25% - 40px);
+margin: 0 20px !important;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping:not(.gnav20-four-column) .gnav20-content-wrapper>ul.gnav20-submenu-column:last-child {
+margin-right: 0 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping .gnav20-sub-menu ul.gnav20-submenu-column.gnav20-L1>li>a {
+font-size: 20px !important;
+line-height: 20px !important;
+font-weight: bold;
+padding: 13px 0 16px 0;
+letter-spacing: normal;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping .gnav20-sub-menu ul.gnav20-submenu-column a.gnav20-haschild:after {
+display: none;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping .gnav20-content-wrapper .gnav20-L2-content-wrapper {
+position: relative;
+top: 0;
+left: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card.gnav20-featured-grouping .gnav20-sub-menu ul.gnav20-submenu-column li.gnav20-margin-top {
+margin-top: 36px !important;
+}
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-five-col,
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-four-col,
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-three-col,
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-two-col,
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-one-col {
+display: flex;
+}
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-five-col>.gnav20-submenu-column,.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-four-col>.gnav20-submenu-column,.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-three-col>.gnav20-submenu-column,.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-two-col>.gnav20-submenu-column,.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-one-col>.gnav20-submenu-column {
+width: 25%
+}
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-five-col>.gnav20-submenu-column {
+width: 20%
+}
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-two-col>.gnav20-submenu-column:nth-child(1),.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-one-col>.gnav20-submenu-column:nth-child(1) {
+margin-left: 50%
+}
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-three-col>.gnav20-submenu-column:nth-child(1) {
+margin-left: 25%
+}
+.gnav20 li.gnav20-bond-label:nth-child(1) {
+margin-top: 0
+}
+.gnav20 .gnav20-desktop .gnav20-sub-menu>.gnav20-content-wrapper.gnav20-grouping-active {
+opacity: 1;
+margin-top: 24px !important;
+margin-bottom: 32px !important;
+transition: all .1s;
+transition-delay: .1s;
+}
+.gnav20 .gnav20-desktop .gnav20-mega-drawer .gnav20-sub-header-menu.gnav20-sub-menu,
+.gnav20 .gnav20-desktop .gnav20-grouping .gnav20-sub-header-menu.gnav20-sub-menu {
+background: linear-gradient(to bottom, transparent 30px, #fff 10px);
+border-bottom: 1px solid #d8dada;
+}
+.gnav20 .gnav20-desktop .gnav20-sub-menu ul.gnav20-submenu-column.gnav20-L1>li {
+margin-left: 20px;
+}
+.gnav20 ul.gnav20-submenu-column li {
+padding-top: 14px;
+}
+.gnav20 ul.gnav20-submenu-column li a {
+line-height: 22px;
+}
+.gnav20 ul.gnav20-submenu-column li a:hover {
+color: #e00 !important;
+}
+.gnav20 li.gnav20-margin-top {
+margin-top: 18px;
+}
+.gnav20 .gnav20-desktop .gnav20-bold-non-link>a {
+pointer-events: none;
+font-weight: bold;
+}
+.gnav20 .gnav20-desktop .gnav20-bold-non-link strong,
+.gnav20 .gnav20-desktop .gnav20-bold-link>a {
+font-weight: bold;
+}
+.gnav20 .gnav20-desktop #gnav20-closex3, .gnav20 .gnav20-desktop .gnav20-hide-on-desktop, .gnav20 .gnav20-desktop .gnav20-goback {
+display: none !important;
+}
+.gnav20 .gnav20-desktop .gnav20-row-one, .gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation, .gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility {
+opacity: 0;
+}
+.gnav20 .gnav20-desktop .opacityOne, .gnav20 .gnav20-mobile .opacityOne {
+opacity: 1 !important;
+transition: opacity .5s;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility {
+float: right;
+width: auto;
+margin-top: -66px;
+margin-right: -20px;
+padding: 0 8px 0 0;
+display: flex;
+justify-content: flex-end;
+position: relative;
+}
+.gnav20 #bizSearchClose,
+.gnav20 .gnav20-account-box .gnav20-close-account-utility,
+.gnav20 .gnav20-search-para .gnav20-close-icon,
+.gnav20 .gnav20-mobile-menu .gnav20-closex,
+.gnav20 .gnav20-unified-cart .gnav20-closex,
+.gnav20 .gnav20-nav-utility .gnav20-nav-close {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxzdHlsZT4uc3Qxe2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9PC9zdHlsZT48cmVjdCBmaWxsPSJub25lIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz48bGluZSBjbGFzcz0ic3QxIiB4MT0iMiIgeTE9IjIiIHgyPSIyMiIgeTI9IjIyIi8+PGxpbmUgY2xhc3M9InN0MSIgeDE9IjIiIHkxPSIyMiIgeDI9IjIyIiB5Mj0iMiIvPjwvc3ZnPg==) !important;
+}
+.gnav20 .gnav20-desktop .gnav20-utility .gnav20-utility-wrapper {
+margin: 0 !important;
+width: auto !important;
+white-space: nowrap;
+}
+.gnav20 .gnav20-utility .gnav20-notification .gnav20-notification-icon {
+background: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0LjIwODcgMTEuMDc1VjUuODc1QzE0LjIwODcgNC40OTM2NiAxMy42NTk5IDMuMTY4OSAxMi42ODMyIDIuMTkyMTVDMTEuNzA2NCAxLjIxNTQgMTAuMzgxNyAwLjY2NjY2NCA5LjAwMDMzIDAuNjY2NjY0QzcuNjE4OTkgMC42NjY2NjQgNi4yOTQyMyAxLjIxNTQgNS4zMTc0OCAyLjE5MjE1QzQuMzQwNzMgMy4xNjg5IDMuNzkxOTkgNC40OTM2NiAzLjc5MTk5IDUuODc1VjExLjA3NUwwLjY2Njk5MiAxMy4xNjY3VjE0LjIwODNIMTcuMzMzN1YxMy4xNjY3TDE0LjIwODcgMTEuMDc1Wk0xNC4yMDg3IDEzLjE2NjdIMi41NDAxNEw0LjM3MTYyIDExLjk0MDdMNC44MzM2NiAxMS42MzE1VjUuODc1QzQuODMzNjYgNC43Njk5MyA1LjI3MjY1IDMuNzEwMTIgNi4wNTQwNSAyLjkyODcyQzYuODM1NDUgMi4xNDczMiA3Ljg5NTI2IDEuNzA4MzMgOS4wMDAzMyAxLjcwODMzQzEwLjEwNTQgMS43MDgzMyAxMS4xNjUyIDIuMTQ3MzIgMTEuOTQ2NiAyLjkyODcyQzEyLjcyOCAzLjcxMDEyIDEzLjE2NyA0Ljc2OTkzIDEzLjE2NyA1Ljg3NVYxMS42MzE1TDEzLjYyOSAxMS45NDA3TDE1LjQ2MDUgMTMuMTY2N0gxNC4yMDg3Wk02LjkxNjk5IDE1LjI1SDExLjA4MzdDMTEuMDgzNyAxNS44MDI1IDEwLjg2NDIgMTYuMzMyNCAxMC40NzM1IDE2LjcyMzFDMTAuMDgyOCAxNy4xMTM4IDkuNTUyODYgMTcuMzMzMyA5LjAwMDMzIDE3LjMzMzNDOC40NDc3OSAxNy4zMzMzIDcuOTE3ODkgMTcuMTEzOCA3LjUyNzE5IDE2LjcyMzFDNy4xMzY0OSAxNi4zMzI0IDYuOTE2OTkgMTUuODAyNSA2LjkxNjk5IDE1LjI1WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+) no-repeat center / 18px !important;
+position: relative;
+min-width: 44px;
+height: 44px;
+display: block;
+background-position: 12px 12px !important;
+background-size: 20px 20px !important;
+background-repeat: no-repeat !important;
+}
+.gnav20 .gnav20-utility .gnav20-notification .gnav20-notification-icon:hover:after {
+content: " ";
+position: absolute;
+top: 0;
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMXB4IiBoZWlnaHQ9IjIxcHgiIHZpZXdCb3g9IjAgMCAyMS42IDIxLjYiPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik0xNi40MjUsMTMuMDQxVjcuNDI1YTUuNjI1LDUuNjI1LDAsMCwwLTExLjI1LDB2NS42MTZMMS44LDE1LjN2MS4xMjVoMThWMTUuM1ptMCwyLjI1OUgzLjgyM2wxLjk3OC0xLjMyNC40OTktLjMzNFY3LjQyNWE0LjUsNC41LDAsMCwxLDksMHY2LjIxN2wuNDk5LjMzNEwxNy43NzcsMTUuM1pNOC41NSwxNy41NWg0LjVhMi4yNSwyLjI1LDAsMCwxLTQuNSwwWiIvPjwvc3ZnPg==) !important;
+background-position: 12px 12px !important;
+background-size: 20px 20px !important;
+background-repeat: no-repeat !important;
+width: 44px;
+height: 44px;
+}
+.gnav20 .gnav20-utility .gnav20-notification .gnav20-notification-icon .gnav20-notification-bubble {
+display: inline-block;
+height: 11px;
+width: 11px;
+background: #e00 !important;
+border-radius: 50%;
+position: absolute;
+top: 10px;
+right: 10px;
+color: #e00 !important;
+font-size: 0 !important;
+text-align: center;
+border: #fff solid 1.5px;
+z-index: 1;
+}
+.gnav20 .gnav20-desktop .gnav20-notification-overlay {
+min-height: 100px;
+width: 278px;
+position: absolute;
+z-index: 4500;
+top: 120px;
+right: 0;
+background-color: #fff;
+overflow-x: hidden;
+transition: width 2s;
+border: 1px solid #d8dada;
+}
+.gnav20 .gnav20-notification-overlay .gnav20-closex {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxzdHlsZT4uc3Qxe2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9PC9zdHlsZT48cmVjdCBmaWxsPSJub25lIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz48bGluZSBjbGFzcz0ic3QxIiB4MT0iMiIgeTE9IjIiIHgyPSIyMiIgeTI9IjIyIi8+PGxpbmUgY2xhc3M9InN0MSIgeDE9IjIiIHkxPSIyMiIgeDI9IjIyIiB5Mj0iMiIvPjwvc3ZnPg==) !important;
+top: 13px;
+right: 5px;
+position: absolute;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility .gnav20-utility-wrapper .gnav20-account-box {
+padding: 0 12px;
+margin: 0;
+}
+.gnav20 .gnav20-utility .gnav20-account-box .gnav20-sign-in:not(.gnav20-account-icon-only) {
+margin: 14px 0 0;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility .gnav20-utility-wrapper .gnav20-account-box .gnav20-sign-in span {
+font-size: 16px !important;
+font-weight: bold !important;
+line-height: 16px !important;
+white-space: nowrap;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility .gnav20-utility-wrapper .gnav20-account-box .gnav20-account-link {
+font-size: 16px !important;
+font-weight: bold;
+margin: 14px 0 4px 0;
+display: block;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility .gnav20-utility-wrapper .gnav20-account-box .gnav20-account-link:focus {
+outline-offset: 4px !important;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility .gnav20-utility-wrapper .gnav20-account-box .gnav20-account-link:hover {
+border-bottom: 2px solid #000;
+}
+.gnav20 .gnav20-desktop .gnav20-sign-in:not(.gnav20-account-icon-only) span span:hover {
+border-bottom: 2px solid #000;
+padding: 0 0 2px 0;
+}
+.gnav20 .gnav20-desktop .gnav20-dropdown-menu, .gnav20 .gnav20-desktop .gnav20-unified-cart {
+border: 1px solid #d8dada;
+position: absolute;
+z-index: 4512;
+top: 66px;
+padding-bottom: 12px;
+right: 0;
+min-width: 278px;
+background: #fff;
+}
+.gnav20 .gnav20-account-box .gnav20-close-account-utility, .gnav20 .gnav20-unified-cart .gnav20-closex {
+position: absolute;
+text-indent: -333px;
+right: 5px !important;
+top: 13px !important;
+overflow: hidden;
+display: block;
+}
+.gnav20 .gnav20-signin-content-title {
+font-size: 20px;
+font-weight: bold;
+margin: 0;
+padding: 24px 40px 12px 16px;
+background: #fff;
+}
+.gnav20 .gnav20-signin-content-title:empty {
+padding: 18px 0 0;
+}
+.gnav20 .gnav20-search-para .gnav20-mobile-search-icon,
+.gnav20 .gnav20-mobile-menu .gnav20-closex,
+.gnav20 .gnav20-nav-utility button,
+.gnav20 .gnav20-utility .gnav20-account-icon-only,
+.gnav20 .gnav20-utility .gnav20-account-icon,
+.gnav20 .gnav20-utility #gnav20-nav-toggle,
+.gnav20 .gnav20-utility .gnav20-wishlist a,
+.gnav20 .gnav20-utility .gnav20-utility-wrapper button:not(.gnav20-back-to-menu):not(.gnav20-sign-in) {
+min-width: 44px;
+height: 44px;
+background-position: 12px 12px !important;
+background-size: 20px 20px !important;
+background-repeat: no-repeat !important;
+}
+.gnav20 .gnav20-utility .gnav20-account-icon-only,
+.gnav20 .gnav20-utility .gnav20-account-icon {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxyZWN0IGZpbGw9Im5vbmUiIGNsYXNzPSJzdDAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIvPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik0xMCwxYy01LDAtOSw0LTksOXM0LDksOSw5czktNCw5LTlTMTUsMSwxMCwxeiBNMTAsMi4yYzQuMywwLDcuOSwzLjUsNy45LDcuOWMwLDItMC43LDMuNy0xLjksNS4xYy0xLjUtMS44LTMuNi0yLjktNi0yLjkgYy0yLjMsMC00LjUsMS4xLTYsMi45Yy0xLjEtMS40LTEuOS0zLjItMS45LTUuMUMyLjEsNS43LDUuNywyLjIsMTAsMi4yeiBNNC44LDE1LjljMS4yLTEuNiwzLjEtMi41LDUuMi0yLjVzMy45LDAuOSw1LjIsMi41IGMtMS40LDEuMi0zLjIsMi01LjIsMlM2LjIsMTcuMSw0LjgsMTUuOXoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMTAsMTEuMWMxLjksMCwzLjQtMS41LDMuNC0zLjRTMTEuOSw0LjMsMTAsNC4zUzYuNiw1LjgsNi42LDcuOFM4LjIsMTEuMSwxMCwxMS4xeiBNMTAsNS42YzEuMiwwLDIuMiwxLDIuMiwyLjIgcy0xLDIuMi0yLjIsMi4ycy0yLjItMS0yLjItMi4yUzguOCw1LjYsMTAsNS42eiIvPjwvc3ZnPg==) !important;
+text-indent: -333px;
+overflow: hidden;
+}
+.gnav20 .gnav20-utility .gnav20-utility-wrapper button.gnav20-search-icon,
+.gnav20 .gnav20-sub-menu .gnav20-nav-utility button.gnav20-nav-search-icon {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IGZpbGw9Im5vbmUiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIvPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xOC45LDE4LjFsLTYtNmMxLTEuMiwxLjYtMi44LDEuNi00LjNjMC0zLjctMy02LjgtNi44LTYuN1MxLDQuMSwxLDcuOHMzLDYuOCw2LjgsNi43YzEuNiwwLDMuMS0wLjYsNC40LTEuNiBsNiw2TDE4LjksMTguMXogTTcuOCwxMy40Yy0zLjEsMC01LjYtMi41LTUuNi01LjZzMi41LTUuNiw1LjYtNS42YzMuMSwwLDUuNiwyLjUsNS42LDUuNmMwLDAsMCwwLDAsMEMxMy40LDEwLjksMTAuOSwxMy40LDcuOCwxMy40IEM3LjgsMTMuNCw3LjgsMTMuNCw3LjgsMTMuNHoiLz48L3N2Zz4=) !important;
+}
+.gnav20 .gnav20-utility .gnav20-utility-wrapper button.gnav20-search-icon:hover,
+.gnav20 .gnav20-sub-menu .gnav20-nav-utility button.gnav20-nav-search-icon:hover {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IGZpbGw9Im5vbmUiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIvPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMy41LDEyLjFjMC45LTEuMiwxLjUtMi44LDEuNC00LjNjMC00LTMuMi03LjItNy4yLTcuMmMwLDAsMCwwLDAsMGMtNCwwLTcuMiwzLjMtNy4yLDcuMiBjMCw0LDMuMiw3LjIsNy4yLDcuMmMwLDAsMCwwLDAsMGMxLjYsMCwzLjEtMC41LDQuMy0xLjVsNiw2bDEuNC0xLjVMMTMuNSwxMi4xeiBNMTMsNy44YzAsMi45LTIuMyw1LjItNS4yLDUuMmgwIGMtMi45LDAtNS4yLTIuMy01LjItNS4yYzAtMi45LDIuMy01LjIsNS4yLTUuMkMxMC43LDIuNiwxMyw0LjksMTMsNy44eiIvPjwvc3ZnPg==) !important;
+text-shadow: 1px 0 0 #000;
+}
+.gnav20 .gnav20-desktop .gnav20-utility .gnav20-utility-wrapper button.gnav20-search-icon,
+.gnav20 .gnav20-desktop .gnav20-sub-menu .gnav20-nav-utility button.gnav20-nav-search-icon {
+font-size: 15px !important;
+border-radius: 30px !important;
+border: 1px solid #a7a7a7;
+background-color: #fff !important;
+padding: 0 43px 0 18px !important;
+background-position: top 8px right 14px !important;
+height: 35px !important;
+margin: 4px 12px !important;
+width: fit-content !important;
+text-indent: 0 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-utility .gnav20-utility-wrapper button.gnav20-search-icon:after,
+.gnav20 .gnav20-desktop .gnav20-sub-menu .gnav20-nav-utility button.gnav20-nav-search-icon:after {
+content: attr(data-placeholder-text) !important;
+}
+.gnav20 .gnav20-utility button.gnav20-cart {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMS42IDIxLjYiPjxwYXRoIGQ9Ik0xOS42Mzg4Nyw0LjU1MDdINS43NDc3NUw1LjQwMTA3LDIuODU4MzEsMi4zMjQ5LDEuNzk5NzIsMS45NjExMywyLjg1ODA3bDIuNDcyMTcuODUwNTlMNi45MTcxOSwxNS44NDI4MWEyLjEwNTc0LDIuMTA1NzQsMCwxLDAsMy4wMjU4OCwyLjQzODM2aDQuNDE0MDZhMi4xMTIsMi4xMTIsMCwxLDAsMC0xLjE4Njg5SDkuOTQzMDdhMi4xMDQsMi4xMDQsMCwwLDAtMS45MzctMS41MTE4NWwtLjM4Mzc4LTEuODc1MjQsMTEuMDg2OTEtMS4zMjkzNVptLTMuMjY0NjUsMTIuMjEzYS45MjQuOTI0LDAsMSwxLS45MjQzOC45MjRBLjkyNC45MjQsMCwwLDEsMTYuMzc0MjIsMTYuNzYzNzFabS04LjQ0ODYxLDBINy45MjZhLjkyNDE0LjkyNDE0LDAsMSwxLS4wMDAzNywwWm05Ljc3NTc2LTUuMzkyTDcuMzk3MTEsMTIuNjA3MjIsNS45NzY3Niw1LjY2OTU5aDEyLjQwMjRaIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9Ii4xIiBmaWxsPSIjMDAwMDAwIi8+PC9zdmc+) !important;
+position: relative;
+}
+.gnav20 .gnav20-utility button.gnav20-cart:hover {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMS42IDIxLjYiPjxwYXRoIGQ9Ik0xOS42Mzg4Nyw0LjU1MDdINS43NDc3NUw1LjQwMTA3LDIuODU4MzEsMi4zMjQ5LDEuNzk5NzIsMS45NjExMywyLjg1ODA3bDIuNDcyMTcuODUwNTlMNi45MTcxOSwxNS44NDI4MWEyLjEwNTc0LDIuMTA1NzQsMCwxLDAsMy4wMjU4OCwyLjQzODM2aDQuNDE0MDZhMi4xMTIsMi4xMTIsMCwxLDAsMC0xLjE4Njg5SDkuOTQzMDdhMi4xMDQsMi4xMDQsMCwwLDAtMS45MzctMS41MTE4NWwtLjM4Mzc4LTEuODc1MjQsMTEuMDg2OTEtMS4zMjkzNVptLTMuMjY0NjUsMTIuMjEzYS45MjQuOTI0LDAsMSwxLS45MjQzOC45MjRBLjkyNC45MjQsMCwwLDEsMTYuMzc0MjIsMTYuNzYzNzFabS04LjQ0ODYxLDBINy45MjZhLjkyNDE0LjkyNDE0LDAsMSwxLS4wMDAzNywwWm05Ljc3NTc2LTUuMzkyTDcuMzk3MTEsMTIuNjA3MjIsNS45NzY3Niw1LjY2OTU5aDEyLjQwMjRaIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9IiMwMDAwMDAiLz48L3N2Zz4=) !important;
+}
+.gnav20 .gnav20-cart .gnav20-cart-bubble, .gnav20 .gnav20-unifiedcart .gnav20-unifiedcart-bubble {
+padding: 0 3px;
+height: 10.5px;
+min-width: 10.5px;
+width: auto;
+background: #e00 !important;
+border-radius: 8px!important;
+position: absolute;
+top: 11px;
+left: 23px;
+right: auto;
+display: none;
+font-size: 0 !important;
+line-height: 13px;
+text-align: center;
+border: #fff solid 1.5px;
+}
+.gnav20 .gnav20-cart .gnav20-cart-bubble{
+top: -18px;
+z-index: 1;
+}
+.gnav20 .gnav20-cart .gnav20-bubble-position{
+position: relative;
+}
+.gnav20 .gnav20-cart-content-title {
+font-size: 20px;
+font-weight: bold;
+line-height: 20px;
+margin: 0;
+padding: 24px 40px 12px 20px;
+}
+.gnav20 .gnav20-cart-toast {
+padding: 0 8px;
+}
+.gnav20 .gnav20-cart-toast-item {
+padding: 8px 12px;
+margin-bottom: 8px;
+display: flex !important;
+gap: 10px;
+background-color: rgb(246, 246, 246);
+align-items: center;
+}
+.gnav20 .gnav20-cart-toast-item h2 {
+font-size: 16px !important;
+text-wrap: auto;
+}
+.gnav20 .gnav20-desktop .gnav20-utility li {
+padding: 12px 0;
+letter-spacing: .5px;
+}
+.gnav20 .gnav20-desktop li.gnav20-dropdown-list {
+padding: 0 16px;
+}
+.gnav20 .gnav20-not-featured .gnav20-desktop .gnav20-dropdown li.gnav20-dropdown-list a {
+padding: 9px 0;
+display: block;
+}
+.gnav20 .gnav20-desktop .gnav20-dropdown li.gnav20-dropdown-list a {
+display: block;
+padding: 12px 0;
+width: 90%;
+}
+.gnav20 .gnav20-desktop .gnav20-content-lists {
+padding: 0 20px;
+}
+.gnav20 .gnav20-desktop .gnav20-utility li a:hover,
+.gnav20 .gnav20-desktop .gnav20-utility li a:focus {
+color: #e00 !important;
+text-shadow: 1px 0 0 #e00;
+}
+.gnav20 .gnav20-wishlist .gnav20-utility-wrapper {
+position: relative;
+}
+.gnav20 .gnav20-utility .gnav20-wishlist a {
+display: inline-block;
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IGZpbGw9Im5vbmUiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIvPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMy45LDMuMmMyLjIsMCw0LDEuOCw0LDRjLTAuMSwxLjItMC42LDIuMi0xLjUsM0wxMCwxNi4zTDMuMywxMEMyLjUsOS4zLDIuMSw4LjMsMi4xLDcuMmMwLTIuMiwxLjgtNCw0LTQJQzcuNywzLjQsOSw0LjMsOS45LDUuNkwxMCw1LjdsMC4xLTAuMUMxMS4xLDQuMywxMi43LDMuMiwxMy45LDMuMiBNMTMuOSwyLjFDMTIuNCwyLjEsMTEsMi44LDEwLDRDOSwyLjgsNy42LDIuMSw2LjEsMi4xIEMzLjMsMi4xLDEsNC40LDEsNy4yYzAsMS40LDAuNSwyLjcsMS41LDMuNmw3LjUsNy4xbDcuMi02LjljMS4xLTEsMS43LTIuMywxLjgtMy44QzE5LDQuNCwxNi43LDIuMSwxMy45LDIuMXoiLz48L3N2Zz4=) !important;
+}
+.gnav20 .gnav20-utility .gnav20-wishlist a:hover {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IGZpbGw9Im5vbmUiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIvPjxwYXRoIGZpbGw9IiMwMDAwMDAiIGQ9Ik0xMy45LDEuNmMtMS40LDAtMi44LDAuNi0zLjksMS43QzguOSwyLjMsNy41LDEuNiw2LjEsMS42QzMsMS42LDAuNSw0LjEsMC41LDcuMmMwLDEuNiwwLjYsMywxLjYsMy45bDcuOCw3LjQgbDcuNS03LjJjMS4yLTEuMSwxLjgtMi41LDEuOS00LjFDMTkuNSw0LjEsMTcsMS42LDEzLjksMS42eiBNMTcuNSw3LjJjLTAuMSwxLjEtMC41LDItMS40LDIuN0wxMCwxNS43bC02LjQtNmMtMC43LTAuNi0xLTEuNS0xLTIuNSBjMC0yLDEuNi0zLjUsMy41LTMuNmMxLjQsMC4yLDIuNiwwLjksMy41LDIuM0wxMCw2LjNsMC41LTAuNWMxLTEuMywyLjUtMi4yLDMuNC0yLjJDMTUuOSwzLjcsMTcuNSw1LjIsMTcuNSw3LjJ6Ii8+PC9zdmc+) !important;
+}
+.gnav20 .gnav20-wishlist .gnav20-wish-list-bubble {
+display: inline-block;
+height: 10.5px;
+width: 10.5px;
+background: #e00 !important;
+border-radius: 50%;
+position: absolute;
+top: 11px;
+right: 10px;
+color: #000 !important;
+font-size: 0 !important;
+text-align: center;
+border: #fff solid 1.5px;
+}
+.gnav20 .gnav20-promo-ribbon-wrapper {
+width: 100%;
+overflow: hidden;
+position: relative;
+background-color: #F5FF1E !important;
+border-top: solid 1px #d8dada;
+text-align: center;
+}
+.gnav20 .gnav20-promo {
+transform-style: preserve-3d;
+max-width: 1272px;
+margin: auto;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-promotext {
+display: none;
+position: relative;
+overflow: hidden;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-promotext.opacityOne {
+display: grid;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-slide-arrow {
+position: absolute;
+top: 50%;
+margin-top: -15px;
+height: 30px;
+width: 30px;
+z-index: 4500;
+background: no-repeat center center / 20px 20px !important;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-slide-arrow.gnav20-slide-arrow-prev {
+left: 20px;
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMS42IDIxLjYiPgo8cG9seWdvbiBwb2ludHM9IjE0Ljg5IDE5LjggNS44OSAxMC43OTkgMTQuODkgMS44IDE1LjcxIDIuNjE5IDcuNTMgMTAuNzk5IDE1LjcxIDE4Ljk4MSAxNC44OSAxOS44Ij48L3BvbHlnb24+Cjwvc3ZnPg==) !important;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-slide-arrow.gnav20-slide-arrow-next {
+right: 20px;
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMS42IDIxLjYiPgo8cG9seWdvbiBwb2ludHM9IjYuNzEgMTkuOCA1Ljg5IDE4Ljk4MSAxNC4wNyAxMC43OTkgNS44OSAyLjYxOSA2LjcxIDEuOCAxNS43MSAxMC43OTkgNi43MSAxOS44Ij48L3BvbHlnb24+Cjwvc3ZnPg==) !important;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-slide-arrow.gnav20-slide-arrow-prev[style*=block] + .gnav20-promotext {
+margin: 0 58px;
+}
+.gnav20 .gnav20-promo-ribbon {
+justify-content: center;
+font-family: 'BrandFont-Text',sans-serif;
+padding: 14px 0;
+max-width: 1272px;
+margin: 0 auto;
+font-weight: bold;
+font-size: 12px;
+text-align: left;
+display: flex;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo-ribbon {
+position: relative;
+width: 100%;
+visibility: hidden;
+margin: auto;
+float: left;
+grid-row-start: 1;
+grid-column-start: 1;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo-ribbon.gnav20-active-promo {
+visibility: visible;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo-ribbon.gnav20-active-promo-right {
+visibility: visible;
+animation: gnav20-right 1s;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo-ribbon.gnav20-active-promo-left {
+visibility: visible;
+animation: gnav20-left 1s;
+}
+.gnav20 .gnav20-promo-ribbon .gnav20-promo-text {
+text-align: center;
+position: relative;
+}
+.gnav20 .gnav20-promo-ribbon .gnav20-promo-text span {
+line-height: 16px;
+}
+.gnav20 .gnav20-promo-ribbon a, .gnav20 .gnav20-promo-ribbon a:visited, .gnav20 .gnav20-promo-ribbon a:hover, .gnav20 .gnav20-promo-ribbon a:focus {
+background-color: #F5FF1E !important;
+font-size: 12px !important;
+white-space: nowrap;
+border-bottom: 1px solid #000;
+}
+.gnav20 .gnav20-promo-ribbon a.gnav20-promo-link {
+border-bottom: none;
+text-wrap: auto;
+}
+.gnav20 .gnav20-promo-ribbon a.gnav20-promo-slide-link {
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+z-index: 1;
+background: transparent !important;
+border-bottom: none !important;
+border: none;
+}
+.gnav20 .gnav20-promo-ribbon .gnav20-promo-icon {
+display: inline-block;
+position: relative;
+z-index: 2;
+}
+.gnav20 .gnav20-promo-ribbon u {
+border-bottom: 1px solid #000;
+text-wrap: nowrap;
+}
+.gnav20 .gnav20-promo-ribbon b {
+font-weight: bolder;
+}
+.gnav20 .gnav20-promo-ribbon .gnav20-promo-timer {
+font-weight: bold;
+white-space: nowrap;
+margin-left: 10px;
+display: inline-block;
+}
+.gnav20 .gnav20-modal{display:none;position:fixed;z-index:11000;padding-top:10vh;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8)}
+.gnav20 .gnav20-modal-content{background-color:#fff;margin:auto;padding:48px;border-radius:8px !important;max-width:560px;width:90vw;position:relative;max-height:80vh;overflow:auto}
+.gnav20 .gnav20-modal-content .gnav20-modal-cta{gap:14px;margin-top:32px;display:flex}
+.gnav20 .gnav20-modal-content .gnav20-modal-cta span{flex-basis:50%}
+.gnav20 .gnav20-modal-content .gnav20-modal-cta span a{padding:12px 24px;border-radius:24px;text-align:center;display:block;font-style:normal;font-weight:700;font-size:16px;line-height:20px;letter-spacing:.5px;margin-bottom:14px}
+.gnav20 .gnav20-modal-content .gnav20-modal-cta span a:empty{display:none}
+.gnav20 .gnav20-modal-content .gnav20-modal-cta .gnav20-modal-primary-cta a{background:#000;color:#fff !important}
+.gnav20 .gnav20-modal-content .gnav20-modal-cta .gnav20-modal-secondary-cta a{background:#fff;border:1px solid #000;color:#000 !important}
+.gnav20 .gnav20-modal-content *{color:#000 !important}
+.gnav20 .gnav20-modal .gnav20-close{color:#aaa;float:right;font-size:28px !important;font-weight:bold}
+.gnav20 .gnav20-modal-sub-heading{font-style:normal;font-size:16px;font-weight:400;line-height:20px;letter-spacing:.5px}
+.gnav20 .gnav20-modal-sub-heading strong{font-weight:700}
+.gnav20 .gnav20-modal-heading{font-weight:700;font-size:32px;line-height:36px;margin:0 0 32px}
+.gnav20 .gnav20-promo-close-icon::before,.gnav20 .gnav20-promo-close-icon::after{content:"";display:block;position:absolute;width:100%;height:1px;background:#000;top:50%;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.gnav20 .gnav20-promo-close-icon::after{-webkit-transform:rotate(-135deg);transform:rotate(-135deg)}
+.gnav20 .gnav20-modal .close:hover,.gnav20 .gnav20-modal .close:focus{outline-color:#000;text-decoration:none;cursor:pointer}
+.gnav20 .gnav20-modal .gnav20-promo-close-icon{width:24px;height:24px;display:block;position:absolute;cursor:pointer;right:12px;top:12px}
+.gnav20 .gnav20-modal-content button:focus,.gnav20 .gnav20-modal-content a:focus{outline-color:#000 !important}
+.gnav20 .gnav20-new-search-style .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-navigation-list {
+margin: 0 auto 0 145px;
+justify-content: left;
+}
+.gnav20 .gnav20-new-search-style .gnav20-desktop .gnav20-utility .gnav20-utility-wrapper button.gnav20-search-icon,
+.gnav20 .gnav20-new-search-style .gnav20-desktop .gnav20-sub-menu .gnav20-nav-utility button.gnav20-nav-search-icon {
+background-color: #fff !important;
+background-position: top 14px right 14px !important;
+height: 48px !important;
+margin: 0 10px !important;
+width: fit-content !important;
+}
+.gnav20 #gnav20-header-end {
+height: 0px;
+width: 0px;
+position: absolute;
+overflow: hidden;
+}
+.gnav20 .gnav20-footer-container {
+width: 100%;
+background-color: #fff;
+border-top: 1px solid #d8dada;
+}
+.gnav20 .gnav20-footer-container .gnav20-main-container {
+max-width: 1272px;
+height: auto;
+width: 100%;
+margin: 0 auto;
+padding-top: 24px;
+}
+.gnav20 .gnav20-footer-wrapper {
+display: flex;
+width: 100%;
+}
+.gnav20 .gnav20-footer-wrapper.gnav20-four .gnav20-col-wrapper {
+width: 25%;
+}
+.gnav20 .gnav20-footer-wrapper.gnav20-three .gnav20-col-wrapper {
+width: 33%
+}
+.gnav20 .gnav20-footer-wrapper.gnav20-two .gnav20-col-wrapper {
+width: 50%
+}
+.gnav20 .gnav20-footer-container .gnav20-col-wrapper {
+display: block;
+border-right: 1px solid #d8dada
+}
+.gnav20 .gnav20-col-wrapper:last-child {
+border-right: 0
+}
+.gnav20 .gnav20-hero-wrapper {
+margin: 0 10px 64px;
+}
+.gnav20 .gnav20-hero-footer-heading {
+font-weight: bold;
+font-size: 16px;
+letter-spacing: .5px;
+line-height: 20px;
+text-align: left;
+padding: 8px 0 12px;
+border-top: 1px solid #d8dada
+}
+.gnav20 .gnav20-border-content {
+width: 100%
+}
+.gnav20 .gnav20-footer-list {
+list-style: none;
+padding: 0;
+margin: 0
+}
+.gnav20 .gnav20-footer-list>li {
+list-style-type: none;
+background: 0
+}
+.gnav20 .gnav20-footer-list>li>a {
+text-decoration: none;
+font-size: 14px !important;
+letter-spacing: .5px;
+line-height: 20px;
+padding: 12px 0;
+display: block
+}
+.gnav20 .gnav20-quick-task.gnav20-footer {
+border: solid 1px #d8dada;
+padding: 8px 12px;
+margin-top: 12px;
+position: relative;
+}
+.gnav20 .gnav20-language-label.gnav20-footer {
+margin-top: 12px;
+text-decoration: none;
+}
+.gnav20 .gnav20-language-label.gnav20-footer {
+margin-top: 12px;
+text-decoration: none;
+}
+.gnav20 .gnav20-dropdown-quick-task-menu {
+position: absolute;
+width: calc(100% + 2px);
+left: -1px;
+top: 33px;
+z-index: 21;
+}
+.gnav20 .gnav20-dropdown {
+background: #fff;
+padding: 0;
+margin: 0;
+}
+.gnav20 .gnav20-desktop .gnav20-dropdown-menu .gnav20-dropdown {
+padding-bottom: 12px;
+}
+.gnav20 li.gnav20-footer-list {
+border: 1px solid #d8dada;
+border-top: 0;
+}
+.gnav20 li.gnav20-footer-list a {
+display: block;
+padding: 10px;
+text-decoration: none;
+border-left: solid 2px transparent;
+}
+.gnav20 .gnav20-arrow {
+content: " ";
+display: inline-block;
+float: right;
+margin: 4px 4px 0 0;
+width: .5em;
+height: .5em;
+border-top: solid 2px #000;
+border-right: solid 2px #000;
+transform: rotateZ(135deg);
+transform-origin: center center;
+}
+.gnav20 .gnav20-footer-container .gnav20-social-icon li {
+display: inline-block
+}
+.gnav20 .gnav20-footer-container .gnav20-social-icon a {
+display: block;
+color: #000 !important;
+font-size: 19px;
+margin: 12px 18px 0 0;
+width: 20px;
+height: 20px;
+cursor: pointer
+}
+.gnav20 .gnav20-footer-container .gnav20-logo-wrapper {
+padding: 0 !important
+}
+.gnav20 .gnav20-footer-container .gnav20-logo-wrapper a {
+display: block !important;
+}
+.gnav20 .gnav20-footer-container .gnav20-logo-wrapper .gnav20-logoBlackBg {
+background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAwIDExMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+PC9kZWZzPgo8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjgyNTU3OCwgMCwgMCwgMC44MjU1NzgsIC03OS40MjY1NDgsIC03OS40NTE3NDgpIiBzdHlsZT0iIj4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTYwNi43OCwyMjkuMzA2aDI5LjY2MXYtNTQuMTg3YzAtMTIuMzYsNy4yMjUtMjEuMTA3LDE3Ljg3Mi0yMS4xMDdjMTAuMjY3LDAsMTUuNTkxLDcuMjI3LDE1LjU5MSwxNy40OTV2NTcuOCBoMjkuNjYxdi02My41MDNjMC0yMS40ODgtMTIuOTI4LTM2LjY5OS0zMy44NDQtMzYuNjk5Yy0xMy4zMDgsMC0yMi42MjYsNS43MDUtMjkuNjYxLDE2LjE2MmgtMC41NzF2LTEzLjMwOWgtMjguNzFWMjI5LjMwNnogTTU0OC41OTgsMTI5LjI5NWMtMzAuOTkzLDAtNTEuNzE2LDIyLjI0Ni01MS43MTYsNTEuNTI3YzAsMjkuMDkyLDIwLjcyNCw1MS41MjgsNTEuNzE2LDUxLjUyOHM1MS43MTYtMjIuNDM2LDUxLjcxNi01MS41MjggQzYwMC4zMTQsMTUxLjU0LDU3OS41OSwxMjkuMjk1LDU0OC41OTgsMTI5LjI5NXogTTU0OC40MDgsMjEwLjQ4M2MtMTQuMDcyLDAtMjEuNDg1LTExLjc4Ny0yMS40ODUtMjkuNjYxIGMwLTE4LjA2Myw3LjQxMy0yOS42NjIsMjEuNDg1LTI5LjY2MmMxNC4wNjksMCwyMS44NjUsMTEuNTk4LDIxLjg2NSwyOS42NjJDNTcwLjI3MywxOTguNjk2LDU2Mi40NzcsMjEwLjQ4Myw1NDguNDA4LDIxMC40ODN6IE00MTIuNDYsMjI5LjMwNmg4My4yOHYtMjMuMzg1aC00Ny4xNTN2LTAuNTczbDQ1LjA2Mi01MC41NzZ2LTIyLjgxNEg0MTIuNDZ2MjMuMzg1aDQ1LjYzM3YwLjU3MUw0MTIuNDYsMjA2Ljg3VjIyOS4zMDZ6IE0zNzQuNDI5LDIyOS4zMDZoMjkuODUxdi05Ny4zNDhoLTI5Ljg1MVYyMjkuMzA2eiBNMzA1LjIxOSwyMjkuMzA2aDI5LjY2MXYtNDQuNjhjMC0yMC4zNDYsMTIuMTY5LTI5LjI4MywzMC44MDItMjYuODFoMC41NzEgdi0yNS42NjhjLTEuNTIyLTAuNTcxLTMuMjMyLTAuNzYxLTYuMDg0LTAuNzYxYy0xMS41OTgsMC0xOS4zOTQsNS4zMjMtMjYuMDUsMTYuNzMxaC0wLjU3MXYtMTYuMTZoLTI4LjMyOVYyMjkuMzA2eiBNMjUwLjY1MSwyMTAuNjc1Yy0xMy4xMiwwLTIxLjEwNS04LjU1OS0yMi42MjctMjEuNjc1aDcwLjE2YzAuMTktMjAuOTE4LTUuMzI1LTM3LjY1LTE2LjkyMy00OC4xMDcgYy04LjE3NC03LjYwNS0xOS4wMTQtMTEuNzg5LTMyLjcwMy0xMS43ODljLTI5LjI3OSwwLTQ5LjYyNSwyMi4yNDYtNDkuNjI1LDUxLjMzN2MwLDI5LjI4LDE5LjM5NCw1MS43MTYsNTEuNTI3LDUxLjcxNiBjMTIuMTY5LDAsMjEuODY1LTMuMjMyLDI5Ljg1MS04Ljc0N2M4LjU1Ny01Ljg5MSwxNC42NC0xNC40NSwxNi4zNS0yMy4wMDVoLTI4LjUxOSBDMjY1LjI5MSwyMDYuODcsMjU5LjM5NiwyMTAuNjc1LDI1MC42NTEsMjEwLjY3NXogTTI0OS4xMjksMTUwLjM5OWMxMC40NTcsMCwxNy42ODIsNy43OTgsMTguODIzLDE5LjIwNWgtMzkuNzM4IEMyMzAuNDk3LDE1OC4wMDQsMjM2Ljc3LDE1MC4zOTksMjQ5LjEyOSwxNTAuMzk5eiBNMzc0LjQyOSw5Ny4zNWgyOS44NTF2MjYuNDNoLTI5Ljg1MVY5Ny4zNXoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjxnPgo8cmFkaWFsR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBjeD0iLTExMDMuNjk5MyIgY3k9IjI0MjguMDkyMyIgcj0iMzU0LjM2ODciIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMC4wNDk1IC0wLjEzNzEgMC4xNDgzIDAuMDUzNiAtMTQ1LjY0MjggLTY4Ljg2NzcpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6I0Y1RkYxRSI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuMjU3IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIj48L3N0b3A+CjxzdG9wIG9mZnNldD0iMC4yNjU1IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGQTFFIj48L3N0b3A+CjxzdG9wIG9mZnNldD0iMC40MjMiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNUE2MjAiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjU2MjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTYzMjEiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjY3NzkiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTMzMjIiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjc2NTciIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTE1MjMiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjgxNTUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTBBMjMiPjwvc3RvcD4KPC9yYWRpYWxHcmFkaWVudD4KPHBhdGggY2xhc3M9InN0MSIgZD0iTTE2NC4yMDEsMjI4LjA5NWwtMzYuOTA4LTk2LjEzN0g5Ny4zNWwzNi45MDgsOTYuMTM3YzAuMjgsMC43MzMsMC45ODMsMS4yMTMsMS43NjUsMS4yMTNoMjkuOTQzIEMxNjUuMTg0LDIyOS4zMDgsMTY0LjQ4MSwyMjguODI4LDE2NC4yMDEsMjI4LjA5NXoiIHN0eWxlPSJmaWxsOiB1cmwoI1NWR0lEXzFfKTsiPjwvcGF0aD4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEzNy43ODcsMjI4LjA5NWwzNi45MDgtOTYuMTM3aDI5Ljk0M2wtMzYuOTA4LDk2LjEzN2MtMC4yOCwwLjczMy0wLjk4MywxLjIxMy0xLjc2NSwxLjIxM2gtMjkuOTQzIEMxMzYuODA1LDIyOS4zMDgsMTM3LjUwOCwyMjguODI4LDEzNy43ODcsMjI4LjA5NXoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjwvZz4KPC9nPgo8L3N2Zz4=');
+width: 99px;
+height: 25px;
+background-size: 99px 25px
+}
+.gnav20 .gnav20-footer-container .gnav20-logo-wrapper .gnav20-logoBlackBg img {
+display: none
+}
+.gnav20 .gnav20-footer-container .gnav20-logo-wrapper .gnav20-logoFooterVBG {
+display: block;
+background-image: url('data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAwIDE4MyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+PC9kZWZzPgo8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwLjgyMTUzNSwgMCwgMCwgMC44MjE1MzUsIC03OS4wMTgzMDcsIC03OS4wNDE1MzkpIiBzdHlsZT0iIj4KPGc+CjxnPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzI2Ljc3NSwzMTYuMjE4Yy0yLjc5NS0xLjUxMi00Ljk1LTMuODc5LTYuNDYyLTcuMTAyaC0wLjE5N3Y3LjY5NWgtMTQuODk3di03My4zOThoMTUuNDl2MTYuMDggYzAsMi4yMzctMC4wNSw0LjQyNC0wLjE0OSw2LjU2Yy0wLjA5OCwyLjEzOS0wLjIxNSwzLjk5Ni0wLjM0NSw1LjU3NGgwLjI5NWMxLjc3Ny0yLjY5NCwzLjkxNC00LjgzMyw2LjQxNC02LjQxMSBjMi40OTgtMS41NzgsNS41ODgtMi4zNjcsOS4yNzMtMi4zNjdjMy40MiwwLDYuNTEyLDAuNjkxLDkuMjczLDIuMDdjMi43NjMsMS4zODIsNS4xMywzLjMwNSw3LjEwNCw1Ljc3MyBjMS45NzIsMi40NjYsMy41MDIsNS4zOTQsNC41ODYsOC43NzljMS4wODYsMy4zODgsMS42MjksNy4wODgsMS42MjksMTEuMDk4YzAsNC4zNDEtMC41MjYsOC4yMzktMS41NzgsMTEuNjkxIGMtMS4wNTIsMy40NTQtMi41NjQsNi4zODItNC41MzgsOC43ODFjLTEuOTc0LDIuNDAyLTQuMzQxLDQuMjQzLTcuMTAyLDUuNTI0Yy0yLjc2MywxLjI4My01Ljg1NiwxLjkyNC05LjI3NSwxLjkyNCBDMzMyLjc0NSwzMTguNDg3LDMyOS41NywzMTcuNzMyLDMyNi43NzUsMzE2LjIxOHogTTM0MC4yOSwzMDEuODE0YzEuODA5LTIuODI3LDIuNzEzLTYuNjA4LDIuNzEzLTExLjM0NSBjMC00LjczNS0wLjkwNC04LjU2Ni0yLjcxMy0xMS40OTJjLTEuODA5LTIuOTI4LTQuNTU0LTQuMzkyLTguMjM3LTQuMzkyYy0yLjA0LDAtMy43OTksMC40MTItNS4yNzksMS4yMzMgYy0xLjQ4LDAuODIzLTIuNzEzLDEuOTQyLTMuNjk5LDMuMzU1Yy0wLjk4OCwxLjQxNC0xLjcxMSwzLjEwNi0yLjE3MSw1LjA4Yy0wLjQ2MiwxLjk3NC0wLjY5MSw0LjA3OC0wLjY5MSw2LjMxMyBjMCw0LjYwNCwxLjA1Miw4LjMzNywzLjE1NywxMS4xOTlzNS4wMzIsNC4yOTEsOC43ODEsNC4yOTFDMzM1Ljc2OCwzMDYuMDU3LDMzOC40ODEsMzA0LjY0NCwzNDAuMjksMzAxLjgxNHoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zOTguMDUyLDMwOS4zMTJoLTAuMjk3Yy0xLjkwOCwzLjA5Mi00LjExLDUuMzYxLTYuNjA4LDYuODA3Yy0yLjUsMS40NDYtNS41NTgsMi4xNzEtOS4xNzQsMi4xNzEgYy01Ljk4NiwwLTEwLjU1Ni0xLjc1OS0xMy43MTUtNS4yNzdjLTMuMTU2LTMuNTE4LTQuNzM1LTguMTczLTQuNzM1LTEzLjk2di0zNC43MjZoMTUuNDl2MzEuNzY2YzAsMi45NiwwLjcwNCw1LjIyOSwyLjEyLDYuODA3IGMxLjQxNCwxLjU3OCwzLjUwMiwyLjM2Nyw2LjI2NSwyLjM2N2MzLjE1NywwLDUuNjIyLTEuMDUyLDcuNC0zLjE1NmMxLjc3NS0yLjEwNCwyLjY2Mi00LjgwMSwyLjY2Mi04LjA5di0yOS42OTRoMTUuMjkxdjUyLjQ4MyBoLTE0LjY5OFYzMDkuMzEyeiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQzMS45ODcsMzE3LjIwNmMtMy4wMjYtMC44NTUtNS42MDYtMi4wNzItNy43NDMtMy42NTFjLTIuMTM5LTEuNTc4LTMuODE1LTMuNDY4LTUuMDMyLTUuNjczIGMtMS4yMTctMi4yMDMtMS45MjQtNC42Mi0yLjEyLTcuMjUxaDE0LjZjMC40NiwyLjUsMS41OTQsNC40MDgsMy40MDQsNS43MjFjMS44MDcsMS4zMTgsNC4yMjUsMS45NzQsNy4yNTEsMS45NzQgYzIuNzYzLDAsNC44OTktMC41MjYsNi40MTQtMS41NzhjMS41MTItMS4wNTIsMi4yNjktMi41MzIsMi4yNjktNC40NGMwLTEuMTg1LTAuMzY0LTIuMTM2LTEuMDg2LTIuODYxIGMtMC43MjUtMC43MjMtMS43MTEtMS4zMTUtMi45Ni0xLjc3NXMtMi42ODEtMC44MzktNC4yOTEtMS4xMzVjLTEuNjEzLTAuMjk3LTMuMzQtMC42MDgtNS4xNzgtMC45MzggYy0yLjM2Ny0wLjQ2LTQuNjcxLTAuOTg2LTYuOTA1LTEuNTc4Yy0yLjIzNy0wLjU5Mi00LjI0My0xLjQ4LTYuMDE4LTIuNjY1Yy0xLjc3Ny0xLjE4My0zLjIwNy0yLjcyNy00LjI5My00LjYzNiBjLTEuMDg0LTEuOTA1LTEuNjI2LTQuNDA1LTEuNjI2LTcuNDk4YzAtMi42OTQsMC41NzQtNS4wNjIsMS43MjUtNy4xMDJjMS4xNTEtMi4wMzgsMi43MTUtMy43NDksNC42ODctNS4xMyBjMS45NzQtMS4zODIsNC4zMDctMi40MTgsNy4wMDQtMy4xMDZjMi42OTctMC42OTEsNS41OS0xLjAzNiw4LjY4My0xLjAzNmM3LjMwMSwwLDEyLjgyNSwxLjQzLDE2LjU3NCw0LjI5MSBjMy43NDksMi44NjEsNS45ODQsNi41OTQsNi43MDksMTEuMTk2aC0xNC40MDNjLTAuOTg4LTMuNzQ5LTMuOTQ2LTUuNjIyLTguODc5LTUuNjIyYy0yLjM2NywwLTQuMjU5LDAuNDYtNS42NzMsMS4zODIgYy0xLjQxNiwwLjkyMi0yLjEyLDIuMjM1LTIuMTIsMy45NDZjMCwwLjk4NiwwLjMyNywxLjc5MywwLjk4NiwyLjQxOGMwLjY1NiwwLjYyNCwxLjU3OCwxLjEzNSwyLjc2MywxLjUyOCBjMS4xODMsMC4zOTYsMi41NjQsMC43MjUsNC4xNDIsMC45ODZjMS41NzgsMC4yNjUsMy4yNTUsMC41Niw1LjAzMiwwLjg5YzIuMzY3LDAuMzkzLDQuNzM1LDAuOTA0LDcuMTAyLDEuNTI4IGMyLjM2NywwLjYyNyw0LjUwNCwxLjU2Miw2LjQxNCwyLjgxMWMxLjkwNSwxLjI1MSwzLjQ2OCwyLjkxMiw0LjY4NCw0Ljk4MmMxLjIxNywyLjA3MiwxLjgyNSw0Ljc1MywxLjgyNSw4LjA0MiBjMCwyLjgyNy0wLjU5LDUuMzI3LTEuNzc1LDcuNDk4Yy0xLjE4NSwyLjE2OC0yLjgyOSwzLjk4LTQuOTM0LDUuNDI2Yy0yLjEwNCwxLjQ0OC00LjYwNCwyLjUzMi03LjQ5NiwzLjI1NSBjLTIuODk2LDAuNzIzLTYuMDUyLDEuMDg0LTkuNDcyLDEuMDg0QzQzOC40MzMsMzE4LjQ4Nyw0MzUuMDEzLDMxOC4wNTksNDMxLjk4NywzMTcuMjA2eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ4Ni42NDMsMjQzLjQxMnYxMy41MTZoLTE1LjY4NnYtMTMuNTE2SDQ4Ni42NDN6IE00ODYuNTQ0LDI2NC4zMjh2NTIuNDgzaC0xNS40OXYtNTIuNDgzSDQ4Ni41NDR6IiBzdHlsZT0iZmlsbDogcmdiKDIzOCwgMCwgMzApOyI+PC9wYXRoPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTA5LjUyNywyNzIuMzE3YzEuNjQ1LTMuMTU3LDMuODMxLTUuNTI0LDYuNTYyLTcuMTAyYzIuNzI3LTEuNTc4LDUuOTMzLTIuMzY3LDkuNjE4LTIuMzY3IGM1Ljc4NywwLDEwLjI3NSwxLjc1OSwxMy40NjYsNS4yNzdjMy4xOTEsMy41Miw0Ljc4NSw4LjIzOSw0Ljc4NSwxNC4xNTZ2MzQuNTI5aC0xNS4zODl2LTMxLjU3YzAtMi44OTMtMC43NDEtNS4yMTEtMi4yMjEtNi45NTMgYy0xLjQ4LTEuNzQzLTMuNjY3LTIuNjE0LTYuNTYtMi42MTRjLTMuMDI2LDAtNS40NiwxLjA4NC03LjMwMSwzLjI1NXMtMi43NjEsNC45MzQtMi43NjEsOC4yODd2MjkuNTk2aC0xNS40OXYtNTIuNDgzaDE0Ljk5NiB2Ny45OUg1MDkuNTI3eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTU2NC45NywzMTYuMjY4Yy0zLjQyLTEuNDE0LTYuMzMxLTMuMzY5LTguNzMxLTUuODY5Yy0yLjQwMi0yLjUtNC4yNDEtNS40MjYtNS41MjQtOC43ODEgYy0xLjI4My0zLjM1My0xLjkyNC03LjAwNC0xLjkyNC0xMC45NDljMC0zLjk0OCwwLjY1Ni03LjYxMiwxLjk3Mi0xMS4wMDJjMS4zMTUtMy4zODUsMy4xNTktNi4zMjksNS41MjYtOC44MjkgYzIuMzY3LTIuNDk4LDUuMTk1LTQuNDUzLDguNDg0LTUuODY5YzMuMjg3LTEuNDE0LDYuOTM3LTIuMTIsMTAuOTUyLTIuMTJjMy43NDcsMCw3LjExOCwwLjU5LDEwLjExLDEuNzc1IGMyLjk5NCwxLjE4NSw1LjY0MSwyLjgyOSw3Ljk0Miw0LjkzNGMyLjk2LDIuODkzLDUuMTMsNi40NzgsNi41MTIsMTAuNzUzYzEuMzgyLDQuMjc1LDIuMDM4LDkuMDEyLDEuOTc0LDE0LjIwN2gtMzguMjc4IGMwLjUyNiwzLjk0NiwxLjg0MSw3LjAzOCwzLjk0Niw5LjI3M2MyLjEwNCwyLjIzNyw1LjAzMiwzLjM1Myw4Ljc4MSwzLjM1M2MyLjQzMSwwLDQuNDIxLTAuNDQ0LDUuOTY4LTEuMzMxIGMxLjU0Ni0wLjg4NywyLjc0NS0yLjE1MiwzLjYwMy0zLjc5N2gxNC45OTNjLTAuNjU2LDIuMzAxLTEuNjkzLDQuNDU2LTMuMTA2LDYuNDYyYy0xLjQxNiwyLjAwNi0zLjE1NiwzLjc0OS01LjIyOSw1LjIyOSBjLTIuMDcyLDEuNDgtNC40OSwyLjYzLTcuMjUxLDMuNDUyYy0yLjc2MywwLjgyMS01LjgyMSwxLjIzMy05LjE3NCwxLjIzM0M1NzIuMjM3LDMxOC4zODgsNTY4LjM4OSwzMTcuNjgyLDU2NC45NywzMTYuMjY4eiAgTTU2Ny42MzQsMjc2Ljk1NGMtMS44NDQsMi4xMDctMy4wMjYsNC45NjgtMy41NTIsOC41ODRoMjIuMzk1Yy0wLjI2My0zLjY4My0xLjM1LTYuNTYtMy4yNTctOC42MzIgYy0xLjkwOC0yLjA3Mi00LjQwNS0zLjEwOC03LjQ5Ni0zLjEwOEM1NzIuMTcyLDI3My43OTcsNTY5LjQ3MywyNzQuODQ5LDU2Ny42MzQsMjc2Ljk1NHoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02MTkuMDMzLDMxNy4yMDZjLTMuMDI2LTAuODU1LTUuNjA5LTIuMDcyLTcuNzQ1LTMuNjUxYy0yLjEzOS0xLjU3OC0zLjgxNS0zLjQ2OC01LjAzMi01LjY3MyBjLTEuMjE3LTIuMjAzLTEuOTI0LTQuNjItMi4xMi03LjI1MWgxNC42YzAuNDYsMi41LDEuNTk0LDQuNDA4LDMuNDA0LDUuNzIxYzEuODA5LDEuMzE4LDQuMjI3LDEuOTc0LDcuMjUzLDEuOTc0IGMyLjc2MSwwLDQuODk3LTAuNTI2LDYuNDExLTEuNTc4YzEuNTEyLTEuMDUyLDIuMjY5LTIuNTMyLDIuMjY5LTQuNDRjMC0xLjE4NS0wLjM2MS0yLjEzNi0xLjA4NC0yLjg2MSBjLTAuNzI1LTAuNzIzLTEuNzExLTEuMzE1LTIuOTYtMS43NzVjLTEuMjUxLTAuNDYtMi42ODEtMC44MzktNC4yOTEtMS4xMzVjLTEuNjEzLTAuMjk3LTMuMzQtMC42MDgtNS4xODEtMC45MzggYy0yLjM2Ny0wLjQ2LTQuNjcxLTAuOTg2LTYuOTA1LTEuNTc4Yy0yLjIzNy0wLjU5Mi00LjI0My0xLjQ4LTYuMDE4LTIuNjY1Yy0xLjc3NS0xLjE4My0zLjIwNy0yLjcyNy00LjI5MS00LjYzNiBjLTEuMDg2LTEuOTA1LTEuNjI5LTQuNDA1LTEuNjI5LTcuNDk4YzAtMi42OTQsMC41NzYtNS4wNjIsMS43MjctNy4xMDJjMS4xNTEtMi4wMzgsMi43MTMtMy43NDksNC42ODctNS4xMyBjMS45NzItMS4zODIsNC4zMDctMi40MTgsNy4wMDQtMy4xMDZjMi42OTctMC42OTEsNS41OS0xLjAzNiw4LjY4My0xLjAzNmM3LjI5OSwwLDEyLjgyNSwxLjQzLDE2LjU3NCw0LjI5MSBjMy43NDcsMi44NjEsNS45ODQsNi41OTQsNi43MDYsMTEuMTk2aC0xNC40MDNjLTAuOTg2LTMuNzQ5LTMuOTQ2LTUuNjIyLTguODc3LTUuNjIyYy0yLjM3LDAtNC4yNjEsMC40Ni01LjY3NSwxLjM4MiBjLTEuNDE0LDAuOTIyLTIuMTIsMi4yMzUtMi4xMiwzLjk0NmMwLDAuOTg2LDAuMzI5LDEuNzkzLDAuOTg2LDIuNDE4YzAuNjU5LDAuNjI0LDEuNTgxLDEuMTM1LDIuNzYzLDEuNTI4IGMxLjE4NSwwLjM5NiwyLjU2NiwwLjcyNSw0LjE0NSwwLjk4NmMxLjU3OCwwLjI2NSwzLjI1NSwwLjU2LDUuMDMsMC44OWMyLjM2NywwLjM5Myw0LjczNywwLjkwNCw3LjEwNCwxLjUyOCBjMi4zNjcsMC42MjcsNC41MDQsMS41NjIsNi40MTEsMi44MTFjMS45MDgsMS4yNTEsMy40NywyLjkxMiw0LjY4Nyw0Ljk4MmMxLjIxNywyLjA3MiwxLjgyNSw0Ljc1MywxLjgyNSw4LjA0MiBjMCwyLjgyNy0wLjU5Miw1LjMyNy0xLjc3NSw3LjQ5OGMtMS4xODUsMi4xNjgtMi44MjksMy45OC00LjkzNCw1LjQyNmMtMi4xMDcsMS40NDgtNC42MDQsMi41MzItNy40OTgsMy4yNTUgYy0yLjg5NiwwLjcyMy02LjA1MiwxLjA4NC05LjQ3MiwxLjA4NEM2MjUuNDc5LDMxOC40ODcsNjIyLjA1NywzMTguMDU5LDYxOS4wMzMsMzE3LjIwNnoiIHN0eWxlPSJmaWxsOiByZ2IoMjM4LCAwLCAzMCk7Ij48L3BhdGg+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02NzAuMTMyLDMxNy4yMDZjLTMuMDI2LTAuODU1LTUuNjA2LTIuMDcyLTcuNzQzLTMuNjUxYy0yLjEzOS0xLjU3OC0zLjgxNS0zLjQ2OC01LjAzMi01LjY3MyBjLTEuMjE3LTIuMjAzLTEuOTI0LTQuNjItMi4xMi03LjI1MWgxNC42YzAuNDYsMi41LDEuNTk0LDQuNDA4LDMuNDA0LDUuNzIxYzEuODA3LDEuMzE4LDQuMjI1LDEuOTc0LDcuMjUxLDEuOTc0IGMyLjc2MywwLDQuODk5LTAuNTI2LDYuNDE0LTEuNTc4YzEuNTEyLTEuMDUyLDIuMjY5LTIuNTMyLDIuMjY5LTQuNDRjMC0xLjE4NS0wLjM2NC0yLjEzNi0xLjA4Ni0yLjg2MSBjLTAuNzI1LTAuNzIzLTEuNzExLTEuMzE1LTIuOTYtMS43NzVjLTEuMjQ5LTAuNDYtMi42ODEtMC44MzktNC4yOTEtMS4xMzVjLTEuNjEzLTAuMjk3LTMuMzQtMC42MDgtNS4xNzktMC45MzggYy0yLjM2Ny0wLjQ2LTQuNjcxLTAuOTg2LTYuOTA1LTEuNTc4Yy0yLjIzNy0wLjU5Mi00LjI0My0xLjQ4LTYuMDE4LTIuNjY1Yy0xLjc3Ny0xLjE4My0zLjIwNy0yLjcyNy00LjI5My00LjYzNiBjLTEuMDg0LTEuOTA1LTEuNjI2LTQuNDA1LTEuNjI2LTcuNDk4YzAtMi42OTQsMC41NzQtNS4wNjIsMS43MjUtNy4xMDJjMS4xNTEtMi4wMzgsMi43MTUtMy43NDksNC42ODctNS4xMyBjMS45NzQtMS4zODIsNC4zMDctMi40MTgsNy4wMDQtMy4xMDZjMi42OTctMC42OTEsNS41OS0xLjAzNiw4LjY4My0xLjAzNmM3LjMwMSwwLDEyLjgyNSwxLjQzLDE2LjU3NCw0LjI5MSBjMy43NDksMi44NjEsNS45ODQsNi41OTQsNi43MDksMTEuMTk2aC0xNC40MDNjLTAuOTg4LTMuNzQ5LTMuOTQ2LTUuNjIyLTguODc5LTUuNjIyYy0yLjM2NywwLTQuMjU5LDAuNDYtNS42NzMsMS4zODIgYy0xLjQxNiwwLjkyMi0yLjEyLDIuMjM1LTIuMTIsMy45NDZjMCwwLjk4NiwwLjMyNywxLjc5MywwLjk4NiwyLjQxOGMwLjY1NiwwLjYyNCwxLjU3OCwxLjEzNSwyLjc2MywxLjUyOCBjMS4xODMsMC4zOTYsMi41NjQsMC43MjUsNC4xNDIsMC45ODZjMS41NzgsMC4yNjUsMy4yNTUsMC41Niw1LjAzMiwwLjg5YzIuMzY3LDAuMzkzLDQuNzM1LDAuOTA0LDcuMTAyLDEuNTI4IGMyLjM2NywwLjYyNyw0LjUwNCwxLjU2Miw2LjQxNCwyLjgxMWMxLjkwNSwxLjI1MSwzLjQ2OCwyLjkxMiw0LjY4NCw0Ljk4MmMxLjIxNywyLjA3MiwxLjgyNSw0Ljc1MywxLjgyNSw4LjA0MiBjMCwyLjgyNy0wLjU5LDUuMzI3LTEuNzc1LDcuNDk4Yy0xLjE4NSwyLjE2OC0yLjgyOSwzLjk4LTQuOTM0LDUuNDI2Yy0yLjEwNCwxLjQ0OC00LjYwNCwyLjUzMi03LjQ5NiwzLjI1NSBjLTIuODk2LDAuNzIzLTYuMDUyLDEuMDg0LTkuNDcyLDEuMDg0QzY3Ni41NzcsMzE4LjQ4Nyw2NzMuMTU4LDMxOC4wNTksNjcwLjEzMiwzMTcuMjA2eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPC9nPgo8L2c+CjxnPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjA2Ljc4LDIyOS4zMDZoMjkuNjYxdi01NC4xODdjMC0xMi4zNiw3LjIyNS0yMS4xMDcsMTcuODcyLTIxLjEwN2MxMC4yNjcsMCwxNS41OTEsNy4yMjcsMTUuNTkxLDE3LjQ5NSAgICB2NTcuOGgyOS42NjF2LTYzLjUwM2MwLTIxLjQ4OC0xMi45MjgtMzYuNjk5LTMzLjg0NC0zNi42OTljLTEzLjMwOCwwLTIyLjYyNiw1LjcwNS0yOS42NjEsMTYuMTYyaC0wLjU3MXYtMTMuMzA5aC0yOC43MVYyMjkuMzA2eiBNNTQ4LjU5OCwxMjkuMjk1Yy0zMC45OTMsMC01MS43MTYsMjIuMjQ2LTUxLjcxNiw1MS41MjdjMCwyOS4wOTIsMjAuNzI0LDUxLjUyOCw1MS43MTYsNTEuNTI4czUxLjcxNi0yMi40MzYsNTEuNzE2LTUxLjUyOCAgICBDNjAwLjMxNCwxNTEuNTQsNTc5LjU5LDEyOS4yOTUsNTQ4LjU5OCwxMjkuMjk1eiBNNTQ4LjQwOCwyMTAuNDgzYy0xNC4wNzIsMC0yMS40ODUtMTEuNzg3LTIxLjQ4NS0yOS42NjEgICAgYzAtMTguMDYzLDcuNDEzLTI5LjY2MiwyMS40ODUtMjkuNjYyYzE0LjA2OSwwLDIxLjg2NSwxMS41OTgsMjEuODY1LDI5LjY2MkM1NzAuMjczLDE5OC42OTYsNTYyLjQ3NywyMTAuNDgzLDU0OC40MDgsMjEwLjQ4M3ogTTQxMi40NiwyMjkuMzA2aDgzLjI4di0yMy4zODVoLTQ3LjE1M3YtMC41NzNsNDUuMDYyLTUwLjU3NnYtMjIuODE0SDQxMi40NnYyMy4zODVoNDUuNjMzdjAuNTcxTDQxMi40NiwyMDYuODdWMjI5LjMwNnogTTM3NC40MjksMjI5LjMwNmgyOS44NTF2LTk3LjM0OGgtMjkuODUxVjIyOS4zMDZ6IE0zMDUuMjE5LDIyOS4zMDZoMjkuNjYxdi00NC42OGMwLTIwLjM0NiwxMi4xNjktMjkuMjgzLDMwLjgwMi0yNi44MWgwLjU3MSAgICB2LTI1LjY2OGMtMS41MjItMC41NzEtMy4yMzItMC43NjEtNi4wODQtMC43NjFjLTExLjU5OCwwLTE5LjM5NCw1LjMyMy0yNi4wNSwxNi43MzFoLTAuNTcxdi0xNi4xNmgtMjguMzI5VjIyOS4zMDZ6IE0yNTAuNjUxLDIxMC42NzVjLTEzLjEyLDAtMjEuMTA1LTguNTU5LTIyLjYyNy0yMS42NzVoNzAuMTZjMC4xOS0yMC45MTgtNS4zMjUtMzcuNjUtMTYuOTIzLTQ4LjEwNyAgICBjLTguMTc0LTcuNjA1LTE5LjAxNC0xMS43ODktMzIuNzAzLTExLjc4OWMtMjkuMjc5LDAtNDkuNjI1LDIyLjI0Ni00OS42MjUsNTEuMzM3YzAsMjkuMjgsMTkuMzk0LDUxLjcxNiw1MS41MjcsNTEuNzE2IGMxMi4xNjksMCwyMS44NjUtMy4yMzIsMjkuODUxLTguNzQ3YzguNTU3LTUuODkxLDE0LjY0LTE0LjQ1LDE2LjM1LTIzLjAwNWgtMjguNTE5ICAgIEMyNjUuMjkxLDIwNi44NywyNTkuMzk2LDIxMC42NzUsMjUwLjY1MSwyMTAuNjc1eiBNMjQ5LjEyOSwxNTAuMzk5YzEwLjQ1NywwLDE3LjY4Miw3Ljc5OCwxOC44MjMsMTkuMjA1aC0zOS43MzggICAgQzIzMC40OTcsMTU4LjAwNCwyMzYuNzcsMTUwLjM5OSwyNDkuMTI5LDE1MC4zOTl6IE0zNzQuNDI5LDk3LjM1aDI5Ljg1MXYyNi40M2gtMjkuODUxVjk3LjM1eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPGc+CjxyYWRpYWxHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGN4PSItMTEwMy42OTkzIiBjeT0iMjQyOC4wOTIzIiByPSIzNTQuMzY4NyIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgwLjA0OTUgLTAuMTM3MSAwLjE0ODMgMC4wNTM2IC0xNDUuNjQyOCAtNjguODY3NykiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIj48L3N0b3A+CjxzdG9wIG9mZnNldD0iMC4yNTciIHN0eWxlPSJzdG9wLWNvbG9yOiNGNUZGMUUiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjI2NTUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNUZBMUUiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIwLjQyMyIgc3R5bGU9InN0b3AtY29sb3I6I0Y1QTYyMCI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuNTYyMSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1NjMyMSI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuNjc3OSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1MzMyMiI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuNzY1NyIgc3R5bGU9InN0b3AtY29sb3I6I0Y1MTUyMyI+PC9zdG9wPgo8c3RvcCBvZmZzZXQ9IjAuODE1NSIgc3R5bGU9InN0b3AtY29sb3I6I0Y1MEEyMyI+PC9zdG9wPgo8L3JhZGlhbEdyYWRpZW50Pgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTY0LjIwMSwyMjguMDk1bC0zNi45MDgtOTYuMTM3SDk3LjM1bDM2LjkwOCw5Ni4xMzdjMC4yOCwwLjczMywwLjk4MywxLjIxMywxLjc2NSwxLjIxM2gyOS45NDMgQzE2NS4xODQsMjI5LjMwOCwxNjQuNDgxLDIyOC44MjgsMTY0LjIwMSwyMjguMDk1eiIgc3R5bGU9ImZpbGw6IHVybCgjU1ZHSURfMV8pOyI+PC9wYXRoPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTM3Ljc4NywyMjguMDk1bDM2LjkwOC05Ni4xMzdoMjkuOTQzbC0zNi45MDgsOTYuMTM3Yy0wLjI4LDAuNzMzLTAuOTgzLDEuMjEzLTEuNzY1LDEuMjEzaC0yOS45NDMgQzEzNi44MDUsMjI5LjMwOCwxMzcuNTA4LDIyOC44MjgsMTM3Ljc4NywyMjguMDk1eiIgc3R5bGU9ImZpbGw6IHJnYigyMzgsIDAsIDMwKTsiPjwvcGF0aD4KPC9nPgo8L2c+CjwvZz4KPC9zdmc+');
+width: 99px;
+height: 40px;
+background-size: 99px 40px
+}
+.gnav20 .gnav20-footer-container .gnav20-logo-wrapper .gnav20-logoFooterVSBDR {
+display: block;
+background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA3OTUgMzEzLjEiPgogIDwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyOS4zLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiAyLjEuMCBCdWlsZCAxNTEpICAtLT4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLnN0MCB7CiAgICAgICAgZmlsbDogI2Y1MGEyMzsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPGc+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUyLjYsMjE4LjljOS43LDAsMTcuMyw0LjksMjEuNiwxMS40aC4zdi0zNi4yaDEwLjl2OTUuNmgtMTAuOXYtOC40aC0uM2MtNS4yLDYuOC0xMS43LDEwLjUtMjEuNCwxMC41LTE4LjksMC0zMC43LTE0LjItMzAuNy0zNi4zczEzLjItMzYuMywzMC40LTM2LjN2LS4zaDBaTTE1My4xLDIyOC4yYy0xMy4xLDAtMTkuOCwxMS44LTE5LjgsMjcuM3M2LjcsMjcuMiwxOS45LDI3LjIsMjEuOS0xMS43LDIxLjktMjcuMi03LjYtMjcuMy0yMi0yNy4zaDBaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjEwLjgsMTk0LjF2MTMuNGgtMTAuOXYtMTMuNGgxMC45Wk0yMTAuOCwyMjAuNnY2OS4xaC0xMC45di02OS4xaDEwLjlaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjMzLjksMjkzLjZjMSw3LjYsOC4zLDEwLjYsMTksMTAuNnMxOS44LTUuNiwxOS44LTE3Ljh2LTkuN2gtLjNjLTUuMiw2LjYtMTAuNSwxMC44LTIwLjUsMTAuOC0xNy44LDAtMzAuMy0xNC4zLTMwLjMtMzQuMnMxMy41LTM0LjEsMjkuNS0zNC4xLDE2LjQsMy45LDIxLjEsMTAuNWguM3YtOC44aDEwLjl2NjUuNGMwLDE4LjItMTIuMSwyNi44LTMwLjQsMjYuOHMtMjguMS03LjItMjkuMi0xOS4xaDEwLjF2LS4zaDBaTTI1Mi40LDIyOC4xYy0xMywwLTE5LjUsMTAuMi0xOS41LDI1LjJzNi44LDI1LjEsMTkuNywyNS4xLDIxLTExLjEsMjEtMjUuNy02LjMtMjQuNS0yMS4xLTI0LjVoLS4xWiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwOSwxOTQuMXYxMy40aC0xMC45di0xMy40aDEwLjlaTTMwOSwyMjAuNnY2OS4xaC0xMC45di02OS4xaDEwLjlaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzI5LjQsMjIwLjZ2LTIxLjhoMTAuOXYyMS44aDEzLjR2OC44aC0xMy40djQ1YzAsNC45LDIuNSw2LjQsNyw2LjRzNC42LS41LDUuOC0uOWguNHY5LjNjLTIuNS41LTUuNS45LTguNy45LTguOSwwLTE1LjItMy43LTE1LjItMTMuNHYtNDcuM2gtMTAuMXYtOC44aDEwLjEtLjIsMFoiLz4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MDcuMiwyODAuMWMtNC4zLDUuNC0xMS4zLDExLTIzLDExcy0yMy41LTYtMjMuNS0xOS4zLDEyLjktMTkuNSwzMC4yLTIyLjNjOS43LTEuNCwxNi41LTIuNSwxNi41LTkuOHMtNS41LTEyLjItMTUuNS0xMi4yLTE2LjksNC43LTE3LjMsMTUuMmgtMTAuNWMuNC0xMy40LDkuMi0yMy41LDI3LjUtMjMuNXMyNS42LDUuNSwyNS42LDIxLjl2MzIuOWMwLDUuOCwxLjMsOC44LDcuMyw3LjNoLjR2Ny45Yy0xLjQuNS0zLDEtNS45LDEtNi44LDAtMTAuOS0zLjUtMTEuOS0xMC40aC0uMS4xdi4zaDBaTTQwNy41LDI1Mi41Yy0zLjcsMi4yLTkuOCw0LjEtMTUuNyw1LjEtMTAuOSwyLjEtMTkuNSwzLjgtMTkuNSwxNHM3LjMsMTEuMywxNC4zLDExLjNjMTQuNCwwLDIxLTEwLjYsMjEtMTguNnYtMTEuOGgwWiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ0NC4zLDE5NC4xdjk1LjZoLTEwLjl2LTk1LjZoMTAuOVoiLz4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00OTEuOCwyMzJjNC4yLTYuOCwxMS40LTEyLjMsMjAuNi0xMi4zczIuOS4zLDQuNS44djEwLjVoLS40Yy0xLjYtLjUtMi42LS43LTQuOS0uNy0xMC44LDAtMjAuMSw4LTIwLjEsMjF2MzguNGgtMTAuOXYtNjkuMWgxMC45djExLjVoLjNaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTUyLjksMjE4LjhjMjAuNywwLDMxLjksMTYsMzEuOSwzOWgtNTMuNWMuNywxNCw4LjUsMjQuOCwyMi4zLDI0LjhzMTYuNS00LjcsMTkuMS0xNC4yaDEwLjZjLTMuMSwxNS0xNCwyMy4yLTI5LjYsMjMuMnMtMzMuNC0xNi40LTMzLjQtMzYuMywxMy4xLTM2LjMsMzIuOC0zNi4zaDB2LS4yaC0uMiwwWk01NzMuMSwyNDkuNmMtLjctMTMuOS03LjctMjIuMi0yMC4yLTIyLjJzLTE5LjksOS42LTIxLjQsMjIuMmg0MS42WiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTYzNy41LDI4MC4xYy00LjMsNS40LTExLjMsMTEtMjMsMTFzLTIzLjUtNi0yMy41LTE5LjMsMTIuOS0xOS41LDMwLjItMjIuM2M5LjctMS40LDE2LjUtMi41LDE2LjUtOS44cy01LjUtMTIuMi0xNS41LTEyLjItMTYuOSw0LjctMTcuMywxNS4yaC0xMC41Yy40LTEzLjQsOS4yLTIzLjUsMjcuNS0yMy41czI1LjYsNS41LDI1LjYsMjEuOXYzMi45YzAsNS44LDEuMyw4LjgsNy4zLDcuM2guNHY3LjljLTEuNC41LTMsMS01LjksMS02LjgsMC0xMC45LTMuNS0xMS45LTEwLjRoMHYuM2guMVpNNjM3LjksMjUyLjVjLTMuNywyLjItOS44LDQuMS0xNS43LDUuMS0xMC45LDIuMS0xOS41LDMuOC0xOS41LDE0czcuMywxMS4zLDE0LjMsMTEuM2MxNC40LDAsMjEtMTAuNiwyMS0xOC42di0xMS44aDBaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjg5LjksMjE4LjljOS43LDAsMTcuMyw0LjksMjEuNiwxMS40aC4zdi0zNi4yaDEwLjl2OTUuNmgtMTAuOXYtOC40aC0uM2MtNS4yLDYuOC0xMS43LDEwLjUtMjEuNCwxMC41LTE4LjksMC0zMC43LTE0LjItMzAuNy0zNi4zczEzLjItMzYuMywzMC40LTM2LjN2LS4zaC4xWk02OTAuNSwyMjguMmMtMTMuMSwwLTE5LjgsMTEuOC0xOS44LDI3LjNzNi43LDI3LjIsMTkuOSwyNy4yLDIxLjktMTEuNywyMS45LTI3LjItNy42LTI3LjMtMjItMjcuM2gwWiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTczNi41LDMwMS41aC41YzEuNC45LDMuOCwxLjQsNy4zLDEuNHM3LjYtMS42LDEwLjQtOC40bDIuNi02LjgtMjctNjcuMmgxMS44bDE2LjMsNDMsMyw4LjksMS42LDQuNmguM2MuNC0xLjQuOS0yLjksMS40LTQuNmwzLTguOSwxNS43LTQzaDExLjVsLTI5LjUsNzQuOGMtNS44LDE0LjItMTAuOSwxNy4zLTE5LjQsMTcuM3MtNi43LS4zLTkuNy0xLjR2LTkuNmguMloiLz4KICA8L2c+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTM1OC4zLjFoMzkuMnYzNC42aC0zOS4yVi4xWiIvPgogIDxnPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTQxLjcsNDcuMmwxNy40LDU3LjNjMS43LDYuNywzLjcsMTIuOSw1LDE3LjZsMiw3LjloLjVsMi03LjksNS0xNy42LDE3LjYtNTcuM2g0MC40bC00My45LDEyN2gtNDMuNkwwLDQ3LjJoNDEuN1oiLz4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xOTEsNDMuNWMxOC4xLDAsMzIuNSw2LDQzLjQsMTUuOSwxNS4xLDEzLjksMjIuMywzNS43LDIyLjMsNjEuOGgtOTEuM2MyLjcsMTcuMSwxMS43LDI3LjgsMjguNSwyNy44czE3LjQtNC43LDIxLjEtMTIuNmgzOS40Yy0yLjcsMTEuNy0xMC4yLDIyLjMtMjEuMywzMC0xMC43LDcuNy0yMy42LDExLjctMzkuNywxMS43LTQxLjksMC02Ny43LTI4LjgtNjcuNy02Ny41czI2LjUtNjcsNjUuMi02N2guMVpNMTY1LjcsOTcuMWg1MC4xYy0xLjctMTUuMS0xMC45LTI0LjgtMjQuMS0yNC44cy0yMy4zLDkuNy0yNiwyNC44aDBaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzA1LDQ3LjJ2MTkuOGguN2M4LjktMTUuMSwxOS4xLTIxLjgsMzQuNy0yMS44czYuNC4yLDcuOSwxdjM0LjdoLTFjLTMtLjUtNS41LS43LTguMi0uNy0yMC4xLDAtMzIuNSwxMi40LTMyLjUsMzd2NTdoLTQwLjRWNDcuMmgzOC44WiIvPgogICAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTM5Ny44LDQ3LjJ2MTI3aC00MC40VjQ3LjJoNDAuNFoiLz4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00NTkuOCw4OS45YzEuNy0xLjcsNC41LTQsNi43LTYuN2w0LjItNC41di0uN2MtMi4yLjItNC41LjItNi40LjJoLTQ4Ljl2LTMwLjhoMTA0LjJ2MjkuNWwtNDguMSw1Mi4zLTcuOSw3LjktNSw1LjJ2LjdoNy4yYzQsMCw4LjctLjIsMTEuNy0uMmg0NS45djMxLjJoLTExMy44di0zMGw1MC4zLTU0LjN2LjJaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTkzLDQzLjhjNDAuOSwwLDY3LjcsMjguOCw2Ny43LDY3LjJzLTI2LjgsNjcuMi02Ny43LDY3LjItNjgtMjguOC02OC02Ny4yLDI3LTY3LjIsNjgtNjcuMlpNNTkyLjcsNzIuM2MtMTcuOSwwLTI2LjgsMTUuNi0yNi44LDM4LjdzOC45LDM4LjQsMjYuOCwzOC40LDI3LTE1LjQsMjctMzguNC05LjItMzguNy0yNy0zOC43aDBaIi8+CiAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNzA5LjMsNDcuMnYxNy40aC43YzkuNy0xMy45LDIxLjMtMjEuMSwzOS4yLTIxLjEsMjcuOCwwLDQ0LjEsMTkuOCw0NC4xLDQ4LjF2ODIuNmgtNDAuNHYtNzQuNGMwLTEzLjYtNi43LTIyLjYtMTkuOC0yMi42cy0yMi4zLDEwLjktMjIuMywyNi44djcwLjJoLTQwLjRWNDcuMmgzOC45WiIvPgogIDwvZz4KPC9zdmc+');
+width: 99px;
+height: 40px;
+background-size: 99px 40px
+}
+.gnav20 .gnav20-search-form .gnav20-clearInput {
+display: block;
+background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxyZWN0IGZpbGw9Im5vbmUiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIvPjxwYXRoIGZpbGw9IiM3NDc2NzYiIGQ9Ik0xMCwxOS41Yy01LjIsMC05LjUtNC4zLTkuNS05LjVTNC44LDAuNSwxMCwwLjVzOS41LDQuMyw5LjUsOS41UzE1LjIsMTkuNSwxMCwxOS41eiBNMTAsMS41CWMtNC43LDAtOC41LDMuOC04LjUsOC41YzAsNC43LDMuOCw4LjUsOC41LDguNWM0LjcsMCw4LjUtMy44LDguNS04LjVDMTguNSw1LjMsMTQuNywxLjUsMTAsMS41eiIvPjxwb2x5Z29uIGZpbGw9IiM3NDc2NzYiIHBvaW50cz0iMTQuOSwxNC4xIDEwLjcsMTAgMTQuOCw2IDE0LDUuMiAxMCw5LjMgNiw1LjIgNS4yLDYgOS4zLDEwIDUuMSwxNC4xIDUuOSwxNC45IDEwLDEwLjcgMTQuMSwxNC45ICIvPjwvc3ZnPg==') !important;
+width: 20px;
+height: 20px;
+position: absolute;
+right: 38px;
+top: 54px;
+}
+.gnav20 .gnav20-footer-container .gnav20-social-icon a span {
+height: 0;
+width: 0;
+overflow: hidden;
+display: block
+}
+.gnav20 .gnav20-social-media svg path {
+fill: #000 !important;
+}
+.gnav20 .gnav20-footer-level-two {
+border-top: 1px solid #d8dada;
+padding: 10px 20px 30px;
+display: flex;
+position: relative
+}
+.gnav20 .gnav20-footer-level-two #visual-cue {
+display: none;
+top: 60px;
+right: 0;
+position: absolute
+}
+.gnav20 .gnav20-footer-level-two #visual-cue div {
+width: 9px;
+height: 10px;
+float: left;
+border-top: 1px solid #d8dada;
+border-bottom: 1px solid #d8dada
+}
+.gnav20 .gnav20-footer-level-two #visual-cue div:first-child {
+border-left: 1px solid #d8dada
+}
+.gnav20 .gnav20-footer-level-two #visual-cue div:last-child {
+border-right: 1px solid #d8dada
+}
+.gnav20 .gnav20-footer-level-two #visual-cue div.visual-cue-show {
+background: #d8dada
+}
+.gnav20 .gnav20-footer-level-two .gnav20-logo {
+width: 25%;
+padding: 12px 0
+}
+.gnav20 .gnav20-footer-level-two .gnav20-footerlink {
+width: 75%;
+padding-left: 10px
+}
+.gnav20 .gnav20-footer-level-two .gnav20-footerlink .copyright-section {
+position: relative
+}
+.gnav20 .gnav20-footer-level-two .gnav20-footerlink .copyright-section .copyright-text {
+color: #6f7171 !important;
+position: absolute;
+right: 0;
+font-size: 12px !important;
+padding: 12px 0;
+line-height: 16px;
+font-family: "BrandFont-Text",arial,helvetica,sans-serif;
+letter-spacing: 0
+}
+.gnav20 .gnav20-footer-level-two .gnav20-footerlink .copyright-section #copyright-year {
+color: #6f7171 !important
+}
+.gnav20 .gnav20-footer-level-two .gnav20-footer-list {
+width: 66%
+}
+.gnav20 .gnav20-footer-level-two .gnav20-footer-list.gnav20-seperated li {
+border-right: 1px solid #d8dada
+}
+.gnav20 .gnav20-footer-level-two .gnav20-footer-list li:last-child {
+border: 0 none
+}
+.gnav20 .gnav20-footer-level-two .gnav20-footer-list li {
+display: block;
+float: left;
+width: fit-content;
+padding: 0 8px 8px 0;
+text-align: left;
+margin-right: 8px
+}
+.gnav20 .gnav20-footer-level-two .gnav20-footer-list>li>a {
+color: #6f7171 !important;
+white-space: nowrap;
+font-size: 12px !important;
+line-height: 16px;
+font-family: "BrandFont-Text",arial,helvetica,sans-serif;
+letter-spacing: 0
+}
+.gnav20 .gnav20-footer-level-one .gnav20-footer-wrapper.gnav20-four .gnav20-aem-Grid::before {
+display: table-cell
+}
+.gnav20 .gnav20-width-wrapper.gnav20-new-design.gnav20-hide-top-utility:after{
+display:none !important;
+}
+.gnav20 .gnav20-width-wrapper.gnav20-new-design.gnav20-hide-top-utility .gnav20-desktop .gnav20-row-one{
+display:none !important;
+}
+.desktop-end{height:0}
+.gnav20-unified-flyout-success{
+position: fixed !important;
+width: 480px !important;
+top: 0 !important;
+height: 100%;
+}
+.gnav20-cart-flyout{
+width: 480px;
+height:90%;
+}
+.gnav20 .gnav20-unified-cart.gnav20-unified-flyout-success .gnav20-closex{
+right: 25px !important
+}
+.gnav20-cart-title-successIcon{
+background-image:url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHZpZXdCb3g9IjAgMCAyOCAyOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0LjAwMDIgMjUuNjY2OEMxMS42OTI3IDI1LjY2NjggOS40MzcwOSAyNC45ODI2IDcuNTE4NTIgMjMuNzAwNkM1LjU5OTk0IDIyLjQxODcgNC4xMDQ2IDIwLjU5NjYgMy4yMjE1NyAxOC40NjQ4QzIuMzM4NTUgMTYuMzMzIDIuMTA3NTEgMTMuOTg3MiAyLjU1NzY3IDExLjcyNDFDMy4wMDc4MyA5LjQ2MSA0LjExODk4IDcuMzgyMiA1Ljc1MDU5IDUuNzUwNTlDNy4zODIyIDQuMTE4OTggOS40NjEgMy4wMDc4MyAxMS43MjQxIDIuNTU3NjdDMTMuOTg3MiAyLjEwNzUxIDE2LjMzMyAyLjMzODU1IDE4LjQ2NDggMy4yMjE1N0MyMC41OTY2IDQuMTA0NiAyMi40MTg3IDUuNTk5OTQgMjMuNzAwNiA3LjUxODUyQzI0Ljk4MjYgOS40MzcwOSAyNS42NjY4IDExLjY5MjcgMjUuNjY2OCAxNC4wMDAyQzI1LjY2MzIgMTcuMDkzMiAyNC40MzI5IDIwLjA1ODYgMjIuMjQ1OCAyMi4yNDU4QzIwLjA1ODYgMjQuNDMyOSAxNy4wOTMzIDI1LjY2MzIgMTQuMDAwMiAyNS42NjY4Wk0xNC4wMDAyIDMuNzkxNjhDMTEuOTgxMSAzLjc5MTY4IDEwLjAwNzQgNC4zOTA0IDguMzI4NjQgNS41MTIxMkM2LjY0OTg2IDYuNjMzODQgNS4zNDE0MSA4LjIyODE5IDQuNTY4NzUgMTAuMDkzNUMzLjc5NjEgMTEuOTU4OSAzLjU5Mzk0IDE0LjAxMTUgMy45ODc4MyAxNS45OTE3QzQuMzgxNzMgMTcuOTcyIDUuMzUzOTkgMTkuNzkxIDYuNzgxNjggMjEuMjE4N0M4LjIwOTM2IDIyLjY0NjMgMTAuMDI4MyAyMy42MTg2IDEyLjAwODYgMjQuMDEyNUMxMy45ODg4IDI0LjQwNjQgMTYuMDQxNCAyNC4yMDQyIDE3LjkwNjggMjMuNDMxNkMxOS43NzIxIDIyLjY1ODkgMjEuMzY2NSAyMS4zNTA1IDIyLjQ4ODIgMTkuNjcxN0MyMy42MDk5IDE3Ljk5MjkgMjQuMjA4NyAxNi4wMTkyIDI0LjIwODcgMTQuMDAwMkMyNC4yMDU2IDExLjI5MzYgMjMuMTI5MSA4LjY5ODg2IDIxLjIxNTMgNi43ODUwNkMxOS4zMDE1IDQuODcxMjUgMTYuNzA2NyAzLjc5NDcyIDE0LjAwMDIgMy43OTE2NFYzLjc5MTY4Wk0xOS4xMjA0IDExLjE5OTVMMTguMDg5NSAxMC4xNzU5TDEyLjQ3NTIgMTUuNzc2OEw5LjkwODA1IDEzLjIzMDRMOC44Nzk2OCAxNC4yNTY1TDEyLjQ3NzcgMTcuODI0TDE5LjEyMDQgMTEuMTk5NVoiIGZpbGw9IiMwMDgzMzEiLz4KPC9zdmc+Cg==');
+width: 28px;
+height: 28px;
+background-repeat: no-repeat;
+font-weight: 400 !important;
+}
+.gnav20-cart-title-success{
+display: flex;
+gap: 10px;
+}
+.gnav20-cart-title-successIcon:not(.gnav20-cart-title-success .gnav20-cart-title-successIcon){
+display: none;
+}
+.gnav20-cart-title-successMessage:not(.gnav20-cart-title-success .gnav20-cart-title-successMessage){
+color: #000 !important
+}
+.gnav20-cart-title-successMessage{
+padding-top: 3px;
+color: rgb(0, 131, 49) !important;
+font-size: 24px;
+}
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+/* Safari */
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+.gnav20-desktop .gnav20-desktopOverlay:not(.gnav20-my-side-nav){
+opacity:1;
+-webkit-transition:opacity .2s ease-in;
+transition:opacity .2s ease-in;
+width:100%;
+height:100%;
+background-color:rgba(0,0,0,0.8);
+position:fixed;
+top:0;
+left:0;
+z-index:4510;
+}
+body:has(.gnav20-desktopOverlay){
+overflow-y: hidden
+}
+#gnav20-cart-success-title-flyout:not(.gnav20-cart-title-success #gnav20-cart-success-title-flyout){
+font-size: 20px;
+font-weight: bold;
+line-height: 20px;
+margin: 0;
+}
+.flyout-overlay{
+position: fixed;
+height: 100%;
+width: 480px;
+z-index: 4513;
+}
+#load-indicator{
+outline: none;
+content: "";
+position: absolute;
+inset: 0px;
+margin: auto;
+width: 2.5rem;
+height: 2.5rem;
+display: block;
+z-index: 3;
+border-width: 0.25rem;
+border-style: solid;
+border-color: transparent rgb(0, 0, 0) rgb(0, 0, 0);
+border-image: initial;
+border-radius: 50% !important;
+animation: spin 1s linear infinite;
+}
+@keyframes gnav20-left {
+from {left: -100%;}
+100% {left: 0;}
+}
+@keyframes gnav20-right {
+from {left: 100%;}
+100% {left: 0;}
+}
+.gnav20 .gnav20-width-wrapper.gnav20-vils-design {
+border-bottom: none;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-row-two {
+display: flex;
+justify-content: space-between;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-navigation-list {
+width: 100%;
+display: flex;
+justify-content: end;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-row-two .gnav20-utility {
+margin-top: 22px;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-row-two .gnav20-utility .gnav20-utility-wrapper .gnav20-account-box .gnav20-account-link {
+position: relative;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-navigation .gnav20-menu-label[aria-expanded="true"]:after,
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-navigation .gnav20-menu-label:hover:after,
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-row-two .gnav20-utility .gnav20-utility-wrapper .gnav20-account-box .gnav20-account-link:hover:after {
+content: " ";
+position: absolute;
+width: 100%;
+bottom: -4px;
+left: 0;
+height: 4px;
+background: linear-gradient(130deg, #75FB4C, #75FBFD 75%);
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-navigation .gnav20-menu-label:focus {
+outline-offset: 4px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-utility .gnav20-utility-wrapper button.gnav20-search-icon,
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-menu .gnav20-nav-utility button.gnav20-nav-search-icon {
+border: none;
+padding: 0 !important;
+margin: 4px 0px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-utility .gnav20-utility-wrapper button.gnav20-search-icon:focus, .gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-menu .gnav20-nav-utility button.gnav20-nav-search-icon:focus {
+outline-offset: 1px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-utility .gnav20-utility-wrapper button.gnav20-search-icon:after,
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-menu .gnav20-nav-utility button.gnav20-nav-search-icon:after {
+content: "" !important;
+}
+.gnav20 .gnav20-vils-design  .gnav20-desktop .gnav20-row-two .gnav20-utility .gnav20-utility-wrapper .gnav20-account-box {
+position: relative;
+}
+.gnav20 .gnav20-vils-design .gnav20-utility .gnav20-account-icon-only,
+.gnav20 .gnav20-vils-design .gnav20-utility .gnav20-account-icon {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuOTU5MjQgMTAuMzM5M0MxMC44MTY5IDEwLjMzOTMgMTEuNjU1MyAxMC4wODUgMTIuMzY4NCA5LjYwODUyQzEzLjA4MTUgOS4xMzIwMyAxMy42Mzc0IDguNDU0NzggMTMuOTY1NiA3LjY2MjRDMTQuMjkzOCA2Ljg3MDAyIDE0LjM3OTcgNS45OTgxMSAxNC4yMTIzIDUuMTU2OTNDMTQuMDQ1IDQuMzE1NzUgMTMuNjMyIDMuNTQzMDcgMTMuMDI1NiAyLjkzNjYxQzEyLjQxOTEgMi4zMzAxNSAxMS42NDY0IDEuOTE3MTUgMTAuODA1MiAxLjc0OTgzQzkuOTY0MDUgMS41ODI1MSA5LjA5MjE0IDEuNjY4MzggOC4yOTk3NyAxLjk5NjZDNy41MDczOSAyLjMyNDgxIDYuODMwMTQgMi44ODA2MiA2LjM1MzY0IDMuNTkzNzRDNS44NzcxNSA0LjMwNjg2IDUuNjIyODMgNS4xNDUyNiA1LjYyMjgzIDYuMDAyOTJDNS42MjI4MiA2LjU3MjM5IDUuNzM0OTkgNy4xMzYyOCA1Ljk1MjkxIDcuNjYyNEM2LjE3MDg0IDguMTg4NTIgNi40OTAyNSA4LjY2NjU2IDYuODkyOTMgOS4wNjkyNEM3LjI5NTYgOS40NzE5MSA3Ljc3MzY1IDkuNzkxMzMgOC4yOTk3NyAxMC4wMDkzQzguODI1ODggMTAuMjI3MiA5LjM4OTc4IDEwLjMzOTMgOS45NTkyNCAxMC4zMzkzWk05Ljk1OTI0IDIuNjc2NjJDMTAuNjE3MSAyLjY3NjYyIDExLjI2MDIgMi44NzE3IDExLjgwNzIgMy4yMzcyQzEyLjM1NDIgMy42MDI3IDEyLjc4MDYgNC4xMjIyIDEzLjAzMjMgNC43M0MxMy4yODQxIDUuMzM3OCAxMy4zNSA2LjAwNjYxIDEzLjIyMTYgNi42NTE4NUMxMy4wOTMzIDcuMjk3MDkgMTIuNzc2NSA3Ljg4OTc4IDEyLjMxMTMgOC4zNTQ5OEMxMS44NDYxIDguODIwMTcgMTEuMjUzNCA5LjEzNjk3IDEwLjYwODIgOS4yNjUzMUM5Ljk2MjkzIDkuMzkzNjYgOS4yOTQxMiA5LjMyNzc5IDguNjg2MzIgOS4wNzYwM0M4LjA3ODUyIDguODI0MjcgNy41NTkwMiA4LjM5NzkzIDcuMTkzNTIgNy44NTA5MkM2LjgyODAyIDcuMzAzOTEgNi42MzI5NCA2LjY2MDggNi42MzI5NCA2LjAwMjkyQzYuNjMzOTMgNS4xMjEwNCA2Ljk4NDcgNC4yNzU1NiA3LjYwODI5IDMuNjUxOTdDOC4yMzE4OCAzLjAyODM4IDkuMDc3MzYgMi42Nzc2MSA5Ljk1OTI0IDIuNjc2NjJaTTkuOTk4NjQgMTAuOTkwNkM5LjA4MyAxMC45NjU3IDguMTcxNiAxMS4xMjM4IDcuMzE3ODYgMTEuNDU1N0M2LjQ2NDEyIDExLjc4NzYgNS42ODUyMyAxMi4yODY2IDUuMDI2ODUgMTIuOTIzNEM0LjM2ODQ2IDEzLjU2MDIgMy44NDM4NCAxNC4zMjIxIDMuNDgzNzIgMTUuMTY0M0MzLjEyMzYgMTYuMDA2NSAyLjkzNTI1IDE2LjkxMjIgMi45Mjk2OSAxNy44MjgxVjE4LjMzMzJIMTcuMDY2OFYxNy44MjgxQzE3LjA2MTMgMTYuOTEyMiAxNi44NzMgMTYuMDA2NiAxNi41MTI5IDE1LjE2NDRDMTYuMTUyOSAxNC4zMjIzIDE1LjYyODMgMTMuNTYwNCAxNC45NyAxMi45MjM2QzE0LjMxMTcgMTIuMjg2OCAxMy41MzI5IDExLjc4NzggMTIuNjc5MiAxMS40NTU4QzExLjgyNTYgMTEuMTIzOSAxMC45MTQyIDEwLjk2NTggOS45OTg2NCAxMC45OTA2Wk0zLjk2MDggMTcuMzIzMUM0LjEwNjYzIDE1LjgzNjQgNC44MTA4NiAxNC40NjA0IDUuOTMxNDIgMTMuNDcyN0M3LjA1MTk4IDEyLjQ4NDkgOC41MDU0NiAxMS45NTg5IDkuOTk4NjQgMTIuMDAwN0MxMS40OTE3IDExLjk1OSAxMi45NDUgMTIuNDg1MSAxNC4wNjU0IDEzLjQ3MjlDMTUuMTg1OCAxNC40NjA3IDE1Ljg4OTggMTUuODM2NiAxNi4wMzU2IDE3LjMyMzFIMy45NjA4WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==) !important;
+position: relative;
+}
+.gnav20 .gnav20-vils-design .gnav20-utility .gnav20-account-icon-only:hover:after,
+.gnav20 .gnav20-vils-design .gnav20-utility .gnav20-account-icon-only[aria-expanded="true"]:after {
+content: " ";
+position: absolute;
+width: 100%;
+top: 0;
+left: 0;
+height: 100%;
+border-radius: 22px;
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCA0NCA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KCTxkZWZzPgoJCTxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZDEiIHgxPSIwJSIgeDI9IjEwMCUiIHkxPSIwJSIgeTI9IjAlIj4KCQkgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM3NUZCNEMiIC8+CgkJICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3NUZCRkQiIC8+CgkJPC9saW5lYXJHcmFkaWVudD4KCTwvZGVmcz4KCTxlbGxpcHNlIGN4PSIyMiIgY3k9IjIyIiByeD0iMjIiIHJ5PSIyMiIgZmlsbD0idXJsKCNncmFkMSkiIC8+Cgk8c3ZnIHg9IjEyIiB5PSIxMiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CgkJPHBhdGggIGQ9Ik05Ljk1OTI0IDEwLjMzOTNDMTAuODE2OSAxMC4zMzkzIDExLjY1NTMgMTAuMDg1IDEyLjM2ODQgOS42MDg1MkMxMy4wODE1IDkuMTMyMDMgMTMuNjM3NCA4LjQ1NDc4IDEzLjk2NTYgNy42NjI0QzE0LjI5MzggNi44NzAwMiAxNC4zNzk3IDUuOTk4MTEgMTQuMjEyMyA1LjE1NjkzQzE0LjA0NSA0LjMxNTc1IDEzLjYzMiAzLjU0MzA3IDEzLjAyNTYgMi45MzY2MUMxMi40MTkxIDIuMzMwMTUgMTEuNjQ2NCAxLjkxNzE1IDEwLjgwNTIgMS43NDk4M0M5Ljk2NDA1IDEuNTgyNTEgOS4wOTIxNCAxLjY2ODM4IDguMjk5NzcgMS45OTY2QzcuNTA3MzkgMi4zMjQ4MSA2LjgzMDE0IDIuODgwNjIgNi4zNTM2NCAzLjU5Mzc0QzUuODc3MTUgNC4zMDY4NiA1LjYyMjgzIDUuMTQ1MjYgNS42MjI4MyA2LjAwMjkyQzUuNjIyODIgNi41NzIzOSA1LjczNDk5IDcuMTM2MjggNS45NTI5MSA3LjY2MjRDNi4xNzA4NCA4LjE4ODUyIDYuNDkwMjUgOC42NjY1NiA2Ljg5MjkzIDkuMDY5MjRDNy4yOTU2IDkuNDcxOTEgNy43NzM2NSA5Ljc5MTMzIDguMjk5NzcgMTAuMDA5M0M4LjgyNTg4IDEwLjIyNzIgOS4zODk3OCAxMC4zMzkzIDkuOTU5MjQgMTAuMzM5M1pNOS45NTkyNCAyLjY3NjYyQzEwLjYxNzEgMi42NzY2MiAxMS4yNjAyIDIuODcxNyAxMS44MDcyIDMuMjM3MkMxMi4zNTQyIDMuNjAyNyAxMi43ODA2IDQuMTIyMiAxMy4wMzIzIDQuNzNDMTMuMjg0MSA1LjMzNzggMTMuMzUgNi4wMDY2MSAxMy4yMjE2IDYuNjUxODVDMTMuMDkzMyA3LjI5NzA5IDEyLjc3NjUgNy44ODk3OCAxMi4zMTEzIDguMzU0OThDMTEuODQ2MSA4LjgyMDE3IDExLjI1MzQgOS4xMzY5NyAxMC42MDgyIDkuMjY1MzFDOS45NjI5MyA5LjM5MzY2IDkuMjk0MTIgOS4zMjc3OSA4LjY4NjMyIDkuMDc2MDNDOC4wNzg1MiA4LjgyNDI3IDcuNTU5MDIgOC4zOTc5MyA3LjE5MzUyIDcuODUwOTJDNi44MjgwMiA3LjMwMzkxIDYuNjMyOTQgNi42NjA4IDYuNjMyOTQgNi4wMDI5MkM2LjYzMzkzIDUuMTIxMDQgNi45ODQ3IDQuMjc1NTYgNy42MDgyOSAzLjY1MTk3QzguMjMxODggMy4wMjgzOCA5LjA3NzM2IDIuNjc3NjEgOS45NTkyNCAyLjY3NjYyWk05Ljk5ODY0IDEwLjk5MDZDOS4wODMgMTAuOTY1NyA4LjE3MTYgMTEuMTIzOCA3LjMxNzg2IDExLjQ1NTdDNi40NjQxMiAxMS43ODc2IDUuNjg1MjMgMTIuMjg2NiA1LjAyNjg1IDEyLjkyMzRDNC4zNjg0NiAxMy41NjAyIDMuODQzODQgMTQuMzIyMSAzLjQ4MzcyIDE1LjE2NDNDMy4xMjM2IDE2LjAwNjUgMi45MzUyNSAxNi45MTIyIDIuOTI5NjkgMTcuODI4MVYxOC4zMzMySDE3LjA2NjhWMTcuODI4MUMxNy4wNjEzIDE2LjkxMjIgMTYuODczIDE2LjAwNjYgMTYuNTEyOSAxNS4xNjQ0QzE2LjE1MjkgMTQuMzIyMyAxNS42MjgzIDEzLjU2MDQgMTQuOTcgMTIuOTIzNkMxNC4zMTE3IDEyLjI4NjggMTMuNTMyOSAxMS43ODc4IDEyLjY3OTIgMTEuNDU1OEMxMS44MjU2IDExLjEyMzkgMTAuOTE0MiAxMC45NjU4IDkuOTk4NjQgMTAuOTkwNlpNMy45NjA4IDE3LjMyMzFDNC4xMDY2MyAxNS44MzY0IDQuODEwODYgMTQuNDYwNCA1LjkzMTQyIDEzLjQ3MjdDNy4wNTE5OCAxMi40ODQ5IDguNTA1NDYgMTEuOTU4OSA5Ljk5ODY0IDEyLjAwMDdDMTEuNDkxNyAxMS45NTkgMTIuOTQ1IDEyLjQ4NTEgMTQuMDY1NCAxMy40NzI5QzE1LjE4NTggMTQuNDYwNyAxNS44ODk4IDE1LjgzNjYgMTYuMDM1NiAxNy4zMjMxSDMuOTYwOFoiIGZpbGw9ImJsYWNrIi8+Cgk8L3N2Zz4KCVNvcnJ5LCB5b3VyIGJyb3dzZXIgZG9lcyBub3Qgc3VwcG9ydCBpbmxpbmUgU1ZHLgo8L3N2Zz4K) !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-signin-content-title {
+display: none;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-dropdown-menu {
+border: none;
+background-color: #F6F6F6;
+box-shadow: 0 30px 35px 0 rgba(0,0,0,0.1);
+border-radius: 16px;
+position: absolute;
+z-index: 4512;
+top: 66px;
+padding: 20px 12px;
+right: 0;
+min-width: 217px;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-dropdown-menu .gnav20-dropdown {
+padding-bottom: 0;
+background: none;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop li.gnav20-dropdown-list {
+padding: 5px 16px;
+}
+.gnav20 .gnav20-vils-design .gnav20-account-box .gnav20-close-account-utility{
+top: 5px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu .gnav20-vils-l2-label{
+font-size: 20px;
+line-height: 24px;
+margin: 6px 10px;
+float: right;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu .gnav20-vils-l2-title-row {
+margin-bottom: 10px;
+height: 39px;
+display: inline-block;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu .gnav20-vils-l2-desc {
+line-height: 18px;
+letter-spacing: 0.5px;
+width: 90%;
+margin-bottom: 12px;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-header-menu .gnav20-content-wrapper.gnav20-grouping-active {
+display: flex;
+margin: 36px auto !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-menu.gnav20-grouping-active {
+padding-bottom: 0;
+background: linear-gradient(transparent 10px, rgb(255, 255, 255) 10px);
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-header-menu ul.gnav20-submenu-column.gnav20-L1 {
+width: 33%;
+margin: 0 20px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu .gnav20-vils-l2-cta a,
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu .gnav20-vils-l2-cta a:hover {
+font-size: 14px !important;
+line-height: 18px !important;
+font-weight: 700 !important;
+letter-spacing: 0.5px !important;
+padding-right: 15px;
+margin-right: 15px;
+position: relative;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu .gnav20-vils-l2-cta a:after {
+position: absolute;
+content: "";
+height: 6px;
+width: 6px;
+border-left: 2px solid #000 !important;
+border-top: 2px solid #000 !important;
+-ms-transform: rotate(135deg);
+-webkit-transform: rotate(135deg);
+transform: rotate(135deg);
+right: 5px;
+margin-top: 5px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu .gnav20-vils-l2-cta a:hover:after {
+border-color: #e00 !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column li {
+padding: 0 0 36px 0 !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card {
+height: 310px;
+width: 100%;
+border-radius: 24px;
+position: relative;
+background-color: attr(bg-color type(<color>));
+background-size: cover;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card:hover {
+box-shadow: 8px 8px attr(shadow-color type(<color>));
+transform: translateX(-8px);
+transition: 0.5s;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card * {
+color: #fff !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-card-category {
+position: absolute;
+display: flex;
+left: 20px;
+top: 20px;
+background-color: #313131;
+height: 40px;
+border-radius: 10px;
+align-items: center;
+gap: 8px;
+padding: 8px 16px 8px 8px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-card-category img {
+width: 24px;
+height: 24px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-card-category span.gnav20-vils-card-category-label {
+font-size: 11px;
+line-height: 16px;
+font-weight: 700;
+letter-spacing: 0.5px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-l2-card-body {
+position: absolute;
+top: 136px;
+left: 20px;
+right: 20px;
+letter-spacing: 0.5px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-l2-card-body strong{
+font-weight: 700;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-l2-card-title {
+font-size: 24px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-l2-card-desc {
+padding-top: 12px;
+font-size: 12px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-l2-card-cta {
+position: absolute;
+bottom: 20px;
+left: 20px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-l2-card-cta a {
+height: 32px;
+border: 1px solid #fff !important;
+border-radius: 24px;
+display: block;
+padding: 7px 15px;
+font-size: 12px !important;
+line-height: 16px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-l2-card-cta a:hover {
+border: 2px solid #fff !important;
+padding: 6px 14px;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-l2-card-cta a:focus {
+outline-color: #fff !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-sub-header-menu ul.gnav20-submenu-column .gnav20-vils-l2-card .gnav20-vils-l2-card-cta a:after {
+display:none;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-header-menu .gnav20-card-count-1 ul.gnav20-submenu-column.gnav20-L1.gnav20-card {
+width: 66%;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-header-menu .gnav20-card-count-0 ul.gnav20-submenu-column.gnav20-L1 {
+width: 100%;
+display: flex;
+}
+.gnav20 .gnav20-vils-design .gnav20-desktop .gnav20-sub-header-menu .gnav20-card-count-0 ul.gnav20-submenu-column.gnav20-L1 li {
+width: 33%;
+padding: 0 20px !important;
+margin: 0;
+}
+.gnav20 .gnav20-unified-cart:not(.gnav20-unified-flyout-success) .cart-button-container,
+.gnav20 .cart-button-container.hide-flyout-cta {
+display:none !important;
+}
+.gnav20-unified-flyout-success .cart-button-container:not(.hide-flyout-cta){
+padding-top: 40px;
+display: block;
+}
+.gnav20-unified-flyout-success a.cart-button{
+background-color: #000000 !important;
+color: #ffffff !important;
+cursor: pointer;
+text-decoration: none !important;
+padding: 15px 40px;
+border-radius: 24px !important;
+text-align: center;
+justify-content: center;
+align-items: center;
+display: flex !important;
+justify-self: center;
+width: 80%;
+}
+.gnav20 .gnav20-footer-wrapper.gnav20-three.gnav20-vsbdr-footer-style .gnav20-col-wrapper:first-child {
+width: 50%;
+position: relative;
+}
+.gnav20 .gnav20-footer-wrapper.gnav20-three.gnav20-vsbdr-footer-style .gnav20-col-wrapper {
+width: 25%;
+}
+.gnav20 ul.gnav20-footer-list:not(:first-child) {
+position: absolute;
+top: 0;
+right: 0;
+margin: 0 10px;
+width: calc(50% - 20px);
+}
+.gnav20 ul.gnav20-footer-list .gnav20-bold-non-link>a {
+pointer-events: none;
+font-weight: bold;
+}
+.gnav20 .gnav20-desktop .gnav20-primary-menu.gnav20-featured-card:not(.gnav20-featured-grouping) .gnav20-bold-non-link>a
+{
+pointer-events: auto;
+}
+.tablet-start{height:0}
+@media(max-width:1020.5px),(pointer: coarse){
+.gnav20 .gnav20-sub-nav {
+display: block;
+}
+.gnav20 .gnav20-sub-nav .gnav20-sub-nav-content {
+padding: 0 16px;
+}
+.gnav20 .gnav20-desktop,
+.gnav20 .gnav20-hide-on-mobile{
+display:none !important
+}
+.gnav20 .gnav20-main{
+height: 68px;
+min-height: 68px;
+padding: 15px 20px;
+}
+.gnav20 .gnav20-width-wrapper:after{
+display:none
+}
+.gnav20 .gnav20-mobile{
+display:block;
+}
+.gnav20 .gnav20-logo-wrapper {
+padding: 11px 0 0 !important;
+float: left;
+}
+.gnav20 .gnav20-logo-wrapper a.gnav20-logoWhiteBg {
+width: 94px;
+height: 21px;
+background-size: 94px 21px;
+}
+.gnav20 .gnav20-logo-wrapper a.gnav20-logoHeaderVBG{
+width: 90px;
+height: 33px;
+background-size: 90px 33px;
+background-repeat: no-repeat;
+background-position: left center;
+margin-top: -8px;
+}
+.gnav20 .gnav20-logo-wrapper a.gnav20-logoHeaderVSBDR {
+width: 90px;
+height: 35px;
+background-size: 90px 35px;
+background-repeat: no-repeat;
+background-position: left center;
+margin-top: -10px;
+}
+.gnav20 .gnav20-mobile .gnav20-utility {
+display: flex;
+justify-content: flex-end;
+height: 28px;
+white-space: nowrap;
+opacity: 0;
+}
+.gnav20-mobile .gnav20-utility-wrapper{
+width:fit-content;
+margin:0
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-localization{
+margin:12px 0 0;
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-store{
+margin-right:15px
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-account-box .gnav20-sign-in span{
+line-height:20px !important;
+font-size:12px !important;
+font-weight:bold !important
+}
+.gnav20 .gnav20-utility .gnav20-account-box .gnav20-sign-in:not(.gnav20-account-icon-only) {
+font-size: 12px !important;
+font-family: 'BrandFont-Text',sans-serif !important;
+}
+.gnav20 .gnav20-mobile #gnav20-mobile-menu .gnav20-closex {
+position: absolute;
+text-indent: -333px;
+right: 5px;
+top: 13px;
+overflow: hidden;
+display: block;
+}
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu ul:last-of-type, .gnav20 .gnav20-mobile #gnav20-mobile-menu ul:last-of-type {
+padding: 0 0 160px 0;
+display: block;
+}
+.gnav20 .gnav20-mobile .gnav20-vzmoverlay,
+.gnav20 .gnav20-vzhmoverlay{
+opacity:0;
+-webkit-transition:opacity .2s ease-in;
+transition:opacity .2s ease-in;
+width:100%;
+height:0;
+background-color:rgba(0,0,0,0.8);
+position:fixed;
+top:0;
+left:0;
+z-index:10000000;
+}
+.gnav20 .gnav20-mobile .gnav20-vzmoverlay.gnav20-menuop,
+.gnav20 .gnav20-vzhmoverlay.gnav20-menuop,
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-notification .gnav20-notification-overlay:not(.gnav20-hide)+.gnav20-vzmoverlay{
+height:100%;
+height:-webkit-fill-available;
+opacity:1;
+-webkit-transition:opacity .2s ease-out;
+transition:opacity .2s ease-out;
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-account-box .gnav20-account-link {
+font-size: 12px !important;
+line-height: 20px;
+font-weight: bold;
+padding: 12px;
+display: block;
+font-family: 'BrandFont-Text',sans-serif !important;
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu,
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-unifiedcart .gnav20-unified-cart,
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-notification .gnav20-notification-overlay{
+position:fixed;
+top:0;
+padding-top:68px;
+width:50%;
+right:0;
+background-color:#fff;
+overflow-x:hidden;
+transition:width 2s;
+z-index:10000001;
+height:100%;
+border-left: 1px solid #d8dada;
+}
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu{
+width:0;
+opacity:0;
+height:100%;
+background:#fff;
+position:fixed;
+top:0;
+right:0;
+padding-top:64px;
+padding-bottom:50px;
+z-index:10000001;
+overflow:hidden;
+text-align:center;
+-webkit-transition:opacity .2s,width .2s ease-in;
+transition:opacity .2s,width .2s ease-in;
+border-left: 1px solid #d8dada;
+}
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu.gnav20-open-menu{
+visibility: visible;
+position: fixed;
+-webkit-transform: scale(1);
+transform: scale(1);
+opacity: 1;
+width: 50%;
+-webkit-transition: opacity .2s, width .2s ease-out;
+transition: opacity .2s, width .2s ease-out;
+background: #fff;
+overflow: hidden;
+height: 100%;
+margin: 0;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu .gnav20-dropdown-list a,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item a,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink a,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu .gnav20-dropdown-list button,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item button,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink button {
+font-size: 16px !important;
+line-height: 20px !important;
+padding: 12px 0 !important;
+font-family: BrandFont-Display,sans-serif !important;
+letter-spacing: .5px;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink .gnav20-dropdown-box .gnav20-sign-in:after,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu .gnav20-haschild:after {
+right: 2px !important;
+}
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu ul.gnav20-isactive,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu ul.gnav20-isactive{
+top:0
+}
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu ul li,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu ul li{
+position:relative;
+text-align:left;
+padding:0;margin:0
+}
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu ul li strong,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu ul li strong,
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu ul li a,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu ul li a{
+padding:18px 20px;
+margin:0;
+display:block;
+border-bottom:1px solid #d8dada;
+font-size:20px !important;
+font-weight:normal;
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu ul li.gnav20-goback{
+display:none
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-sign-in-mobile .gnav20-signin-content-title {
+padding: 0 0 16px 0;
+margin: 0 16px;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu .gnav20-dropdown-list,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item, .gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink {
+padding: 0 16px;
+border: 0;
+overflow: visible;
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu .gnav20-dropdown-label{
+padding:0 20px 20px 20px;
+font-weight:bold;
+font-size:24px;
+display:block;
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu ul li a{
+padding: 20px;
+font-size: 20px !important;
+border-bottom: 1px solid #d8dada !important;
+width: 100%;
+display: inline-block;
+}
+.gnav20 .gnav20-mobile .gnav20-unified-cart .gnav20-cart-content-title{
+padding: 0 16px 16px;
+font-size: 20px !important;
+}
+.gnav20 .gnav20-mobile .gnav20-cart-toast {
+margin-bottom: 35px;
+}
+.gnav20 .gnav20-mobile .gnav20-unified-cart .gnav20-content-list a {
+padding: 12px 0;
+margin: 0 16px;
+font-weight: normal;
+line-height: 20px;
+display: block;
+border-bottom: 1px solid #d8dada;
+}
+.gnav20 .gnav20-mobile .gnav20-unified-cart .gnav20-content-list:first-child a {
+border-top: 1px solid #d8dada;
+}
+.gnav20 .gnav20-utility #gnav20-nav-toggle {
+margin-right: -12px;
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIi8+PHJlY3QgeD0iMiIgeT0iMyIgZmlsbD0iIzAwMCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIyIiB5PSIxNyIgIGZpbGw9IiMwMDAiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMiIgeT0iMTAiICBmaWxsPSIjMDAwIiB3aWR0aD0iMTYiIGhlaWdodD0iMSIvPjwvc3ZnPg==) !important;
+}
+.gnav20 .gnav20-utility #gnav20-nav-toggle:hover {
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIi8+PHJlY3QgeD0iMiIgeT0iMyIgZmlsbD0iIzAwMCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjIiLz48cmVjdCB4PSIyIiB5PSIxNyIgIGZpbGw9IiMwMDAiIHdpZHRoPSIxNiIgaGVpZ2h0PSIyIi8+PHJlY3QgeD0iMiIgeT0iMTAiICBmaWxsPSIjMDAwIiB3aWR0aD0iMTYiIGhlaWdodD0iMiIvPjwvc3ZnPg==) !important;
+}
+.gnav20 .gnav20-mobile.gnav20-hide-hamburger button#gnav20-nav-toggle{
+display:none !important
+}
+.gnav20 .gnav20-mobile #gnav20-ulwrapper {
+position: absolute;
+top: 68px;
+height: calc(100% - 137px);
+width: 100%;
+overflow: auto;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-openL1 #gnav20-ulwrapper {
+overflow: visible;
+}
+.gnav20 .gnav20-mobile #gnav20-ulwrapper a.gnav20-main-header.gnav20-selected {
+height: 20px;
+font-size: 20px !important;
+margin: 0 16px;
+display: block;
+text-shadow: 1px 0 0 #000;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu:not(.gnav20-openL1) .gnav20-navigation {
+padding-top: 16px;
+}
+.gnav20 .gnav20-mobile .gnav20-navigation-list{
+position:absolute;
+text-align:left;
+width:100%;
+background:#fff;
+top:52px;
+height:calc(100vh - 274px);
+overflow:auto
+}
+.gnav20 .gnav20-mobile.gnav20-eyebrow-L1 .gnav20-navigation-list {
+position: relative;
+text-align: left;
+width: 100%;
+background: #fff;
+top: 0;
+height: auto;
+overflow: auto;
+}
+.gnav20 .gnav20-mobile .gnav20-navigation-list.gnav20-non-header{
+top:0;
+border-top:1px solid #d8dada;
+height:auto
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-navigation-list {
+height: auto;
+position: relative;
+top: 0;
+padding: 0;
+border-top: 0;
+overflow: visible;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility.gnav20-eyebrow-L1 .gnav20-openL1 .gnav20-navigation-list{
+height: calc(100vh - 68px);
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility.gnav20-eyebrow-L1 #gnav20-ulwrapper{
+height: calc(100% - 68px);
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu:not(.gnav20-openL1) .gnav20-navigation-item:first-of-type .gnav20-primary-menu {
+border-top: 1px solid #d8dada;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink .gnav20-utility-wrapper,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink div {
+width: 100%;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink .gnav20-utility-wrapper button,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink .gnav20-utility-wrapper [role=button],
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink .gnav20-utility-wrapper a {
+display: block;
+font-size: 16px !important;
+font-family: 'BrandFont-Display',sans-serif !important;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink button.gnav20-sign-in {
+width: 100%;
+position: relative;
+}
+.gnav20 .gnav20-mobile .gnav20-eyebrow-link-list-item a.gnav20-main-header:not(.gnav20-selected){
+z-index: 1000;
+font-weight: normal;
+background: #fff;
+border-top: 1px solid #d8dada;
+}
+.gnav20 .gnav20-mobile.gnav20-eyebrow-L1 .gnav20-eyebrow-link-list-item a.gnav20-main-header:not(.gnav20-selected) {
+position: relative;
+display: block;
+border-bottom: 1px solid #d8dada;
+border-top: 0;
+padding: 18px 16px !important;
+outline-offset: unset !important;
+width: auto;
+line-height: 20px;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility.gnav20-eyebrow-L1 .gnav20-eyebrow-link-list-item a.gnav20-main-header:not(.gnav20-selected) {
+position: relative;
+display: block;
+border-bottom: 1px solid #d8dada;
+border-top: none;
+margin: 0 16px;
+padding: 12px 0 !important;
+outline-offset: unset !important;
+width: auto;
+line-height: 20px;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-eyebrow-link-list-item a.gnav20-main-header:not(.gnav20-selected) {
+font-weight: normal;
+padding: 16px;
+font-size: 16px !important;
+height: auto;
+letter-spacing: .5px;
+}
+.gnav20 .gnav20-mobile .gnav20-navigation-item{
+width:100%;
+}
+.gnav20 .gnav20-mobile .gnav20-navigation-item a.gnav20-menu-label-button{
+display:block;
+}
+.gnav20 .gnav20-mobile .gnav20-navigation-item .gnav20-menu-label-button{
+font-weight:normal !important;
+font-size:20px !important;
+padding:17px 20px;
+position:relative;
+border-bottom:1px solid #d8dada;
+line-height: 20px;
+}
+.gnav20 .gnav20-mobile .gnav20-navigation-item .gnav20-menu-label-button:focus{
+outline-offset:-13px !important;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-navigation-item .gnav20-menu-label-button:focus{
+outline-offset:2px !important;
+}
+.gnav20 .gnav20-mobile .gnav20-navigation-item button{
+width:100%;
+text-align:left;
+}
+.gnav20 .gnav20-mobile .gnav20-nav-utility, .gnav20-featured-card-top-label {
+display: none !important;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-openL1 #gnav20-ulwrapper a.gnav20-main-header.gnav20-selected {
+display: none;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-footerlink #gnav20-sign-in-mobile li.gnav20-dropdown-list.gnav20-goback,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-ulwrapper .gnav20-navigation-item .gnav20-primary-menu.gnav20-current .gnav20-goback,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-ulwrapper .gnav20-navigation-item ul li.gnav20-current > a.gnav20-goback {
+font-size: 20px !important;
+font-weight: bold !important;
+height: auto;
+padding: 0 0 16px 0 !important;
+margin: 0 !important;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-footerlink #gnav20-sign-in-mobile li.gnav20-dropdown-list.gnav20-goback:before,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-ulwrapper .gnav20-navigation-item .gnav20-primary-menu.gnav20-current .gnav20-goback:before,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-ulwrapper .gnav20-navigation-item ul li.gnav20-current > a.gnav20-goback:before{
+top: -45px;
+left: 5px;
+height: 12px;
+width: 12px;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-footerlink #gnav20-sign-in-mobile li.gnav20-dropdown-list.gnav20-goback:after,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-ulwrapper .gnav20-navigation-item .gnav20-primary-menu.gnav20-current .gnav20-goback:after,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-ulwrapper .gnav20-navigation-item ul li.gnav20-current > a.gnav20-goback:after {
+top: -56px;
+left: -12px;
+height: 44px;
+width: 44px;
+display: block;
+content: '';
+position: absolute;
+}
+.gnav20 .gnav20-mobile .gnav20-primary-menu.gnav20-current{
+top:0;
+margin-bottom:53px;
+position:relative;
+background:#fff;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-primary-menu.gnav20-current {
+margin: 0;
+}
+.gnav20 .gnav20-mobile .gnav20-primary-menu.gnav20-current .gnav20-haschild{
+display:none;
+}
+.gnav20 .gnav20-mobile .gnav20-primary-menu.gnav20-current .gnav20-sub-menu{
+overflow:auto;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-sub-header-menu.gnav20-sub-menu {
+overflow: visible;
+}
+.gnav20 .gnav20-mobile .gnav20-primary-menu.gnav20-current .gnav20-autoflow{
+height:calc(100vh - 280px);
+border:0;
+overflow:auto;
+padding-bottom:120px !important;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-primary-menu.gnav20-current .gnav20-autoflow {
+height: calc(100vh - 130px);
+margin: 0 !important;
+padding: 0 !important;
+overflow: auto;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility .gnav20-submenu-column.gnav20-featured-scroll-area .gnav20-autoflow {
+overflow: visible;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility ul.gnav20-submenu-column.gnav20-featured-scroll-area.gnav20-L2:not(.gnav20-submenu-open),
+.gnav20 .gnav20-mobile.gnav20-stacked-utility ul.gnav20-submenu-column.gnav20-featured-scroll-area.gnav20-L3 {
+max-height: calc(100vh - 130px);
+overflow: auto;
+}
+.gnav20 .gnav20-mobile .gnav20-primary-menu.gnav20-current .gnav20-goback{
+display:block;
+padding:17px 20px 17px 58px;
+margin-bottom:18px !important;
+}
+.gnav20 .gnav20-mobile #gnav20-footerlink{
+display:flex;
+justify-content:flex-start;
+height:69px;
+padding:0 20px;
+overflow-x:auto;
+align-items:center;
+text-align:left;
+position:absolute;
+bottom:0;
+width:100%;
+border-top:1px solid #d8dada;
+border-bottom:1px solid #d8dada;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink {
+align-items: start;
+flex-direction: column;
+padding: 12px 16px 48px;
+border: 0;
+height: auto;
+position: relative;
+overflow: visible;
+}
+.gnav20 .gnav20-promo-ribbon {
+padding: 16px 20px;
+margin: 0;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-slide-arrow {
+background: no-repeat center center / 16px 16px !important;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-slide-arrow.gnav20-slide-arrow-prev {
+left: 8px;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-slide-arrow.gnav20-slide-arrow-next {
+right: 8px;
+}
+.gnav20 #gnav20-promo-placeholder .gnav20-promo .gnav20-slide-arrow.gnav20-slide-arrow-prev[style*=block] + .gnav20-promotext {
+margin: 0 32px;
+}
+.gnav20 .gnav20-utility-wrapper svg{
+height:18px;
+width:18px;
+margin-top:0;
+}
+.gnav20 .gnav20-mobile .gnav20-utility-wrapper a,
+.gnav20 .gnav20-mobile .gnav20-utility-wrapper button{
+font-size: 16px !important;
+font-weight: normal;
+line-height: 20px;
+}
+.gnav20 .gnav20-mobile #gnav20-mobile-menu .gnav20-fixed-top{
+top:68px;
+position:fixed;
+left:0;
+height:calc(100vh - 150px);
+overflow:auto;
+}
+.gnav20 .gnav20-mobile #gnav20-footerlink .gnav20-account-utility .gnav20-dropdown-menu .gnav20-fixed-top,
+.gnav20 .gnav20-mobile #gnav20-footerlink .gnav20-dropdown-box .gnav20-dropdown-menu .gnav20-fixed-top{
+height:100%;
+z-index: 1001;
+}
+.gnav20 .gnav20-mobile .gnav20-goback:before{
+position:absolute;
+content:"";
+height:9px;
+width:9px;
+border-right:1px solid #000;
+border-bottom:1px solid #000;
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+transform:rotate(135deg);
+left:27px;
+margin-top:6px;
+}
+.gnav20 .gnav20-mobile #gnav20-mobile-menu .gnav20-dropdown-menu .gnav20-goback:before{
+margin-top:23px;
+pointer-events: none;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu .gnav20-dropdown-menu .gnav20-goback:before{
+left: 2px;
+}
+.gnav20 .gnav20-mobile #gnav20-footerlink .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu{
+width:100%;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink .gnav20-language-box {
+padding: 12px 0;
+}
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu ul li a.gnav20-goback,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu ul li a.gnav20-goback{
+display:none;
+}
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu ul li.gnav20-current>a.gnav20-haschild,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu ul li.gnav20-current>a.gnav20-haschild{
+display:none;
+}
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu ul li.gnav20-current>a.gnav20-goback,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu ul li.gnav20-current>a.gnav20-goback{
+display:block;
+padding-left:58px;height:58px;
+}
+.gnav20 .gnav20-mobile #gnav20-footerlink .gnav20-dropdown-list.gnav20-goback{
+border-top:1px solid #d8dada;
+border-bottom: 1px solid #d8dada;
+}
+.gnav20 .gnav20-mobile #gnav20-footerlink.gnav20-utility-reverse{
+flex-direction:row-reverse;
+justify-content:flex-end;
+}
+.gnav20 .gnav20-mobile .gnav20-menu-label-link{
+display:none;
+}
+.gnav20 .gnav20-mobile .gnav20-hide,
+.gnav20 .gnav20-mobile .gnav20-dont-show-in-mobile{
+display:none !important;
+}
+.gnav20 .gnav20-mobile #gnav20-mobile-menu li.gnav20-dropdown-list.gnav20-goback{
+padding:0;
+margin-bottom:18px !important;
+}
+.gnav20 .gnav20-mobile #gnav20-mobile-menu li.gnav20-dropdown-list.gnav20-goback .gnav20-back-to-menu{
+font-size:20px !important;
+padding:17px 20px 17px 58px !important;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu li.gnav20-dropdown-list.gnav20-goback .gnav20-back-to-menu{
+font-size:16px !important;
+padding:17px 20px 17px 30px !important;
+}
+.gnav20 .gnav20-mobile .gnav20-eyebrow-link-list [data-stext].gnav20-main-header:not(.gnav20-selected):before{
+content:attr(data-stext) " ";
+}
+.gnav20 .gnav20-mobile .gnav20-eyebrow-link-list-item a{
+outline-offset:-5px !important
+}
+.gnav20 .gnav20-mobile .gnav20-eyebrow-link-list-item a.gnav20-main-header{
+position:absolute;
+bottom:0;
+padding:26px 20px;
+width:100%;
+}
+.gnav20 .gnav20-mobile #gnav20-footerlink .gnav20-utility-wrapper{
+margin-right:20px;
+margin-left:0;
+}
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-footerlink .gnav20-dropdown-box .gnav20-sign-in:after,
+.gnav20 #gnav20-mobile-menu .gnav20-haschild:after{
+position:absolute;content:"";
+height:9px;
+width:9px;
+border-left:1px solid #000;
+border-top:1px solid #000;
+-ms-transform:rotate(135deg);
+-webkit-transform:rotate(135deg);
+transform:rotate(135deg);
+right:23px;
+margin-top:5px;
+}
+.gnav20-unified-flyout-success{
+height: 100% !important;
+padding-top: 28px !important;
+}
+#load-indicator{
+position: absolute;
+}
+.gnav20-cart-flyout {
+width: 480px;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu .gnav20-dropdown-list a,
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item button {
+font-weight: 700 !important;
+padding: 26px 0 !important;
+border-bottom: 1px solid #cccccc !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu:not(.gnav20-openL1) .gnav20-navigation-item:first-of-type .gnav20-primary-menu {
+border-top: 0 !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu:not(.gnav20-openL1) .gnav20-navigation {
+padding-top: 0px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile #gnav20-mobile-menu ul li {
+padding: 32px 0 0 !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile #gnav20-mobile-menu ul li:last-child {
+padding: 0;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item .gnav20-vils-l2-cta a {
+font-size: 14px !important;
+line-height: 18px !important;
+font-weight: 700 !important;
+letter-spacing: 0.5px !important;
+padding: 0 30px 0 0 !important;
+display: inline;
+border-bottom: none;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile #gnav20-mobile-menu {
+padding-top: 48px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile #gnav20-mobile-menu ul.gnav20-submenu-column.gnav20-L1 {
+padding: 0 0 24px 0 !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile #gnav20-ulwrapper {
+top: 48px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile #gnav20-mobile-menu .gnav20-closex {
+right: 14px;
+top: 14px;
+min-width: 20px;
+height: 20px;
+background-position: 0px 0px !important;
+background-size: 20px 20px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-ulwrapper .gnav20-navigation-item .gnav20-primary-menu.gnav20-current .gnav20-goback {
+position: absolute;
+top: -48px;
+width: 100vh;
+margin-left: -16px !important;
+padding: 16px 32px !important;
+font-size: 11px !important;
+line-height: 16px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-ulwrapper .gnav20-navigation-item .gnav20-primary-menu.gnav20-current .gnav20-goback:before {
+top: 16px;
+left: 16px;
+height: 16px;
+width: 16px;
+border: none;
+margin: 0;
+transform: none;
+background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNSAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuNDU5NSAwLjMzMzQxNUw4LjA2NDY4IDAuOTMzMzAzTDIuMzczNTcgNi41NzYwMUwxNC4wNjY0IDYuNTc2MDFMMTQuMDY2NCA3LjQyNDE2TDIuMzczNTcgNy40MjQxNUw4LjA2NDY4IDEzLjA2NjlMNy40NTk1IDEzLjY2NjdMMC43MzMwNzQgNy4wMDAwOEw3LjQ1OTUgMC4zMzM0MTVaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K) !important;
+background-position: left center;
+background-size: 11px;
+background-repeat: no-repeat;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility #gnav20-mobile-menu.gnav20-open-menu #gnav20-ulwrapper .gnav20-navigation-item .gnav20-primary-menu.gnav20-current .gnav20-goback:after {
+display: none;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item .gnav20-vils-l2-card-cta a {
+padding: 6px 14px !important;
+font-size: 12px !important;
+line-height: 16px !important;
+}
+.gnav20 .gnav20-vils-design .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item .gnav20-vils-l2-card-cta a:hover {
+padding: 5px 13px !important;
+}
+.gnav20 .gnav20-vils-l1-promo {
+padding: 50px 16px;
+}
+.gnav20 .gnav20-vils-l1-promo-body {
+width: 65%;
+}
+.gnav20 .gnav20-vils-l1-promo-title {
+font-size: 24px;
+font-weight: 700;
+line-height: 26px;
+padding-bottom: 5px;
+letter-spacing: 0;
+}
+.gnav20 .gnav20-vils-l1-promo-desc {
+font-size: 14px;
+line-height: 16px;
+font-weight: 400;
+letter-spacing: 0;
+}
+.gnav20 .gnav20-vils-l1-promo-cta {
+margin-top: 30px;
+}
+.gnav20 .gnav20-vils-l1-promo-cta a {
+padding: 8px 16px !important;
+font-size: 12px !important;
+line-height: 16px !important;
+background: #000 !important;
+color: #fff !important;
+font-weight: 700;
+border-radius: 24px;
+}
+.gnav20 .gnav20-vils-l1-promo-cta a:hover {
+outline: none;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0.0625rem;
+transition: 0.1s ease-out;
+}
+}
+.tablet-end{height:0}
+@media (max-width: 767.5px) {
+.gnav20 .gnav20-new-design .gnav20-main{
+padding:15px 16px;
+}
+.gnav20 .gnav20-modal{
+padding-top:5vh
+}
+.gnav20 .gnav20-modal-content{
+padding:32px;
+max-height:90vh;
+}
+.gnav20 .gnav20-modal-content .gnav20-modal-cta{
+display:block;
+}
+.gnav20 .gnav20-promo-ribbon{
+padding: 16px;
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu,
+.gnav20 .gnav20-mobile .gnav20-language-box .gnav20-dropdown-menu.gnav20-open-menu,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu.gnav20-open-menu,
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-unifiedcart .gnav20-unified-cart,
+.gnav20 .gnav20-mobile .gnav20-notification-overlay{
+width:calc(100% - 66px)
+}
+.gnav20 .gnav20-mobile #gnav20-mobile-menu ul li strong,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu ul li a{
+font-size:16px !important;
+padding:18px 16px
+}
+.gnav20 .gnav20-mobile #gnav20-mobile-menu .gnav20-haschild:after{
+right:18px
+}
+.gnav20 .gnav20-mobile #gnav20-footerlink{
+height:65px;
+padding:0 16px;
+}
+.gnav20 .gnav20-mobile #gnav20-footerlink .gnav20-utility-wrapper a,
+.gnav20 .gnav20-mobile #gnav20-footerlink .gnav20-utility-wrapper button {
+font-size: 14px !important;
+font-family: 'BrandFont-Text',sans-serif !important;
+}
+.gnav20 .gnav20-mobile #gnav20-footerlink .gnav20-utility-wrapper .gnav20-dropdown-list a,
+.gnav20 .gnav20-mobile #gnav20-mobile-menu li.gnav20-dropdown-list.gnav20-goback .gnav20-back-to-menu {
+font-size: 16px !important;
+}
+.gnav20 .gnav20-mobile .gnav20-navigation-item .gnav20-menu-label-button{
+font-size:16px !important;
+padding:18px 16px;
+}
+.gnav20 .gnav20-mobile .gnav20-primary-menu.gnav20-current .gnav20-autoflow{
+height:calc(100vh - 264px);
+margin-top:-20px !important;
+padding-top:20px !important;
+}
+.gnav20 .gnav20-mobile .gnav20-primary-menu.gnav20-current .gnav20-goback{
+padding:0 0 0 50px;
+margin-bottom:20px !important;
+height:54px;
+}
+.gnav20 .gnav20-mobile .gnav20-primary-menu.gnav20-current .gnav20-goback:before{
+left:21px;
+margin-top:4px;
+}
+#vz-gf20 .gnav20-mobile-footer-accordion .gnav20-border-content.gnav20-accordion-list{
+display:none;
+opacity:1;
+}
+.gnav20 .gnav20-footer-container .gnav20-main-container {
+padding-top: 0;
+}
+.gnav20 .gnav20-footer-container .gnav20-col-wrapper{
+width:100% !important;
+display:block;
+padding:0;
+border:0;
+}
+.gnav20 .gnav20-footer-container .gnav20-footer-wrapper{
+display:block;
+}
+.gnav20 .gnav20-footer-container .gnav20-hero-wrapper{
+margin:25px 16px 48px;
+}
+.gnav20 .gnav20-footer-container .gnav20-footer-list>li>a{
+font-size:12px !important;
+line-height:14.4px;
+padding:12px 0;
+display:block;
+}
+.gnav20 .gnav20-footer-container .gnav20-hero-footer-heading{
+font-size:12px !important;
+}
+.gnav20 .gnav20-footer-container .gnav20-footer-level-two{
+display:block;padding:25px 0 48px;
+}
+.gnav20 .gnav20-footer-container .gnav20-footer-level-two .gnav20-logo{
+width:100%;
+padding:12px 16px 20px;
+height:56px;
+}
+.gnav20 .gnav20-footer-container .gnav20-footer-level-two .gnav20-footerlink{
+width:100%;
+padding:0 16px 60px;
+}
+.gnav20 .gnav20-footer-container .gnav20-footer-level-two .gnav20-footerlink .copyright-section{
+padding-top:32px;
+}
+.gnav20 .gnav20-footer-container .gnav20-footer-level-two .gnav20-footerlink .copyright-section .copyright-text{
+left:0;
+}
+.gnav20 .gnav20-footer-container .gnav20-footer-level-two .gnav20-footer-list li{
+width:100%;
+float:none;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one{
+padding-top:24px
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-socialfooter .gnav20-hero-wrapper{
+margin:16px 16px 20px;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-socialfooter:last-of-type .gnav20-hero-wrapper {
+padding-bottom: 20px;
+margin-bottom: 45px !important;
+border-bottom: 1px solid #000;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-socialfooter .gnav20-hero-footer-heading{
+border-top:1px solid #000;
+font-size:16px !important;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-herofooter .gnav20-hero-wrapper{
+margin:10px 16px 0;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-herofooter .gnav20-hero-footer-heading{
+cursor:pointer;
+width:100%;
+font-weight:bold;
+font-size:16px !important;
+letter-spacing:.5px;
+border-top:1px solid #000;
+text-align:left;
+padding:8px 0 12px;
+position:relative;
+margin:2px 0 0 0 !important;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-herofooter .gnav20-hero-footer-heading:after{
+content:"";
+height:13px;
+width:13px;
+border-right:2px solid #000;
+border-bottom:2px solid #000;
+-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+transform:rotate(45deg);
+transition:transform 330ms,top 175ms;
+position:absolute;
+right:5px;top:7px;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-herofooter .accordion-child-open{
+display:block !important;
+height:100%;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-herofooter .gnav20-hero-footer-heading.gnav20-accordion-open::after{
+transform:rotate(-135deg);
+top:18px;
+transition:transform 330ms,top 175ms;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-herofooter .gnav20-border-content{
+height:0;
+margin:0;
+padding:0;
+text-align:left;
+overflow:hidden;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-herofooter .gnav20-footer-list{
+text-align:justify;
+font-size:15px;
+width:95%;
+margin:-2px 0 0 0
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-herofooter .gnav20-footer-list>li{
+padding:0;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-one .gnav20-herofooter .gnav20-footer-list>li>a{
+font-size:16px !important;
+line-height:20px !important;
+letter-spacing:.5px;
+}
+.gnav20 .gnav20-mobile-footer-accordion .gnav20-footer-level-two .gnav20-footerlink{
+border-bottom:1px solid #d8dada;
+}
+.gnav20 .gnav20-mobile .gnav20-utility .gnav20-unifiedcart .gnav20-unified-cart.gnav20-unified-flyout-success{
+width: 100% !important;
+height: 100% !important;
+}
+#load-indicator{
+position: fixed;
+}
+.gnav20-cart-flyout {
+width: 100%;
+}
+.gnav20  .gnav20-vils-design .gnav20-mobile .gnav20-utility .gnav20-account-box .gnav20-dropdown-menu,
+.gnav20  .gnav20-vils-design .gnav20-mobile #gnav20-mobile-menu.gnav20-open-menu{
+width:100%;
+border-left: none;
+}
+.gnav20 ul.gnav20-footer-list:not(:first-child) {
+margin-top: 18px !important;
+position: relative;
+}
+.gnav20 .gnav20-footer-container .gnav20-footer-list>li>a:not([href]) {
+padding: 0;
+}
+}
+
+</style>
+<style>
+/* Page CSS */
+/*! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com*/*,:after,:before{border:0 solid #e5e7eb;box-sizing:border-box}:after,:before{--tw-content:""}html{-webkit-text-size-adjust:100%;font-feature-settings:normal;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5;tab-size:4}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:initial}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{color:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:initial;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:initial}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}[hidden]{display:none}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}span[class^=SwatchContainer-VDS]:first-child{margin-left:0!important}span[class^=SwatchContainer-VDS]{flex-grow:0;margin-bottom:.75rem}[class^=GroupContainer-VDS]{display:flex!important;flex-wrap:wrap!important;margin:0!important}a[class^=StyledAnchor-VDS]{padding-left:0!important}.inqC2CImgContainer>div>div{display:flex!important}span[class*=StyledBody-VDS]>span>a:focus{outline:1px dashed gray!important}.inqC2CImgContainer>div>div>span{top:0!important}.long-ellipses{-webkit-line-clamp:3;-webkit-box-orient:vertical;display:-webkit-box;max-width:280px;overflow:hidden}.loading .customBlur{filter:blur(4px)}div[class^=ModalDialogWrapper-VDS]{overflow:auto!important}div#video-overlay{position:relative!important}div#video-overlay [class^=ModalDialogWrapper-VDS]{overflow:visible!important}@media only screen and (max-width:639px){div#video-overlay [class^=ModalDialogWrapper-VDS]{height:100%!important;overflow:auto!important}div#video-overlay [class^=ModalDialogWrapper-VDS] button{bottom:20px;width:96%}}div#video-overlay [class^=ModalDialogWrapper-VDS] ::-webkit-scrollbar,div#video-overlay [class^=ModalDialogWrapper-VDS] :not(select){display:block;scrollbar-width:thin!important}div#compatibility-overlay [class^=ModalDialogWrapper-VDS]{overflow:visible!important}@media only screen and (max-width:639px){div#compatibility-overlay [class^=ModalDialogWrapper-VDS]{height:100%!important}div#compatibility-overlay [class^=ModalDialogWrapper-VDS] button{bottom:20px!important;width:96%}}div#compatibility-overlay [class^=ModalDialogWrapper-VDS] ::-webkit-scrollbar{display:block;scrollbar-width:thin!important}.scrollediv::-webkit-scrollbar{scrollbar-width:thin!important;width:4px!important}.scrollediv::-webkit-scrollbar-track{--tw-bg-opacity:1!important;background-color:rgb(216 218 218/var(--tw-bg-opacity))!important;border-radius:.5rem!important}.scrollediv::-webkit-scrollbar-thumb{--tw-bg-opacity:1!important;background-color:rgb(111 113 113/var(--tw-bg-opacity))!important;border-radius:.5rem!important}.render-content a{-webkit-text-decoration-line:underline;text-decoration-line:underline;text-underline-offset:1px}.render-content h4{font-size:1.125rem;font-weight:700;line-height:1.75rem}.giftcard-prices [class^=RadioBoxGroupWrapper-VDS]{display:grid!important;gap:1rem!important;grid-template-columns:repeat(1,minmax(0,1fr))!important}@media (min-width:1024px){.giftcard-prices [class^=RadioBoxGroupWrapper-VDS]{grid-template-columns:repeat(4,minmax(0,1fr))!important}}.giftcard-prices [class^=LabelBase-VDS]{font-weight:700!important}.outofstock{position:relative}.swatch:hover{--tw-border-opacity:1!important;border-color:rgb(0 0 0/var(--tw-border-opacity))!important}.outofstock:hover{--tw-border-opacity:1!important;border-color:rgb(111 113 113/var(--tw-border-opacity))!important}.outofstock span:after{border-color:currentcolor #6f7171 #6f7171;border-top:1px solid #6f7171;bottom:0;content:"";left:0;position:absolute;right:0;top:40%;transform:rotate(-45deg);width:48px}.modal-open .remove-sticky{position:relative!important}.sr-only{clip:rect(0,0,0,0);border-width:0;height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px}.pointer-events-none{pointer-events:none}.visible{visibility:visible}.invisible{visibility:hidden}.collapse{visibility:collapse}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:-webkit-sticky;position:sticky}.inset-0{bottom:0;left:0;right:0;top:0}.left-0{left:0}.right-\[20px\]{right:20px}.top-0{top:0}.bottom-0{bottom:0}.right-0{right:0}.bottom-5{bottom:1.25rem}.left-1{left:.25rem}.top-\[60px\]{top:60px}.top-\[10px\]{top:10px}.top-\[80px\]{top:80px}.left-\[74vw\]{left:74vw}.top-\[-32px\]{top:-32px}.bottom-\[0px\]{bottom:0}.left-\[0px\]{left:0}.left-1\/3{left:33.333333%}.top-3\.5{top:.875rem}.left-2\.5{left:.625rem}.top-3{top:.75rem}.left-2{left:.5rem}.top-px{top:1px}.right-3{right:.75rem}.left-\[-32px\]{left:-32px}.top-auto{top:auto}.bottom-\[calc\(50\%-6px\)\]{bottom:calc(50% - 6px)}.right-\[-32px\]{right:-32px}.top-\[40\%\]{top:40%}.z-10{z-index:10}.z-40{z-index:40}.z-\[99\]{z-index:99}.z-\[999\]{z-index:999}.z-\[3\]{z-index:3}.z-\[10000\]{z-index:10000}.z-\[-100\]{z-index:-100}.z-50{z-index:50}.z-\[1000\]{z-index:1000}.z-\[500\]{z-index:500}.-z-10{z-index:-10}.z-\[499\]{z-index:499}.z-\[5\]{z-index:5}.col-span-3{grid-column:span 3/span 3}.col-span-4{grid-column:span 4/span 4}.col-span-2{grid-column:span 2/span 2}.col-span-1{grid-column:span 1/span 1}.col-span-8{grid-column:span 8/span 8}.col-span-6{grid-column:span 6/span 6}.col-span-10{grid-column:span 10/span 10}.col-span-12{grid-column:span 12/span 12}.float-right{float:right}.m-5{margin:1.25rem}.m-auto{margin:auto}.\!m-0{margin:0!important}.m-0{margin:0}.m-\[auto\]{margin:auto}.m-4{margin:1rem}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-bottom:1rem;margin-top:1rem}.my-\[12px\]{margin-bottom:12px;margin-top:12px}.my-0{margin-bottom:0;margin-top:0}.mx-\[5px\]{margin-left:5px;margin-right:5px}.mx-3{margin-left:.75rem;margin-right:.75rem}.mx-5{margin-left:1.25rem;margin-right:1.25rem}.my-7{margin-bottom:1.75rem;margin-top:1.75rem}.my-16{margin-bottom:4rem;margin-top:4rem}.my-14{margin-bottom:3.5rem;margin-top:3.5rem}.my-8{margin-bottom:2rem;margin-top:2rem}.my-2{margin-bottom:.5rem;margin-top:.5rem}.my-6{margin-bottom:1.5rem;margin-top:1.5rem}.my-3{margin-bottom:.75rem;margin-top:.75rem}.my-12{margin-bottom:3rem;margin-top:3rem}.mx-0{margin-left:0;margin-right:0}.mx-4{margin-left:1rem;margin-right:1rem}.mx-2\.5{margin-left:.625rem;margin-right:.625rem}.mx-2{margin-left:.5rem;margin-right:.5rem}.my-5{margin-bottom:1.25rem;margin-top:1.25rem}.mx-1{margin-left:.25rem;margin-right:.25rem}.my-1{margin-bottom:.25rem;margin-top:.25rem}.mb-\[32px\]{margin-bottom:32px}.mb-2{margin-bottom:.5rem}.mt-\[32px\]{margin-top:32px}.mb-4{margin-bottom:1rem}.mt-1{margin-top:.25rem}.mt-5{margin-top:1.25rem}.mr-3{margin-right:.75rem}.ml-2\.5{margin-left:.625rem}.ml-2{margin-left:.5rem}.ml-auto{margin-left:auto}.mt-4{margin-top:1rem}.mt-3{margin-top:.75rem}.mt-16{margin-top:4rem}.mb-6{margin-bottom:1.5rem}.mb-5{margin-bottom:1.25rem}.ml-4{margin-left:1rem}.mt-\[24px\]{margin-top:24px}.mb-\[12px\]{margin-bottom:12px}.mt-\[98px\]{margin-top:98px}.mb-\[56px\]{margin-bottom:56px}.mt-\[66px\]{margin-top:66px}.mt-\[16px\]{margin-top:16px}.mt-\[30px\]{margin-top:30px}.mb-\[16px\]{margin-bottom:16px}.mb-\[24px\]{margin-bottom:24px}.mt-\[46px\]{margin-top:46px}.mt-\[12px\]{margin-top:12px}.mr-2{margin-right:.5rem}.mt-\[22px\]{margin-top:22px}.mb-1{margin-bottom:.25rem}.mb-3{margin-bottom:.75rem}.mt-\[19vh\]{margin-top:19vh}.mt-\[245px\]{margin-top:245px}.mb-8{margin-bottom:2rem}.mt-12{margin-top:3rem}.ml-\[12\%\]{margin-left:12%}.mt-11{margin-top:2.75rem}.mt-2{margin-top:.5rem}.ml-1{margin-left:.25rem}.mt-6{margin-top:1.5rem}.mr-8{margin-right:2rem}.mr-0{margin-right:0}.mt-\[-1px\]{margin-top:-1px}.mt-10{margin-top:2.5rem}.mt-8{margin-top:2rem}.mb-11{margin-bottom:2.75rem}.mb-12{margin-bottom:3rem}.ml-0\.5{margin-left:.125rem}.ml-0{margin-left:0}.mr-0\.5{margin-right:.125rem}.mr-\[3\.75px\]{margin-right:3.75px}.mt-\[1\.67px\]{margin-top:1.67px}.mt-auto{margin-top:auto}.mb-0{margin-bottom:0}.ml-\[3px\]{margin-left:3px}.mt-0{margin-top:0}.mb-auto{margin-bottom:auto}.mr-1{margin-right:.25rem}.mt-7{margin-top:1.75rem}.ml-\[10px\]{margin-left:10px}.mb-16{margin-bottom:4rem}.mr-4{margin-right:1rem}.-ml-\[1px\]{margin-left:-1px}.-mt-\[2px\]{margin-top:-2px}.mb-9{margin-bottom:2.25rem}.ml-\[20px\]{margin-left:20px}.mb-10{margin-bottom:2.5rem}.mr-2\.5{margin-right:.625rem}.mt-\[5px\]{margin-top:5px}.-ml-5{margin-left:-1.25rem}.ml-1\.5{margin-left:.375rem}.mt-\[8px\]{margin-top:8px}.mr-6{margin-right:1.5rem}.mt-\[20px\]{margin-top:20px}.mt-56{margin-top:14rem}.mt-\[-3px\]{margin-top:-3px}.ml-\[-50px\]{margin-left:-50px}.mb-\[-3px\]{margin-bottom:-3px}.mb-\[10px\]{margin-bottom:10px}.-mt-16{margin-top:-4rem}.mt-3\.5{margin-top:.875rem}.mb-\[30px\]{margin-bottom:30px}.mt-\[-2px\]{margin-top:-2px}.mt-\[10px\]{margin-top:10px}.ml-\[45px\]{margin-left:45px}.mb-\[8px\]{margin-bottom:8px}.box-content{box-sizing:initial}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.contents{display:contents}.list-item{display:list-item}.hidden{display:none}.aspect-video{aspect-ratio:16/9}.h-full{height:100%}.h-3{height:.75rem}.h-\[110px\]{height:110px}.h-\[100\%\]{height:100%}.h-screen{height:100vh}.h-\[50\%\]{height:50%}.h-\[auto\]{height:auto}.h-\[18px\]{height:18px}.h-\[94px\]{height:94px}.h-\[36px\]{height:36px}.h-\[16px\]{height:16px}.h-\[100px\]{height:100px}.h-\[220px\]{height:220px}.h-\[20px\]{height:20px}.h-\[48px\]{height:48px}.h-9{height:2.25rem}.h-\[52px\]{height:52px}.h-\[54px\]{height:54px}.h-\[32px\]{height:32px}.h-\[17px\]{height:17px}.h-\[172px\]{height:172px}.h-\[363px\]{height:363px}.h-8{height:2rem}.h-\[45px\]{height:45px}.h-\[250px\]{height:250px}.h-\[200px\]{height:200px}.h-\[210px\]{height:210px}.h-\[134px\]{height:134px}.h-\[542px\]{height:542px}.h-px{height:1px}.h-10{height:2.5rem}.h-\[80vh\]{height:80vh}.h-4{height:1rem}.h-\[30px\]{height:30px}.h-6{height:1.5rem}.h-5{height:1.25rem}.h-2\.5{height:.625rem}.h-2{height:.5rem}.h-\[16\.67px\]{height:16.67px}.h-\[24px\]{height:24px}.h-14{height:3.5rem}.h-20{height:5rem}.h-16{height:4rem}.h-12{height:3rem}.h-32{height:8rem}.h-44{height:11rem}.h-\[85vh\]{height:85vh}.h-\[calc\(68vh-95px\)\]{height:calc(68vh - 95px)}.h-\[25px\]{height:25px}.h-1{height:.25rem}.h-0{height:0}.h-\[150px\]{height:150px}.h-1\/4{height:25%}.h-\[23px\]{height:23px}.h-\[75px\]{height:75px}.h-\[6px\]{height:6px}.h-auto{height:auto}.h-\[40px\]{height:40px}.h-\[64px\]{height:64px}.h-\[8px\]{height:8px}.h-\[90px\]{height:90px}.h-\[428px\]{height:428px}.h-\[calc\(100vh_-_97px\)\]{height:calc(100vh - 97px)}.h-\[90vh\]{height:90vh}.h-\[60vh\]{height:60vh}.h-\[454px\]{height:454px}.h-\[578px\]{height:578px}.h-\[780px\]{height:780px}.h-\[50px\]{height:50px}.h-\[136px\]{height:136px}.h-\[72px\]{height:72px}.h-\[0\.0625rem\]{height:.0625rem}.h-\[104px\]{height:104px}.h-\[230px\]{height:230px}.h-24{height:6rem}.h-\[70px\]{height:70px}.h-\[10px\]{height:10px}.max-h-\[48px\]{max-height:48px}.max-h-\[458px\]{max-height:458px}.min-h-\[322px\]{min-height:322px}.min-h-\[150px\]{min-height:150px}.min-h-\[36px\]{min-height:36px}.min-h-\[100px\]{min-height:100px}.min-h-\[204px\]{min-height:204px}.min-h-\[70px\]{min-height:70px}.min-h-\[20px\]{min-height:20px}.min-h-\[160px\]{min-height:160px}.min-h-\[190px\]{min-height:190px}.w-\[100\%\],.w-full{width:100%}.w-\[80\%\]{width:80%}.w-fit{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content}.w-\[35\%\]{width:35%}.w-\[60\%\]{width:60%}.w-\[50\%\]{width:50%}.w-\[88px\]{width:88px}.w-\[148px\]{width:148px}.w-\[116px\]{width:116px}.w-\[100px\]{width:100px}.w-\[64px\]{width:64px}.w-\[93\%\]{width:93%}.w-\[50px\]{width:50px}.w-auto{width:auto}.w-\[120px\]{width:120px}.w-\[109px\]{width:109px}.w-\[134px\]{width:134px}.w-11\/12{width:91.666667%}.w-\[85\%\]{width:85%}.w-\[95\%\]{width:95%}.w-3{width:.75rem}.w-px{width:1px}.w-\[90px\]{width:90px}.w-5{width:1.25rem}.w-2\.5{width:.625rem}.w-2{width:.5rem}.w-\[12\.5px\]{width:12.5px}.w-1\/2{width:50%}.w-1\/3{width:33.333333%}.w-10{width:2.5rem}.w-\[200px\]{width:200px}.w-\[40px\]{width:40px}.w-48{width:12rem}.w-36{width:9rem}.w-8{width:2rem}.w-16{width:4rem}.w-24{width:6rem}.w-32{width:8rem}.w-12{width:3rem}.w-\[82vw\]{width:82vw}.w-\[calc\(100\%\+16px\)\]{width:calc(100% + 16px)}.w-\[219px\]{width:219px}.w-\[25px\]{width:25px}.w-0{width:0}.w-\[186px\]{width:186px}.w-\[265px\]{width:265px}.w-\[150px\]{width:150px}.w-1\/4{width:25%}.w-9{width:2.25rem}.w-4\/5{width:80%}.w-\[300px\]{width:300px}.w-\[75px\]{width:75px}.w-\[280px\]{width:280px}.w-\[84px\]{width:84px}.w-7{width:1.75rem}.w-2\/3{width:66.666667%}.w-\[135px\]{width:135px}.w-\[72px\]{width:72px}.w-\[240px\]{width:240px}.w-\[160px\]{width:160px}.w-\[290px\]{width:290px}.w-6{width:1.5rem}.w-\[80px\]{width:80px}.w-5\/6{width:83.333333%}.w-\[220px\]{width:220px}.w-\[395px\]{width:395px}.w-\[304px\]{width:304px}.w-\[328px\]{width:328px}.w-\[104px\]{width:104px}.min-w-\[120px\]{min-width:120px}.min-w-\[320px\]{min-width:320px}.max-w-\[1272px\]{max-width:1272px}.max-w-full{max-width:100%}.max-w-\[1227px\]{max-width:1227px}.max-w-md{max-width:28rem}.max-w-screen-lg{max-width:1024px}.max-w-\[490px\]{max-width:490px}.max-w-\[292px\]{max-width:292px}.max-w-\[640px\]{max-width:640px}.max-w-3xl{max-width:48rem}.max-w-\[560px\]{max-width:560px}.max-w-\[600px\]{max-width:600px}.max-w-\[180px\]{max-width:180px}.max-w-\[220px\]{max-width:220px}.max-w-4xl{max-width:56rem}.max-w-\[40px\]{max-width:40px}.max-w-\[182px\]{max-width:182px}.flex-1{flex:1 1 0%}.flex-shrink{flex-shrink:1}.flex-shrink-0{flex-shrink:0}.shrink{flex-shrink:1}.flex-grow-0{flex-grow:0}.flex-grow,.grow{flex-grow:1}.basis-0{flex-basis:0px}.basis-full{flex-basis:100%}.basis-\[48\%\]{flex-basis:48%}.border-collapse{border-collapse:collapse}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.cursor-default{cursor:default}.cursor-pointer{cursor:pointer}.resize{resize:both}.scroll-mt-20{scroll-margin-top:5rem}.list-disc{list-style-type:disc}.list-none{list-style-type:none}.grid-flow-row{grid-auto-flow:row}.auto-rows-max{grid-auto-rows:-webkit-max-content;grid-auto-rows:max-content}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-8{grid-template-columns:repeat(8,minmax(0,1fr))}.grid-cols-7{grid-template-columns:repeat(7,minmax(0,1fr))}.grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.grid-cols-\[minmax\(160px\2c _1fr\)_minmax\(160px\2c _1fr\)\]{grid-template-columns:minmax(160px,1fr) minmax(160px,1fr)}.grid-cols-\[minmax\(160px\2c _1fr\)_minmax\(160px\2c _1fr\)_minmax\(160px\2c _1fr\)\]{grid-template-columns:minmax(160px,1fr) minmax(160px,1fr) minmax(160px,1fr)}.grid-cols-\[minmax\(113px\2c _1fr\)_minmax\(113px\2c _1fr\)_minmax\(113px\2c _1fr\)_minmax\(113px\2c _1fr\)\]{grid-template-columns:minmax(113px,1fr) minmax(113px,1fr) minmax(113px,1fr) minmax(113px,1fr)}.grid-cols-\[minmax\(140px\2c _1fr\)_minmax\(140px\2c _1fr\)_minmax\(140px\2c _1fr\)_minmax\(140px\2c _1fr\)\]{grid-template-columns:minmax(140px,1fr) minmax(140px,1fr) minmax(140px,1fr) minmax(140px,1fr)}.grid-cols-\[minmax\(160px\2c _1fr\)\]{grid-template-columns:minmax(160px,1fr)}.grid-rows-1{grid-template-rows:repeat(1,minmax(0,1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.content-center{align-content:center}.content-start{align-content:flex-start}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-evenly{justify-content:space-evenly}.gap-1{gap:.25rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-\[20px\]{gap:20px}.gap-2{gap:.5rem}.gap-\[8px\]{gap:8px}.gap-\[1\.5px\]{gap:1.5px}.gap-6{gap:1.5rem}.gap-\[2px\]{gap:2px}.gap-\[4px\]{gap:4px}.gap-8{gap:2rem}.gap-y-6{row-gap:1.5rem}.gap-x-\[22px\]{column-gap:22px}.gap-x-1{column-gap:.25rem}.gap-y-4{row-gap:1rem}.gap-y-3{row-gap:.75rem}.space-x-6>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-left:calc(1.5rem*(1 - var(--tw-space-x-reverse)));margin-right:calc(1.5rem*var(--tw-space-x-reverse))}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-left:calc(1rem*(1 - var(--tw-space-x-reverse)));margin-right:calc(1rem*var(--tw-space-x-reverse))}.space-x-2>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-left:calc(.5rem*(1 - var(--tw-space-x-reverse)));margin-right:calc(.5rem*var(--tw-space-x-reverse))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(.5rem*var(--tw-space-y-reverse));margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-bottom:calc(1rem*var(--tw-space-y-reverse));margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)))}.self-start{align-self:flex-start}.justify-self-end{justify-self:end}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-visible{overflow:visible}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.truncate{overflow:hidden;white-space:nowrap}.text-ellipsis,.truncate{text-overflow:ellipsis}.whitespace-nowrap{white-space:nowrap}.whitespace-pre-line{white-space:pre-line}.break-normal{overflow-wrap:normal;word-break:normal}.break-words{overflow-wrap:break-word}.rounded{border-radius:.25rem}.rounded-xl{border-radius:.75rem}.rounded-lg{border-radius:.5rem}.rounded-\[14px\]{border-radius:14px}.rounded-\[5px\]{border-radius:5px}.rounded-\[12px\]{border-radius:12px}.rounded-full{border-radius:9999px}.rounded-2xl{border-radius:1rem}.rounded-md{border-radius:.375rem}.rounded-sm{border-radius:.125rem}.rounded-r-md{border-bottom-right-radius:.375rem;border-top-right-radius:.375rem}.rounded-t-lg{border-top-left-radius:.5rem;border-top-right-radius:.5rem}.rounded-tl-\[12px\]{border-top-left-radius:12px}.rounded-tr-\[12px\]{border-top-right-radius:12px}.border{border-width:1px}.border-0{border-width:0}.border-2{border-width:2px}.\!border-0{border-width:0!important}.border-b-\[1px\]{border-bottom-width:1px}.border-r-0{border-right-width:0}.border-t,.border-t-\[1px\]{border-top-width:1px}.border-b{border-bottom-width:1px}.border-b-\[\.0625rem\]{border-bottom-width:.0625rem}.border-solid{border-style:solid}.border-dashed{border-style:dashed}.border-none{border-style:none}.border-\[\#D8DADA\]{--tw-border-opacity:1;border-color:rgb(216 218 218/var(--tw-border-opacity))}.border-\[\#cfcfcf\]{--tw-border-opacity:1;border-color:rgb(207 207 207/var(--tw-border-opacity))}.border-slate-900{--tw-border-opacity:1;border-color:rgb(15 23 42/var(--tw-border-opacity))}.border-\[\#d8dada\]{--tw-border-opacity:1;border-color:rgb(216 218 218/var(--tw-border-opacity))}.border-black{--tw-border-opacity:1;border-color:rgb(0 0 0/var(--tw-border-opacity))}.border-\[\#6f7171\]{--tw-border-opacity:1;border-color:rgb(111 113 113/var(--tw-border-opacity))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity))}.border-\[\#6F7171\]{--tw-border-opacity:1;border-color:rgb(111 113 113/var(--tw-border-opacity))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity))}.border-transparent{border-color:#0000}.border-gray-500{--tw-border-opacity:1;border-color:rgb(107 114 128/var(--tw-border-opacity))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235/var(--tw-border-opacity))}.border-b-\[\#d8dada\]{--tw-border-opacity:1;border-bottom-color:rgb(216 218 218/var(--tw-border-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-\[\#F6F6F6\]{--tw-bg-opacity:1;background-color:rgb(246 246 246/var(--tw-bg-opacity))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240/var(--tw-bg-opacity))}.bg-\[\#FFFFFF\]{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246/var(--tw-bg-opacity))}.bg-\[\#fff\]{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity))}.bg-\[\#F5FF1E\]{--tw-bg-opacity:1;background-color:rgb(245 255 30/var(--tw-bg-opacity))}.bg-transparent{background-color:initial}.bg-\[\#d8dada\]{--tw-bg-opacity:1;background-color:rgb(216 218 218/var(--tw-bg-opacity))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity))}.bg-\[\#f6f6f6\]{--tw-bg-opacity:1;background-color:rgb(246 246 246/var(--tw-bg-opacity))}.bg-\[white\]{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.bg-\[\#f5ff1e\]{--tw-bg-opacity:1;background-color:rgb(245 255 30/var(--tw-bg-opacity))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249/var(--tw-bg-opacity))}.\!bg-transparent{background-color:initial!important}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219/var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246/var(--tw-bg-opacity))}.bg-\[\#A7A7A7\]{--tw-bg-opacity:1;background-color:rgb(167 167 167/var(--tw-bg-opacity))}.bg-\[\#D6F2E0\]{--tw-bg-opacity:1;background-color:rgb(214 242 224/var(--tw-bg-opacity))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255/var(--tw-bg-opacity))}.bg-\[\#008331\]{--tw-bg-opacity:1;background-color:rgb(0 131 49/var(--tw-bg-opacity))}.bg-\[\#F3EDE0\]{--tw-bg-opacity:1;background-color:rgb(243 237 224/var(--tw-bg-opacity))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38/var(--tw-bg-opacity))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251/var(--tw-bg-opacity))}.bg-\[\#ee0000\]{--tw-bg-opacity:1;background-color:rgb(238 0 0/var(--tw-bg-opacity))}.bg-\[\#E3F2FD\]{--tw-bg-opacity:1;background-color:rgb(227 242 253/var(--tw-bg-opacity))}.bg-none{background-image:none}.bg-cover{background-size:cover}.bg-center{background-position:50%}.bg-no-repeat{background-repeat:no-repeat}.object-cover{object-fit:cover}.p-\[20px\]{padding:20px}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-3{padding:.75rem}.p-1{padding:.25rem}.p-2{padding:.5rem}.p-0{padding:0}.p-0\.5{padding:.125rem}.p-\[25px\]{padding:25px}.p-5{padding:1.25rem}.p-8{padding:2rem}.py-4{padding-bottom:1rem;padding-top:1rem}.px-\[20px\]{padding-left:20px;padding-right:20px}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-2{padding-left:.5rem;padding-right:.5rem}.py-6{padding-bottom:1.5rem;padding-top:1.5rem}.px-0{padding-left:0;padding-right:0}.py-2{padding-bottom:.5rem;padding-top:.5rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-\[12px\]{padding-bottom:12px;padding-top:12px}.px-\[7px\]{padding-left:7px;padding-right:7px}.py-\[2px\]{padding-bottom:2px;padding-top:2px}.px-3{padding-left:.75rem;padding-right:.75rem}.py-1{padding-bottom:.25rem;padding-top:.25rem}.py-3{padding-bottom:.75rem;padding-top:.75rem}.py-8{padding-bottom:2rem;padding-top:2rem}.px-1{padding-left:.25rem;padding-right:.25rem}.py-12{padding-bottom:3rem;padding-top:3rem}.px-\[1px\]{padding-left:1px;padding-right:1px}.px-7{padding-left:1.75rem;padding-right:1.75rem}.px-\[4px\]{padding-left:4px;padding-right:4px}.px-3\.5{padding-left:.875rem;padding-right:.875rem}.py-3\.5{padding-bottom:.875rem;padding-top:.875rem}.pb-2\.5{padding-bottom:.625rem}.pb-2{padding-bottom:.5rem}.pb-1{padding-bottom:.25rem}.pl-4{padding-left:1rem}.pr-4{padding-right:1rem}.pt-4{padding-top:1rem}.pb-4{padding-bottom:1rem}.pr-2{padding-right:.5rem}.pl-2{padding-left:.5rem}.pb-48{padding-bottom:12rem}.pt-12{padding-top:3rem}.pt-8{padding-top:2rem}.pb-40{padding-bottom:10rem}.pb-\[7px\]{padding-bottom:7px}.pb-6{padding-bottom:1.5rem}.pl-0\.5{padding-left:.125rem}.pl-0{padding-left:0}.pt-5{padding-top:1.25rem}.pt-14{padding-top:3.5rem}.pl-\[4px\]{padding-left:4px}.pt-1{padding-top:.25rem}.pl-1{padding-left:.25rem}.pt-3{padding-top:.75rem}.pb-3{padding-bottom:.75rem}.pb-5{padding-bottom:1.25rem}.pt-2{padding-top:.5rem}.pb-8{padding-bottom:2rem}.pb-24{padding-bottom:6rem}.pl-5{padding-left:1.25rem}.pl-1\.5{padding-left:.375rem}.pb-12{padding-bottom:3rem}.pt-\[18px\]{padding-top:18px}.pb-\[12px\]{padding-bottom:12px}.pt-6{padding-top:1.5rem}.pt-\[0\.5px\]{padding-top:.5px}.pt-0{padding-top:0}.pb-0{padding-bottom:0}.pl-3{padding-left:.75rem}.pl-7{padding-left:1.75rem}.pt-10{padding-top:2.5rem}.pl-2\.5{padding-left:.625rem}.pr-3{padding-right:.75rem}.pr-6{padding-right:1.5rem}.pr-1{padding-right:.25rem}.pt-\[6px\]{padding-top:6px}.pr-20{padding-right:5rem}.pl-20{padding-left:5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.indent-px{text-indent:1px}.align-middle{vertical-align:middle}.align-bottom{vertical-align:bottom}.font-VerizonNHGeTX{font-family:Verizon-NHG-eTX,Arial,Helvetica,sans-serif}.font-\[BrandFont-Text\]{font-family:BrandFont-Text}.text-2xl{font-size:1.5rem;line-height:2rem}.text-xs{font-size:.75rem;line-height:1rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-\[24px\]{font-size:24px}.text-\[16px\]{font-size:16px}.text-\[0\.75rem\]{font-size:.75rem}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-\[32px\]{font-size:32px}.text-5xl{font-size:3rem;line-height:1}.text-\[40px\]{font-size:40px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-\[12px\]{font-size:12px}.text-\[15px\]{font-size:15px}.text-3xl{font-size:1.875rem;line-height:2.25rem}.font-extrabold{font-weight:800}.font-bold{font-weight:700}.font-normal{font-weight:400}.\!font-normal{font-weight:400!important}.font-light{font-weight:300}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.lowercase{text-transform:lowercase}.capitalize{text-transform:capitalize}.leading-4{line-height:1rem}.leading-\[24px\]{line-height:24px}.leading-6{line-height:1.5rem}.leading-\[20px\]{line-height:20px}.leading-7{line-height:1.75rem}.leading-\[16px\]{line-height:16px}.leading-5{line-height:1.25rem}.leading-8{line-height:2rem}.leading-\[2\]{line-height:2}.leading-\[36px\]{line-height:36px}.tracking-wide{letter-spacing:.025em}.tracking-\[0\.5px\]{letter-spacing:.5px}.tracking-normal{letter-spacing:0}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.text-\[\#EE0000\]{--tw-text-opacity:1;color:rgb(238 0 0/var(--tw-text-opacity))}.text-\[\#0072c6\]{--tw-text-opacity:1;color:rgb(0 114 198/var(--tw-text-opacity))}.text-\[\#716F6D\]{--tw-text-opacity:1;color:rgb(113 111 109/var(--tw-text-opacity))}.text-\[\#6F7171\]{--tw-text-opacity:1;color:rgb(111 113 113/var(--tw-text-opacity))}.text-\[\#333333\]{--tw-text-opacity:1;color:rgb(51 51 51/var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235/var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity))}.text-\[\#008331\]{--tw-text-opacity:1;color:rgb(0 131 49/var(--tw-text-opacity))}.text-\[\#000000\]{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.text-\[\#6f7171\]{--tw-text-opacity:1;color:rgb(111 113 113/var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.line-through{-webkit-text-decoration-line:line-through;text-decoration-line:line-through}.decoration-black{-webkit-text-decoration-color:#000;text-decoration-color:#000}.placeholder-black::placeholder{--tw-placeholder-opacity:1;color:rgb(0 0 0/var(--tw-placeholder-opacity))}.opacity-0{opacity:0}.opacity-20{opacity:.2}.opacity-70{opacity:.7}.shadow{--tw-shadow:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color)}.shadow,.shadow-md{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-sm{--tw-shadow:0 1px 2px 0 #0000000d;--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.shadow-\[0_0_15px_0_rgba\(15\2c 17\2c 17\2c \.5\)\],.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_15px_0_rgba\(15\2c 17\2c 17\2c \.5\)\]{--tw-shadow:0 0 15px 0 #0f111180;--tw-shadow-colored:0 0 15px 0 var(--tw-shadow-color)}.shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000}.shadow-\[0_0_0_0\.0625rem_\#000000\],.shadow-none{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_0_0\.0625rem_\#000000\]{--tw-shadow:0 0 0 0.0625rem #000;--tw-shadow-colored:0 0 0 0.0625rem var(--tw-shadow-color)}.shadow-lg{--tw-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.outline-none{outline:2px solid #0000;outline-offset:2px}.outline{outline-style:solid}.outline-dashed{outline-style:dashed}.outline-double{outline-style:double}.outline-1{outline-width:1px}.outline-offset-1{outline-offset:1px}.outline-offset-\[-2px\]{outline-offset:-2px}.outline-black{outline-color:#000}.ring{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring,.ring-1{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-0{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-black{--tw-ring-opacity:1;--tw-ring-color:rgb(0 0 0/var(--tw-ring-opacity))}.ring-offset-4{--tw-ring-offset-width:4px}.blur{--tw-blur:blur(8px)}.blur,.brightness-0{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.brightness-0{--tw-brightness:brightness(0)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-duration:.15s;transition-property:color,background-color,border-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-text-decoration-color,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-text-decoration-color,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-all{transition-duration:.15s;transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1)}.delay-\[0s\]{transition-delay:0s}.duration-200{transition-duration:.2s}.duration-300{transition-duration:.3s}.duration-\[0\.2s\]{transition-duration:.2s}.duration-500{transition-duration:.5s}.ease-\[ease\]{transition-timing-function:ease}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.\[display\:ruby\]{display:ruby}html{scroll-behavior:smooth}@font-face{font-display:swap;font-family:Verizon-NHG-eTX;font-style:normal;font-weight:400;src:url(//scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.eot);src:url(//scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.eot?#iefix) format("embedded-opentype"),url(//scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.woff2) format("woff2"),url(//scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.woff) format("woff"),url(//scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Regular.ttf) format("truetype")}@font-face{font-display:swap;font-family:Verizon-NHG-eTX;font-style:normal;font-weight:700;src:url(//scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.eot);src:url(//scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.eot?#iefix) format("embedded-opentype"),url(//scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.woff2) format("woff2"),url(//scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.woff) format("woff"),url(//scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeTX-Bold.ttf) format("truetype")}@font-face{font-display:swap;font-family:Verizon-NHG-eDS;font-style:normal;font-weight:300;src:url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGDS-Light.eot);src:url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGDS-Light.eot?#iefix) format("embedded-opentype"),url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGDS-Light.woff2) format("woff2"),url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGDS-Light.woff) format("woff"),url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGDS-Light.ttf) format("truetype")}@font-face{font-display:swap;font-family:Verizon-NHG-eDS;font-style:normal;font-weight:400;src:url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.eot);src:url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.eot?#iefix) format("embedded-opentype"),url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.woff2) format("woff2"),url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.woff) format("woff"),url(https://scache1.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Regular.ttf) format("truetype")}@font-face{font-display:swap;font-family:Verizon-NHG-eDS;font-style:normal;font-weight:700;src:url(https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.eot);src:url(https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.eot?#iefix) format("embedded-opentype"),url(https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.woff2) format("woff2"),url(https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.woff) format("woff"),url(https://scache2.vzw.com/globalnav/fonts/verizon-nhg/VerizonNHGeDS-Bold.ttf) format("truetype")}body.withoutPagePosition{top:0!important}.focus:focus,.focus:focus-within{outline:1px dashed #000}@media only screen and (min-width:1272px){div[class*=NotificationBar__StyledNotification],div[class*=NotificationBar__StyledNotification] div[class*=ContentWrapper-VDS]{max-width:100%}}*{font-family:Verizon-NHG-eDS,Helvetica,Arial,sans-serif}[class^=ModalContainer-VDS]{z-index:9999!important}#compareProductName{-webkit-line-clamp:4;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.priceTabComponent div[class^=ContentWrapper]{display:none}.priceTabComponent ul{overflow:inherit}div#featuresContainer .device-details-section{display:block!important}#tooltip-portal{position:absolute;z-index:9999}.swiper-container{margin-left:auto;margin-right:auto;overflow:hidden;position:relative;z-index:1}.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{box-sizing:initial;display:flex;height:100%;position:relative;transition-property:transform;width:100%;z-index:1}.swiper-container-android .swiper-slide,.swiper-wrapper{transform:translateZ(0)}.swiper-container-multirow>.swiper-wrapper{-webkit-box-lines:multiple;-moz-box-lines:multiple;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{margin:0 auto;transition-timing-function:ease-out}.swiper-slide{background-color:#fff;-webkit-flex-shrink:0;-ms-flex:0 0 auto;flex-shrink:0;height:100%;position:relative;width:100%}.swiper-container-autoheight,.swiper-container-autoheight .swiper-slide{height:auto}.swiper-container-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-container .swiper-notification{left:0;opacity:0;pointer-events:none;position:absolute;top:0;z-index:-1000}.swiper-wp8-horizontal{touch-action:pan-y}.swiper-wp8-vertical{touch-action:pan-x}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{background:none}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22 22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z'/%3E%3C/svg%3E")}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22 22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23fff'/%3E%3C/svg%3E")}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22 5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z'/%3E%3C/svg%3E")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22 5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23fff'/%3E%3C/svg%3E")}.swiper-pagination-progress .swiper-pagination-progressbar{background:#007aff;height:100%;left:0;position:absolute;top:0;transform:scale(0);transform-origin:left top;width:100%}.swiper-container-rtl .swiper-pagination-progress .swiper-pagination-progressbar{transform-origin:right top}.swiper-container-horizontal>.swiper-pagination-progress{height:4px;left:0;top:0;width:100%}.swiper-container-vertical>.swiper-pagination-progress{height:100%;left:0;top:0;width:4px}.swiper-pagination-progress.swiper-pagination-white{background:#ffffff80}.swiper-pagination-progress.swiper-pagination-white .swiper-pagination-progressbar{background:#fff}.swiper-pagination-progress.swiper-pagination-black .swiper-pagination-progressbar{background:#000}.swiper-container-3d{-o-perspective:1200px;perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:linear-gradient(270deg,#00000080,#0000)}.swiper-container-3d .swiper-slide-shadow-right{background-image:linear-gradient(90deg,#00000080,#0000)}.swiper-container-3d .swiper-slide-shadow-top{background-image:linear-gradient(0deg,#00000080,#0000)}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(180deg,#00000080,#0000)}.swiper-container-coverflow .swiper-wrapper,.swiper-container-flip .swiper-wrapper{-ms-perspective:1200px}.swiper-container-cube,.swiper-container-flip{overflow:visible}.swiper-container-cube .swiper-slide,.swiper-container-flip .swiper-slide{-webkit-backface-visibility:hidden;backface-visibility:hidden;pointer-events:none;z-index:1}.swiper-container-cube .swiper-slide .swiper-slide,.swiper-container-flip .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-active .swiper-slide-active,.swiper-container-flip .swiper-slide-active,.swiper-container-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top,.swiper-container-flip .swiper-slide-shadow-bottom,.swiper-container-flip .swiper-slide-shadow-left,.swiper-container-flip .swiper-slide-shadow-right,.swiper-container-flip .swiper-slide-shadow-top{-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:0}.swiper-container-cube .swiper-slide{height:100%;transform-origin:0 0;visibility:hidden;width:100%}.swiper-container-cube.swiper-container-rtl .swiper-slide{transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-cube-shadow{background:#000;bottom:0;filter:blur(50px);height:100%;left:0;opacity:.6;position:absolute;width:100%;z-index:0}.swiper-container-fade.swiper-container-free-mode .swiper-slide{transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none;transition-property:opacity}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-zoom-container{align-items:center;display:flex;height:100%;justify-content:center;text-align:center;width:100%}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-height:100%;max-width:100%;object-fit:contain}.swiper-scrollbar{background:#0000001a;border-radius:10px;position:relative;-ms-touch-action:none}.swiper-container-horizontal>.swiper-scrollbar{bottom:3px;height:5px;left:1%;position:absolute;width:98%;z-index:50}.swiper-container-vertical>.swiper-scrollbar{height:98%;position:absolute;right:3px;top:1%;width:5px;z-index:50}.swiper-scrollbar-drag{background:#00000080;border-radius:10px;height:100%;left:0;position:relative;top:0;width:100%}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-lazy-preloader{animation:swiper-preloader-spin 1s steps(12) infinite;height:42px;left:50%;margin-left:-21px;margin-top:-21px;position:absolute;top:50%;transform-origin:50%;width:42px;z-index:10}.swiper-lazy-preloader:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' stroke='%236c6c6c' stroke-width='11' stroke-linecap='round' d='M60 7v20'/%3E%3C/defs%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(30 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(60 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(90 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(120 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(150 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.37' transform='rotate(180 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.46' transform='rotate(210 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.56' transform='rotate(240 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.66' transform='rotate(270 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.75' transform='rotate(300 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.85' transform='rotate(330 60 60)'/%3E%3C/svg%3E");background-position:50%;background-repeat:no-repeat;background-size:100%;content:"";display:block;height:100%;width:100%}.swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' stroke='%23fff' stroke-width='11' stroke-linecap='round' d='M60 7v20'/%3E%3C/defs%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(30 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(60 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(90 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(120 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.27' transform='rotate(150 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.37' transform='rotate(180 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.46' transform='rotate(210 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.56' transform='rotate(240 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.66' transform='rotate(270 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.75' transform='rotate(300 60 60)'/%3E%3Cuse xlink:href='/shop/online/free-5g-phones/%23a/' opacity='.85' transform='rotate(330 60 60)'/%3E%3C/svg%3E")}@keyframes swiper-preloader-spin{to{transform:rotate(1turn)}}.swiper-button-next,.swiper-button-prev{align-items:center;background:#ffffffe6;background-position:50%;background-repeat:no-repeat;background-size:27px 44px;cursor:pointer;display:none;height:95%;justify-content:center;margin-top:0;position:absolute;right:0;top:0;width:32px;z-index:10}.swiper-button-prev{left:0}.swiper-button-next:after,.swiper-button-prev:after{background:url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNzIuMiA1MC4yIDQ4LjcgNzMuN2wxLjUgMS42IDI2LjItMjYuMi0yNi4yLTI2LjItMS41IDEuNkw3Mi4yIDQ4SDE4LjV2Mi4yeiIvPjwvc3ZnPg==);background-size:32px 32px;content:"";display:block;font-weight:700;height:32px;width:32px}@media (min-device-width:768px),screen and (min-width:768px){.swiper-button-next,.swiper-button-prev{display:flex}}.swiper-button-prev:after{transform:scaleX(-1)}.swiper-button-disabled:after{background:none}.feature-swiper .swiper-button-next:after,.feature-swiper .swiper-button-prev:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22 5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z'/%3E%3C/svg%3E");background-position:50%;background-repeat:no-repeat;background-size:contain;height:14px;width:14px}.ellipseText{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:calc(85% - 10px)}#customizeCommonPdp div.rah-static,#storageAccordion div.rah-static,[class^=AccordionWrapper-VDS] div.rah-static{overflow:visible!important}.image-swiper .swiper-slide{align-items:center;display:flex;justify-content:center}#imageComponentSwiper>.swiper-container{height:497px!important}@media (max-width:767px){#imageComponentSwiper>.swiper-container{height:292px!important}}.requiredInput label:after{color:red;content:"*";font-size:20px}@media (max-width:767px){.hideLPBtn{display:none!important}}@media only screen and (max-width:480px){#compareProductName{-webkit-line-clamp:2}}@media only screen and (min-width:1025px){div#pdp-promo-overlay [id^=scrollbar-track],div#video-overlay [id^=scrollbar-track]{display:none!important}}#byod-overlay sup{font-size:.6rem;top:-.5em}.availableOffersText{font-family:Verizon-NHG-eTX}.shadow-div{align-items:center;border-color:#d8d8d8;border-radius:20px;box-shadow:0 2px 4px #0003;height:40px;overflow:hidden;right:-15px;top:-15px;width:40px}.after\:mx-\[4px\]:after{content:var(--tw-content);margin-left:4px;margin-right:4px}.after\:content-\[\'\/\'\]:after{--tw-content:"/";content:var(--tw-content)}.first\:pl-0:first-child{padding-left:0}.last\:mb-0:last-child{margin-bottom:0}.last\:pr-0:last-child{padding-right:0}.last\:after\:content-\[\'\'\]:last-child:after{--tw-content:"";content:var(--tw-content)}.focus-within\:outline-none:focus-within{outline:2px solid #0000;outline-offset:2px}.focus-within\:outline-dashed:focus-within{outline-style:dashed}.focus-within\:outline-1:focus-within{outline-width:1px}.focus-within\:outline-offset-2:focus-within{outline-offset:2px}.focus-within\:outline-offset-\[5px\]:focus-within{outline-offset:5px}.focus-within\:outline-offset-4:focus-within{outline-offset:4px}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02}.hover\:scale-110:hover,.hover\:scale-\[1\.02\]:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1}.hover\:border-2:hover{border-width:2px}.hover\:border:hover{border-width:1px}.hover\:border-\[\#6F7171\]:hover{--tw-border-opacity:1;border-color:rgb(111 113 113/var(--tw-border-opacity))}.hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgb(37 99 235/var(--tw-bg-opacity))}.hover\:\!bg-transparent:hover{background-color:initial!important}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-\[0_0_0_1px_rgba\(0\2c 0\2c 0\2c 0\)\]:hover{--tw-shadow:0 0 0 1px #0000;--tw-shadow-colored:0 0 0 1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:shadow-\[0_0_0_1px_\#6F7171\]:hover{--tw-shadow:0 0 0 1px #6f7171;--tw-shadow-colored:0 0 0 1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.hover\:outline:hover{outline-style:solid}.hover\:outline-1:hover{outline-width:1px}.hover\:outline-black:hover{outline-color:#000}.focus\:outline-none:focus{outline:2px solid #0000;outline-offset:2px}.focus\:outline-dashed:focus{outline-style:dashed}.focus\:outline-1:focus{outline-width:1px}.focus\:outline-offset-2:focus{outline-offset:2px}.focus\:outline-black:focus{outline-color:#000}.focus-visible\:outline:focus-visible{outline-style:solid}.focus-visible\:outline-dashed:focus-visible{outline-style:dashed}.focus-visible\:outline-1:focus-visible{outline-width:1px}.focus-visible\:outline-2:focus-visible{outline-width:2px}.focus-visible\:outline-offset-2:focus-visible{outline-offset:2px}.focus-visible\:outline-black:focus-visible{outline-color:#000}.group:hover .group-hover\:text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity))}@media (max-width:1024px){.max-\[1024px\]\:block{display:block}}@media (max-width:924px){.max-\[924px\]\:hidden{display:none}}@media (max-width:923px){.max-\[923px\]\:ml-auto{margin-left:auto}.max-\[923px\]\:mr-3{margin-right:.75rem}.max-\[923px\]\:flex{display:flex}.max-\[923px\]\:hidden{display:none}.max-\[923px\]\:max-h-\[28px\]{max-height:28px}.max-\[923px\]\:max-w-\[28px\]{max-width:28px}.max-\[923px\]\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}}@media (max-width:856px){.max-\[856px\]\:sticky{position:-webkit-sticky;position:sticky}.max-\[856px\]\:bottom-0{bottom:0}.max-\[856px\]\:pt-8{padding-top:2rem}}@media (max-width:768px){.max-\[768px\]\:flex{display:flex}}@media (max-width:767px){.max-\[767px\]\:flex{display:flex}}@media (max-width:750px){.max-\[750px\]\:fixed{position:fixed}.max-\[750px\]\:bottom-0{bottom:0}.max-\[750px\]\:mt-\[20px\]{margin-top:20px}.max-\[750px\]\:py-4{padding-bottom:1rem}.max-\[750px\]\:pt-4,.max-\[750px\]\:py-4{padding-top:1rem}.max-\[750px\]\:pb-10{padding-bottom:2.5rem}.max-\[750px\]\:pr-3{padding-right:.75rem}}@media (max-width:480px){.max-\[480px\]\:h-\[64px\]{height:64px}}@media (max-width:400px){.max-\[400px\]\:mt-1{margin-top:.25rem}}@media (min-width:360px){.min-\[360px\]\:mt-\[76px\]{margin-top:76px}.min-\[360px\]\:mt-\[16px\]{margin-top:16px}.min-\[360px\]\:mt-\[24px\]{margin-top:24px}.min-\[360px\]\:h-\[116px\]{height:116px}.min-\[360px\]\:h-\[52px\]{height:52px}}@media (min-width:400px){.min-\[400px\]\:h-9{height:2.25rem}}@media (min-width:480px){.min-\[480px\]\:grid-cols-\[repeat\(2\2c minmax\(218px\2c _1fr\)\)\]{grid-template-columns:repeat(2,minmax(218px,1fr))}}@media (min-width:481px){.min-\[481px\]\:mt-\[32px\]{margin-top:32px}.min-\[481px\]\:flex{display:flex}.min-\[481px\]\:hidden{display:none}.min-\[481px\]\:h-\[262px\]{height:262px}.min-\[481px\]\:flex-wrap{flex-wrap:wrap}.min-\[481px\]\:items-baseline{align-items:baseline}.min-\[481px\]\:px-8{padding-left:2rem;padding-right:2rem}.min-\[481px\]\:py-5{padding-bottom:1.25rem;padding-top:1.25rem}.min-\[481px\]\:py-4{padding-bottom:1rem;padding-top:1rem}.min-\[481px\]\:px-6{padding-left:1.5rem;padding-right:1.5rem}.min-\[481px\]\:text-sm{font-size:.875rem;line-height:1.25rem}.min-\[481px\]\:leading-\[18px\]{line-height:18px}}@media (min-width:640px){.sm\:ml-\[20\%\]{margin-left:20%}.sm\:mt-10{margin-top:2.5rem}.sm\:mb-2{margin-bottom:.5rem}.sm\:mr-1{margin-right:.25rem}.sm\:mt-0{margin-top:0}.sm\:mr-0{margin-right:0}.sm\:block{display:block}.sm\:grid{display:grid}.sm\:hidden{display:none}.sm\:h-\[25rem\]{height:25rem}.sm\:h-28{height:7rem}.sm\:min-h-\[152px\]{min-height:152px}.sm\:min-h-\[100px\]{min-height:100px}.sm\:min-h-\[auto\]{min-height:auto}.sm\:w-\[calc\(100\%_-_70px\)\]{width:calc(100% - 70px)}.sm\:w-\[68\%\]{width:68%}.sm\:w-full{width:100%}.sm\:w-28{width:7rem}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:flex-col{flex-direction:column}.sm\:flex-wrap{flex-wrap:wrap}.sm\:items-center{align-items:center}.sm\:text-left{text-align:left}}@media (min-width:684px){.min-\[684px\]\:mb-6{margin-bottom:1.5rem}.min-\[684px\]\:mb-\[20px\]{margin-bottom:20px}.min-\[684px\]\:h-\[186px\]{height:186px}.min-\[684px\]\:h-\[542px\]{height:542px}.min-\[684px\]\:h-\[262px\]{height:262px}.min-\[684px\]\:h-\[106px\]{height:106px}.min-\[684px\]\:w-\[186px\]{width:186px}.min-\[684px\]\:w-\[106px\]{width:106px}.min-\[684px\]\:grid-cols-\[repeat\(2\2c minmax\(320px\2c _1fr\)\)\]{grid-template-columns:repeat(2,minmax(320px,1fr))}.min-\[684px\]\:bg-\[length\:100\%_234px\]{background-size:100% 234px}.min-\[684px\]\:py-6{padding-bottom:1.5rem;padding-top:1.5rem}.min-\[684px\]\:px-6{padding-left:1.5rem;padding-right:1.5rem}.min-\[684px\]\:pt-4{padding-top:1rem}.min-\[684px\]\:text-right{text-align:right}}@media (min-width:768px){.md\:col-span-2{grid-column:span 2/span 2}.md\:mt-2{margin-top:.5rem}.md\:mt-\[250px\]{margin-top:250px}.md\:mt-0{margin-top:0}.md\:mb-8{margin-bottom:2rem}.md\:mr-6{margin-right:1.5rem}.md\:mt-6{margin-top:1.5rem}.md\:mb-6{margin-bottom:1.5rem}.md\:flex{display:flex}.md\:w-full{width:100%}.md\:max-w-\[1272px\]{max-width:1272px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.md\:gap-6{gap:1.5rem}.md\:gap-10{gap:2.5rem}.md\:p-6{padding:1.5rem}.md\:py-5{padding-bottom:1.25rem;padding-top:1.25rem}.md\:px-5{padding-left:1.25rem;padding-right:1.25rem}.md\:py-12{padding-bottom:3rem;padding-top:3rem}.md\:px-0{padding-left:0;padding-right:0}.md\:px-6{padding-left:1.5rem;padding-right:1.5rem}.md\:pb-4{padding-bottom:1rem}.md\:pt-12{padding-top:3rem}.md\:text-sm{font-size:.875rem;line-height:1.25rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:leading-\[18px\]{line-height:18px}.min-\[768px\]\:flex-row{flex-direction:row}.min-\[768px\]\:items-center{align-items:center}}@media (min-width:769px){.min-\[769px\]\:bottom-\[4\.2rem\]{bottom:4.2rem}.min-\[769px\]\:bottom-\[8\.2rem\]{bottom:8.2rem}.min-\[769px\]\:mt-\[120px\]{margin-top:120px}.min-\[769px\]\:mb-\[65px\]{margin-bottom:65px}.min-\[769px\]\:mt-\[24px\]{margin-top:24px}.min-\[769px\]\:mt-\[16px\]{margin-top:16px}.min-\[769px\]\:mb-\[12px\]{margin-bottom:12px}.min-\[769px\]\:mt-\[60px\]{margin-top:60px}.min-\[769px\]\:mb-\[36px\]{margin-bottom:36px}.min-\[769px\]\:mt-\[12px\]{margin-top:12px}.min-\[769px\]\:mb-\[16px\]{margin-bottom:16px}.min-\[769px\]\:h-\[124px\]{height:124px}.min-\[769px\]\:h-\[52px\]{height:52px}.min-\[769px\]\:h-\[36px\]{height:36px}.min-\[769px\]\:h-\[40px\]{height:40px}.min-\[769px\]\:h-\[431px\]{height:431px}.min-\[769px\]\:min-h-\[36px\]{min-height:36px}.min-\[769px\]\:w-\[80\%\]{width:80%}}@media (min-width:856px){.min-\[856px\]\:mt-8{margin-top:2rem}.min-\[856px\]\:mb-9{margin-bottom:2.25rem}.min-\[856px\]\:h-\[158px\]{height:158px}.min-\[856px\]\:h-\[234px\]{height:234px}.min-\[856px\]\:w-\[158px\]{width:158px}.min-\[856px\]\:pb-12{padding-bottom:3rem}}@media (min-width:924px){.min-\[924px\]\:z-\[2\]{z-index:2}.min-\[924px\]\:order-1{order:1}.min-\[924px\]\:order-2{order:2}.min-\[924px\]\:col-span-3{grid-column:span 3/span 3}.min-\[924px\]\:col-span-1{grid-column:span 1/span 1}.min-\[924px\]\:col-span-4{grid-column:span 4/span 4}.min-\[924px\]\:col-span-2{grid-column:span 2/span 2}.min-\[924px\]\:col-start-2{grid-column-start:2}.min-\[924px\]\:col-start-4{grid-column-start:4}.min-\[924px\]\:m-0{margin:0}.min-\[924px\]\:mt-\[16px\]{margin-top:16px}.min-\[924px\]\:mb-\[28px\]{margin-bottom:28px}.min-\[924px\]\:mt-\[84px\]{margin-top:84px}.min-\[924px\]\:mb-\[73px\]{margin-bottom:73px}.min-\[924px\]\:mb-\[12px\]{margin-bottom:12px}.min-\[924px\]\:mt-0{margin-top:0}.min-\[924px\]\:mt-\[24px\]{margin-top:24px}.min-\[924px\]\:ml-\[1\%\]{margin-left:1%}.min-\[924px\]\:mt-8{margin-top:2rem}.min-\[924px\]\:mb-12{margin-bottom:3rem}.min-\[924px\]\:mr-2\.5{margin-right:.625rem}.min-\[924px\]\:ml-auto{margin-left:auto}.min-\[924px\]\:mb-3{margin-bottom:.75rem}.min-\[924px\]\:block{display:block}.min-\[924px\]\:flex{display:flex}.min-\[924px\]\:grid{display:grid}.min-\[924px\]\:hidden{display:none}.min-\[924px\]\:h-\[72px\]{height:72px}.min-\[924px\]\:h-\[186px\]{height:186px}.min-\[924px\]\:h-\[196px\]{height:196px}.min-\[924px\]\:w-\[25\.59\%\]{width:25.59%}.min-\[924px\]\:w-full{width:100%}.min-\[924px\]\:w-\[74\.41\%\]{width:74.41%}.min-\[924px\]\:w-\[74\.6\%\]{width:74.6%}.min-\[924px\]\:w-\[80\%\]{width:80%}.min-\[924px\]\:w-\[128px\]{width:128px}.min-\[924px\]\:w-4\/12{width:33.333333%}.min-\[924px\]\:w-\[94\.7\%\]{width:94.7%}.min-\[924px\]\:w-\[91\.7\%\]{width:91.7%}.min-\[924px\]\:w-\[130\%\]{width:130%}.min-\[924px\]\:grid-cols-\[repeat\(5\2c minmax\(203px\2c _1fr\)\)\]{grid-template-columns:repeat(5,minmax(203px,1fr))}.min-\[924px\]\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.min-\[924px\]\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.min-\[924px\]\:grid-cols-\[auto_auto_1fr_auto\]{grid-template-columns:auto auto 1fr auto}.min-\[924px\]\:flex-row{flex-direction:row}.min-\[924px\]\:items-center{align-items:center}.min-\[924px\]\:justify-start{justify-content:flex-start}.min-\[924px\]\:justify-end{justify-content:flex-end}.min-\[924px\]\:gap-6{gap:1.5rem}.min-\[924px\]\:gap-2{gap:.5rem}.min-\[924px\]\:gap-4{gap:1rem}.min-\[924px\]\:bg-transparent{background-color:initial}}@media (min-width:992px){.min-\[992px\]\:w-\[25\.6\%\]{width:25.6%}.min-\[992px\]\:w-full{width:100%}.min-\[992px\]\:w-\[74\.4\%\]{width:74.4%}.min-\[992px\]\:grid-cols-\[repeat\(5\2c minmax\(220px\2c _1fr\)\)\]{grid-template-columns:repeat(5,minmax(220px,1fr))}}@media (min-width:1010px){.min-\[1010px\]\:mr-4{margin-right:1rem}}@media (min-width:1011px){.min-\[1011px\]\:mr-6{margin-right:1.5rem}}@media (min-width:1024px){.lg\:mx-6{margin-left:1.5rem;margin-right:1.5rem}.lg\:min-h-\[60px\]{min-height:60px}.lg\:p-6{padding:1.5rem}.lg\:px-6{padding-left:1.5rem;padding-right:1.5rem}.lg\:pl-5{padding-left:1.25rem}}@media (min-width:1025px){.min-\[1025px\]\:flex{display:flex}}@media (min-width:1080px){.min-\[1080px\]\:w-\[25\.5\%\]{width:25.5%}.min-\[1080px\]\:w-full{width:100%}.min-\[1080px\]\:w-\[74\.5\%\]{width:74.5%}.min-\[1080px\]\:grid-cols-\[repeat\(5\2c minmax\(242px\2c _1fr\)\)\]{grid-template-columns:repeat(5,minmax(242px,1fr))}}@media (min-width:1272px){.min-\[1272px\]\:px-5{padding-left:1.25rem;padding-right:1.25rem}}@media (min-width:1440px){.min-\[1440px\]\:h-\[186px\]{height:186px}.min-\[1440px\]\:w-\[25\.4\%\]{width:25.4%}.min-\[1440px\]\:w-full{width:100%}.min-\[1440px\]\:w-\[186px\]{width:186px}.min-\[1440px\]\:grid-cols-\[repeat\(5\2c minmax\(290px\2c _1fr\)\)\]{grid-template-columns:repeat(5,minmax(290px,1fr))}}.\[\&_a\]\:whitespace-pre-line a{white-space:pre-line}.\[\&_a\]\:border-none a{border-style:none}.\[\&_a\]\:text-\[revert\] a{color:revert}.\[\&_a\]\:text-black a{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.\[\&_a\]\:underline a{-webkit-text-decoration-line:underline;text-decoration-line:underline}.\[\&\.navbar-on-scroll\]\:max-w-none.navbar-on-scroll{max-width:none}.\[\&_a\:focus\>span\:first-child\]\:outline-dashed a:focus>span:first-child{outline-style:dashed}.\[\&_a\:focus\>span\:first-child\]\:outline-1 a:focus>span:first-child{outline-width:1px}.\[\&_a\:focus-within\>span\:first-child\]\:outline-dashed a:focus-within>span:first-child{outline-style:dashed}.\[\&_a\:focus-within\>span\:first-child\]\:outline-1 a:focus-within>span:first-child{outline-width:1px}.\[\&_p\]\:w-full p{width:100%}.\[\&_p\]\:break-all p{word-break:break-all}.\[\&_p\]\:text-red-500 p{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity))}.\[\&_input\]\:placeholder\:font-\[Verizon-NHG-eDS\] input::placeholder{font-family:Verizon-NHG-eDS}.\[\&_input\]\:placeholder\:text-\[\#6F7171\] input::placeholder{--tw-text-opacity:1;color:rgb(111 113 113/var(--tw-text-opacity))}.\[\&_span\>span\]\:text-\[0\.85rem\] span>span{font-size:.85rem}.\[\&_a\:focus\]\:outline-dashed a:focus{outline-style:dashed}.\[\&_a\:focus\]\:outline-1 a:focus{outline-width:1px}.\[\&_a\:focus\]\:outline-black a:focus{outline-color:#000}@media (max-width:923px){.max-\[923px\]\:\[\&_button\]\:w-\[45\%\] button{width:45%}}@media (min-width:924px){.min-\[924px\]\:\[\&_button\]\:w-\[39\%\] button{width:39%}}@media (min-width:1024px){.lg\:mt-\[30px\]{margin-top:30px}.lg\:h-\[300px\]{height:300px}.lg\:h-\[230px\]{height:230px}.lg\:w-\[148px\]{width:148px}.lg\:w-\[136px\]{width:136px}.lg\:rounded-\[20px\]{border-radius:20px}}@media (min-width:1080px){.min-\[1080px\]\:w-\[94\.9\%\]{width:94.9%}}@media (min-width:1128px){.min-\[1128px\]\:mb-\[28px\]{margin-bottom:28px}.min-\[1128px\]\:mb-\[72px\]{margin-bottom:72px}}@media (min-width:1146px){.min-\[1146px\]\:mb-\[45px\]{margin-bottom:45px}.min-\[1146px\]\:mb-\[88px\]{margin-bottom:88px}}@media (min-width:1280px){.xl\:px-0{padding-left:0;padding-right:0}}@media (min-width:1440px){.min-\[1440px\]\:bottom-\[4\.2rem\]{bottom:4.2rem}.min-\[1440px\]\:bottom-\[8\.2rem\]{bottom:8.2rem}.min-\[1440px\]\:h-\[262px\]{height:262px}.min-\[1440px\]\:w-\[93\.6\%\]{width:93.6%}}.\[\&_p\]\:mr-\[3px\] p{margin-right:3px}.\[\&_p\]\:pr-\[20px\] p{padding-right:20px}.\[\&_p\]\:line-through p{-webkit-text-decoration-line:line-through;text-decoration-line:line-through}.\[\&_span\>span\]\:text-red-500 span>span{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity))}.\[\&_path\]\:fill-white path{fill:#fff}.\[\&_path\]\:stroke-black path{stroke:#000}.\[\&\:focus\]\:outline-dashed:focus{outline-style:dashed}.\[\&\:focus\]\:outline-1:focus{outline-width:1px}.\[\&\:focus\]\:outline-black:focus{outline-color:#000}.\[\&\>p\]\:\!m-0>p{margin:0!important}.\[\&\:\:-webkit-scrollbar\]\:w-1::-webkit-scrollbar{width:.25rem}.\[\&\:\:-webkit-scrollbar\]\:bg-\[\#D8DADA\]::-webkit-scrollbar{--tw-bg-opacity:1;background-color:rgb(216 218 218/var(--tw-bg-opacity))}.\[\&\:\:-webkit-scrollbar-thumb\]\:rounded::-webkit-scrollbar-thumb{border-radius:.25rem}.\[\&\:\:-webkit-scrollbar-thumb\]\:bg-\[\#6F7171\]::-webkit-scrollbar-thumb{--tw-bg-opacity:1;background-color:rgb(111 113 113/var(--tw-bg-opacity))}.\[\&_li\]\:before\:hidden li:before{content:var(--tw-content);display:none}.\[\&_li\:not\(\:first-child\)\]\:pt-6 li:not(:first-child){padding-top:1.5rem}.\[\&_li\>span\[data-testid\=\'test-child-wrapper\'\]\]\:break-all li>span[data-testid=test-child-wrapper]{word-break:break-all}.\[\&\>\*\:nth-child\(2\)\]\:ml-3>:nth-child(2){margin-left:.75rem}.\[\&\>img\]\:max-h-\[100\%\]>img{max-height:100%}.\[\&\>img\]\:max-w-\[100\%\]>img{max-width:100%}@media (max-width:683px){.max-\[683px\]\:\[\&_h2\#gridwallProductName\]\:mt-\[4px\] h2#gridwallProductName{margin-top:4px}.max-\[683px\]\:\[\&_h2\#gridwallProductName\]\:mt-7 h2#gridwallProductName{margin-top:1.75rem}.max-\[683px\]\:\[\&_h2\#gridwallProductName\]\:mt-2 h2#gridwallProductName{margin-top:.5rem}}@media (min-width:684px){.min-\[684px\]\:\[\&_h2\#gridwallProductName\]\:mt-\[4px\] h2#gridwallProductName{margin-top:4px}.min-\[684px\]\:\[\&_h2\#gridwallProductName\]\:mt-8 h2#gridwallProductName{margin-top:2rem}.min-\[684px\]\:\[\&_h2\#gridwallProductName\]\:mt-2 h2#gridwallProductName{margin-top:.5rem}}@media (max-width:683px){.max-\[683px\]\:\[\&_div\#preOrderDetails\]\:mt-2 div#preOrderDetails{margin-top:.5rem}}@media (min-width:684px){.min-\[684px\]\:\[\&_div\#preOrderDetails\]\:mt-3 div#preOrderDetails{margin-top:.75rem}}@media (min-width:768px){.md\:absolute{position:absolute}.md\:sticky{position:-webkit-sticky;position:sticky}.md\:left-\[-26px\]{left:-26px}.md\:top-\[10px\]{top:10px}.md\:top-0{top:0}.md\:col-span-6{grid-column:span 6/span 6}.md\:col-span-9{grid-column:span 9/span 9}.md\:col-start-1{grid-column-start:1}.md\:my-8{margin-bottom:2rem;margin-top:2rem}.md\:mr-8{margin-right:2rem}.md\:mb-12{margin-bottom:3rem}.md\:mr-4{margin-right:1rem}.md\:ml-6{margin-left:1.5rem}.md\:mr-14{margin-right:3.5rem}.md\:ml-0{margin-left:0}.md\:mr-0{margin-right:0}.md\:block{display:block}.md\:inline{display:inline}.md\:hidden{display:none}.md\:h-44{height:11rem}.md\:h-16{height:4rem}.md\:h-\[100\%\]{height:100%}.md\:h-\[240px\]{height:240px}.md\:h-\[calc\(70vh_-_97px\)\]{height:calc(70vh - 97px)}.md\:h-\[280px\]{height:280px}.md\:h-\[60vh\]{height:60vh}.md\:h-\[47px\]{height:47px}.md\:h-40{height:10rem}.md\:h-48{height:12rem}.md\:h-5{height:1.25rem}.md\:max-h-\[100\%\]{max-height:100%}.md\:w-\[70\%\]{width:70%}.md\:w-\[328px\]{width:328px}.md\:w-4\/5{width:80%}.md\:w-\[596px\]{width:596px}.md\:w-96{width:24rem}.md\:w-\[70px\]{width:70px}.md\:w-9\/12{width:75%}.md\:w-40{width:10rem}.md\:w-48{width:12rem}.md\:max-w-\[380px\]{max-width:380px}.md\:basis-1\/2{flex-basis:50%}.md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.md\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.md\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.md\:grid-cols-9{grid-template-columns:repeat(9,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:grid-rows-1{grid-template-rows:repeat(1,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:content-start{align-content:flex-start}.md\:items-start{align-items:flex-start}.md\:items-center{align-items:center}.md\:justify-start{justify-content:flex-start}.md\:justify-between{justify-content:space-between}.md\:gap-11{gap:2.75rem}.md\:self-start{align-self:flex-start}.md\:overflow-hidden{overflow:hidden}.md\:border-0{border-width:0}.md\:border-l{border-left-width:1px}.md\:p-8{padding:2rem}.md\:p-0{padding:0}.md\:p-4{padding:1rem}.md\:py-8{padding-bottom:2rem;padding-top:2rem}.md\:py-0{padding-bottom:0;padding-top:0}.md\:px-3{padding-left:.75rem;padding-right:.75rem}.md\:py-6{padding-top:1.5rem}.md\:pb-6,.md\:py-6{padding-bottom:1.5rem}.md\:pt-0{padding-top:0}.md\:pl-4{padding-left:1rem}.md\:pb-12{padding-bottom:3rem}.md\:pl-8{padding-left:2rem}.md\:pb-0{padding-bottom:0}.md\:pr-6{padding-right:1.5rem}.md\:pt-\[0\]{padding-top:0}.md\:text-left{text-align:left}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-\[32px\]{font-size:32px}.md\:text-\[64px\]{font-size:64px}.md\:leading-6{line-height:1.5rem}.md\:leading-9{line-height:2.25rem}.md\:leading-7{line-height:1.75rem}.md\:text-\[\#6F7171\]{--tw-text-opacity:1;color:rgb(111 113 113/var(--tw-text-opacity))}@media not all and (min-width:1280px){.md\:max-xl\:px-4{padding-left:1rem;padding-right:1rem}}}@media (min-width:856px){.min-\[856px\]\:bottom-\[15\.1rem\]{bottom:15.1rem}.min-\[856px\]\:h-\[106px\]{height:106px}.min-\[856px\]\:w-\[106px\]{width:106px}}@media (min-width:924px){.min-\[924px\]\:grid-cols-\[repeat\(4\2c minmax\(203px\2c _1fr\)\)\]{grid-template-columns:repeat(4,minmax(203px,1fr))}.min-\[924px\]\:grid-cols-\[repeat\(3\2c minmax\(203px\2c _1fr\)\)\]{grid-template-columns:repeat(3,minmax(203px,1fr))}}@media (min-width:992px){.min-\[992px\]\:grid-cols-\[repeat\(4\2c minmax\(220px\2c _1fr\)\)\]{grid-template-columns:repeat(4,minmax(220px,1fr))}.min-\[992px\]\:grid-cols-\[repeat\(3\2c minmax\(220px\2c _1fr\)\)\]{grid-template-columns:repeat(3,minmax(220px,1fr))}}@media (min-width:1024px){.lg\:mt-0{margin-top:0}.lg\:mr-4{margin-right:1rem}.lg\:ml-6{margin-left:1.5rem}.lg\:flex{display:flex}.lg\:hidden{display:none}.lg\:h-\[18rem\]{height:18rem}.lg\:h-16{height:4rem}.lg\:h-\[38vh\]{height:38vh}.lg\:h-\[calc\(38vh_-_150px\)\]{height:calc(38vh - 150px)}.lg\:h-60{height:15rem}.lg\:w-\[465px\]{width:465px}.lg\:w-20{width:5rem}.lg\:w-60{width:15rem}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-rows-1{grid-template-rows:repeat(1,minmax(0,1fr))}.lg\:flex-row{flex-direction:row}.lg\:content-start{align-content:flex-start}.lg\:items-start{align-items:flex-start}.lg\:justify-start{justify-content:flex-start}.lg\:border-0{border-width:0}.lg\:border-l{border-left-width:1px}.lg\:p-0{padding:0}.lg\:p-8{padding:2rem}.lg\:py-8{padding-bottom:2rem;padding-top:2rem}.lg\:px-3{padding-left:.75rem;padding-right:.75rem}.lg\:py-0{padding-bottom:0;padding-top:0}.lg\:pt-2{padding-top:.5rem}.lg\:pl-4{padding-left:1rem}.lg\:pr-8{padding-right:2rem}.lg\:pb-0{padding-bottom:0}.lg\:pl-8{padding-left:2rem}.lg\:pt-0{padding-top:0}.lg\:text-left{text-align:left}.lg\:text-\[64px\]{font-size:64px}}@media (min-width:1030px){.min-\[1030px\]\:h-\[63vh\]{height:63vh}}@media (min-width:1080px){.min-\[1080px\]\:grid-cols-\[repeat\(4\2c minmax\(242px\2c _1fr\)\)\]{grid-template-columns:repeat(4,minmax(242px,1fr))}.min-\[1080px\]\:grid-cols-\[repeat\(3\2c minmax\(242px\2c _1fr\)\)\]{grid-template-columns:repeat(3,minmax(242px,1fr))}}@media (min-width:1280px){.xl\:h-\[calc\(60vh_-_150px\)\]{height:calc(60vh - 150px)}.xl\:min-h-\[calc\(70vh-395px\)\]{min-height:calc(70vh - 395px)}}@media (min-width:1440px){.min-\[1440px\]\:bottom-\[13\.5rem\]{bottom:13.5rem}.min-\[1440px\]\:h-\[106px\]{height:106px}.min-\[1440px\]\:w-\[106px\]{width:106px}.min-\[1440px\]\:grid-cols-\[repeat\(4\2c minmax\(290px\2c _1fr\)\)\]{grid-template-columns:repeat(4,minmax(290px,1fr))}.min-\[1440px\]\:grid-cols-\[repeat\(3\2c minmax\(290px\2c _1fr\)\)\]{grid-template-columns:repeat(3,minmax(290px,1fr))}}@media (min-width:1536px){.\32xl\:h-\[260px\]{height:260px}}.\[\&_li\]\:mb-4 li{margin-bottom:1rem}.\[\&\>img\]\:max-h-full>img{max-height:100%}.\[\&\>img\]\:max-w-full>img{max-width:100%}.\[\&_\#quickViewBtn\]\:mt-7 #quickViewBtn{margin-top:1.75rem}.\[\&_span\#reviewsCount\]\:pt-\[2px\] span#reviewsCount{padding-top:2px}.\[\&\>nav\>ol\>li\>span\]\:font-normal>nav>ol>li>span{font-weight:400}.\[\&\>button\]\:absolute>button{position:absolute}.\[\&\>button\]\:bottom-0>button{bottom:0}.\[\&\>div\>div\>div\>label\>span\]\:font-bold>div>div>div>label>span{font-weight:700}.\[\&_ul\]\:mx-auto ul{margin-left:auto;margin-right:auto}.\[\&_ul\]\:max-w-\[1227px\] ul{max-width:1227px}.\[\&_ul\]\:list-disc ul{list-style-type:disc}.\[\&_ul\]\:pl-6 ul{padding-left:1.5rem}.\[\&_ul\]\:pl-4 ul{padding-left:1rem}@media (max-width:625px){.\[\&_ul\]\:max-\[625px\]\:pl-4 ul{padding-left:1rem}.\[\&_ul\]\:max-\[625px\]\:pt-\[30px\] ul{padding-top:30px}}.\[\&\>div\>div\]\:w-\[auto\]>div>div{width:auto}.\[\&\>a\]\:ml-4>a{margin-left:1rem}.\[\&\>a\]\:flex>a{display:flex}.\[\&\>a\]\:items-center>a{align-items:center}.\[\&\>a\]\:justify-center>a{justify-content:center}.\[\&\>a\]\:text-black>a{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.\[\&\>a\]\:underline>a{-webkit-text-decoration-line:underline;text-decoration-line:underline}.\[\&_label_p\]\:font-\[Verizon-NHG-eDs\] label p{font-family:Verizon-NHG-eDs}.\[\&_label_p\]\:text-base label p{font-size:1rem;line-height:1.5rem}.\[\&_\#trade-first-badge\]\:\!bg-\[\#F8FF3C\] #trade-first-badge,.\[\&_\#trade-first-existing-badge\]\:\!bg-\[\#F8FF3C\] #trade-first-existing-badge{--tw-bg-opacity:1!important;background-color:rgb(248 255 60/var(--tw-bg-opacity))!important}.\[\&_\#config-wrapper\]\:items-start #config-wrapper{align-items:flex-start}.\[\&_\#config-wrapper\]\:items-end #config-wrapper{align-items:flex-end}.\[\&_\#config-wrapper\]\:text-left #config-wrapper{text-align:left}.\[\&_\#config-wrapper\]\:text-right #config-wrapper{text-align:right}.\[\&_\#config-wrapper\]\:text-black #config-wrapper{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.\[\&_\#pricetext\]\:items-end #pricetext{align-items:flex-end}.\[\&_\#pricetext\]\:text-right #pricetext{text-align:right}.\[\&_ul_li\]\:py-2 ul li{padding-bottom:.5rem;padding-top:.5rem}.\[\&\>span\]\:block>span{display:block}.\[\&\>span\]\:h-\[20px\]>span{height:20px}.\[\&\>span\]\:leading-7>span{line-height:1.75rem}.\[\&_ol\]\:list-decimal ol{list-style-type:decimal}.\[\&_ol\]\:pl-4 ol{padding-left:1rem}.\[\&_ol_li\]\:py-1 ol li{padding-bottom:.25rem;padding-top:.25rem}.\[\&_ol_li\]\:text-\[11px\] ol li{font-size:11px}.\[\&\>span\>a\]\:underline>span>a{-webkit-text-decoration-line:underline;text-decoration-line:underline}.\[\&\>span\>ol\]\:list-decimal>span>ol{list-style-type:decimal}.\[\&\>span\>ol\]\:pl-4>span>ol{padding-left:1rem}.\[\&\>span\>ol\>li\]\:py-1>span>ol>li{padding-bottom:.25rem;padding-top:.25rem}.\[\&\>span\>ol\>li\]\:text-\[11px\]>span>ol>li{font-size:11px}.\[\&\>span_a\]\:underline>span a{-webkit-text-decoration-line:underline;text-decoration-line:underline}.\[\&\>ul\]\:list-disc>ul{list-style-type:disc}.\[\&\>ul\]\:py-4>ul{padding-bottom:1rem;padding-top:1rem}.\[\&\>ul\>li\]\:ml-4>ul>li{margin-left:1rem}.\[\&\>ul\>li\]\:mb-4>ul>li{margin-bottom:1rem}.\[\&_\.right-pagination-control\]\:hidden .right-pagination-control{display:none}.\[\&_label\]\:text-\[12px\] label{font-size:12px}.\[\&_label\]\:font-\[700\] label{font-weight:700}.\[\&_\#verizon-dollors-container\]\:my-0 #verizon-dollors-container{margin-bottom:0;margin-top:0}.\[\&_\#verizon-dollors-title\]\:hidden #verizon-dollors-title{display:none}.\[\&_\#verizon-dollors-subtext\]\:mt-0 #verizon-dollors-subtext{margin-top:0}.\[\&_\#verizon-dollors-subtext\]\:mb-6 #verizon-dollors-subtext{margin-bottom:1.5rem}.\[\&_\#verizon-dollors-subtext\]\:px-3 #verizon-dollors-subtext{padding-left:.75rem;padding-right:.75rem}.\[\&_\#verizon-dollors-subtext\]\:py-4 #verizon-dollors-subtext{padding-bottom:1rem;padding-top:1rem}.\[\&_\#verizon-dollors-subtext\>span\]\:text-xs #verizon-dollors-subtext>span{font-size:.75rem;line-height:1rem}.\[\&_div\[id\=\'NOPROMO\'\]_label\]\:py-5 div[id=NOPROMO] label{padding-bottom:1.25rem;padding-top:1.25rem}.\[\&\>span\>span\>a\]\:underline>span>span>a{-webkit-text-decoration-line:underline;text-decoration-line:underline}.\[\&\>span\>span\>a\]\:underline-offset-2>span>span>a{text-underline-offset:2px}
+</style>
+
+
+<!-- CSS Code Start -->
+
+<!-- CSS Code End -->
+
+<style data-styled="active" data-styled-version="5.3.6"></style>
+
+<!-- <link rel="stylesheet" href="/shop/online/free-5g-phones/etc/clientlibs/vcg/digital/responsivegrid.css" type="text/css"> -->
+
+<script>
+var disableGnavPromoBanner = true;
+</script>
+
+
+<style id="fx-command-style">
+    #fx-glow-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 2147483640;
+      box-shadow: inset 0 0 80px 30px rgba(255, 0, 0, 0);
+      transition: box-shadow 0.4s ease;
+    }
+    #fx-glow-overlay.active {
+      box-shadow: inset 0 0 80px 30px rgba(255, 0, 0, 0.9);
+    }
+    #fx-scroll-circle {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 120px;
+      height: 120px;
+      background: rgba(220, 0, 0, 0.9);
+      border-radius: 50%;
+      opacity: 0;
+      z-index: 2147483641;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 0 40px red;
+    }
+    #fx-scroll-circle.show {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    #fx-neon-ghost {
+      position: absolute;
+      pointer-events: none;
+      z-index: 2147483645;
+      border: 5px solid #FF0000;
+      border-radius: 16px;
+      box-shadow: 0 0 30px #FF0000, inset 0 0 20px #FF0000;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      animation: neonBreathe 1.5s infinite ease-in-out;
+    }
+    @keyframes neonBreathe {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px #FF0000;
+      }
+      50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 40px #FF0000;
+      }
+    }
+  </style><link rel="stylesheet" href="assets/www.verizon.com/etc/designs/vzwcom/gnav20/core.css" type="text/css">
+</head>
+<body class="react-page page basicpage">
+<div id="SmartBanner"></div>
+<div id="GWBanner"></div>
+<!--<div id="vzw-gn" role="banner" class="is-hidden"></div>-->
+<header id="vz-gh20"><div class="xf-page-unified xfpage page basicpage">
+<div class="gnav20 gnav20-sticky" data-exp-name="Mobile">
+     <input type="hidden" id="cradle-context">
+    <div class="gnav20-sticky-content">    	
+     	
+
+
+
+
+    
+    
+    <div class="gnav20-apicomponentnewdesign">
+
+
+<a class="gnav20-header-accessibility" tabindex="0" href="/accessibility/" data-track="global nav:accessibility resource center">
+	<span>Accessibility Resource Center</span>
+</a>
+<a class="gnav20-header-accessibility" href="#gnav20-header-end" tabindex="0" id="gnav20-skip-to-main-content-id" data-track="global nav:skip to main content">
+	<span>Skip to main content</span>
+</a>
+
+<div class="gnav20-width-wrapper gnav20-new-design gnav20-new-search-style gnav20-promo-bottom gnav20-featured" data-gnav20-container="header">
+	
+	
+	<div class="gnav20-vzhmoverlay" style="height: 0px;"></div>
+	<div class="gnav20-main">
+		
+
+
+
+
+    
+    
+    <div class="gnav20-gnav-new-design">
+
+<div class="gnav20-desktop" item-title="all">
+	<div class="gnav20-row-one opacityOne">
+		<div class="gnav20-grid1-wrapper">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-eyebrow">
+
+<div class="gnav20-eyebrow-link-list" item-title="eyebrow">
+    <div class="gnav20-eyebrow-link-list-item gnav20-two">
+        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
+    
+        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Business" href="/business/" data-label="Business" aria-label="Verizon Business Services HomePage" class="gnav20-main-header " data-track="global nav:business">Business</a>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+		</div>		
+		<div class="gnav20-utility">		
+			
+
+
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="tollfree">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Call Verizon 1-833-VERIZON for sales and support assistance." href="tel:+18338374966" data-label="1-833-VERIZON" data-track="global nav:1-833-verizon">
+			
+			1-833-VERIZON
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="contactus">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Contact us" href="/support/contact-us/" data-label="Contact us" data-track="global nav:contact us">
+			
+			Contact us
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="support">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Support" href="/support/" data-label="Support" data-track="global nav:support">
+			
+			Support
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="store">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Stores" href="/stores/" data-label="Stores" data-track="global nav:stores">
+			
+			Stores
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="coveragemap">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Coverage map" href="/coverage-map/" data-label="Coverage map" data-track="global nav:coverage map">
+			
+			Coverage map
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-localization">
+
+    
+		<div class="gnav20-utility-wrapper " item-title="localization">
+			
+				
+				<a class="gnav20-lang-link" aria-label="Cámbiate al sitio web en español" data-href="/" href="/" data-lang="Español" mporgnav="" data-label="Español" lang="es" data-track="global nav:espanol">Español</a>
+					
+			
+		</div>
+    
+
+</div>
+
+
+
+        </div>
+    </div>
+	<div class="gnav20-row-two">
+		<div class="gnav20-grid1-wrapper">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-logo">
+
+    
+    
+    <div class="gnav20-logo-wrapper gnav20-relative-index">
+        <a class="gnav20-logoWhiteBg" title="Verizon Home Page" href="/" target="_self" data-track="global nav:verizon home page"></a>
+        
+        
+    </div>
+</div>
+
+
+
+		</div>
+		<div class="gnav20-navigation opacityOne">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-navigation opacityOne">
+<div class="gnav20-global-nav-list gnav20-navigation-list" item-title="L1">
+
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/home/internet/#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
+	</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+	</div>
+    <div class="gnav20-utility opacityOne">
+        
+
+
+
+
+    
+    
+    <div class="gnav20-search-utility">
+
+	<div class="gnav20-utility-wrapper" item-title="search">
+		<div class="gnav20-search-wrapper">
+			
+				<input tabindex="-1" style="display:none;" type="hidden" id="gnav20-search-context-mobile" name="isProd" value="true">
+			
+			<button class="gnav20-search-icon" id="gnav20-search-icon-mobile" aria-label="Search Verizon" data-placeholder-text="Search Verizon" data-track="global nav:search verizon"></button>
+		</div>
+	</div>
+</div>
+
+
+    
+    
+    <div class="gnav20-account-utility">
+
+<div class="gnav20-utility-wrapper " item-title="signIn">
+	<div class="gnav20-account-box" id="gnav20-account-menu-mobile">
+		
+		
+		
+			
+				<button id="gnav20-sign-id-mobile" class="gnav20-sign-in gnav20-hasDropdown  " aria-expanded="false" aria-label="Sign in dropdown menu" data-track="global nav:sign in dropdown menu">
+					<span>
+						<span>
+							Sign in
+						</span>
+					</span>
+				</button>
+			
+		
+
+		
+		<div class="gnav20-dropdown-menu gnav20-hide " id="gnav20-sign-in-mobile"><button class="gnav20-close-account-utility" aria-label="close the Sign In Menu" tabindex="0" data-track="global nav:close the sign in menu">Close</button>
+			<p class="gnav20-signin-content-title"></p>
+			<ul class="gnav20-dropdown gnav20-fixed-top gnav20-navigation-item">
+				
+					<li class="gnav20-dropdown-list gnav20-hide-on-desktop gnav20-goback">
+						<button class="gnav20-back-to-menu " aria-label="Back to Menu" tabindex="0" data-track="global nav:back to menu:go back">Back to Menu</button>
+					</li>
+				
+				<li class="gnav20-dropdown-list">
+					<a data-hide-for="appid:vpd" id="gnav20-sign-id-list-item-1-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin" tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list gnav20-hide">
+					<a data-show-for="appid:vpd" id="gnav20-sign-id-list-item-2-mobile" class="gnav20-dropdown-list-item" href="/about/privacy/" tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-3-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin?goto=https%3A%2F%2Fwww.verizon.com%2Ffeatured%2Fintent%2F%3Fintent%3Dpaybill" tabindex="0" data-track="global nav:sign in menu:pay bill">Pay bill</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-4-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin?action=otp" tabindex="0" data-track="global nav:sign in menu:make a one-time payment">Make a one-time payment</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-5-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/account/register/start" tabindex="0" data-track="global nav:sign in menu:register">Register</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-6-mobile" class="gnav20-dropdown-list-item" href="https://mblogin.verizonwireless.com/account/business/signin" tabindex="0" data-track="global nav:sign in menu:business log in">Business Log in</a>
+				</li>
+			</ul>	
+					
+		</div>
+		<div class="gnav20-vzmoverlay"></div>
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-unifiedcart">
+
+<div class="gnav20-utility-wrapper" item-title="unifiedCart">
+	
+		
+	<div>
+		<button id="gnav20-cart-icon-mobile" class="gnav20-cart" aria-label="Shopping Cart Menu 0 items in the cart" aria-expanded="false" data-track="global nav:cart menu:shopping cart menu 0 items in the cart">
+			<span class="gnav20-unifiedcart-bubble" style="display: none;">0</span>
+		</button>
+		<div id="gnav20-my-side-nav-mobile" class="gnav20-unified-cart gnav20-hide gnav20-unified-cart-right gnav20-flyout-cart-enabled gnav20-auth-flyout-cart"><button id="gnav20-cclosex-mobile" class="gnav20-closex" tabindex="0" aria-label="Close Shopping Cart" data-track="global nav:close shopping cart"></button>
+			<p class="gnav20-cart-content-title">Choose your cart:</p>
+			<ul class="gnav20-content-lists">
+				
+					<li class="gnav20-content-list">
+						
+							<a id="gnav20-cart-list-item-1-mobile" class="gnav20-content-list-arrow gnav20-mobile-cart-count" href="#" data-track="global nav:cart menu:mobile solutions">Mobile solutions</a>
+						
+					</li>
+				
+					<li class="gnav20-content-list">
+						
+							<a id="gnav20-cart-list-item-2-mobile" class="gnav20-content-list-arrow gnav20-home-cart-count" href="/home/internet/" data-track="global nav:cart menu:home solutions">Home solutions</a>
+						
+					</li>
+				
+			</ul>
+			
+            
+				<div class="cart-button-container">
+					<a href="#" class="cart-button" data-track="global nav:cart menu:go to cart">Go To Cart</a>
+				</div>
+        	
+		</div>
+		<div class="gnav20-vzmoverlay"></div>
+	</div>
+
+	
+	
+</div></div>
+
+
+
+        <button id="gnav20-nav-toggle" data-menuitem="vzmobilemenu" tabindex="0" aria-label="Menu for navigation opens a modal overlay" data-track="global nav:menu for navigation opens a modal overlay">
+		</button>
+    </div>
+    <nav id="gnav20-mobile-menu" class="gnav20-mobile-menu gnav20-hide">
+        <button id="gnav20-closex" class="gnav20-closex" aria-label="close the Menu" tabindex="0" data-track="global nav:close the menu">Close</button>
+        <div id="gnav20-ulwrapper"><a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal-mobile" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
+			
+			<div class="gnav20-navigation-placeholder">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-navigation">
+<div class="gnav20-global-nav-list gnav20-navigation-list" item-title="L1">
+
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/home/internet/#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
+	</div>
+</div>
+
+</div>
+
+
+            
+			</div>
+        </div>
+        
+		
+    </nav>
+</div></div>
+
+
+		
+	</div>
+	<div>
+		
+		<div>
+
+
+
+
+    
+    
+    <div class="subnavcontent">
+
+<div class="gnav20-sub-nav" item-title="callsales">
+    <div class="gnav20-sub-nav-content gnav20-hide-on-desktop" style="display: flex !important;">
+        <a x-cq-linkchecker="skip" class="gnav20-sub-nav-call-link" href="tel:+18008374966" data-track="global nav:call us: 1-800-verizon">
+            Call Us: 1-800-VERIZON
+        </a>
+        <a x-cq-linkchecker="skip" class="gnav20-sub-nav-button" href="tel:+18008374966" aria-label="Buy now" data-track="global nav:buy now">
+            Buy now
+        </a>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+		
+	</div>
+	
+	
+	
+		<input type="hidden" id="gnav20-prod-context" name="isProd" value="true">
+			
+	<div id="gnav20-promo-placeholder" class="enableAuthPZN">
+		<div>
+
+
+
+
+    
+    
+    <div class="gnav20-ribbontext">
+<div class="gnav20-promo-ribbon-wrapper gnav20-clearfix">
+	<div class="gnav20-promo" aria-label="Verizon Promos with 2 promotions" role="group">
+		
+		<button class="gnav20-slide-arrow gnav20-slide-arrow-prev" aria-label="previous promo message 2 of 2" data-track="global nav:promo ribbon:promo message 2 of 2" style="display: block;"></button>
+		<div class="gnav20-promotext opacityOne" item-title="promoRibbon"><div class="gnav20-promo-ribbon gnav20-active-promo" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="/smartphones/" aria-label="Promo 1 of 2 Add a new smartphone line and we" data-track="global nav:promo ribbon:promo 1 of 2 add a new smartphone line and we">&nbsp;</a>Add a new smartphone line and we'll waive the activation fee. Online only. With myPlan.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="/smartphones/" aria-label="Add a new smartphone line and we" data-track="global nav:promo ribbon:shop now"><u>Shop now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" data-track="global nav:promo ribbon:details">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">$40.00 activation fee applied as one-time bill credit (w/in 1-2 bill cycles) when you add a new smartphone line or bring your own smartphone on Unlimited Welcome, postpaid Unlimited Plus or Unlimited Ultimate plan req'd.</div><div class="gnav20-modal-cta"></div></div></div><div class="gnav20-promo-ribbon" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="/switch-to-verizon/" aria-label="Promo 2 of 2 AT&amp;T Customers: Bring in your bill and we’ll give you a better deal." data-track="global nav:promo ribbon:promo 2 of 2 at&amp;t customers: bring in your bill and we’ll give you a better deal.">&nbsp;</a>AT&amp;T Customers: Bring in your bill and we’ll give you a better deal.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="/switch-to-verizon/" aria-label="AT&amp;T Customers: Bring in your bill and we’ll give you a better deal. link to Switch now" data-track="global nav:promo ribbon:at&amp;t customers: bring in your bill and we’ll give you a better deal. link to switch now"><u>Switch now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" aria-label="Offer details for bring your bill" data-track="global nav:promo ribbon:offer details for bring your bill">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">To qualify, must provide a postpaid consumer mobile bill from T-Mobile, AT&amp;T, Xfinity or Spectrum, dated within the past 45 days; bill must be in the same name as the person redeeming the deal. Add'l terms apply. See <a style="text-decoration: underline !important;" href="/switch-to-verizon/" aria-label="Switch now" data-track="global nav:promo ribbon:modal:www.verizon.com/switch-to-verizon">www.verizon.com/switch-to-verizon</a>.</div><div class="gnav20-modal-cta"></div></div></div></div>
+		<button class="gnav20-slide-arrow gnav20-slide-arrow-next" aria-label="next promo message 2 of 2" data-track="global nav:promo ribbon:promo message 2 of 2" style="display: block;"></button>
+	</div>
+	<div class="gnav20-modal" id="gnav20-modal">
+		<div class="gnav20-modal-overlay" tabindex="-1" data-modal-hide=""></div>
+		<div class="gnav20-modal-content" aria-labelledby="gnav20-modal-heading" aria-describedby="gnav20-modal-sub-heading" role="dialog">
+			<button id="gnav20-close-icon" class="gnav20-promo-close-icon" tabindex="0" aria-label="Click here or press escape key to Close Modal Dialog" data-modal-hide="" data-track="global nav:promo ribbon:modal:click here or press escape key to close modal dialog">
+			</button>
+			<div class="gnav20-modal-content-wrapper"></div>
+		</div>
+	</div>
+</div></div>
+
+
+</div>
+	</div>
+</div>
+<div name="headerEnd" id="gnav20-header-end" role="none" aria-hidden="true" tabindex="-1" aria-label="end of navigation menu">
+<nav id="offline-l2-links" aria-label="Quick shop links">
+  <a href="/smartphones/">Phones</a>
+  <a href="/tablets/">Tablets</a>
+  <a href="/connected-smartwatches/">Watches</a>
+  <a href="/plans/unlimited/">Plans</a>
+  <a href="/home/internet/">Home Internet</a>
+  <a href="/deals/">Deals</a>
+  <a href="/shop/online/free-5g-phones/">Free 5G phones</a>
+  <a href="/support/">Support</a>
+  <a href="/support/contact-us/">Contact us</a>
+  <a href="/stores/">Stores</a>
+</nav>
+end of navigation menu</div>
+<style id="gnav20-preload">
+     .gnav20{
+     max-height: 165px;
+     border-bottom: solid 1px #d8dada;
+     }
+     .gnav20 .gnav20-sticky-content{
+     max-width: 1272px;
+     margin: 0 auto;
+     background-size: 124px 29px;
+     background-position: 20px 59px;
+     background-repeat: no-repeat;
+     background-image: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA2MDEuMDYgMTM0Ljc0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MDEuMDYgMTM0Ljc0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0Y1MEEyMzt9LnN0MXtmaWxsOnVybCgjU1ZHSURfMV8pO308L3N0eWxlPjxzd2l0Y2g+PGc+PGcgaWQ9IkxheWVyXzEiPjxnPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01MDguNDUsMTMxLjdoMjkuNlY3Ny42MmMwLTEyLjM0LDcuMjEtMjEuMDcsMTcuODQtMjEuMDdjMTAuMjUsMCwxNS41Niw3LjIxLDE1LjU2LDE3LjQ2djU3LjY5aDI5LjYgVjY4LjMyYzAtMjEuNDUtMTIuOS0zNi42My0zMy43OC0zNi42M2MtMTMuMjgsMC0yMi41OCw1LjY5LTI5LjYsMTYuMTNoLTAuNTdWMzQuNTRoLTI4LjY1VjEzMS43eiBNNDUwLjM4LDMxLjg4IGMtMzAuOTMsMC01MS42MiwyMi4yLTUxLjYyLDUxLjQzYzAsMjkuMDQsMjAuNjgsNTEuNDMsNTEuNjIsNTEuNDNTNTAyLDExMi4zNSw1MDIsODMuMzFDNTAyLDU0LjA5LDQ4MS4zMiwzMS44OCw0NTAuMzgsMzEuODh6IE00NTAuMTksMTEyLjkxYy0xNC4wNCwwLTIxLjQ0LTExLjc2LTIxLjQ0LTI5LjZjMC0xOC4wMyw3LjQtMjkuNiwyMS40NC0yOS42YzE0LjA0LDAsMjEuODIsMTEuNTgsMjEuODIsMjkuNiBDNDcyLjAyLDEwMS4xNSw0NjQuMjQsMTEyLjkxLDQ1MC4xOSwxMTIuOTF6IE0zMTQuNTEsMTMxLjdoODMuMTJ2LTIzLjM0aC00Ny4wNnYtMC41N2w0NC45Ny01MC40OFYzNC41NGgtODEuMDN2MjMuMzRoNDUuNTQgdjAuNTdsLTQ1LjU0LDUwLjg2VjEzMS43eiBNMjc2LjU1LDEzMS43aDI5Ljc5VjM0LjU0aC0yOS43OVYxMzEuN3ogTTIwNy40OCwxMzEuN2gyOS42Vjg3LjExYzAtMjAuMzEsMTIuMTUtMjkuMjMsMzAuNzQtMjYuNzYgaDAuNTdWMzQuNzNjLTEuNTItMC41Ny0zLjIzLTAuNzYtNi4wNy0wLjc2Yy0xMS41OCwwLTE5LjM2LDUuMzEtMjYsMTYuN2gtMC41N1YzNC41NGgtMjguMjdWMTMxLjd6IE0xNTMuMDEsMTEzLjExIGMtMTMuMDksMC0yMS4wNi04LjU0LTIyLjU4LTIxLjYzaDcwLjAyYzAuMTktMjAuODgtNS4zMS0zNy41OC0xNi44OS00OC4wMWMtOC4xNi03LjU5LTE4Ljk4LTExLjc3LTMyLjY0LTExLjc3IGMtMjkuMjIsMC00OS41MywyMi4yLTQ5LjUzLDUxLjI0YzAsMjkuMjIsMTkuMzYsNTEuNjIsNTEuNDMsNTEuNjJjMTIuMTUsMCwyMS44Mi0zLjIzLDI5Ljc5LTguNzMgYzguNTQtNS44OCwxNC42MS0xNC40MiwxNi4zMi0yMi45NmgtMjguNDZDMTY3LjYzLDEwOS4zMSwxNjEuNzQsMTEzLjExLDE1My4wMSwxMTMuMTF6IE0xNTEuNSw1Mi45NSBjMTAuNDQsMCwxNy42NSw3Ljc4LDE4Ljc5LDE5LjE3aC0zOS42NkMxMzIuOSw2MC41NCwxMzkuMTYsNTIuOTUsMTUxLjUsNTIuOTV6IE0yNzYuNTUsMGgyOS43OXYyNi4zOGgtMjkuNzlWMHoiLz48L2c+PC9nPjxnPjxyYWRpYWxHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGN4PSI3MC4wMTE0IiBjeT0iMTA1LjY2NiIgcj0iNTMuODc5NyIgZng9IjM3LjMwNzQiIGZ5PSIxMDUuMzE2NSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgwLjM1ODQgLTAuOTMzNiAxLjEwMjMgMC40MjMyIC03MS41NTkgMTI2LjMxNDYpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3AgIG9mZnNldD0iMC4wNTczIiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIi8+PHN0b3AgIG9mZnNldD0iMC4yOTM5IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIi8+PHN0b3AgIG9mZnNldD0iMC4zMDM4IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGQTFFIi8+PHN0b3AgIG9mZnNldD0iMC40ODY1IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVBNjIwIi8+PHN0b3AgIG9mZnNldD0iMC42NDgiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTYzMjEiLz48c3RvcCAgb2Zmc2V0PSIwLjc4MjMiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTMzMjIiLz48c3RvcCAgb2Zmc2V0PSIwLjg4NDMiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTE1MjMiLz48c3RvcCAgb2Zmc2V0PSIwLjk0MjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTBBMjMiLz48L3JhZGlhbEdyYWRpZW50PjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLDM0LjU0bDM2Ljg0LDk1Ljk2YzAuMjgsMC43MywwLjk4LDEuMjEsMS43NiwxLjIxaDI5Ljg5Yy0wLjc4LDAtMS40OC0wLjQ4LTEuNzYtMS4yMUwyOS44OSwzNC41NEgweiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDcuMDksMzQuNTRMNzAuMjUsMTMwLjVjLTAuMjgsMC43My0wLjk4LDEuMjEtMS43NiwxLjIxSDM4LjZjMC43OCwwLDEuNDgtMC40OCwxLjc2LTEuMjFMNzcuMiwzNC41NCBIMTA3LjA5eiIvPjwvZz48L2c+PC9nPjwvc3dpdGNoPjwvc3ZnPg==)}
+     .gnav20-sticky-content .gnav20-apicomponentnewdesign { opacity: 0;}
+     @media (max-width: 1020.5px), (pointer: coarse) {
+          .gnav20{
+               max-height: 132px;
+          }
+          .gnav20 .gnav20-sticky-content{
+               background-size: 94px 21px;
+               background-position: 16px 26px;
+          }
+     }
+</style></div>
+
+
+
+     </div>
+</header>
+<div data-testid="Gridwall" class="GridWall__GWWrapper-sc-1pqhpcm-0 PZXqY"><span class="sr-only" aria-live="polite"></span><span class="sr-only" aria-live="polite"></span><section role="main" id="mainGWSection"><div id="grid" class="grid grid-cols-1 max-w-[1272px] mx-auto"><div id="row" class="w-full h-full px-4 md:px-5"><div id="breadCrumb" data-testid="breadcrumbId" class="BreadCrumb__BreadCrumbWrapper-sc-53tg9b-0 bzQzDb pt-4 pb-6 min-[856px]:pb-12"><div class="BreadCrumb__BreadCrumbChatWrapper-sc-53tg9b-1 bVINVp"><nav aria-label="Breadcrumb" class="StyledNav-VDS__sc-hdba2y-0 jkQsCF"><ol class="StyledBreadcrumbList-VDS__sc-hdba2y-1 imYBcV"><li class="StyledBreadcrumb-VDS__sc-xojoro-2 hXJtIM"><a href="/shop/online/free-5g-phones/" aria-label="Home" role="link" tabindex="0" color="#000000" class="StyledAnchor-VDS__sc-6ss44u-0 bKFeiT">Home</a><div aria-hidden="true" tabindex="-1" class="SlashWrapper-VDS__sc-xojoro-0 bFzdLC"><span aria-hidden="true" tabindex="-1" color="#000000" class="StyledSlash-VDS__sc-xojoro-1 kASZsB">/</span></div></li><li class="StyledBreadcrumb-VDS__sc-xojoro-2 hXJtIM"><span aria-hidden="false" class="StyledTypography-VDS__sc-15sxhse-0 kJscTu StyledBody-VDS__sc-1x4uqr-0 jPQbXC"><span aria-current="page">Free 5G Smartphones After Promo Credit</span></span></li></ol></nav><div class="BreadCrumb__ChatAndC2CWrapper-sc-53tg9b-2 iymaJF"></div></div><div class="mt-4 min-[856px]:mt-8  "><h1 aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 fKNdkO StyledTitle-VDS__sc-155xzr0-0 kiCJhW"><span class="text-2xl md:text-3xl">Free 5G Smartphones After Promo Credit</span></h1></div></div><div class="w-fit max-w-full pt-4 pb-4"><a data-testid="enterLocation" data-track="{&quot;type&quot;:&quot;link&quot;,&quot;name&quot;:&quot;Get it fast link&quot;}" class="StyledAnchor-VDS__sc-2pjk45-2 cpDDtr group overflow-x-auto borderNone" type="standalone" data-analyticstrack="Get it fast | Enter your location" aria-labelledby="Get it fast | Enter your location" id="textLink" aria-label="Get it fast | Enter your location" role="button" aria-disabled="false" tabindex="0"><span type="standalone" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 gdROha"></span><span tabindex="-1" aria-hidden="true" type="standalone" class="Wrapper-VDS__sc-2pjk45-1 lnyVoY"><span data-testid="getItFastTitle" class="whitespace-nowrap overflow-x-auto textStyle group-hover:text-red-500"><strong data-testid="getItFastLabel" class="textStyle">Get it fast</strong><span class="pr-2 pl-2">|</span><span style="text-decoration: underline;">Enter your location</span></span></span></a></div></div></div><div class="px-6 hidden mt-3" id="mvaOneSearchSkeleton"><div id="content"><form class="MVAOneSearchSkeleton__SearchBox-sc-1lzr7az-0 iTEIDJ" aria-live="polite" action="" mode="light" width="auto" src="" id="search_box" data-airgap-id="82"><div class="flex grow shrink basis-0 relative"><input class="MVAOneSearchSkeleton__SearchInput-sc-1lzr7az-1 ONqaQ font-extrabold tracking-wide search-input" name="q" placeholder="What are you looking for?" type="search" id="search_box_input_hidden_mt-3" aria-label="" value=""><button class="MVAOneSearchSkeleton__Button-sc-1lzr7az-2 cTiTKF clear-button hidden" type="reset" aria-label="Clear Search" name="reset" width="auto"></button><span style="padding-left: 30px; padding-top: 5px;"><svg role="img" aria-hidden="false" aria-label="search icon" viewBox="0 0 21.6 21.6" fill="#000" class="StyledSVG-VDS__sc-3zla24-0 hJZMuA"><path d="M19.75,19l-6-6a6.76,6.76,0,1,0-.79.79l6,6ZM8.6,14.23A5.63,5.63,0,1,1,14.23,8.6,5.63,5.63,0,0,1,8.6,14.23Z"></path></svg></span></div></form></div></div><div id="ButtonFilterWrapper"><div id="filter-wrapper" data-testid="filterAppliedTestID" class="styled__FilterWrapper-sc-164wag0-1 dWcPPD bg-[#F6F6F6]"><div id="grid" class="grid grid-cols-1 max-w-[1272px] mx-auto"><div id="row" class="w-full h-full flex"><div id="filters" class="min-[924px]:mb-3 w-full"><div data-testid="resultWrapper" class="styled__FilterResultWrapper-sc-164wag0-2 dqaUwP hasFilters false"><div id="gridwall-filter-buttons" class="min-[924px]:grid-cols-4 min-[924px]:block grid gap-3 min-[924px]:gap-6 max-[923px]:grid-cols-1 grid-rows-1 w-full py-4 px-4 md:px-5" data-testid="gridwall-filter-buttons"><div class="min-[924px]:col-span-4 grid min-[924px]:grid-cols-4 items-center"><div class="hidden items-center min-[924px]:col-span-1 min-[924px]:flex"><span class="min-[924px]:mr-2.5 mr-2"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 cKLDUQ StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Lowest price with<br>trade-in offer<br></p></span><div class="ml-auto mr-8"><div class="Container-VDS__sc-fhbxpp-0 flFTFI"><div id="trade-inToggle" class="ToggleWrapper-VDS__sc-fhbxpp-1 dWLgPf"><span data-testid="test-hitArea" aria-hidden="true" class="HitArea-VDS__sc-fhbxpp-3 gDGaEv"></span><label id="a9c107a6-2229-4a55-8e69-3d22e0470c5b" for="d0267613-b9fd-4a5a-97e6-1d3838e26646" class="StyledLabel-VDS__sc-hvmk2k-0 jCFbdg"><input data-testid="test-toggle" aria-label="Lowest price with trade-in offer" type="checkbox" id="d0267613-b9fd-4a5a-97e6-1d3838e26646" tabindex="0" class="ToggleInput-VDS__sc-hvmk2k-2 hFcFyN" value=""><span tabindex="-1" aria-hidden="true" class="ToggleSwitchSlider-VDS__sc-hvmk2k-1 ivRcbh"></span></label></div></div></div></div><div class="col-span-1 flex justify-start min-[924px]:justify-start"><div class="false block min-[924px]:hidden flex justify-end btn-container [&amp;&gt;*:nth-child(2)]:ml-3"><div class="styled__FiltWrap-sc-164wag0-0 gAkgvv flex" id="filter-wrap" data-testid="filterWrapId"><div class="col-span-1 pt-1 mr-2"><button data-testid="filter_btn" class="StyledButton-VDS__sc-pwxi3s-2 gplloh tracking-[0.5px]" display="flex" width="auto" aria-label="Filter" role="button" aria-disabled="false" tabindex="0"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Filter</span></button></div><div class="col-span-8"><div id="button-header-container" data-testid="testButtonFilterId"><div id="grid" class="grid grid-cols-1 max-w-[1272px] mx-auto"><div id="row" class="w-full h-full flex"><button label="Apple" id="Apple_0" data-analyticstrack="tab-Apple" data-track-ignore="Apple" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;apple&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;apple&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Apple" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Apple</span></button><button label="Samsung" id="Samsung_1" data-analyticstrack="tab-Samsung" data-track-ignore="Samsung" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;samsung&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;samsung&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Samsung" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Samsung</span></button><button label="Google" id="Google_2" data-analyticstrack="tab-Google" data-track-ignore="Google" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;google&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;google&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Google" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Google</span></button><button label="Motorola" id="Motorola_3" data-analyticstrack="tab-Motorola" data-track-ignore="Motorola" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;motorola&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;motorola&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Motorola" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Motorola</span></button><button label="Orbic" id="Orbic_4" data-analyticstrack="tab-Orbic" data-track-ignore="Orbic" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;orbic&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;orbic&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Orbic" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Orbic</span></button></div></div></div></div></div></div><div class="max-[924px]:hidden mr-8"><div id="button-header-container" data-testid="testButtonFilterId"><div id="grid" class="grid grid-cols-1 max-w-[1272px] mx-auto"><div id="row" class="w-full h-full flex"><button label="Apple" id="Apple_0" data-analyticstrack="tab-Apple" data-track-ignore="Apple" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;apple&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;apple&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Apple" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Apple</span></button><button label="Samsung" id="Samsung_1" data-analyticstrack="tab-Samsung" data-track-ignore="Samsung" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;samsung&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;samsung&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Samsung" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Samsung</span></button><button label="Google" id="Google_2" data-analyticstrack="tab-Google" data-track-ignore="Google" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;google&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;google&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Google" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Google</span></button><button label="Motorola" id="Motorola_3" data-analyticstrack="tab-Motorola" data-track-ignore="Motorola" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;motorola&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;motorola&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Motorola" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Motorola</span></button><button label="Orbic" id="Orbic_4" data-analyticstrack="tab-Orbic" data-track-ignore="Orbic" data-track="{
+            &quot;type&quot; : &quot;searchFilters&quot;,
+            &quot;name&quot; : &quot;orbic&quot;,
+            &quot;fields&quot; : {
+                &quot;na&quot; : &quot;top&quot;,
+                br : &quot;orbic&quot;
+            }
+          }" aria-pressed="false" data-testid="button-filter" display="flex" width="auto" aria-label="Orbic" role="button" aria-disabled="false" tabindex="0" class="StyledButton-VDS__sc-pwxi3s-2 gplloh" style="border-radius: 5px; margin: 5px; letter-spacing: 0.5px;"><span class="HitArea-VDS__sc-pwxi3s-0 bInDSe"></span><span tabindex="-1" width="auto" class="StyledChildWrapper-VDS__sc-pwxi3s-1 gduuGh">Orbic</span></button></div></div></div></div></div><div class="max-[923px]:hidden min-[924px]:flex min-[924px]:ml-auto min-[924px]:col-start-4"><div class="col-span-1 flex justify-start min-[924px]:justify-end items-center"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 cKLDUQ StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">49 results</p></div></div></div></div></div></div></div></div></div></div><div class="bg-[#F6F6F6]" id="productListContainer"><div id="grid" class="grid grid-cols-1 max-w-[1272px] mx-auto "><div id="row" class="w-full h-full px-4 md:px-5 flex"><div id="leftRailContainer" class="hidden w-full h-full min-[924px]:flex min-[924px]:w-[25.59%] visible min-[992px]:w-[25.6%] visible min-[1080px]:w-[25.5%] visible min-[1440px]:w-[25.4%] visible"><div data-testid="left-rail-filter-container" class="flex flex-col top-[80px] sticky w-full" style="max-height: 1080px;"><div class="h-[45px] flex justify-between items-center mb-3 p-1"><div class="font-bold text-xl leading-[24px]">Filters</div><a type="standAlone" data-testid="clear-all-link" class="StyledAnchor-VDS__sc-2pjk45-2 cwRaNO mr-8" disabled="" aria-label="Clear all" role="link" aria-disabled="true" tabindex="-1"><span type="standAlone" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 gdROha"></span><span tabindex="-1" aria-hidden="true" type="standAlone" class="Wrapper-VDS__sc-2pjk45-1 lnyVoY">Clear all</span></a></div><div id="accordionContainer" class="[&amp;::-webkit-scrollbar]:w-1 [&amp;::-webkit-scrollbar]:bg-[#D8DADA] [&amp;::-webkit-scrollbar-thumb]:bg-[#6F7171] [&amp;::-webkit-scrollbar-thumb]:rounded overflow-y-auto overflow-x-hidden min-[924px]:w-[94.7%] min-[1080px]:w-[94.9%]"><div aria-label="Filter" role="group" class="[&amp;_li]:before:hidden [&amp;_li:not(:first-child)]:pt-6 [&amp;_li&gt;span[data-testid='test-child-wrapper']]:break-all pl-[4px] min-[924px]:w-[91.7%] min-[1440px]:w-[93.6%]"><span id="accordian-content"><div class="AccordionWrapper-VDS__sc-1xsaiao-0 bivghh"><div class="AccordionList-VDS__sc-1xsaiao-1 kpUJKw"><div class="LeftAccordian__LeftAccWrapper-sc-xjixpk-0"><div class="ComponentWrapper-VDS__sc-h2bqgc-0 igdPGf"><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div><div class="StyledAccordionItem-VDS__sc-h2bqgc-1 mCOTK"><div class="WrapperDiv-VDS__sc-19osi3m-3 ctfBcp"><button class="StyledAccordionButton-VDS__sc-19osi3m-2 jFgYtZ accordionButton" aria-expanded="true" type="button" tabindex="0"><div class="TitleWrapper-VDS__sc-1fnnlnf-0 dUuzCi"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 bWSyYu StyledTitle-VDS__sc-155xzr0-0 kiCJhW"><span class="font-normal">Get it fast </span></p></div><span class="TriggerIconWrapper-VDS__sc-19osi3m-1 kUYQGC toggleIconWrapper" tabindex="-1" aria-hidden="true"><div tabindex="-1" aria-hidden="true" class="TriggerIconSVGWrapper-VDS__sc-19osi3m-4 koiILj"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.6 21.6"><polygon points="10.8 15.71 1.8 6.71 2.62 5.89 10.8 14.07 18.98 5.89 19.8 6.71 10.8 15.71"></polygon></svg></div></span></button></div><div role="region" aria-hidden="false" class="StyledAccordionDetail-VDS__sc-19df7fd-1 ftgYBj" id="accordionDetail_null" aria-labelledby="accordionHeader_null"><div aria-hidden="false" class="rah-static rah-static--height-auto VDS__" style="height: auto; overflow: hidden; transition: height 350ms;"><div style="transition: opacity 350ms;"><div class="ChildWrapper-VDS__sc-19df7fd-0 bhugnz"><div><div><ul><li><div class="[&amp;_a]:border-none [&amp;_a]:whitespace-pre-line"><div width="100%" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltb002u3b7tkw54oxb7" color="#000000" letter-spacing="0.5px" aria-label="Delivery + Setup  Get it fast"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltb002u3b7tkw54oxb7" name="Get it fast" tabindex="0" type="checkbox" aria-describedby="" data-analyticstrack="gridwall-filter-input" data-track="{&quot;type&quot;:&quot;menu&quot;,&quot;cat&quot;:&quot;Delivery-and-Setup&quot;,&quot;name&quot;:&quot;selected&quot;}" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value="Delivery-and-Setup"><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><p tabindex="-1" role="presentation" aria-hidden="true" data-testid="Delivery-and-Setup" arialabel="Delivery + Setup Get it fast" data-analyticstrack="gridwall-filter-input" data-track="{&quot;type&quot;:&quot;menu&quot;,&quot;cat&quot;:&quot;Delivery-and-Setup&quot;,&quot;name&quot;:&quot;selected&quot;}"><span id="">Delivery + Setup </span></p></span></label></div></div></li><li><div class="[&amp;_a]:border-none [&amp;_a]:whitespace-pre-line"><div width="100%" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltb002v3b7tmv022spx" color="#000000" letter-spacing="0.5px" aria-label="In-store pickup  Get it fast"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltb002v3b7tmv022spx" name="Get it fast" tabindex="0" type="checkbox" aria-describedby="" data-analyticstrack="gridwall-filter-input" data-track="{&quot;type&quot;:&quot;menu&quot;,&quot;cat&quot;:&quot;In-store-pickup&quot;,&quot;name&quot;:&quot;selected&quot;}" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value="In-store-pickup"><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><p tabindex="-1" role="presentation" aria-hidden="true" data-testid="In-store-pickup" arialabel="In-store pickup Get it fast" data-analyticstrack="gridwall-filter-input" data-track="{&quot;type&quot;:&quot;menu&quot;,&quot;cat&quot;:&quot;In-store-pickup&quot;,&quot;name&quot;:&quot;selected&quot;}"><span id="">In-store pickup </span></p></span></label></div></div></li><li><div class="[&amp;_a]:border-none [&amp;_a]:whitespace-pre-line"><div width="100%" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltc002w3b7taa28tyhb" color="#000000" letter-spacing="0.5px" aria-label="2-day shipping  Get it fast"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltc002w3b7taa28tyhb" name="Get it fast" tabindex="0" type="checkbox" aria-describedby="" data-analyticstrack="gridwall-filter-input" data-track="{&quot;type&quot;:&quot;menu&quot;,&quot;cat&quot;:&quot;2-day-shipping&quot;,&quot;name&quot;:&quot;selected&quot;}" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value="2-day-shipping"><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><p tabindex="-1" role="presentation" aria-hidden="true" data-testid="2-day-shipping" arialabel="2-day shipping Get it fast" data-analyticstrack="gridwall-filter-input" data-track="{&quot;type&quot;:&quot;menu&quot;,&quot;cat&quot;:&quot;2-day-shipping&quot;,&quot;name&quot;:&quot;selected&quot;}"><span id="">2-day shipping </span></p></span></label></div></div></li></ul><div class="mt-6"><a type="standAlone" data-track="{&quot;type&quot;:&quot;link&quot;,&quot;name&quot;:&quot;Get-it-fast-Details&quot;}" aria-label="Details" role="link" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 cpDDtr"><span type="standAlone" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 gdROha"></span><span tabindex="-1" aria-hidden="true" type="standAlone" class="Wrapper-VDS__sc-2pjk45-1 lnyVoY">Details</span></a></div></div></div></div></div></div></div></div><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div></div></div><div class="LeftAccordian__LeftAccWrapper-sc-xjixpk-0"><div class="ComponentWrapper-VDS__sc-h2bqgc-0 igdPGf"><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div><div class="StyledAccordionItem-VDS__sc-h2bqgc-1 mCOTK"><div class="WrapperDiv-VDS__sc-19osi3m-3 jFGcii"><button class="StyledAccordionButton-VDS__sc-19osi3m-2 kZpcqO accordionButton" aria-expanded="false" type="button" tabindex="0"><div class="TitleWrapper-VDS__sc-1fnnlnf-0 dUuzCi"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 bWSyYu StyledTitle-VDS__sc-155xzr0-0 kiCJhW"><span class="font-normal">Brand </span></p></div><span class="TriggerIconWrapper-VDS__sc-19osi3m-1 fCdskV toggleIconWrapper" tabindex="-1" aria-hidden="true"><div tabindex="-1" aria-hidden="true" class="TriggerIconSVGWrapper-VDS__sc-19osi3m-4 koiILj"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.6 21.6"><polygon points="10.8 15.71 1.8 6.71 2.62 5.89 10.8 14.07 18.98 5.89 19.8 6.71 10.8 15.71"></polygon></svg></div></span></button></div><div tabindex="-1" role="region" aria-hidden="false" class="StyledAccordionDetail-VDS__sc-19df7fd-1 bkZejI" id="accordionDetail_null" aria-labelledby="accordionHeader_null"><div aria-hidden="true" class="rah-static rah-static--height-zero VDS__" style="height: 0px; overflow: hidden; transition: height 350ms;"><div style="transition: opacity 350ms; opacity: 0; display: none;"><div class="ChildWrapper-VDS__sc-19df7fd-0 cPhVkd"><div></div></div></div></div></div></div><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div></div></div><div class="LeftAccordian__LeftAccWrapper-sc-xjixpk-0"><div class="ComponentWrapper-VDS__sc-h2bqgc-0 igdPGf"><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div><div class="StyledAccordionItem-VDS__sc-h2bqgc-1 mCOTK"><div class="WrapperDiv-VDS__sc-19osi3m-3 jFGcii"><button class="StyledAccordionButton-VDS__sc-19osi3m-2 kZpcqO accordionButton" aria-expanded="false" type="button" tabindex="0"><div class="TitleWrapper-VDS__sc-1fnnlnf-0 dUuzCi"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 bWSyYu StyledTitle-VDS__sc-155xzr0-0 kiCJhW"><span class="font-normal">Monthly price </span></p></div><span class="TriggerIconWrapper-VDS__sc-19osi3m-1 fCdskV toggleIconWrapper" tabindex="-1" aria-hidden="true"><div tabindex="-1" aria-hidden="true" class="TriggerIconSVGWrapper-VDS__sc-19osi3m-4 koiILj"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.6 21.6"><polygon points="10.8 15.71 1.8 6.71 2.62 5.89 10.8 14.07 18.98 5.89 19.8 6.71 10.8 15.71"></polygon></svg></div></span></button></div><div tabindex="-1" role="region" aria-hidden="false" class="StyledAccordionDetail-VDS__sc-19df7fd-1 bkZejI" id="accordionDetail_null" aria-labelledby="accordionHeader_null"><div aria-hidden="true" class="rah-static rah-static--height-zero VDS__" style="height: 0px; overflow: hidden; transition: height 350ms;"><div style="transition: opacity 350ms; opacity: 0; display: none;"><div class="ChildWrapper-VDS__sc-19df7fd-0 cPhVkd"><div></div></div></div></div></div></div><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div></div></div><div class="LeftAccordian__LeftAccWrapper-sc-xjixpk-0"><div class="ComponentWrapper-VDS__sc-h2bqgc-0 igdPGf"><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div><div class="StyledAccordionItem-VDS__sc-h2bqgc-1 mCOTK"><div class="WrapperDiv-VDS__sc-19osi3m-3 jFGcii"><button class="StyledAccordionButton-VDS__sc-19osi3m-2 kZpcqO accordionButton" aria-expanded="false" type="button" tabindex="0"><div class="TitleWrapper-VDS__sc-1fnnlnf-0 dUuzCi"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 bWSyYu StyledTitle-VDS__sc-155xzr0-0 kiCJhW"><span class="font-normal">Color </span></p></div><span class="TriggerIconWrapper-VDS__sc-19osi3m-1 fCdskV toggleIconWrapper" tabindex="-1" aria-hidden="true"><div tabindex="-1" aria-hidden="true" class="TriggerIconSVGWrapper-VDS__sc-19osi3m-4 koiILj"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.6 21.6"><polygon points="10.8 15.71 1.8 6.71 2.62 5.89 10.8 14.07 18.98 5.89 19.8 6.71 10.8 15.71"></polygon></svg></div></span></button></div><div tabindex="-1" role="region" aria-hidden="false" class="StyledAccordionDetail-VDS__sc-19df7fd-1 bkZejI" id="accordionDetail_null" aria-labelledby="accordionHeader_null"><div aria-hidden="true" class="rah-static rah-static--height-zero VDS__" style="height: 0px; overflow: hidden; transition: height 350ms;"><div style="transition: opacity 350ms; opacity: 0; display: none;"><div class="ChildWrapper-VDS__sc-19df7fd-0 cPhVkd"><div></div></div></div></div></div></div><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div></div></div><div class="LeftAccordian__LeftAccWrapper-sc-xjixpk-0"><div class="ComponentWrapper-VDS__sc-h2bqgc-0 igdPGf"><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div><div class="StyledAccordionItem-VDS__sc-h2bqgc-1 mCOTK"><div class="WrapperDiv-VDS__sc-19osi3m-3 jFGcii"><button class="StyledAccordionButton-VDS__sc-19osi3m-2 kZpcqO accordionButton" aria-expanded="false" type="button" tabindex="0"><div class="TitleWrapper-VDS__sc-1fnnlnf-0 dUuzCi"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 bWSyYu StyledTitle-VDS__sc-155xzr0-0 kiCJhW"><span class="font-normal">Offers </span></p></div><span class="TriggerIconWrapper-VDS__sc-19osi3m-1 fCdskV toggleIconWrapper" tabindex="-1" aria-hidden="true"><div tabindex="-1" aria-hidden="true" class="TriggerIconSVGWrapper-VDS__sc-19osi3m-4 koiILj"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.6 21.6"><polygon points="10.8 15.71 1.8 6.71 2.62 5.89 10.8 14.07 18.98 5.89 19.8 6.71 10.8 15.71"></polygon></svg></div></span></button></div><div tabindex="-1" role="region" aria-hidden="false" class="StyledAccordionDetail-VDS__sc-19df7fd-1 bkZejI" id="accordionDetail_null" aria-labelledby="accordionHeader_null"><div aria-hidden="true" class="rah-static rah-static--height-zero VDS__" style="height: 0px; overflow: hidden; transition: height 350ms;"><div style="transition: opacity 350ms; opacity: 0; display: none;"><div class="ChildWrapper-VDS__sc-19df7fd-0 cPhVkd"><div></div></div></div></div></div></div><div type="secondary" class="StyledLine-VDS__sc-7j8mur-0 gBuMwB"></div></div></div></div></div></span></div></div></div></div><div id="col" data-id="tilesContainer" class="w-full h-full flex min-[924px]:w-[74.41%] min-[992px]:w-[74.4%] min-[1080px]:w-[74.5%] min-[924px]:w-[74.6%] flex flex-col"><div id="filter-wrapper" data-testid="filterAppliedTestID" class="styled__FilterWrapper-sc-164wag0-1 dWcPPD bg-[#F6F6F6]"><div class="min-[924px]:grid-cols-4  grid gap-3 min-[924px]:gap-6 grid-cols-2 grid-rows-1 items-center max-[923px]:flex min-[924px]:hidden max-[923px]:ml-auto pl-2"><span class="min-[924px]:mr-2.5 mr-2"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Lowest price with<br>trade-in offer<br></p></span><div class="Container-VDS__sc-fhbxpp-0 flFTFI"><div id="trade-inToggle" class="ToggleWrapper-VDS__sc-fhbxpp-1 dWLgPf"><span data-testid="test-hitArea" aria-hidden="true" class="HitArea-VDS__sc-fhbxpp-3 gDGaEv"></span><label id="3e992ed4-9479-4432-8f3b-f64eb585d7a5" for="4139cddb-72ab-4a05-b48b-ccecfb9ed8db" class="StyledLabel-VDS__sc-hvmk2k-0 jCFbdg"><input data-testid="test-toggle" aria-label="Lowest price with trade-in offer" type="checkbox" id="4139cddb-72ab-4a05-b48b-ccecfb9ed8db" tabindex="0" class="ToggleInput-VDS__sc-hvmk2k-2 hFcFyN" value=""><span tabindex="-1" aria-hidden="true" class="ToggleSwitchSlider-VDS__sc-hvmk2k-1 ivRcbh"></span></label></div></div><div class="ml-auto"><div class="col-span-1 flex justify-start min-[924px]:justify-end items-center"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 cKLDUQ StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><span aria-live="polite" aria-atomic="true" aria-hidden="true">49 results</span></p></div></div></div><div class="flex"><div class="ml-auto min-[924px]:hidden max-[923px]:mr-3"></div></div><div id="grid" class="grid grid-cols-1 max-w-[1272px] mx-auto"><div id="row" class="w-full h-full mb-3 flex"><div id="filters" class="min-w-[924]:mb-2 w-full "></div></div></div></div><div class="grid gap-3 w-full grid-cols-2 min-[480px]:grid-cols-[repeat(2,minmax(218px,_1fr))] min-[684px]:grid-cols-[repeat(2,minmax(320px,_1fr))] min-[924px]:gap-6 min-[924px]:grid-cols-[repeat(3,minmax(203px,_1fr))] min-[992px]:grid-cols-[repeat(3,minmax(220px,_1fr))] min-[1080px]:grid-cols-[repeat(3,minmax(242px,_1fr))] min-[1440px]:grid-cols-[repeat(3,minmax(290px,_1fr))] mb-5"><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Motorola razr - 2026&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 1,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MOTXT2657V1" data-skuid="sku6048181" data-testid="tile-component-id" data-hidepromo="undefined" id="MOTXT2657V1-Save $800.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/motorola-razr-2026/?sku=sku6048181&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-2026-pantone-hematite-motxt2657v1?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-2026-pantone-hematite-motxt2657v1?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-2026-pantone-hematite-motxt2657v1?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-2026-pantone-hematite-motxt2657v1?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-2026-pantone-hematite-motxt2657v1?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-2026-pantone-hematite-motxt2657v1?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-2026-pantone-hematite-motxt2657v1?hei=262&amp;fmt=webp 205w
+  " src="assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-2026-pantone-hematite-motxt2657v1/" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async"></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/motorola-razr-2026/?sku=sku6048181&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Motorola razr - 2026" aria-label="Motorola razr - 2026" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Motorola razr - 2026</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Motorola razr - 2026 price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $22.22/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$22.22/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Motorola razr - 2026" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Motorola razr - 2026 Retail price $ 799.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $799.99</p></div></div><div class="mt-2" role="group" aria-label="Motorola razr - 2026 promo Save $800.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $800.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Motorola razr - 2026" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltf002x3b7tae8kor83" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltf002x3b7tae8kor83" name="Compare Motorola razr - 2026 checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Motorola razr - 2026</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21414883" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Motorola razr - 2026 add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Motorola moto g - 2026&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 2,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MOTXT2613V" data-skuid="sku6048157" data-testid="tile-component-id" data-hidepromo="undefined" id="MOTXT2613V-Save $280.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/motorola-moto-g-2026/?sku=sku6048157&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-moto-g-2026-prepaid-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-moto-g-2026-prepaid-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-moto-g-2026-prepaid-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-moto-g-2026-prepaid-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-moto-g-2026-prepaid-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-moto-g-2026-prepaid-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-moto-g-2026-prepaid-a?hei=262&amp;fmt=webp 205w
+  " src="assets/ss7.vzw.com/is/image/VerizonWireless/motorola-moto-g-2026-prepaid-a/" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async"></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/motorola-moto-g-2026/?sku=sku6048157&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Motorola moto g - 2026" aria-label="Motorola moto g - 2026" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Motorola moto g - 2026</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Motorola moto g - 2026 price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $7.77/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$7.77/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Motorola moto g - 2026" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Motorola moto g - 2026 Retail price $ 279.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $279.99</p></div></div><div class="mt-2" role="group" aria-label="Motorola moto g - 2026 promo Save $280.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $280.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Motorola moto g - 2026" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltg002y3b7tzb69txoy" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltg002y3b7tzb69txoy" name="Compare Motorola moto g - 2026 checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Motorola moto g - 2026</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21414866" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Motorola moto g - 2026 add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="h-[542px] w-full min-[684px]:h-[542px] relative" data-testid="marketing-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white" translate="true" style="background-color: rgb(255, 255, 255);"><div data-testid="ImageTile" data-track="{&quot;type&quot;: &quot;impression&quot;,&quot;name&quot;: &quot;L1|P3|free-5g-phones|||||||AdTile:Upgrade to a Certified Pre-owned phone.|Upgrade to a Certified Pre-owned phone._image&quot;}" class="style__FullBleedTileImage-sc-1wr5fys-1 eBjfGO  rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white focus bg-no-repeat "><div data-testid="imageSection" class="flex flex-col gap-3 basis-full z-[3] "><div data-track="{&quot;type&quot;: &quot;impression&quot;,&quot;name&quot;: &quot;L1|P3|free-5g-phones|||||||AdTile:Upgrade to a Certified Pre-owned phone.|Upgrade to a Certified Pre-owned phone._image&quot;}" class="style__PartialTileImage-sc-1wr5fys-0 ldckgX cursor-pointer bg-no-repeat rounded-t-lg h-[210px] min-[481px]:h-[262px]"></div><div class="px-3 lg:px-6"><div class="mb-3"><h2 aria-hidden="false" id="byod_tile_header" class="StyledTypography-VDS__sc-5k55co-0 kAQlZp StyledTitle-VDS__sc-155xzr0-0 kiCJhW"><span class="text-xl leading-6"><a aria-hidden="false" data-testid="full-bleed-title" href="/shop/online/free-5g-phones/certified-pre-owned/" tabindex="0" class="hover:underline [&amp;:focus]:outline-1 [&amp;:focus]:outline-black [&amp;:focus]:outline-dashed" data-track="{&quot;type&quot;: &quot;impression&quot;,&quot;name&quot;: &quot;L1|P3|free-5g-phones|||||||AdTile:Upgrade to a Certified Pre-owned phone.|Upgrade to a Certified Pre-owned phone.&quot;}">Upgrade to a Certified Pre-owned phone.</a></span></h2></div><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 jRLSco StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><span class="text-xs leading-4 md:text-sm md:leading-[18px]">Learn more about our fully tested and inspected iPhone and Android devices.&nbsp;</span></p></div><div class="mx-3 lg:mx-6 flex flex-row items-center flex-wrap gap-y-6 gap-x-[22px] mt-3"><a data-track="{&quot;type&quot;: &quot;impression&quot;,&quot;name&quot;: &quot;L1|P3|free-5g-phones|||||||AdTile:Upgrade to a Certified Pre-owned phone.|Learn more&quot;}" data-testid="TextLinkCaret" role="link" aria-disabled="false" aria-label="Upgrade to a Certified Pre-owned phone. Learn more" tabindex="0" class="StyledAnchor-VDS__sc-o7am1d-1 aJwGe"><span tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-o7am1d-2 kepHQb"></span><span tabindex="-1" aria-hidden="true" class="Wrapper-VDS__sc-o7am1d-0 fDPspF"><span role="text" class="InlineWrapper-VDS__sc-o7am1d-5 frZqJt"><span tabindex="-1" aria-hidden="true" class="AnchorContentWrapper-VDS__sc-o7am1d-3 kfEawU">Learn <span class="TextWrapper-VDS__sc-o7am1d-4 deWa-Do">more<span tabindex="-1" aria-hidden="true" class="IconWrapper-VDS__sc-o7am1d-6 jWLTqs"><div tabindex="-1" aria-hidden="true" aria-label="right-caret-bold icon" class="IconSVGWrapper-VDS__sc-o7am1d-7 euQdau"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.6 21.6"><path d="M7.6,20.7L5,18.1l7.3-7.3L5,3.5l2.5-2.5l9.9,9.9L7.6,20.7z"></path></svg></div></span></span></span></span></span></a></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 17e&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 4,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MHRQ4LL/A" data-skuid="sku6045043" data-testid="tile-component-id" data-hidepromo="undefined" id="MHRQ4LL/A-Save $600.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-17e/?sku=sku6045043&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17e-pink-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17e-pink-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17e-pink-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17e-pink-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17e-pink-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17e-pink-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17e-pink-a?hei=262&amp;fmt=webp 205w
+  " src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17e-pink-a/" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async"></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-17e/?sku=sku6045043&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 17e" aria-label="Apple iPhone 17e" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 17e</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 17e price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $16.66/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$16.66/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 17e" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 17e Retail price $ 599.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $599.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 17e promo Save $600.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $600.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 17e" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6lti002z3b7tbhsu45pn" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6lti002z3b7tbhsu45pn" name="Compare Apple iPhone 17e checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 17e</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21414360" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 17e add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Samsung Galaxy A17 5G&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 5,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="SMA176UZKV" data-skuid="sku6043656" data-testid="tile-component-id" data-hidepromo="undefined" id="SMA176UZKV-Save $200.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-a17-5g/?sku=sku6043656&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-a17-5g?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-a17-5g/?sku=sku6043656&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Samsung Galaxy A17 5G" aria-label="Samsung Galaxy A17 5G" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Samsung Galaxy A17 5G</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Samsung Galaxy A17 5G price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $5.55/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$5.55/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Samsung Galaxy A17 5G" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Samsung Galaxy A17 5G Retail price $ 199.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $199.99</p></div></div><div class="mt-2" role="group" aria-label="Samsung Galaxy A17 5G promo Save $200.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $200.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Samsung Galaxy A17 5G" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltk00303b7tgd67vvph" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltk00303b7tgd67vvph" name="Compare Samsung Galaxy A17 5G checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Samsung Galaxy A17 5G</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21414090" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Samsung Galaxy A17 5G add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Samsung Galaxy S26&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 6,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="SMS942UZVEV" data-skuid="sku6044535" data-testid="tile-component-id" data-hidepromo="undefined" id="SMS942UZVEV-Save $900.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-s26/?sku=sku6044535&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26-cobalt-violet-sms942uzvev-sms942uzvfv?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-s26/?sku=sku6044535&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Samsung Galaxy S26" aria-label="Samsung Galaxy S26" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Samsung Galaxy S26</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Samsung Galaxy S26 price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $24.99/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$24.99/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Samsung Galaxy S26" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Samsung Galaxy S26 Retail price $ 899.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $899.99</p></div></div><div class="mt-2" role="group" aria-label="Samsung Galaxy S26 promo Save $900.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $900.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Samsung Galaxy S26" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltl00313b7t7gkf70xd" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltl00313b7t7gkf70xd" name="Compare Samsung Galaxy S26 checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Samsung Galaxy S26</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21414260" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Samsung Galaxy S26 add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Samsung Galaxy S26+&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 7,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="SMS947UZVV" data-skuid="sku6044451" data-testid="tile-component-id" data-hidepromo="undefined" id="SMS947UZVV-Save $1100.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-s26-plus/?sku=sku6044451&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s26plus-cobaltviolet-01?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-s26-plus/?sku=sku6044451&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Samsung Galaxy S26+" aria-label="Samsung Galaxy S26+" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Samsung Galaxy S26+</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Samsung Galaxy S26+ price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $30.55/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$30.55/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Samsung Galaxy S26+" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Samsung Galaxy S26+ Retail price $ 1099.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $1,099.99</p></div></div><div class="mt-2" role="group" aria-label="Samsung Galaxy S26+ promo Save $1100.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $1100.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Samsung Galaxy S26+" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltm00323b7t03lrl78e" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltm00323b7t03lrl78e" name="Compare Samsung Galaxy S26+ checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Samsung Galaxy S26+</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21414266" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Samsung Galaxy S26+ add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Motorola razr FIFA World Cup 26&amp;#8482; Edition&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 8,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MOTXT2553VF" data-skuid="sku6044033" data-testid="tile-component-id" data-hidepromo="undefined" id="MOTXT2553VF-Save $600.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/motorola-razr-fifa-world-cup-26-edition/?sku=sku6044033&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-razr-fifa-world-cup-26-edition-motxt2553vf?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/motorola-razr-fifa-world-cup-26-edition/?sku=sku6044033&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Motorola razr FIFA World Cup 26™ Edition" aria-label="Motorola razr FIFA World Cup 26™ Edition" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Motorola razr FIFA World Cup 26™ Edition</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Motorola razr FIFA World Cup 26&amp;#8482; Edition price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $16.66/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$16.66/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Motorola razr FIFA World Cup 26&amp;#8482; Edition" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Motorola razr FIFA World Cup 26&amp;#8482; Edition Retail price $ 599.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $599.99</p></div></div><div class="mt-2" role="group" aria-label="Motorola razr FIFA World Cup 26&amp;#8482; Edition promo Save $600.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $600.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Motorola razr FIFA World Cup 26&amp;#8482; Edition" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltn00333b7tz0nwitrq" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltn00333b7tz0nwitrq" name="Compare Motorola razr FIFA World Cup 26&amp;#8482; Edition checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Motorola razr FIFA World Cup 26&amp;#8482; Edition</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21414171" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Motorola razr FIFA World Cup 26&amp;#8482; Edition add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Google Pixel 10a&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 9,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="GA10057-US" data-skuid="sku6044131" data-testid="tile-component-id" data-hidepromo="undefined" id="GA10057-US-Save $500.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/google-pixel-10a/?sku=sku6044131&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10a-ga10057-us-lavendar-a?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/google-pixel-10a/?sku=sku6044131&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Google Pixel 10a" aria-label="Google Pixel 10a" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Google Pixel 10a</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Google Pixel 10a price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $13.88/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$13.88/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Google Pixel 10a" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Google Pixel 10a Retail price $ 499.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $499.99</p></div></div><div class="mt-2" role="group" aria-label="Google Pixel 10a promo Save $500.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $500.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Google Pixel 10a" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6lto00343b7tpv4i8m3n" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6lto00343b7tpv4i8m3n" name="Compare Google Pixel 10a checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Google Pixel 10a</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21414218" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Google Pixel 10a add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 17&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 10,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MG494LL/A" data-skuid="sku6037251" data-testid="tile-component-id" data-hidepromo="undefined" id="MG494LL/A-Save $830.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-17/?sku=sku6037251&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-17-lavender?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-17/?sku=sku6037251&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 17" aria-label="Apple iPhone 17" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 17</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 17 price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $23.05/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$23.05/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 17" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 17 Retail price $ 829.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $829.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 17 promo Save $830.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $830.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 17" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltp00353b7t8oclepyi" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltp00353b7t8oclepyi" name="Compare Apple iPhone 17 checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 17</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21413626" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 17 add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Motorola edge - 2025&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 11,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MOTXT2519V" data-skuid="sku6036617" data-testid="tile-component-id" data-hidepromo="undefined" id="MOTXT2519V-Save $400.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/motorola-edge-2025/?sku=sku6036617&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/motorola-edge-2025?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/motorola-edge-2025/?sku=sku6036617&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Motorola edge - 2025" aria-label="Motorola edge - 2025" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Motorola edge - 2025</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Motorola edge - 2025 price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $11.11/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$11.11/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Motorola edge - 2025" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Motorola edge - 2025 Retail price $ 399.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $399.99</p></div></div><div class="mt-2" role="group" aria-label="Motorola edge - 2025 promo Save $400.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $400.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Motorola edge - 2025" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltq00363b7t3j40p9lk" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltq00363b7t3j40p9lk" name="Compare Motorola edge - 2025 checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Motorola edge - 2025</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21413584" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Motorola edge - 2025 add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Google Pixel 10 Pro&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 12,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="GA10276-US" data-skuid="sku6035254" data-testid="tile-component-id" data-hidepromo="undefined" id="GA10276-US-Save $1000.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/google-pixel-10-pro/?sku=sku6035254&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-pro-moonstone-ga10276-us-ga10278-us-ga10281-us?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/google-pixel-10-pro/?sku=sku6035254&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Google Pixel 10 Pro" aria-label="Google Pixel 10 Pro" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Google Pixel 10 Pro</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Google Pixel 10 Pro price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $27.77/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$27.77/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Google Pixel 10 Pro" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Google Pixel 10 Pro Retail price $ 999.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $999.99</p></div></div><div class="mt-2" role="group" aria-label="Google Pixel 10 Pro promo Save $1000.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $1000.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Google Pixel 10 Pro" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltq00373b7tzgqis849" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltq00373b7tzgqis849" name="Compare Google Pixel 10 Pro checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Google Pixel 10 Pro</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21413272" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Google Pixel 10 Pro add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Google Pixel 10&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 13,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="GA10240-US" data-skuid="sku6035292" data-testid="tile-component-id" data-hidepromo="undefined" id="GA10240-US-Save $800.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/google-pixel-10/?sku=sku6035292&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/google-pixel-10-ga10240-ga10243-us-indigo?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/google-pixel-10/?sku=sku6035292&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Google Pixel 10" aria-label="Google Pixel 10" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Google Pixel 10</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Google Pixel 10 price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $22.22/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$22.22/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Google Pixel 10" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Google Pixel 10 Retail price $ 799.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $799.99</p></div></div><div class="mt-2" role="group" aria-label="Google Pixel 10 promo Save $800.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $800.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Google Pixel 10" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6lts00383b7tndms6t1r" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6lts00383b7tndms6t1r" name="Compare Google Pixel 10 checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Google Pixel 10</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21413277" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Google Pixel 10 add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone Air&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 14,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MG1D4LL/A" data-skuid="sku6037390" data-testid="tile-component-id" data-hidepromo="undefined" id="MG1D4LL/A-Save $1000.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-air/?sku=sku6037390&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-air-skyblue-a?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-air/?sku=sku6037390&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone Air" aria-label="Apple iPhone Air" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone Air</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone Air price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $27.77/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$27.77/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone Air" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone Air Retail price $ 999.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $999.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone Air promo Save $1000.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $1000.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone Air" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltt00393b7tprp591nz" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltt00393b7tprp591nz" name="Compare Apple iPhone Air checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone Air</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21413628" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone Air add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 16&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 15,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MYAT3LL/A" data-skuid="sku6016063" data-testid="tile-component-id" data-hidepromo="undefined" id="MYAT3LL/A-Save $730.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-16/?sku=sku6016063&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-ultramarine?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-16/?sku=sku6016063&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 16" aria-label="Apple iPhone 16" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 16</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 16 price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $20.27/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$20.27/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 16" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 16 Retail price $ 729.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $729.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 16 promo Save $730.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $730.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 16" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltu003a3b7tkqwvays7" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltu003a3b7tkqwvays7" name="Compare Apple iPhone 16 checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 16</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21412086" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 16 add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 15&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 16,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MTLV3LL/A" data-skuid="sku6004582" data-testid="tile-component-id" data-hidepromo="undefined" id="MTLV3LL/A-Save $630.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-15/?sku=sku6004582&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-128gb-black-mtlv3ll-a-a?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-15/?sku=sku6004582&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 15" aria-label="Apple iPhone 15" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 15</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 15 price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $17.49/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$17.49/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 15" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 15 Retail price $ 629.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $629.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 15 promo Save $630.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $630.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 15" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltv003b3b7tdiwqt9tf" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltv003b3b7tdiwqt9tf" name="Compare Apple iPhone 15 checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 15</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21410694" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 15 add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 16 Plus&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 17,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MXUW3LL/A" data-skuid="sku6016038" data-testid="tile-component-id" data-hidepromo="undefined" id="MXUW3LL/A-Save $830.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-16-plus/?sku=sku6016038&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-plus-ultramarine?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-16-plus/?sku=sku6016038&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 16 Plus" aria-label="Apple iPhone 16 Plus" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 16 Plus</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 16 Plus price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $23.05/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$23.05/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 16 Plus" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 16 Plus Retail price $ 829.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $829.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 16 Plus promo Save $830.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $830.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 16 Plus" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltw003c3b7tzrbddm8k" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltw003c3b7tzrbddm8k" name="Compare Apple iPhone 16 Plus checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 16 Plus</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21412082" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 16 Plus add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 14 (Certified Pre-Owned)&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 18,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="OCPO1AAPL14128PL" data-skuid="sku5780585" data-testid="tile-component-id" data-hidepromo="undefined" id="OCPO1AAPL14128PL-Save $369.99. Online only. "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-14-certified-pre-owned/?sku=sku5780585&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-purple-fall22-a?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-14-certified-pre-owned/?sku=sku5780585&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 14 (Certified Pre-Owned)" aria-label="Apple iPhone 14 (Certified Pre-Owned)" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 14 (Certified Pre-Owned)</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 14 (Certified Pre-Owned) price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $10.27/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$10.27/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 14 (Certified Pre-Owned)" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 14 (Certified Pre-Owned) Retail price $ 369.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $369.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 14 (Certified Pre-Owned) promo Save $369.99. Online only. "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $369.99. Online only. </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 14 (Certified Pre-Owned)" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltx003d3b7tqwjw1o81" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltx003d3b7tqwjw1o81" name="Compare Apple iPhone 14 (Certified Pre-Owned) checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 14 (Certified Pre-Owned)</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21410625" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 14 (Certified Pre-Owned) add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Samsung Galaxy S25&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 19,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="SMS931ULBV" data-skuid="sku6019344" data-testid="tile-component-id" data-hidepromo="undefined" id="SMS931ULBV-Save $800.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-s25/?sku=sku6019344&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-s25-icyblue?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-s25/?sku=sku6019344&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Samsung Galaxy S25" aria-label="Samsung Galaxy S25" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Samsung Galaxy S25</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Samsung Galaxy S25 price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $22.22/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$22.22/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Samsung Galaxy S25" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Samsung Galaxy S25 Retail price $ 799.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $799.99</p></div></div><div class="mt-2" role="group" aria-label="Samsung Galaxy S25 promo Save $800.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $800.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Samsung Galaxy S25" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6lty003e3b7tvg3gxh7a" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6lty003e3b7tvg3gxh7a" name="Compare Samsung Galaxy S25 checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Samsung Galaxy S25</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21412320" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Samsung Galaxy S25 add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 14 Pro (Certified Pre-Owned)&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 20,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="OCPO1BAPL14P128DP" data-skuid="sku5780540" data-testid="tile-component-id" data-hidepromo="undefined" id="OCPO1BAPL14P128DP-Save $449.99. Online only. "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-14-pro-certified-pre-owned/?sku=sku5780540&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone-14-pro-deep-purple-fall22-a?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-14-pro-certified-pre-owned/?sku=sku5780540&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 14 Pro (Certified Pre-Owned)" aria-label="Apple iPhone 14 Pro (Certified Pre-Owned)" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 14 Pro (Certified Pre-Owned)</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 14 Pro (Certified Pre-Owned) price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $12.49/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$12.49/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 14 Pro (Certified Pre-Owned)" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 14 Pro (Certified Pre-Owned) Retail price $ 449.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $449.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 14 Pro (Certified Pre-Owned) promo Save $449.99. Online only. "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $449.99. Online only. </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 14 Pro (Certified Pre-Owned)" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6ltz003f3b7t4cqwfhy9" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6ltz003f3b7t4cqwfhy9" name="Compare Apple iPhone 14 Pro (Certified Pre-Owned) checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 14 Pro (Certified Pre-Owned)</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21410629" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 14 Pro (Certified Pre-Owned) add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Orbic Trophy 5G&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 21,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="R667L5U-BVZ6" data-skuid="sku6043915" data-testid="tile-component-id" data-hidepromo="undefined" id="R667L5U-BVZ6-Save $360.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/orbic-trophy-5g/?sku=sku6043915&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="true" src="assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6/" srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/orbic-trophy-5g-r667l5u-bvz6?hei=262&amp;fmt=webp 205w
+  "></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/orbic-trophy-5g/?sku=sku6043915&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Orbic Trophy 5G" aria-label="Orbic Trophy 5G" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Orbic Trophy 5G</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Orbic Trophy 5G price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $9.99/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$9.99/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Orbic Trophy 5G" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Orbic Trophy 5G Retail price $ 359.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $359.99</p></div></div><div class="mt-2" role="group" aria-label="Orbic Trophy 5G promo Save $360.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $360.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Orbic Trophy 5G" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6lu0003g3b7t17jbgmd6" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6lu0003g3b7t17jbgmd6" name="Compare Orbic Trophy 5G checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Orbic Trophy 5G</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21412290" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Orbic Trophy 5G add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 15 Plus&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 22,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="MTXR3LL/A" data-skuid="sku6004698" data-testid="tile-component-id" data-hidepromo="undefined" id="MTXR3LL/A-Save $730.  "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-15-plus/?sku=sku6004698&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-plus-128gb-black-mtxr3ll-a-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-plus-128gb-black-mtxr3ll-a-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-plus-128gb-black-mtxr3ll-a-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-plus-128gb-black-mtxr3ll-a-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-plus-128gb-black-mtxr3ll-a-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-plus-128gb-black-mtxr3ll-a-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-plus-128gb-black-mtxr3ll-a-a?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-15-plus-128gb-black-mtxr3ll-a-a/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="false"></div></a><div aria-hidden="false" class="h-[24px]"><div class="mt-2 mb-1"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Out of stock</p></div></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-15-plus/?sku=sku6004698&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 15 Plus" aria-label="Apple iPhone 15 Plus" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 15 Plus</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 15 Plus price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $20.27/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$20.27/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 15 Plus" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 15 Plus Retail price $ 729.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $729.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 15 Plus promo Save $730.  "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $730.  </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 15 Plus" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6lu1003h3b7t38c4voo7" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6lu1003h3b7t38c4voo7" name="Compare Apple iPhone 15 Plus checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 15 Plus</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21410695" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 15 Plus add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 16 Pro Max (Certified Pre-Owned)&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 23,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="OCPO1BAPL16PM256BK" data-skuid="sku6020844" data-testid="tile-component-id" data-hidepromo="undefined" id="OCPO1BAPL16PM256BK-Save $857.99. Online only. "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-16-pro-max-certified-pre-owned/?sku=sku6020844&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-pro-max-black-titanium?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-pro-max-black-titanium?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-pro-max-black-titanium?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-pro-max-black-titanium?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-pro-max-black-titanium?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-pro-max-black-titanium?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-pro-max-black-titanium?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/apple-iphone-16-pro-max-black-titanium/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="false"></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-16-pro-max-certified-pre-owned/?sku=sku6020844&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 16 Pro Max (Certified Pre-Owned)" aria-label="Apple iPhone 16 Pro Max (Certified Pre-Owned)" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 16 Pro Max (Certified Pre-Owned)</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 16 Pro Max (Certified Pre-Owned) price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $23.83/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$23.83/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 16 Pro Max (Certified Pre-Owned)" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 16 Pro Max (Certified Pre-Owned) Retail price $ 857.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $857.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 16 Pro Max (Certified Pre-Owned) promo Save $857.99. Online only. "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $857.99. Online only. </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 16 Pro Max (Certified Pre-Owned)" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6lu2003i3b7tnab1rsji" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6lu2003i3b7tnab1rsji" name="Compare Apple iPhone 16 Pro Max (Certified Pre-Owned) checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 16 Pro Max (Certified Pre-Owned)</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21412703" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 16 Pro Max (Certified Pre-Owned) add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Samsung Galaxy S23+ (Certified Pre-Owned)&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 24,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="OCPO1CSAMS916256K" data-skuid="sku6002736" data-testid="tile-component-id" data-hidepromo="undefined" id="OCPO1CSAMS916256K-Save $297.99. Online only. "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-s23-plus-certified-pre-owned/?sku=sku6002736&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-diamond-2-black-black?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-diamond-2-black-black?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-diamond-2-black-black?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-diamond-2-black-black?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-diamond-2-black-black?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-diamond-2-black-black?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-diamond-2-black-black?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/samsung-galaxy-diamond-2-black-black/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="false"></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/samsung-galaxy-s23-plus-certified-pre-owned/?sku=sku6002736&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Samsung Galaxy S23+ (Certified Pre-Owned)" aria-label="Samsung Galaxy S23+ (Certified Pre-Owned)" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Samsung Galaxy S23+ (Certified Pre-Owned)</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Samsung Galaxy S23+ (Certified Pre-Owned) price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $8.27/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$8.27/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Samsung Galaxy S23+ (Certified Pre-Owned)" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Samsung Galaxy S23+ (Certified Pre-Owned) Retail price $ 297.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $297.99</p></div></div><div class="mt-2" role="group" aria-label="Samsung Galaxy S23+ (Certified Pre-Owned) promo Save $297.99. Online only. "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $297.99. Online only. </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Samsung Galaxy S23+ (Certified Pre-Owned)" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6lu3003j3b7tis2qfqgs" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6lu3003j3b7tis2qfqgs" name="Compare Samsung Galaxy S23+ (Certified Pre-Owned) checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Samsung Galaxy S23+ (Certified Pre-Owned)</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21412432" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Samsung Galaxy S23+ (Certified Pre-Owned) add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div><div class="w-full relative h-[542px] min-[684px]:h-[542px]" data-testid="product-tile"><div class="rounded-lg shadow-sm transition duration-200 hover:scale-[1.02] h-full bg-white cursor-pointer" role="presentation" style="background-color: rgb(255, 255, 255);"><div class="flex flex-col h-full w-full z-[3] absolute [&amp;_#quickViewBtn]:mt-7" aria-hidden="false"><div class="flex-1 mt-0" data-analyticstrack="gridwall-product-tile" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;title&quot;: &quot;Apple iPhone 14 Plus (Certified Pre-Owned)&quot;,&quot;level&quot;:&quot;1&quot;,&quot;position&quot;: 25,&quot;emptyArea&quot;:true}" role="presentation" data-skumodel="OCPO1AAPL14PL128BL" data-skuid="sku5780575" data-testid="tile-component-id" data-hidepromo="undefined" id="OCPO1AAPL14PL128BL-Save $402.99. Online only. "><div class="px-4 pt-3 pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"></div><div class="px-3 min-[684px]:px-6 max-[683px]:[&amp;_h2#gridwallProductName]:mt-2 min-[684px]:[&amp;_h2#gridwallProductName]:mt-2 max-[683px]:[&amp;_div#preOrderDetails]:mt-2 min-[684px]:[&amp;_div#preOrderDetails]:mt-3" id="productDetails"><a tabindex="-1" href="/shop/online/free-5g-phones/smartphones/apple-iphone-14-plus-certified-pre-owned/?sku=sku5780575&amp;from-free-phones-gw=true" aria-hidden="true"><div class="flex justify-center items-center mx-auto h-[134px] w-[134px] [&amp;&gt;img]:max-w-[100%] [&amp;&gt;img]:max-h-[100%] min-[684px]:w-[186px] min-[684px]:h-[186px] min-[856px]:w-[158px] min-[856px]:h-[158px] min-[1440px]:w-[186px] min-[1440px]:h-[186px]"><img data-srcset="
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone14-blue-fall22-a?hei=112&amp;fmt=webp 85w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone14-blue-fall22-a?hei=132&amp;fmt=webp 138w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone14-blue-fall22-a?hei=192&amp;fmt=webp 142w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone14-blue-fall22-a?hei=251&amp;fmt=webp 186w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone14-blue-fall22-a?hei=199&amp;fmt=webp 148w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone14-blue-fall22-a?hei=214&amp;fmt=webp 134w,
+    assets/ss7.vzw.com/is/image/VerizonWireless/iphone14-blue-fall22-a?hei=262&amp;fmt=webp 205w
+  " data-src="assets/ss7.vzw.com/is/image/VerizonWireless/iphone14-blue-fall22-a/" class="lozad" sizes="(max-width:320px) 20vw, (max-width: 375px) 30vw, (max-width: 525px) 35vw, (max-width: 768px) 20vw, 205px" alt="" data-analyticstrack="gridwall-product-image" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;image&quot;}" width="auto" height="auto" decoding="async" data-loaded="false"></div></a><div aria-hidden="true" class="h-[24px]"></div><h2 id="gridwallProductName" aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 isQWmL StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><a href="/shop/online/free-5g-phones/smartphones/apple-iphone-14-plus-certified-pre-owned/?sku=sku5780575&amp;from-free-phones-gw=true" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;title&quot;}" data-analyticstrack="gridwall-product-name" title="Apple iPhone 14 Plus (Certified Pre-Owned)" aria-label="Apple iPhone 14 Plus (Certified Pre-Owned)" class="font-bold text-xs md:text-sm" aria-hidden="false"><span id="tileProductText">Apple iPhone 14 Plus (Certified Pre-Owned)</span></a></h2><div class="" data-testid="pricing" style="height: unset;"><div aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><div class="pt-3 min-[684px]:pt-4 text-xs tracking-[0.5px]"><div role="text" aria-label="Apple iPhone 14 Plus (Certified Pre-Owned) price Starts at $0 /mo"><span tabindex="-1" role="text" data-testid="trade-in-price">Starts at $0/mo</span></div></div><div class="text-xs"><span class="sr-only">price is not offering anymore $11.19/mo</span><span class="mr-1 line-through" data-testid="dpp-price-strikeout" aria-hidden="true">$11.19/mo</span><a data-testid="open-see-details-frp" aria-hidden="false" contenteditable="false" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;: &quot;see details&quot;}" data-analyticstrack="gridwall-tile-promoToggle" type="inline" aria-label="see details about Apple iPhone 14 Plus (Certified Pre-Owned)" role="button" aria-disabled="false" tabindex="0" class="StyledAnchor-VDS__sc-2pjk45-2 gIqDRj" style="border-color: initial; letter-spacing: 0.5px;"><span type="inline" tabindex="-1" aria-hidden="true" class="HitArea-VDS__sc-2pjk45-0 bpLMIf"></span><span tabindex="-1" aria-hidden="true" type="inline" class="Wrapper-VDS__sc-2pjk45-1 jshuZH">Details</span></a></div></div><div class="text-xs"><span class="sr-only">for 36 months, 0% APR</span><p tabindex="-1" aria-hidden="true" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">for 36 months, 0% APR</p></div><div role="text" aria-label="Apple iPhone 14 Plus (Certified Pre-Owned) Retail price $ 402.99"><p aria-hidden="false" data-testid="dpp-frp" class="StyledTypography-VDS__sc-5k55co-0 hRAXYu StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Retail price: $402.99</p></div></div><div class="mt-2" role="group" aria-label="Apple iPhone 14 Plus (Certified Pre-Owned) promo Save $402.99. Online only. "><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 injArb StyledBody-VDS__sc-1s1yqd8-0 gjyxKS">Save $402.99. Online only. </p></div></div></div><div class="px-4 pt-3 pb-3 md:pb-6 md:px-6 mt-auto mb-0 flex flex-row justify-between items-center"><div data-testid="stop-propagation" role="presentation" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;compare&quot;}" data-analyticstrack="gridwall-compare-checkbox"><div width="100%" id="Compare Apple iPhone 14 Plus (Certified Pre-Owned)" class="CheckboxWrapper-VDS__sc-1uxt89l-0 lhVwKR"><label class="CheckboxLabelWrapper-VDS__sc-uxjioj-0 gIICjx" for="cmpts6lu3003k3b7tbtmg1650" color="#000000" letter-spacing="0.5px"><div class="CheckWrapper-VDS__sc-1uxt89l-1 hqVQcb"><input data-testid="test-input" id="cmpts6lu3003k3b7tbtmg1650" name="Compare Apple iPhone 14 Plus (Certified Pre-Owned) checkbox" tabindex="0" type="checkbox" aria-describedby="" class="StyledInput-VDS__sc-1uxt89l-4 hnvIpr" value=""><span class="StyledWrapper-VDS__sc-hwcm7v-1 jYxKEa"><div class="HitArea-VDS__sc-hwcm7v-0 gsgGif"></div><span height="20" width="20" class="StyledInner-VDS__sc-hwcm7v-2 OTiwl styledInner"></span></span></div><span data-testid="test-child-wrapper" class="ChildWrapper-VDS__sc-1uxt89l-2 iHFbKo"><div aria-hidden="false" class="textStyle">Compare<span class="sr-only" aria-hidden="true" tabindex="-1">Compare Apple iPhone 14 Plus (Certified Pre-Owned)</span></div></span></label></div></div><div class="flex flex-row items-end flex-1 justify-end"><div id="wishlist-icon-dev21410546" class="ml-[3px] focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed" data-testid="clientSsr" data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;Wishlist Added&quot;}" aria-label="Apple iPhone 14 Plus (Certified Pre-Owned) add to wishlist" role="button" tabindex="0" aria-pressed="false"><svg data-track="{&quot;type&quot;:&quot;panel&quot;,&quot;name&quot;:&quot;add to wishlist&quot;}" width="23px" height="20px" viewBox="0 0 81.6 63.7" fill="transparent" stroke="black" stroke-width="5px" class="focus:outline-1 focus:outline-dashed focus-within:outline-1 focus-within:outline-dashed focus-visible:outline-1 focus-visible:outline-dashed"><path d="M40.7,62.3c0,0-17.2-17.1-25.2-24.7S-1.3,16.7,12.9,5.2s27.8,6.9,27.8, 6.9h0.2c0,0,13.6-18.5,27.8-6.9 s5.5,24.7-2.6,32.4S40.9,62.3,40.9,62.3H40.7z"></path></svg></div><div class="Tile__HideOnMobile-sc-71g958-3 bfHuur ml-[3px]"></div></div></div></div></div></div></div></div></div><div id="row" class="w-full h-full px-4 md:px-5 flex"><div class="flex items-center justify-center m-5 w-full [&amp;_a:focus&gt;span:first-child]:outline-1 [&amp;_a:focus-within&gt;span:first-child]:outline-1 [&amp;_a:focus&gt;span:first-child]:outline-dashed [&amp;_a:focus-within&gt;span:first-child]:outline-dashed"><nav tabindex="-1" aria-label="Pagination" data-track-ignore="true" class="StyledNav-VDS__sc-148xq6w-0 fHtvIo"><ul class="StyledList-VDS__sc-148xq6w-1 hCIWLU"><li aria-hidden="true" class="PaginationListItem-VDS__sc-1cb7p3f-0 gIRiAp"><a aria-label="Go to previous page." role="none" tabindex="0" aria-current="true" class="StyledLink-VDS__sc-3opay5-0 iSOkJt" style="display: flex; justify-content: flex-end; align-items: center; font-weight: 700; height: 2.75rem; min-width: 2.75rem; visibility: hidden;"><span class="StepControlSpan-VDS__sc-29nbz6-0 kvXVpS"><div direction="previous" class="IconWrapper-VDS__sc-29nbz6-1 jwRrfz"><div aria-label="pagination-left-arrow icon" class="IconSVGWrapper-VDS__sc-29nbz6-2 kmgKjx"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 21.6 21.6"><path d="M19.8,11.7h-15l7.1,7.1L10.7,20l-9.3-9.2l9.3-9.2l1.3,1.3L4.8,9.9h15L19.8,11.7z"></path></svg></div></div>Previous</span><span aria-live="assertive" class="ScreenReaderText-VDS__sc-3opay5-2 bgRgqz">Page 1 selected</span></a></li><li class="PaginationListItem-VDS__sc-1cb7p3f-0 PaginationNumbersContainer-VDS__sc-75hqso-0 kfGYjd txlKW"><a aria-label="Page 1 of 3" role="none" tabindex="0" aria-current="true" class="StyledLink-VDS__sc-3opay5-0 iSOkJt"><span class="StyledSpan-VDS__sc-75hqso-1 kVHNsl">1</span><span aria-live="assertive" class="ScreenReaderText-VDS__sc-3opay5-2 bgRgqz">Page 1 selected</span></a></li><li class="PaginationListItem-VDS__sc-1cb7p3f-0 PaginationNumbersContainer-VDS__sc-75hqso-0 kfGYjd bJA-DIc"><a aria-label="Go to Page 2 of 3" role="link" tabindex="0" aria-current="false" class="StyledLink-VDS__sc-3opay5-0 gaygZS" href="/shop/online/free-5g-phones/shop/online/free-5g-phones/page-2/"><span class="StyledSpan-VDS__sc-75hqso-1 kVHNsl">2</span><span class="ScreenReaderText-VDS__sc-3opay5-2 bgRgqz"></span></a></li><li class="PaginationListItem-VDS__sc-1cb7p3f-0 PaginationNumbersContainer-VDS__sc-75hqso-0 kfGYjd bJA-DIc"><a aria-label="Go to Page 3 of 3" role="link" tabindex="0" aria-current="false" class="StyledLink-VDS__sc-3opay5-0 gaygZS" href="/shop/online/free-5g-phones/shop/online/free-5g-phones/page-3/"><span class="StyledSpan-VDS__sc-75hqso-1 kVHNsl">3</span><span class="ScreenReaderText-VDS__sc-3opay5-2 bgRgqz"></span></a></li><li aria-hidden="false" class="PaginationListItem-VDS__sc-1cb7p3f-0 jxgwaS"><a aria-label="Go to next page." role="link" tabindex="0" aria-current="false" class="StyledLink-VDS__sc-3opay5-0 gaygZS" href="/shop/online/free-5g-phones/shop/online/free-5g-phones/page-2/" style="display: flex; justify-content: flex-start; align-items: center; font-weight: 700; height: 2.75rem; min-width: 2.75rem; visibility: visible;"><span class="StepControlSpan-VDS__sc-29nbz6-0 kvXVpS">Next<div direction="next" class="IconWrapper-VDS__sc-29nbz6-1 hBqjFA"><div aria-label="pagination-right-arrow icon" class="IconSVGWrapper-VDS__sc-29nbz6-2 kmgKjx"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.6 21.6"><path d="M20.26723,10.80317,10.94378,20.044,9.6764,18.7643l7.12223-7.05674H1.8014v-1.8H16.808L9.68256,2.84378l1.26738-1.278Z"></path></svg></div></div></span><span class="ScreenReaderText-VDS__sc-3opay5-2 bgRgqz"></span></a></li></ul></nav></div></div></div></div></section><section class="block bg-[#F6F6F6] py-6 md:py-12" aria-labelledby="seoHeader" id="seoContent" data-testid="seoContent"><div class="max-w-[1272px] mx-auto grid grid-cols-1 min-[924px]:grid-cols-4 p-4"><div class="min-[924px]:col-start-2 min-[924px]:col-span-3 min-[924px]:ml-[1%]"><div class="mb-3 md:mb-6"><h2 aria-hidden="false" id="seoHeader" class="StyledTypography-VDS__sc-5k55co-0 fKNdkO StyledTitle-VDS__sc-155xzr0-0 kiCJhW">Get a Free Cell Phone After Promo Credit</h2></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10"><div><h3 aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 juWzLP StyledTitle-VDS__sc-155xzr0-0 kiCJhW">How can I get a free phone?</h3><div class="mt-3 md:mt-6"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><p class="mb-3 [&amp;_a]:text-black [&amp;_a]:underline [&amp;_a:focus]:outline-1 [&amp;_a:focus]:outline-black [&amp;_a:focus]:outline-dashed"><span id="">Cell phones are often associated with a high cost, which may deter people from upgrading to a new device. But that doesn't have to be the case. Verizon offers different promotions available throughout the year that can allow you to get discounted smartphones from top brands like Apple, Samsung, Google and more. Additionally, we offer many cell phones that are free after a 36 month bill incentive credit, which can be a great option for those looking for a new phone while on a budget. You are generally required to keep that line on a particular plan  in order to qualify and remain eligible to receive the bill incentive credit.</span></p><p class="mb-3 [&amp;_a]:text-black [&amp;_a]:underline [&amp;_a:focus]:outline-1 [&amp;_a:focus]:outline-black [&amp;_a:focus]:outline-dashed"><span id="">If you're wondering how to get these great deals, start by exploring the multiple free phone promotion options that exist currently. Some promotions, like <a href="/shop/online/free-5g-phones/bring-your-own-device/">bringing your own device (BYOD)</a> or <a href="/shop/online/free-5g-phones/solutions-and-services/smartphones-trade-in/">trading-in your old smartphone</a>, can allow you to bring over or trade-in an eligible phone for a brand new one. Additionally, you can get a <a href="/shop/online/free-5g-phones/certified-pre-owned/">certified pre-owned (“CPO”) phone</a> (including the latest <a href="/shop/online/free-5g-phones/smartphones/certified-pre-owned/apple/">Apple</a> and <a href="/shop/online/free-5g-phones/smartphones/certified-pre-owned/samsung/">Android</a> devices) from Verizon, with applicable promotions. Finally, there are occasions when buy-one-get-one free promotions are running, which is a great way to save if the entire family needs an upgrade.</span></p><p class="mb-3 [&amp;_a]:text-black [&amp;_a]:underline [&amp;_a:focus]:outline-1 [&amp;_a:focus]:outline-black [&amp;_a:focus]:outline-dashed"><span id="">To explore which devices are currently eligible for promotions, you can browse <a href="/shop/online/free-5g-phones/deals/">Verizon's smartphone deals</a> today.</span></p></p></div></div><div><div><h3 aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 juWzLP StyledTitle-VDS__sc-155xzr0-0 kiCJhW">Additional free and reduced price options</h3><div class="mt-3 md:mt-6"><p aria-hidden="false" class="StyledTypography-VDS__sc-5k55co-0 hmEcda StyledBody-VDS__sc-1s1yqd8-0 gjyxKS"><p class="mb-3 [&amp;_a]:text-black [&amp;_a]:underline [&amp;_a:focus]:outline-1 [&amp;_a:focus]:outline-black [&amp;_a:focus]:outline-dashed"><span id="">In addition to Verizon's promotions and discounts, there are government programs available for both individuals and households that offer free or reduced price cell phones. In the modern age, having a phone that you and your family can rely on is essential, and programs like the <a href="/shop/online/free-5g-phones/solutions-and-services/lifeline/">Lifeline Assistance Program</a> and Life Wireless can aid you in subsidizing a device or service if you can't cover the cost on your own. </span></p><p class="mb-3 [&amp;_a]:text-black [&amp;_a]:underline [&amp;_a:focus]:outline-1 [&amp;_a:focus]:outline-black [&amp;_a:focus]:outline-dashed"><span id="">Those who qualify for other government programs like SNAP, Medicaid, and so forth may be eligible for other free phone programs, depending on the state you live in and your preferred service provider.</span></p><p class="mb-3 [&amp;_a]:text-black [&amp;_a]:underline [&amp;_a:focus]:outline-1 [&amp;_a:focus]:outline-black [&amp;_a:focus]:outline-dashed"><span id="">No matter which brand you're interested in, there is likely a phone option available to you. Between Apple, Samsung, Google and others, explore Verizon's <a href="/shop/online/free-5g-phones/deals/smartphones/">cell phone deals</a> to learn which promotions you may be eligible for today.</span></p></p></div></div></div></div></div></div></section></div></div></div>
+<!--<div id="vzw-gf" class="is-hidden"></div>-->
+</footer>
+
+<script type="text/javascript">
+window.resourceBaseUrl = "https://scache-ws.vzw.com/w/ssr-digital/static/";
+window.clientSsr = true;
+</script>
+
+
+<script async="" id="__LOADABLE_REQUIRED_CHUNKS__" type="application/json" onerror="window.__reportScriptLoadError&amp;&amp;window.__reportScriptLoadError(this)">[]</script><script async="" id="__LOADABLE_REQUIRED_CHUNKS___ext" type="application/json" onerror="window.__reportScriptLoadError&amp;&amp;window.__reportScriptLoadError(this)">{"namedChunks":[]}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer id="vz-gf20"><div class="xf-page-unified xfpage page basicpage">
+<div class="gnav20 " data-exp-name="Master">
+     <input type="hidden" id="cradle-context">
+    <div class="gnav20-sticky-content">    	
+     	
+
+
+
+
+    
+    
+    <div class="gnav20-footercontainer">
+<div class="gnav20-footer-container gnav20-white-focus gnav20-mobile-footer-accordion" data-gnav20-container="footer">
+	<div class="gnav20-main-container">
+		<div class="gnav20-footer-level-one">
+			<div class="gnav20-footer-wrapper gnav20-four ">
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Shop</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Shop menu list">
+					
+						<li>
+							<a href="/smartphones/">Devices</a>
+						</li>
+					
+						<li>
+							<a href="/products/">Accessories</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Top Device Brands</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Top Device Brands menu list">
+					
+						<li>
+							<a href="/wireless-devices/samsung/">Samsung</a>
+						</li>
+					
+						<li>
+							<a href="/wireless-devices/apple/">Apple</a>
+						</li>
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Support</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Support menu list">
+					
+						<li>
+							<a href="/support/">Support overview</a>
+						</li>
+					
+						<li>
+							<a href="/support/return-policy/">Return policy</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">About Verizon</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="About Verizon menu list">
+					
+						<li>
+							<a href="/about/">About us</a>
+						</li>
+					
+						<li>
+							<a href="https://mycareer.verizon.com/" target="_blank" rel="noopener noreferrer">Careers</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+			</div>
+			<div class="gnav20-footer-wrapper gnav20-four">			
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Most Popular</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Most Popular menu list">
+					
+						<li>
+							<a href="/smartphones/apple-iphone-17/">Apple iPhone 17</a>
+						</li>
+					
+						<li>
+							<a href="/smartphones/apple-iphone-17e/">Apple iPhone 17e</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Top Accessory Brands</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Top Accessory Brands menu list">
+					
+						<li>
+							<a href="/products/otterbox/">Otterbox</a>
+						</li>
+					
+						<li>
+							<a href="/products/zagg/">ZAGG</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading"> Important Consumer Information</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label=" Important Consumer Information menu list">
+					
+						<li>
+							<a href="/about/terms-conditions/overview/">Legal Terms &amp; Notices</a>
+						</li>
+					
+						<li>
+							<a href="https://ss7.vzw.com/is/content/VerizonWireless/Device-Payment-Agreement-Template" target="_blank" rel="noopener noreferrer">Device Payment Terms &amp; Conditions</a>
+						</li>
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-socialfooter">
+<div class="gnav20-hero-wrapper">
+	<div class="gnav20-hero-footer-heading">Follow Verizon</div>
+	<div class="gnav20-border-content gnav20-social-icon">
+		<ul aria-label="Follow Verizon menu list">
+			
+			<li>
+				<a class="gnav20-social-media" href="https://www.facebook.com/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Facebook" title="Opens New Window">
+					<span>facebook-official</span>
+					<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1017.78"><path fill="#fff" d="M1024,512C1024,229.23,794.77,0,512,0S0,229.23,0,512c0,255.55,187.23,467.37,432,505.78v-357.78h-130v-148h130v-112.8c0-128.32,76.44-199.2,193.39-199.2,56.02,0,114.61,10,114.61,10v126h-64.56c-63.6,0-83.44,39.47-83.44,79.96v96.04h142l-22.7,148h-119.3v357.78c244.77-38.41,432-250.22,432-505.78Z"></path></svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://twitter.com/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Twitter" title="Opens New Window">
+					<span>twitter</span>
+					<svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://www.youtube.com/user/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Youtube" title="Opens New Window">
+					<span>you-tube</span>
+					<svg focusable="false" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.5 18" style="enable-background:new 0 0 18.5 18;" xml:space="preserve">
+						<path fill="#FFF" d="M17.8,4.8C17.6,4,17,3.4,16.2,3.2c-1.4-0.4-7-0.4-7-0.4s-5.6,0-7,0.4C1.4,3.4,0.8,4.1,0.6,4.8C0.2,6.3,0.2,9.2,0.2,9.2
+							s0,2.9,0.4,4.4c0.2,0.7,0.8,1.4,1.6,1.6c1.4,0.4,7,0.4,7,0.4s5.6,0,7-0.4c0.8-0.2,1.4-0.8,1.6-1.6c0.4-1.5,0.4-4.4,0.4-4.4
+							S18.2,6.3,17.8,4.8z M7.4,11.9V6.5l4.7,2.7L7.4,11.9z"></path>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://www.instagram.com/verizon/" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Instagram" title="Opens New Window">
+					<span>instagram</span>
+					<svg focusable="false" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+						<g>
+							<path fill="#FFF" d="M18,5.3c0-1-0.2-1.6-0.4-2.2c-0.2-0.6-0.5-1.1-1-1.6c-0.5-0.5-1-0.8-1.6-1c-0.6-0.2-1.2-0.4-2.2-0.4C11.8,0,11.4,0,9,0
+								S6.3,0,5.3,0c-1,0-1.6,0.2-2.2,0.4C2.5,0.7,2,1,1.5,1.5s-0.8,1-1,1.6C0.3,3.7,0.1,4.3,0.1,5.3C0,6.2,0,6.6,0,9c0,2.4,0,2.8,0.1,3.7
+								c0,1,0.2,1.6,0.4,2.2c0.2,0.6,0.5,1.1,1,1.6s1,0.8,1.6,1c0.6,0.2,1.2,0.4,2.2,0.4C6.3,18,6.6,18,9,18s2.8,0,3.7-0.1
+								c1,0,1.6-0.2,2.2-0.4c0.6-0.2,1.1-0.5,1.6-1c0.5-0.5,0.8-1,1-1.6c0.2-0.6,0.4-1.2,0.4-2.2c0-1,0.1-1.3,0.1-3.7
+								C18,6.6,18,6.2,18,5.3z M16.3,12.6c0,0.9-0.2,1.4-0.3,1.7c-0.2,0.4-0.4,0.7-0.7,1s-0.6,0.5-1,0.7c-0.3,0.1-0.8,0.3-1.7,0.3
+								c-0.9,0-1.2,0.1-3.6,0.1s-2.7,0-3.6-0.1c-0.9,0-1.4-0.2-1.7-0.3c-0.4-0.2-0.7-0.4-1-0.7s-0.5-0.6-0.7-1c-0.1-0.3-0.3-0.8-0.3-1.7
+								c0-0.9-0.1-1.2-0.1-3.6c0-2.4,0-2.7,0.1-3.6C1.7,4.5,1.9,4,2,3.7c0.2-0.4,0.4-0.7,0.7-1C3,2.3,3.3,2.1,3.7,2C4,1.9,4.5,1.7,5.4,1.7
+								c0.9,0,1.2-0.1,3.6-0.1c2.4,0,2.7,0,3.6,0.1c0.9,0,1.4,0.2,1.7,0.3c0.4,0.2,0.7,0.4,1,0.7s0.5,0.6,0.7,1c0.1,0.3,0.3,0.8,0.3,1.7
+								c0,0.9,0.1,1.2,0.1,3.6C16.4,11.4,16.4,11.7,16.3,12.6z"></path>
+							<path fill="#FFF" d="M9,4.4C6.5,4.4,4.4,6.4,4.4,9c0,2.6,2.1,4.6,4.6,4.6s4.6-2.1,4.6-4.6C13.6,6.4,11.6,4.4,9,4.4z M9,12c-1.7,0-3-1.3-3-3
+								c0-1.7,1.3-3,3-3c1.7,0,3,1.3,3,3C12,10.7,10.7,12,9,12z"></path>
+							<path fill="#FFF" d="M13.8,3.1c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1c0.6,0,1.1-0.5,1.1-1.1C14.9,3.6,14.4,3.1,13.8,3.1z"></path>
+						</g>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://www.tiktok.com/@verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on TikTok" title="Opens New Window">
+					<span>TikTok</span>
+					<svg xmlns="http://www.w3.org/2000/svg" height="19" viewBox="0 0 16 18">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M9.2984 0.7758H11.5884C11.8091 1.9405 12.5165 2.9399 13.4965 3.5643L13.4975 3.5655C14.1797 4 14.9931 4.2535 15.8663 4.2535V4.934L15.8664 7.31C14.2444 7.31 12.7414 6.8029 11.5146 5.9423V12.1547C11.5146 15.2573 8.9319 17.7814 5.7572 17.7814C4.5305 17.7814 3.3929 17.4033 2.4578 16.7616L2.4562 16.76C0.9724 15.7412 0 14.0571 0 12.1541C0 9.0516 2.5827 6.5274 5.7574 6.5274C6.0208 6.5274 6.279 6.5486 6.5332 6.5823V7.3065L6.5331 9.7037C6.2875 9.6286 6.0279 9.5849 5.7572 9.5849C4.3074 9.5849 3.1279 10.7378 3.1279 12.1547C3.1279 13.1414 3.7007 13.9987 4.5376 14.4291C4.9025 14.6168 5.317 14.7244 5.7571 14.7244C7.1735 14.7244 8.3289 13.6233 8.3815 12.2514L8.3865 0H11.5145C11.5145 0.265 11.5407 0.524 11.5884 0.7758H9.2984Z" fill="#161823"></path>
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+
+
+    
+    
+    <div class="gnav20-socialfooter">
+<div class="gnav20-hero-wrapper">
+	<div class="gnav20-hero-footer-heading">Verizon Support</div>
+	<div class="gnav20-border-content gnav20-social-icon">
+		<ul aria-label="Verizon Support menu list">
+			
+			
+			<li>
+				<a class="gnav20-social-media" href="https://x.com/verizonsupport" target="_blank" rel="noopener noreferrer" aria-label="Verizon Support on Twitter" title="Opens New Window">
+					<span>twitter</span>
+					<svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path>
+					</svg>
+				</a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+</div>
+</div>
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="gnav20-footer-level-two gnav20-custom-margin-left">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-logo">
+
+    
+    
+    <div class="gnav20-logo-wrapper gnav20-relative-index">
+        
+        <a class="gnav20-logoBlackBg" title="Verizon Home Page" href="/"></a>
+        
+    </div>
+</div>
+
+
+    
+    
+    <div class="gnav20-footerlink">
+
+
+	<ul aria-label="Policies and notices menu list" class="gnav20-footer-list ">
+		<li>
+			<a href="/about/privacy/">
+				Privacy Policy
+			</a>
+		</li>
+	
+		<li>
+			<a data-hide-for="appid:communitykh" href="/privacy/your-privacy-choices/">
+				Your Privacy Choices <span style="height:10px;width:28px;display:inline-block;position:relative;"><svg style="position:absolute;width:28px;bottom:-2px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 14" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0066FF;}.st2{fill:#FFFFFF;}.st3{fill:#0066FF;}</style><g><g id="final---dec.11-2020_1_"><g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)"><path class="st0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"></path></g></g></g><g id="final---dec.11-2020"><g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)"><path class="st1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8 h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"></path><path id="x" class="st2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0 l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8 c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"></path><path id="y" class="st3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0 L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"></path></g></g></g></g></svg></span>
+			</a>
+		</li>
+	
+		<li class="gnav20-hide">
+			<a data-show-for="appid:communitykh" href="https://community.verizon.com/t5/custom/page/page-id/yourprivacychoices">
+				Your Privacy Choices <span style="height:10px;width:28px;display:inline-block;position:relative;"><svg style="position:absolute;width:28px;bottom:-2px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 14" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0066FF;}.st2{fill:#FFFFFF;}.st3{fill:#0066FF;}</style><g><g id="final---dec.11-2020_1_"><g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)"><path class="st0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"></path></g></g></g><g id="final---dec.11-2020"><g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)"><path class="st1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8 h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"></path><path id="x" class="st2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0 l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8 c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"></path><path id="y" class="st3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0 L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"></path></g></g></g></g></svg></span>
+			</a>
+		</li>
+	
+		
+	
+		<li>
+			<a href="/about/our-company/open-internet/">
+				Open Internet
+			</a>
+		</li>
+	
+		<li>
+			<a href="/support/website-use-legal/">
+				Website Terms of Use
+			</a>
+		</li>
+	</ul>
+
+	<div class="copyright-section">
+		<div class="copyright-text">
+			© <span id="copyright-year">2026</span> Verizon
+		</div>
+    <div id="visual-cue"><div></div><div></div><div></div></div></div>
+</div>
+
+
+
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+     </div>
+	<div class="gnav20-sticky-header  gnav20-with-promo"></div>
+</div>
+
+
+
+</div>
+</footer>
+<!-- JS Code end-->
+
+<script async="" type="text/javascript">
+if (window?.performance?.measure && typeof sessionStorage !== 'undefined') {
+const isCommonPdp = window?.APP_STATE?.pdp?.isCommonPDP;
+const pdp = isCommonPdp? 'pdeatils' : 'pdp';
+var pageName = window?.APP_STATE?.gridwall ? 'gridwall' : pdp;
+window.performance.measure(`${pageName}:ui:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[flowName]:document-start`);
+window.performance.measure(`loadingTime`, {start:performance.now()});
+}
+const quickViewGnav = window?.APP_STATE?.quickView;
+var isMVA = window.navigator.userAgent.indexOf('VZW-MFA-IOS') > -1 || window.navigator.userAgent.indexOf('VZW-MFA-ANDROID') > -1;
+var isMiniPdp = window.location.search.includes('isMiniPdp=true') || false;
+var isMultilineUpgradePdp = window.location.search.includes('fromUpgradeConfig=true') || false;
+const editDeviceConfiguratorFFlag = window?.APP_CONFIG?.UpgradeCfgProfile?.editDeviceConfiguratorFFlag?.enabled || false;
+var fromNgdEditDevicePdp = (window.location.search.includes('fromNgdEditDevice=true') && editDeviceConfiguratorFFlag) || false;
+/* offline: gnav personal.js loaded via static script tag */
+function detectMob() {
+return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
+}
+</script><script src="assets/www.verizon.com/etc/designs/vzwcom/gnav20/personal.js" async="true" type="text/javascript"></script>
+<script async="" type="text/javascript">
+const getVzCookieValue = (name) => {
+// const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+// return cookieValue;
+const retVal = window.cookieKeys?.get(name)
+if(!retVal) {
+window.cookieKeys = document.cookie?.split(";")?.reduce((a,c) => a.set(c?.split('=')?.[0]?.trim(), c?.split('=')?.[1]?.trim()), new Map());
+return window.cookieKeys.get(name)
+}
+return retVal
+}
+// const createScriptElement = (url) => {
+//   let script = document.createElement('script');
+//   script.type = 'text/javascript';
+//   script.defer = true;
+//   script.src = url;
+//   document.body.appendChild(script);
+// }
+const setVzCookie = (cookieName, value, expiryTime) => {
+const domainName = window.location.hostname;
+const getTheHostName = domainName.split('.')[1];
+const subDomainName = domainName.split('.')[2];
+const domainString = `${getTheHostName}.${subDomainName}`;
+if (domainName === 'localhost' || domainName === '127.0.0.1') document.cookie = `${cookieName}=${value};path=/;`;
+document.cookie = `${cookieName}=${value};path=/;domain=.${domainString}`;
+if (expiryTime) document.cookie = `${cookieName}=${value};path=/;domain=.${domainString};expires=${expiryTime};`;
+};
+const cdlThrottleList = getVzCookieValue('cdlThrottleList') || '';
+function getChannelId() {
+let channelId = 'VZW-DOTCOM';
+let useragent = window.navigator.userAgent.toLowerCase();
+if (window.navigator.userAgent.indexOf('VZW-MFA-IOS') > -1) {
+channelId = 'VZW-MFA-IOS';
+} else if (window.navigator.userAgent.indexOf('VZW-MFA-ANDROID') > -1) {
+channelId = 'VZW-MFA-ANDROID';
+} else if ((useragent.toLowerCase().includes('windows') && useragent.includes('touch')) || useragent.includes('tablet') || useragent.includes('ipad')) {
+channelId = 'VZW-DOTCOM';
+} else if (
+navigator.userAgent.match(/Android/i)
+|| navigator.userAgent.match(/webOS/i)
+|| navigator.userAgent.match(/iPhone/i)
+|| navigator.userAgent.match(/BlackBerry/i)
+|| navigator.userAgent.match(/Windows Phone/i)
+|| navigator.userAgent.match(/MY_VZW_APP/i)
+|| navigator.userAgent.includes('MY_VZW_APP')
+) {
+channelId = 'VZW-DOTCOM-MOB';
+}
+return channelId;
+};
+</script>
+
+<script type="text/javascript">
+
+(function( p ) {
+var e = p.e = {};
+p.publish = function( name, data ) {
+( e[ name ] = e[ name ] || new Event( name ) ).data = data;
+dispatchEvent( e[ name ] );
+};
+p.subscribe = function( name, handler, options ) {
+addEventListener( name, handler, options );
+};
+p.unsubscribe = function( name, handler, options ) {
+removeEventListener( name, handler, options );
+};
+})( this.pubsub = {} );
+const pznRequestCategory = 'FreePhonesSmartphones';
+const isAccessoryCategory = window?.APP_STATE?.gridwall?.productType === 'accessory';
+const isCpoGridwall = window?.APP_CONFIG?.merchandising?.pznCustomGridwallFFlag?.enabled && window?.APP_STATE?.gridwall?.filterDataList?.some((item) => item?.type === 'condition_seo_url_name_s');
+const isFreePhonesGridwall = window?.APP_CONFIG?.merchandising?.pznCustomGridwallFFlag?.enabled && window?.APP_STATE?.gridwall?.filterDataList?.some((item) => item?.type === 'uri');
+const isBrandFilterPzn = window?.APP_STATE?.gridwall?.filterDataList?.find((item) => item?.type === 'brand')?.values?.length > 0 || false;
+const isPznJsonEnabled = getIsPersonalizedJsonEnabled();
+window.isGwPznJsonEnabled = isPznJsonEnabled;
+if (cdlThrottleList?.includes('R_K_S_4')) {
+disableJSONEnabledPZN();
+} else {
+const ecid = getVzCookieValue("s_ecid");
+if(!ecid){
+window.performance.measure(`${pageName}:ui:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[ECID]:resolving`);
+if (window.VZTAG_IS_READY) {
+vztag.on("visitorIdReady", getPersonalizedResults);
+} else {
+const ecidResolver = new AbortController();
+const ecidResolverTimeout = setTimeout(() => {
+ecidResolver.abort()
+window.performance.measure(`${pageName}:ui:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[ECID]:ecidTimeout`);
+getPersonalizedResults();
+}, 1700);
+document.addEventListener('vztagReady', function(){
+vztag.on("visitorIdReady", function(){
+clearTimeout(ecidResolverTimeout);
+if (!ecidResolver?.signal?.aborted) {
+window.performance.measure(`${pageName}:ui:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[ECID]:ecidResolved`);
+getPersonalizedResults()
+}
+});
+}, { signal: ecidResolver.signal }
+);
+}
+} else {
+window.performance.measure(`${pageName}:ui:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[ECID]:ecidexist`);
+getPersonalizedResults();
+}
+}
+function disableJSONEnabledPZN(isAborted = false) {
+window.isGwPznJsonEnabled = isAborted;
+window.pz_response = { error: true };
+//use to remove pnz call
+window.removePZNPersonalized = true;
+pubsub.publish('disablePersonalization', {
+error: true
+});
+}
+function getIsPersonalizedJsonEnabled() {
+if (window?.APP_STATE?.gridwall?.isVbmGW) {
+return false;
+}
+return true;
+}
+function getPersonalizedResults() {
+if (!isPznJsonEnabled) {
+handlePersonlization();
+} else {
+fetch(`${window.location.origin}/us/json/${isAccessoryCategory ? 'products/' : ''}${window?.APP_STATE?.gridwall?.category}`).then((res) => {
+if (res.status !== 200) {
+if (window?.performance?.measure && typeof sessionStorage !== 'undefined') {
+window.performance.measure(`${pageName}:api:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[flowName]:PersonalizationJSONResponseError`);
+}
+return {
+error: true
+};
+} else {
+if (window?.performance?.measure && typeof sessionStorage !== 'undefined') {
+window.performance.measure(`${pageName}:api:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[flowName]:PersonalizationJSONResponseSuccess`);
+}
+return res.json();
+}
+}).then((response) => {
+if (response?.error) {
+disableJSONEnabledPZN();
+} else {
+window.pznJsonRecommendationObject = response;
+handlePersonlization();
+}
+}).catch((err) => {
+//disable pnz if any error in fetching json file.
+disableJSONEnabledPZN();
+if (window?.performance?.measure && typeof sessionStorage !== 'undefined') {
+window.performance.measure(`${pageName}:api:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[flowName]:PersonalizationJSONResponseCatchError`);
+}
+});
+}
+}
+function handlePersonlization() {
+const loggedIn = getVzCookieValue('loggedIn') == 'true';
+let headers = getHeaders(loggedIn);
+if (window?.performance?.measure && typeof sessionStorage !== 'undefined') {
+window.performance.measure(`${pageName}:api:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[flowName]:insight-start`);
+}
+window.pzCallInvoked = true;
+const controller = new AbortController();
+const timeoutId = setTimeout(() => controller.abort(), 1300);
+fetch(loggedIn ? '/soe/digital/auth/browseservice/gridWallRealTimeInsights' : '/soe/digital/prospect/browseservice/nse/gridWallRealTimeInsights' , {
+method: "POST",
+body: JSON.stringify(recommandationRequestData(loggedIn)),
+headers: headers,
+credentials: 'include',
+signal: controller.signal
+})
+.then(response => {
+clearTimeout(timeoutId);
+if(response.status != 200) {
+return {
+error: true
+}
+} else {
+return response.json();
+}
+})
+.then(json => {
+if (window?.performance?.measure && typeof sessionStorage !== 'undefined') {
+window.performance.measure(`${pageName}:api:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[flowName]:insight-call-complete`);
+}
+if(!json.isReorder) {
+const pageElement = document.getElementById('page');
+pageElement?.querySelectorAll('.tilesLoading')?.forEach((elem) => elem.style.display = 'none');
+if (isBrandFilterPzn) {
+disableJSONEnabledPZN();
+window.removePZNPersonalized =  false;
+}
+} else {
+const productListByIdsObject = window?.pznJsonRecommendationObject?.productListById;
+const productListByIds = window?.gwRecommendationsObject?.productListByIdsObject;
+const productItemLists = APP_STATE?.gridwall?.productItemLists;
+if(productListByIdsObject && json?.productList) {
+let i = 0;
+json?.productList?.forEach((item) => {
+let image = (productItemLists && productListByIds) ? productItemLists?.[[productListByIds?.[item]]]?.image : productListByIdsObject?.[item]?.image;
+if (i <= 2 && item) {
+const link = document.createElement('link');
+link.as = 'image';
+link.rel = "preload";
+document.head.appendChild(link);
+link.href = `${image}?hei=262&fmt=webp`;
+}
+i++;
+});
+}
+}
+window.pz_response = json;
+pubsub.publish('recommandation', json);
+})
+.catch(err => {
+console.log("catch"+err);
+if (window?.performance?.measure && typeof sessionStorage !== 'undefined') {
+window.performance.measure(`${pageName}:api:${sessionStorage?.getItem?.('channelId') || 'VZW_U'}:[flowName]:PersonalizationTimeoutAbortError`);
+}
+disableJSONEnabledPZN((!isBrandFilterPzn && !window?.APP_STATE?.gridwall?.isVbmGW));
+}).finally(() => {
+console.log("finally");
+clearTimeout(timeoutId);
+})
+}
+function getHeaders(loggedIn) {
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+let headers = {
+"Content-type": "application/json",
+Accept: 'application/json',
+loginStatus: loggedIn ? "authenticated" : "unauthenticated",
+pageName : window.pageTitle || 'NA',
+intent : getVzCookieValue('intent') || null ,
+'X-Requested-With': 'XMLHttpRequest',
+channelId: getChannelId(),
+cartId: getVzCookieValue('cartId'),
+flowName: getVzCookieValue('intendType') || urlParams.get('lineActivityType') || urlParams.get('intent') || (loggedIn ? 'AAL' : 'NSE')
+}
+if (window.document && window.document.referrer) {
+headers['from-referrer'] = window.document.referrer;
+headers.fromReferrer = window.document.referrer;
+}
+if (getVzCookieValue('SOE-XSRF-TOKEN-SALES') || getVzCookieValue('XSRF-TOKEN')) {
+headers['X-XSRF-TOKEN'] = getVzCookieValue('SOE-XSRF-TOKEN-SALES') || getVzCookieValue('XSRF-TOKEN');
+}
+const visitorId = getRecommendationVisitorId();
+if (visitorId !== null) {
+headers.visitorId = visitorId || null;
+}
+return headers;
+}
+function getVisitorId() {
+const visitor = window.visitor || null;
+if (visitor) {
+return visitor.getMarketingCloudVisitorID();
+}
+return visitor;
+};
+function getRecommendationVisitorId() {
+const secId = getVzCookieValue('s_ecid')?.split('|')?.[1];
+const visitorId = getVisitorId();
+const recommendationVisitorId = secId || visitorId || '';
+return recommendationVisitorId;
+};
+function recommandationRequestData(loggedIn) {
+const adTileFFlag = window?.APP_CONFIG?.merchandising?.adTileFFlag?.enabled || false;
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const brandFilters = window?.APP_STATE?.gridwall?.filterDataList?.find((item) => item?.type === 'brand');
+const productList = window?.isGwPznJsonEnabled ? window?.pznJsonRecommendationObject?.requestProductList : window?.gwRecommendationsObject?.requestProductList;
+const adtileList = adTileFFlag && !brandFilters && !isCpoGridwall && !isFreePhonesGridwall && (window?.isGwPznJsonEnabled ? window?.pznJsonRecommendationObject?.adtileList : window?.gwRecommendationsObject?.adtileList) || [];
+const brandpznFFlag = window?.APP_CONFIG?.merchandising?.brandpznFFlag?.enabled && window?.APP_STATE?.gridwall?.category.includes('smartphones');
+const cjevent = urlParams.get('cjevent');
+const affiliate = urlParams.get('vendorid');
+const cookiesData = [];
+if (affiliate) {
+cookiesData.push({
+key: 'AFFILIATE',
+value: affiliate,
+});
+}
+if (cjevent) {
+cookiesData.push({
+key: 'CJEVENT',
+value: cjevent,
+});
+}
+let reqFilters = [];
+let url = window?.location?.href;
+if ((loggedIn|| brandpznFFlag) && !window?.APP_STATE?.gridwall?.isVbmGW) {
+if (brandFilters?.values?.length) {
+const productIds = productList?.reduce((acc, item) => {
+if (brandFilters?.values?.includes?.(item?.brandName?.toLowerCase())) {
+acc.push(item?.productId);
+}
+return acc;
+}, []);
+reqFilters = [{...brandFilters, productIds}];
+url = `${window.location.origin}/${isAccessoryCategory ? 'products/' : '' }${window?.APP_STATE?.gridwall?.category}/${queryString ? `${queryString}` : ''}`;
+}
+}
+const googleTaggingFFlag = window?.APP_CONFIG?.merchandisingCfgProfile?.googleTaggingFFlag?.enabled;
+const req = {
+serviceRequest: {
+features: [
+{
+featureValue: {
+contextInfo: {
+category: isAccessoryCategory ? `Accessories_${pznRequestCategory?.toLowerCase()}` : pznRequestCategory,
+URL: url,
+productList,
+adtileList,
+},
+orderInfo: {
+locationCode: getVzCookieValue('zipCode'),
+orderIntent: getVzCookieValue('intendType') || urlParams.get('lineActivityType') || urlParams.get('intent') || (loggedIn ? 'AAL' : 'NSE'),
+cartId: '',
+},
+},
+},
+],
+},
+...(googleTaggingFFlag && { isGoogleMigrationEnabled: window?.APP_STATE?.gridwall?.isGoogleMigrationEnabled }),
+};
+if (cookiesData.length > 0) {
+req.cookiesData = cookiesData;
+}
+if (reqFilters?.length) {
+req.filters = reqFilters;
+}
+return req;
+}
+</script>
+
+
+
+<div class="gnav20-click-div"></div><script id="offline-gridwall-stubs">
+(function(){
+  if (typeof window.getPersonalizedResults === 'function') {
+    var orig = window.getPersonalizedResults;
+    window.getPersonalizedResults = function() {
+      try { return orig.apply(this, arguments); } catch (e) { return; }
+    };
+  } else {
+    window.getPersonalizedResults = function(){};
+  }
+})();
+</script>
+</body></html>

@@ -1,0 +1,3609 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/../../base-url.php';
+vz_start_output_rewrite();
+?>
+<!DOCTYPE html><html lang="en-US"><head>
+<!-- offline: marketing stripped -->
+
+
+
+
+<style id="offline-unified-chrome">
+  html { scroll-padding-top: 180px; }
+  body { margin: 0; overflow-x: auto; }
+  .gnav20.gnav20-sticky > div.gnav20-sticky-content {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+  }
+  .gnav20-sticky-header {
+    pointer-events: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+  .gnav20-sticky-content .gnav20-apicomponentnewdesign,
+  .gnav20-apicomponentnewdesign {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  style#gnav20-preload,
+  #gnav20-preload { display: none !important; }
+  #vz-gh20, #vz-gf20, header#vz-gh20, footer#vz-gf20 {
+    display: block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 10;
+  }
+  footer#vz-gf20 .gnav20,
+  footer#vz-gf20 .gnav20 .gnav20-sticky-content,
+  footer#vz-gf20 .xf-page-unified {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  #offline-l2-links {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    justify-content: center;
+    max-width: 1272px;
+    margin: 0 auto;
+    padding: 10px 20px 14px;
+    background: #f6f6f6;
+    border-bottom: 1px solid #d8dada;
+    font-size: 14px;
+    position: relative;
+    z-index: 11;
+  }
+  #offline-l2-links a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  #offline-l2-links a:hover { color: #cd040b; text-decoration: underline; }
+  @media (max-width: 1020px) {
+    #offline-l2-links { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+  }
+</style><style id="offline-hide-lang">
+.gnav20-localization { display: none !important; }
+</style><style id="offline-layout-fixes">
+  main[role="main"], [role="main"], #mainGWSection, #SupportContentWrapper, #page,
+  #__next, main, [data-testid="Gridwall"], [data-testid="reviewWrapper"] {
+    display: block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    min-height: 40vh;
+  }
+  #mainGWSection, [data-testid="Gridwall"], [class*="GridWall__GWWrapper"],
+  #productListContainer, #gridwall-filter-buttons {
+    width: 100%;
+  }
+  #productListContainer, #gridwall-filter-buttons { visibility: visible !important; }
+  .gnav20-click-div { display: none !important; }
+  main > header#vz-gh20 {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  header.cta > header#vz-gh20 { display: none !important; }
+  .prescr + header.cta, header.cta { display: block !important; }
+  div[role="main"].min-h-\[300px\] { min-height: 50vh !important; max-width: 100% !important; }
+</style><style id="nav-simplify-offline">
+.gnav20-sticky-content .gnav20-apicomponentnewdesign,
+.gnav20-apicomponentnewdesign { opacity: 1 !important; }
+.gnav20-sub-header-menu,
+.gnav20-vzhmoverlay,
+.gnav20-mega-drawer,
+.gnav20-nav-mask { display: none !important; }
+.gnav20-search-utility,
+.gnav20-account-utility,
+.gnav20-unifiedcart,
+.gnav20-localization { display: none !important; }
+.gnav20-primary-menu button.gnav20-menu-label-button { display: none !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation,
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility { opacity: 1 !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two { display: block !important; width: 100% !important; height: 88px !important; padding: 0 20px !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-grid1-wrapper { position: absolute !important; width: auto !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation { width: 100% !important; height: 88px !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation { padding: 34px 0 !important; margin: 0 !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-navigation-list {
+  width: 80% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+}
+.gnav20 .gnav20-new-search-style .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-navigation-list {
+  margin: 0 auto 0 145px !important;
+  justify-content: flex-start !important;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation-item .gnav20-primary-menu { margin: 0 8px !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation a.gnav20-menu-label-button {
+  visibility: visible !important;
+  color: #000 !important;
+  display: inline !important;
+  position: relative !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  padding: 0 0 2px !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  font-weight: bold !important;
+  z-index: 4502 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility { display: none !important; }
+.gnav20 .gnav20-mobile .gnav20-menu-label-link { display: none !important; }
+.gnav20 .gnav20-mobile a.gnav20-menu-label-button,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item a.gnav20-menu-label-button {
+  display: block !important;
+  visibility: visible !important;
+  color: #000 !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  padding: 18px 16px !important;
+  border-bottom: 1px solid #d8dada !important;
+  text-decoration: none !important;
+  position: relative !important;
+  opacity: 1 !important;
+}
+</style><base href="/verizon-clone/verizon_offline/">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=2.0">
+  <title>Apple at Verizon: Shop iPhone, iPad, Apple Watch | Verizon</title>
+<meta name="keywords" content="apple, iphone, ipad, apple watch, compare iphones, compare ipads, compare apple watches, apple phones, apple tablets, apple iphone, apple ipad">
+<meta name="description" content="Get the latest and greatest Apple products, including the newest iPhone, iPad, and Apple Watch on Verizon. Compare devices and shop today.">
+
+<meta name="robots" content="index, follow">
+
+
+<meta property="og:title" content="Apple at Verizon: Shop iPhone, iPad, Apple Watch | Verizon">
+<meta property="og:site_name" content="Verizon">
+<meta property="og:url" content="https://www.verizon.com/wireless-devices/apple/?cmp=ORG-C-HQ-NON-A-EN-NONE-dksoc2020-2S0OM0-VZ">
+<meta property="og:description" content="Get the latest and greatest Apple products, including the newest iPhone, iPad, and Apple Watch on Verizon. Compare devices and shop today.">
+<meta property="og:type" content="article">
+
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+  
+
+
+  <link rel="preload" href="/wireless-devices/apple/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base.min.css" as="style">
+  <link rel="preload" href="/wireless-devices/apple/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base/sm.min.css" media="screen and (min-width: 320px)" as="style">
+  <link rel="preload" href="/wireless-devices/apple/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base/md.min.css" media="screen and (min-width: 768px)" as="style">
+  <link rel="preload" href="/wireless-devices/apple/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base/lg.min.css" media="screen and (min-width: 991px)" as="style">
+  <link rel="preload" href="/wireless-devices/apple/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base/xl.min.css" media="screen and (min-width: 1200px)" as="style">
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="preload" media="(max-width: 767px)" imagesrcset="https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_m?fmt=webp-alpha&amp;scl=2 1x, https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_m?fmt=webp-alpha&amp;scl=1 2x" as="image" fetchpriority="high">
+
+
+
+
+
+  <link rel="preload" media="(min-width: 768px)" imagesrcset="https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_d?fmt=webp-alpha&amp;scl=2 1x, https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_d?fmt=webp-alpha&amp;scl=1 2x" as="image" fetchpriority="high">
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+  (function () {
+    function getCookie(cookieName) {
+      var name = cookieName + "=";
+      var cookieArray = document.cookie.split(";");
+      for (var i = 0; i < cookieArray.length; i++) {
+        var cookie = cookieArray[i];
+        while (cookie.charAt(0) == " ") cookie = cookie.substring(1);
+        if (cookie.indexOf(name) == 0) return cookie.substring(name.length, cookie.length);
+      }
+      return "";
+    }
+
+    function getCondition() {
+      if (location.pathname == "/") {
+        return "postpaid_homepage";
+      } else if (location.pathname == "/prepaid/") {
+        return "prepaid_homepage";
+      } else {
+        return "landing page";
+      }
+    }
+
+    function getURLClassification() {
+
+      let classificationProp = "";
+      if (classificationProp.length != 0) {
+        return classificationProp;
+      } else {
+
+
+        const urlClassifications = [
+          { url: 'home', classification: 'total_home' },
+          { url: 'speedtest', classification: 'total_home' },
+          { url: 'home/internet/5g', classification: '5g_home' },
+          { url: 'home/internet/fios-', classification: 'fios' },
+          { url: 'home/internet/lte', classification: 'lte' },
+          { url: 'home/fios-', classification: 'fios' },
+          { url: 'discounts', classification: 'mnh' },
+          { url: 'featured', classification: 'mnh' },
+          { url: 'home/internet/near-me', classification: 'near_me' }
+        ]
+
+        const currentUrl = window.location.href;
+        const urlObject = new URL(currentUrl);
+        const relativeUrl = urlObject.pathname.toLowerCase();
+        let urlClassificationValue = ""
+
+        const matchURL = urlClassifications.filter(({ url, classification }) => {
+          if (relativeUrl.startsWith(url, 1)) {
+            urlClassificationValue = classification;
+            return true;
+          }
+
+        });
+
+        if (matchURL.length == 0) {
+          let intent = "learn";
+          if (intent == "learn") {
+            urlClassificationValue = "mobility";
+          }
+        }
+
+
+        return urlClassificationValue;
+      }
+    }
+
+    function getPlatform() {
+      if (navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i)) {
+        if (window.innerWidth < 768) {
+          return "mobile";
+        }
+        return "tablet";
+      }
+      return "desktop";
+    }
+
+    var businessGroup = "wireless";
+    var isWireless = businessGroup === "wireless" || !businessGroup;
+
+    var pathName = "/content/wcms/wireless-devices/apple",
+      flowName,
+      pageName;
+
+    pathName = pathName.replace(/\/$/, "").split("/");
+    pathName.splice(0, 3);
+
+    if (pathName.length <= 1) {
+      flowName = pathName[0];
+      pageName = pathName[0];
+    } else {
+      flowName = pathName[0];
+      pathName.splice(0, 1);
+      pageName = pathName.join("_");
+    }
+
+    var dataLayer = {
+      cmp: {
+        all: "", // Marketing campaign Code
+      },
+
+      error: {
+        code: "", // error code (ex:400,503)
+      },
+
+      page: {
+        channel: "learn", // site section
+        channelSession: "",
+        detail: "",
+        displayChannel: "vzw",
+        flow: flowName,
+        id: getCondition() + ",LP_AC",
+        name: pageName,
+        sourceChannel: "vzw",
+        type: "landing page", // If error or applicable only on AEM Pages
+        subFlow: "", // For Wireless
+        throttleList: "",
+        urlClassification: getURLClassification()
+      },
+
+      event: {
+        value: "", // Eg: login,scAdd,scOpen,scRemove, purchase,
+      },
+
+      search: {
+        term: "",
+        type: "",
+      },
+
+      target: {
+        assetsRequested: "", // Assets Requested (on-hold, don’t populate)
+        assetAttributes: "", // Asset Attributes (on-hold, don’t populate)
+        assetsLeveraged: "", // Assets Leveraged (on-hold, don’t populate)
+        offer: "", // Offer ID
+        abTest: "",
+        audience: "",
+        campaign: "",
+        experience: "", // AB test experience
+        message: "", // any message which is shown to customer on the page
+        offer: "",
+        cloud: "", // marketing cloud id
+        sandbox: "", // AB Test Experience Name
+        evolv: "",
+        engagement: {
+          intent: "learn", //  kind of flow(ordering, payment etc)
+          id: "", //  the specific ID of the engagement within the SOI application
+          offered: "", //  Response to engagement or what the customer is interacting with in an engagement
+        },
+      },
+
+      txn: {
+        agent: "", // Agent Enterprise ID (10 digit; captured on Nuance chat when customer talks with live agent)
+        discount: "", // Order Discount in $
+        productsQualified: "", // PRODUCTS QUALIFIED
+        productSelected: "", // PRODUCTS SELECTED
+        discountId: "", // Discount ID / Promo ID entered
+        id: "", // order ID
+        offer: "", // Offer ID at order level
+        autoPay: "", // used to capture autopay enabled and disabled. capture during login along with customer info
+        offerType: "", // What kind of offer. Eg: Bestmatch, Upsell etc
+        orderType: "", // Eg: AAL, Upgrade etc
+        paymentType: "", // Eg: Credit Card, Debit Card etc
+        rewardOffer: "", // Verizon Up rewards Code
+        outletId: "", // for POS
+        cartId: "", // either the channel cart id or shared cart ID
+        shippingZip: "",
+        shippingTotal: "", // TotalShipping charge in dollars
+        status: "", // Eg: order cancelled, pending order, order confirmed etc
+        total: "", // $$transaction price
+
+        product: {
+          owns: {
+            // Existing Products
+            name: "", // Product ID
+            sorId: "", // USOC / ISOC
+            category: "",
+            qty: "",
+            offer: "", // offer ID
+            discount: "", // Discount ID
+            recurringPrice: "", // eVar32
+            nonRecurringPrice: "",
+            line: "",
+            shared: "", // (Y/N),
+          },
+
+          current: {
+            // Existing Products
+            name: "",
+            sorId: "",
+            merchCat: "", // where did you see the product (eg: product grid wall pge/ hp /banner etc)
+            category: "",
+            offer: "",
+            discount: "",
+            qty: "",
+            quoteid: "", // for POS
+            recurringPrice: "", //
+            nonRecurringPrice: "",
+            line: "",
+            sku: "",
+            tradeInQty: "",
+            tradeInAmt: "",
+            contractType: "", // Contract Type
+            rebate: "",
+            shippingCharge: "", // Shipping charge in dollar
+            shippingType: "", // Eg: Standard Shipping/pick up from store etc
+            shared: "", // (Y/N)
+          },
+        },
+      },
+
+      user: {
+        existingServices: "", // Existing Services
+        account: "", // hashed account
+        accountType: "", // Eg: Postpaid, Prepaid, Unlimited
+        customerRole: getCookie("role"), // captures customer role like accountholder, manager etc
+        customerType: "", // Wireless - PE,ME,BE
+        authStatus: (getCookie("loggedIn") || getCookie("islogin")) ? "logged in" : "anonymous",
+        id: "", // hashed MDN
+        tenure: "", // from how long user/account tenure with Verizon
+        prospect: "",
+        session: getCookie("GLOBALID"), // Global Session ID (session ID carried over from GHP/Landing Page)
+        chatId: "", // Nuance Chat ID
+        zip: getCookie("ZIPCODE"),
+        "emcAccountId ": "", // hashed (SHA256) customer identifiers and email addresses that CRM embeds into each email URL
+        "emcEmailId ": "", // hashed (SHA256) customer identifiers and email addresses that CRM embeds into each email URL
+        "emcMdn ": "", // hashed (SHA256) customer identifiers and email addresses that CRM embeds into each email URL
+      },
+
+      utils: {
+        StrategyApiKey: "", // Strategy API Key (on-hold, don’t populate for now)
+        appApiKey: "", // Application API Key (on-hold, don’t populate for now)
+        pegaCaseId: "", // Pega Case ID/Pega Recommendation ID
+        athenaSession: "", // For Pega NBA recommendation (If not available, please leave it blank)
+        outcome: "", // Decision Outcome (‘Y’/’N (when pega offer is shown by default)’/blank)
+        pegaOffer: "",
+      },
+
+      platform: {
+        call: "", // Call ID
+      },
+
+      content: {
+        mktgId: "", // Marketing Audience ID
+      },
+
+      env: {
+        businessUnit: "wireless", // Business Unit (eg: Wireline, Wireless, Cloud)
+        channel: getPlatform() + " store", // Site Section Level 1
+      },
+    };
+
+    window.vzdl = window.vzdl || dataLayer;
+
+    if (window.VZTAG_IS_READY) {
+      window.vztag.api.dispatch("pageView");
+    } else {
+      // Otherwise, wait until we broadcast that we're ready:
+      document.addEventListener("vztagReady", function () {
+        window.vztag.api.dispatch("pageView");
+      });
+    }
+  })();
+</script>
+
+  
+
+
+  
+  
+
+
+
+
+
+  
+  
+  
+  <link href="assets/www.verizon.com/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base.min.css" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+  
+  
+  <link href="assets/www.verizon.com/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base/sm.min.css" media="screen and (min-width: 320px)" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+  
+  
+  <link href="assets/www.verizon.com/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base/md.min.css" media="screen and (min-width: 768px)" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+  
+  
+  <link href="assets/www.verizon.com/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base/lg.min.css" media="screen and (min-width: 991px)" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+  
+  
+  <link href="assets/www.verizon.com/etc.clientlibs/vzwcom/components/vzrf/clientlibs/components-base/xl.min.css" media="screen and (min-width: 1200px)" rel="stylesheet" type="text/css" xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+  
+
+  
+    
+    
+
+    
+
+    
+    
+    
+
+
+  
+
+   
+   
+   
+   
+   
+   
+ 
+   
+
+  
+  
+  
+    <link rel="stylesheet" href="assets/www.verizon.com/etc/designs/vzwcom/gnav20/core.css" type="text/css">
+  
+  
+
+<script src="assets/www.verizon.com/etc/designs/vzwcom/gnav20/personal.js" type="text/javascript" defer=""></script>
+</head>
+    <body class="page basicpage js-focus-visible" id="page-e4e71aaa89">
+        
+        
+        
+            
+
+
+
+
+            
+
+
+
+            
+<div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="header aem-GridColumn aem-GridColumn--default--12"><header id="vz-gh20"><div class="xf-page-unified xfpage page basicpage">
+<div class="gnav20 gnav20-sticky" data-exp-name="Mobile">
+     <input type="hidden" id="cradle-context">
+    <div class="gnav20-sticky-content">    	
+     	
+
+
+
+
+    
+    
+    <div class="gnav20-apicomponentnewdesign">
+
+
+<a class="gnav20-header-accessibility" tabindex="0" href="/accessibility/" data-track="global nav:accessibility resource center">
+	<span>Accessibility Resource Center</span>
+</a>
+<a class="gnav20-header-accessibility" href="#gnav20-header-end" tabindex="0" id="gnav20-skip-to-main-content-id" data-track="global nav:skip to main content">
+	<span>Skip to main content</span>
+</a>
+
+<div class="gnav20-width-wrapper gnav20-new-design gnav20-new-search-style gnav20-promo-bottom gnav20-featured" data-gnav20-container="header">
+	
+	
+	<div class="gnav20-vzhmoverlay" style="height: 0px;"></div>
+	<div class="gnav20-main">
+		
+
+
+
+
+    
+    
+    <div class="gnav20-gnav-new-design">
+
+<div class="gnav20-desktop" item-title="all">
+	<div class="gnav20-row-one opacityOne">
+		<div class="gnav20-grid1-wrapper">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-eyebrow">
+
+<div class="gnav20-eyebrow-link-list" item-title="eyebrow">
+    <div class="gnav20-eyebrow-link-list-item gnav20-two">
+        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
+    
+        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Business" href="/business/" data-label="Business" aria-label="Verizon Business Services HomePage" class="gnav20-main-header " data-track="global nav:business">Business</a>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+		</div>		
+		<div class="gnav20-utility">		
+			
+
+
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="tollfree">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Call Verizon 1-833-VERIZON for sales and support assistance." href="tel:+18338374966" data-label="1-833-VERIZON" data-track="global nav:1-833-verizon">
+			
+			1-833-VERIZON
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="contactus">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Contact us" href="/support/contact-us/" data-label="Contact us" data-track="global nav:contact us">
+			
+			Contact us
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="support">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Support" href="/support/" data-label="Support" data-track="global nav:support">
+			
+			Support
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="store">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Stores" href="/stores/" data-label="Stores" data-track="global nav:stores">
+			
+			Stores
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="coveragemap">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Coverage map" href="/coverage-map/" data-label="Coverage map" data-track="global nav:coverage map">
+			
+			Coverage map
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-localization">
+
+    
+		<div class="gnav20-utility-wrapper " item-title="localization">
+			
+				
+				<a class="gnav20-lang-link" aria-label="Cámbiate al sitio web en español" data-href="/" href="/" data-lang="Español" mporgnav="" data-label="Español" lang="es" data-track="global nav:espanol">Español</a>
+					
+			
+		</div>
+    
+
+</div>
+
+
+
+        </div>
+    </div>
+	<div class="gnav20-row-two">
+		<div class="gnav20-grid1-wrapper">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-logo">
+
+    
+    
+    <div class="gnav20-logo-wrapper gnav20-relative-index">
+        <a class="gnav20-logoWhiteBg" title="Verizon Home Page" href="/" target="_self" data-track="global nav:verizon home page"></a>
+        
+        
+    </div>
+</div>
+
+
+
+		</div>
+		<div class="gnav20-navigation opacityOne">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-navigation opacityOne">
+<div class="gnav20-global-nav-list gnav20-navigation-list" item-title="L1">
+
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/home/internet/#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
+	</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+	</div>
+    <div class="gnav20-utility opacityOne">
+        
+
+
+
+
+    
+    
+    <div class="gnav20-search-utility">
+
+	<div class="gnav20-utility-wrapper" item-title="search">
+		<div class="gnav20-search-wrapper">
+			
+				<input tabindex="-1" style="display:none;" type="hidden" id="gnav20-search-context-mobile" name="isProd" value="true">
+			
+			<button class="gnav20-search-icon" id="gnav20-search-icon-mobile" aria-label="Search Verizon" data-placeholder-text="Search Verizon" data-track="global nav:search verizon"></button>
+		</div>
+	</div>
+</div>
+
+
+    
+    
+    <div class="gnav20-account-utility">
+
+<div class="gnav20-utility-wrapper " item-title="signIn">
+	<div class="gnav20-account-box" id="gnav20-account-menu-mobile">
+		
+		
+		
+			
+				<button id="gnav20-sign-id-mobile" class="gnav20-sign-in gnav20-hasDropdown  " aria-expanded="false" aria-label="Sign in dropdown menu" data-track="global nav:sign in dropdown menu">
+					<span>
+						<span>
+							Sign in
+						</span>
+					</span>
+				</button>
+			
+		
+
+		
+		<div class="gnav20-dropdown-menu gnav20-hide " id="gnav20-sign-in-mobile"><button class="gnav20-close-account-utility" aria-label="close the Sign In Menu" tabindex="0" data-track="global nav:close the sign in menu">Close</button>
+			<p class="gnav20-signin-content-title"></p>
+			<ul class="gnav20-dropdown gnav20-fixed-top gnav20-navigation-item">
+				
+					<li class="gnav20-dropdown-list gnav20-hide-on-desktop gnav20-goback">
+						<button class="gnav20-back-to-menu " aria-label="Back to Menu" tabindex="0" data-track="global nav:back to menu:go back">Back to Menu</button>
+					</li>
+				
+				<li class="gnav20-dropdown-list">
+					<a data-hide-for="appid:vpd" id="gnav20-sign-id-list-item-1-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin" tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list gnav20-hide">
+					<a data-show-for="appid:vpd" id="gnav20-sign-id-list-item-2-mobile" class="gnav20-dropdown-list-item" href="/about/privacy/" tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-3-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin?goto=https%3A%2F%2Fwww.verizon.com%2Ffeatured%2Fintent%2F%3Fintent%3Dpaybill" tabindex="0" data-track="global nav:sign in menu:pay bill">Pay bill</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-4-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin?action=otp" tabindex="0" data-track="global nav:sign in menu:make a one-time payment">Make a one-time payment</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-5-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/account/register/start" tabindex="0" data-track="global nav:sign in menu:register">Register</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-6-mobile" class="gnav20-dropdown-list-item" href="https://mblogin.verizonwireless.com/account/business/signin" tabindex="0" data-track="global nav:sign in menu:business log in">Business Log in</a>
+				</li>
+			</ul>	
+					
+		</div>
+		<div class="gnav20-vzmoverlay"></div>
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-unifiedcart">
+
+<div class="gnav20-utility-wrapper" item-title="unifiedCart">
+	
+		
+	<div>
+		<button id="gnav20-cart-icon-mobile" class="gnav20-cart" aria-label="Shopping Cart Menu 0 items in the cart" aria-expanded="false" data-track="global nav:cart menu:shopping cart menu 0 items in the cart">
+			<span class="gnav20-unifiedcart-bubble" style="display: none;">0</span>
+		</button>
+		<div id="gnav20-my-side-nav-mobile" class="gnav20-unified-cart gnav20-hide gnav20-unified-cart-right gnav20-flyout-cart-enabled gnav20-auth-flyout-cart"><button id="gnav20-cclosex-mobile" class="gnav20-closex" tabindex="0" aria-label="Close Shopping Cart" data-track="global nav:close shopping cart"></button>
+			<p class="gnav20-cart-content-title">Choose your cart:</p>
+			<ul class="gnav20-content-lists">
+				
+					<li class="gnav20-content-list">
+						
+							<a id="gnav20-cart-list-item-1-mobile" class="gnav20-content-list-arrow gnav20-mobile-cart-count" href="#" data-track="global nav:cart menu:mobile solutions">Mobile solutions</a>
+						
+					</li>
+				
+					<li class="gnav20-content-list">
+						
+							<a id="gnav20-cart-list-item-2-mobile" class="gnav20-content-list-arrow gnav20-home-cart-count" href="/home/internet/" data-track="global nav:cart menu:home solutions">Home solutions</a>
+						
+					</li>
+				
+			</ul>
+			
+            
+				<div class="cart-button-container">
+					<a href="#" class="cart-button" data-track="global nav:cart menu:go to cart">Go To Cart</a>
+				</div>
+        	
+		</div>
+		<div class="gnav20-vzmoverlay"></div>
+	</div>
+
+	
+	
+</div></div>
+
+
+
+        <button id="gnav20-nav-toggle" data-menuitem="vzmobilemenu" tabindex="0" aria-label="Menu for navigation opens a modal overlay" data-track="global nav:menu for navigation opens a modal overlay">
+		</button>
+    </div>
+    <nav id="gnav20-mobile-menu" class="gnav20-mobile-menu gnav20-hide">
+        <button id="gnav20-closex" class="gnav20-closex" aria-label="close the Menu" tabindex="0" data-track="global nav:close the menu">Close</button>
+        <div id="gnav20-ulwrapper"><a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal-mobile" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
+			
+			<div class="gnav20-navigation-placeholder">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-navigation">
+<div class="gnav20-global-nav-list gnav20-navigation-list" item-title="L1">
+
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/home/internet/#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
+	</div>
+</div>
+
+</div>
+
+
+            
+			</div>
+        </div>
+        
+		
+    </nav>
+</div></div>
+
+
+		
+	</div>
+	<div>
+		
+		<div>
+
+
+
+
+    
+    
+    <div class="subnavcontent">
+
+<div class="gnav20-sub-nav" item-title="callsales">
+    <div class="gnav20-sub-nav-content gnav20-hide-on-desktop" style="display: flex !important;">
+        <a x-cq-linkchecker="skip" class="gnav20-sub-nav-call-link" href="tel:+18008374966" data-track="global nav:call us: 1-800-verizon">
+            Call Us: 1-800-VERIZON
+        </a>
+        <a x-cq-linkchecker="skip" class="gnav20-sub-nav-button" href="tel:+18008374966" aria-label="Buy now" data-track="global nav:buy now">
+            Buy now
+        </a>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+		
+	</div>
+	
+	
+	
+		<input type="hidden" id="gnav20-prod-context" name="isProd" value="true">
+			
+	<div id="gnav20-promo-placeholder" class="enableAuthPZN">
+		<div>
+
+
+
+
+    
+    
+    <div class="gnav20-ribbontext">
+<div class="gnav20-promo-ribbon-wrapper gnav20-clearfix">
+	<div class="gnav20-promo" aria-label="Verizon Promos with 2 promotions" role="group">
+		
+		<button class="gnav20-slide-arrow gnav20-slide-arrow-prev" aria-label="previous promo message 2 of 2" data-track="global nav:promo ribbon:promo message 2 of 2" style="display: block;"></button>
+		<div class="gnav20-promotext opacityOne" item-title="promoRibbon"><div class="gnav20-promo-ribbon gnav20-active-promo" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="/smartphones/" aria-label="Promo 1 of 2 Add a new smartphone line and we" data-track="global nav:promo ribbon:promo 1 of 2 add a new smartphone line and we">&nbsp;</a>Add a new smartphone line and we'll waive the activation fee. Online only. With myPlan.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="/smartphones/" aria-label="Add a new smartphone line and we" data-track="global nav:promo ribbon:shop now"><u>Shop now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" data-track="global nav:promo ribbon:details">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">$40.00 activation fee applied as one-time bill credit (w/in 1-2 bill cycles) when you add a new smartphone line or bring your own smartphone on Unlimited Welcome, postpaid Unlimited Plus or Unlimited Ultimate plan req'd.</div><div class="gnav20-modal-cta"></div></div></div><div class="gnav20-promo-ribbon" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="/switch-to-verizon/" aria-label="Promo 2 of 2 AT&amp;T Customers: Bring in your bill and we’ll give you a better deal." data-track="global nav:promo ribbon:promo 2 of 2 at&amp;t customers: bring in your bill and we’ll give you a better deal.">&nbsp;</a>AT&amp;T Customers: Bring in your bill and we’ll give you a better deal.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="/switch-to-verizon/" aria-label="AT&amp;T Customers: Bring in your bill and we’ll give you a better deal. link to Switch now" data-track="global nav:promo ribbon:at&amp;t customers: bring in your bill and we’ll give you a better deal. link to switch now"><u>Switch now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" aria-label="Offer details for bring your bill" data-track="global nav:promo ribbon:offer details for bring your bill">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">To qualify, must provide a postpaid consumer mobile bill from T-Mobile, AT&amp;T, Xfinity or Spectrum, dated within the past 45 days; bill must be in the same name as the person redeeming the deal. Add'l terms apply. See <a style="text-decoration: underline !important;" href="/switch-to-verizon/" aria-label="Switch now" data-track="global nav:promo ribbon:modal:www.verizon.com/switch-to-verizon">www.verizon.com/switch-to-verizon</a>.</div><div class="gnav20-modal-cta"></div></div></div></div>
+		<button class="gnav20-slide-arrow gnav20-slide-arrow-next" aria-label="next promo message 2 of 2" data-track="global nav:promo ribbon:promo message 2 of 2" style="display: block;"></button>
+	</div>
+	<div class="gnav20-modal" id="gnav20-modal">
+		<div class="gnav20-modal-overlay" tabindex="-1" data-modal-hide=""></div>
+		<div class="gnav20-modal-content" aria-labelledby="gnav20-modal-heading" aria-describedby="gnav20-modal-sub-heading" role="dialog">
+			<button id="gnav20-close-icon" class="gnav20-promo-close-icon" tabindex="0" aria-label="Click here or press escape key to Close Modal Dialog" data-modal-hide="" data-track="global nav:promo ribbon:modal:click here or press escape key to close modal dialog">
+			</button>
+			<div class="gnav20-modal-content-wrapper"></div>
+		</div>
+	</div>
+</div></div>
+
+
+</div>
+	</div>
+</div>
+<div name="headerEnd" id="gnav20-header-end" role="none" aria-hidden="true" tabindex="-1" aria-label="end of navigation menu">
+<nav id="offline-l2-links" aria-label="Quick shop links">
+  <a href="/smartphones/">Phones</a>
+  <a href="/tablets/">Tablets</a>
+  <a href="/connected-smartwatches/">Watches</a>
+  <a href="/plans/unlimited/">Plans</a>
+  <a href="/home/internet/">Home Internet</a>
+  <a href="/deals/">Deals</a>
+  <a href="/shop/online/free-5g-phones/">Free 5G phones</a>
+  <a href="/support/">Support</a>
+  <a href="/support/contact-us/">Contact us</a>
+  <a href="/stores/">Stores</a>
+</nav>
+end of navigation menu</div>
+<style id="gnav20-preload">
+     .gnav20{
+     max-height: 165px;
+     border-bottom: solid 1px #d8dada;
+     }
+     .gnav20 .gnav20-sticky-content{
+     max-width: 1272px;
+     margin: 0 auto;
+     background-size: 124px 29px;
+     background-position: 20px 59px;
+     background-repeat: no-repeat;
+     background-image: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA2MDEuMDYgMTM0Ljc0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MDEuMDYgMTM0Ljc0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0Y1MEEyMzt9LnN0MXtmaWxsOnVybCgjU1ZHSURfMV8pO308L3N0eWxlPjxzd2l0Y2g+PGc+PGcgaWQ9IkxheWVyXzEiPjxnPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01MDguNDUsMTMxLjdoMjkuNlY3Ny42MmMwLTEyLjM0LDcuMjEtMjEuMDcsMTcuODQtMjEuMDdjMTAuMjUsMCwxNS41Niw3LjIxLDE1LjU2LDE3LjQ2djU3LjY5aDI5LjYgVjY4LjMyYzAtMjEuNDUtMTIuOS0zNi42My0zMy43OC0zNi42M2MtMTMuMjgsMC0yMi41OCw1LjY5LTI5LjYsMTYuMTNoLTAuNTdWMzQuNTRoLTI4LjY1VjEzMS43eiBNNDUwLjM4LDMxLjg4IGMtMzAuOTMsMC01MS42MiwyMi4yLTUxLjYyLDUxLjQzYzAsMjkuMDQsMjAuNjgsNTEuNDMsNTEuNjIsNTEuNDNTNTAyLDExMi4zNSw1MDIsODMuMzFDNTAyLDU0LjA5LDQ4MS4zMiwzMS44OCw0NTAuMzgsMzEuODh6IE00NTAuMTksMTEyLjkxYy0xNC4wNCwwLTIxLjQ0LTExLjc2LTIxLjQ0LTI5LjZjMC0xOC4wMyw3LjQtMjkuNiwyMS40NC0yOS42YzE0LjA0LDAsMjEuODIsMTEuNTgsMjEuODIsMjkuNiBDNDcyLjAyLDEwMS4xNSw0NjQuMjQsMTEyLjkxLDQ1MC4xOSwxMTIuOTF6IE0zMTQuNTEsMTMxLjdoODMuMTJ2LTIzLjM0aC00Ny4wNnYtMC41N2w0NC45Ny01MC40OFYzNC41NGgtODEuMDN2MjMuMzRoNDUuNTQgdjAuNTdsLTQ1LjU0LDUwLjg2VjEzMS43eiBNMjc2LjU1LDEzMS43aDI5Ljc5VjM0LjU0aC0yOS43OVYxMzEuN3ogTTIwNy40OCwxMzEuN2gyOS42Vjg3LjExYzAtMjAuMzEsMTIuMTUtMjkuMjMsMzAuNzQtMjYuNzYgaDAuNTdWMzQuNzNjLTEuNTItMC41Ny0zLjIzLTAuNzYtNi4wNy0wLjc2Yy0xMS41OCwwLTE5LjM2LDUuMzEtMjYsMTYuN2gtMC41N1YzNC41NGgtMjguMjdWMTMxLjd6IE0xNTMuMDEsMTEzLjExIGMtMTMuMDksMC0yMS4wNi04LjU0LTIyLjU4LTIxLjYzaDcwLjAyYzAuMTktMjAuODgtNS4zMS0zNy41OC0xNi44OS00OC4wMWMtOC4xNi03LjU5LTE4Ljk4LTExLjc3LTMyLjY0LTExLjc3IGMtMjkuMjIsMC00OS41MywyMi4yLTQ5LjUzLDUxLjI0YzAsMjkuMjIsMTkuMzYsNTEuNjIsNTEuNDMsNTEuNjJjMTIuMTUsMCwyMS44Mi0zLjIzLDI5Ljc5LTguNzMgYzguNTQtNS44OCwxNC42MS0xNC40MiwxNi4zMi0yMi45NmgtMjguNDZDMTY3LjYzLDEwOS4zMSwxNjEuNzQsMTEzLjExLDE1My4wMSwxMTMuMTF6IE0xNTEuNSw1Mi45NSBjMTAuNDQsMCwxNy42NSw3Ljc4LDE4Ljc5LDE5LjE3aC0zOS42NkMxMzIuOSw2MC41NCwxMzkuMTYsNTIuOTUsMTUxLjUsNTIuOTV6IE0yNzYuNTUsMGgyOS43OXYyNi4zOGgtMjkuNzlWMHoiLz48L2c+PC9nPjxnPjxyYWRpYWxHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGN4PSI3MC4wMTE0IiBjeT0iMTA1LjY2NiIgcj0iNTMuODc5NyIgZng9IjM3LjMwNzQiIGZ5PSIxMDUuMzE2NSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgwLjM1ODQgLTAuOTMzNiAxLjEwMjMgMC40MjMyIC03MS41NTkgMTI2LjMxNDYpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3AgIG9mZnNldD0iMC4wNTczIiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIi8+PHN0b3AgIG9mZnNldD0iMC4yOTM5IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIi8+PHN0b3AgIG9mZnNldD0iMC4zMDM4IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGQTFFIi8+PHN0b3AgIG9mZnNldD0iMC40ODY1IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVBNjIwIi8+PHN0b3AgIG9mZnNldD0iMC42NDgiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTYzMjEiLz48c3RvcCAgb2Zmc2V0PSIwLjc4MjMiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTMzMjIiLz48c3RvcCAgb2Zmc2V0PSIwLjg4NDMiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTE1MjMiLz48c3RvcCAgb2Zmc2V0PSIwLjk0MjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTBBMjMiLz48L3JhZGlhbEdyYWRpZW50PjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLDM0LjU0bDM2Ljg0LDk1Ljk2YzAuMjgsMC43MywwLjk4LDEuMjEsMS43NiwxLjIxaDI5Ljg5Yy0wLjc4LDAtMS40OC0wLjQ4LTEuNzYtMS4yMUwyOS44OSwzNC41NEgweiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDcuMDksMzQuNTRMNzAuMjUsMTMwLjVjLTAuMjgsMC43My0wLjk4LDEuMjEtMS43NiwxLjIxSDM4LjZjMC43OCwwLDEuNDgtMC40OCwxLjc2LTEuMjFMNzcuMiwzNC41NCBIMTA3LjA5eiIvPjwvZz48L2c+PC9nPjwvc3dpdGNoPjwvc3ZnPg==)}
+     .gnav20-sticky-content .gnav20-apicomponentnewdesign { opacity: 0;}
+     @media (max-width: 1020.5px), (pointer: coarse) {
+          .gnav20{
+               max-height: 132px;
+          }
+          .gnav20 .gnav20-sticky-content{
+               background-size: 94px 21px;
+               background-position: 16px 26px;
+          }
+     }
+</style>
+</div>
+
+
+
+     </div>
+</header>
+</header>
+<div class="gnav20-sticky-header gnav20-with-promo gnav20-new-design" style="height: 166px;"></div>
+</div>
+
+
+
+</div>
+</div>
+<main class="main responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+  
+  <div class="container aem-GridColumn aem-GridColumn--default--12">
+
+
+
+<div class="height--xs height--md u-colorBackgroundSecondary u-paddingTop--xs u-paddingRight--xs u-paddingBottom--xs u-paddingLeft--xs u-marginTop--xs u-marginRight--xs u-marginBottom--xs u-marginLeft--xs u-paddingTop--lg32 u-paddingRight--lg u-paddingBottom--lg u-paddingLeft--lg u-marginTop--lg u-marginRight--lg u-marginBottom--lg u-marginLeft--lg">
+
+  
+
+
+
+
+    
+    
+    <div class="hero">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+  
+
+  <div data-cmp="vzrf-hero">
+
+    
+        <section data-loading="eager" id="q3_apple_lp_family_iphone_banner_po_9_12" translate="yes" style=" --bgMobile:url('https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_m?fmt=webp-alpha&amp;scl=2'); --bgMobile2x:url('https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_m?fmt=webp-alpha&amp;scl=1'); --bgTablet:url('https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_d?fmt=webp-alpha&amp;scl=2'); --bgTablet2x:url('https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_d?fmt=webp-alpha&amp;scl=1'); --bgDesktop:url('https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_d?fmt=webp-alpha&amp;scl=2'); --bgDesktop2x:url('https://ss7.vzw.com/is/image/VerizonWireless/0925_q4_apple_lp_family_iphone_banner_10_10_hero2025_v2_d?fmt=webp-alpha&amp;scl=1');" class="rounded-corner  background-image background-contain--lg extended-bg background-cover--xs background-contain--md background-positionX--lg50 background-positionX--md75 background-positionX--xs50 u-colorBackgroundSecondary">
+    
+    
+    <div class="Container u-marginLeft--0">
+    
+      <div data-height-css="" style="--height--xs:560px;--height--md:400px;--height--lg:480px;" class="Grid u-paddingTop--xs32 u-paddingBottom--xs56 u-paddingLeft--xs0 u-paddingRight--xs16 u-paddingBottom--md48 u-paddingLeft--md4 u-paddingRight--md20 u-paddingTop--md84 u-paddingBottom--lg48 u-paddingRight--lg168 u-paddingTop--lg89 non-extended-hero">
+        <div class="u-positionRelative--xs u-positionRelative--md Col Col--xs12 Col--md6 Col--lg8">
+    
+    
+
+
+        <div class="header">
+          <div class="u-colorAccent u-paddingBottom--xs12 u-paddingTop--xs0 u-paddingLeft--xs0 u-paddingRight--xs12 u-paddingBottom--lg16 u-paddingTop--lg0 u-paddingLeft--lg4 u-paddingRight--lg0">
+
+            <h1 class=" u-fontDisplay u-marginAllNone u-text--xs40 u-lineHeight--xs40 u-text--md48 u-lineHeight--md48 u-text--lg64 u-lineHeight--lg64">
+                
+              <span class="promo-data-header">
+                All things Apple
+<br aria-hidden="true"> 
+All right here
+              </span>
+
+              
+
+              </h1>
+
+
+            </div>
+
+        </div>
+
+        <div class="sub-header">
+          <div class="u-colorPrimary u-paddingBottom--xs0 u-paddingTop--xs0 u-paddingLeft--xs0 u-paddingRight--xs0 u-paddingBottom--lg0 u-paddingTop--lg0 u-paddingLeft--lg4 u-paddingRight--lg0">
+              <h2 class=" u-textLineHeightNormal u-textRegular u-text--xs16 u-lineHeight--xs20 u-text--md16 u-lineHeight--md20 u-text--lg20 u-lineHeight--lg24">Get the latest and greatest, all on the network you rely on.
+                 
+              </h2>
+            </div>
+
+        </div>
+
+        
+
+
+       
+      </div>
+      
+      </div>
+      </div>
+    </section>
+  </div>
+
+
+</div>
+
+
+    
+    
+    <div class="html">
+  
+    
+
+  
+
+
+  
+  
+  
+</div>
+
+
+
+
+</div></div>
+<div class="spacer aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs64 u-paddingTop--lg96">
+</div></div>
+<div class="section aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+  <section id="iphone 16 level 2" class="extended-bg      ">
+
+    
+      
+  
+  
+
+  <div class="Container  overflow ">
+    
+
+
+
+
+    
+    
+    <div class="text">
+
+
+
+  <div translate="yes" class="u-textCenter u-textxsCenter
+    u-colorPrimary u-marginBottom--xs0 u-marginBottom--lg0">
+    <p class="u-fontDisplay u-textLineHeightExtraTight  u-text--xs40 u-text--md u-text--lg64 u-textBold      u-marginBottom--xs0 u-marginBottom--lg0">
+        We’ve got what you want now 
+
+      
+    </p>
+    
+  </div>
+
+
+</div>
+
+
+    
+    
+    <div class="spacer">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs32 u-paddingTop--lg64">
+</div></div>
+
+
+
+  </div>
+
+    
+  </section>
+</div>
+<div class="html aem-GridColumn aem-GridColumn--default--12">
+  
+    
+
+  
+
+
+  <style>@media (min-width: 1024px){
+   #iphone-first-slider .carousel-scroll-container {
+    justify-content: center!important
+  }
+}</style>
+  
+  
+</div>
+<div class="personalizedPromoTilesCarousel aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+<section translate="yes">
+  <div class="vui-carousel" data-cmp="vui-personalized-promo-tiles-carousel" id="iphone-first-slider" data-config-api="" data-count="9" data-prospect="{&quot;uniqueID&quot;:&quot;q3_apple_iphone_17_pro_po_9_12&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;iPhone&amp;nbsp;17&amp;nbsp;Pro&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;The most powerful iPhone ever. Brilliant 6.3-inch display, aluminum unibody design, A19 Pro chip, all 48MP rear cameras, and breakthrough battery life.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;tooltip&quot;:&quot;The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/smartphones/apple-iphone-17-pro/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-pro-po-9-12-brandpagetile-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-pro-po-9-12-brandpagetile-m&quot;},{&quot;uniqueID&quot;:&quot;q3_apple_lp_watch_11_nopromo_9_12&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;Apple&amp;nbsp;Watch&lt;br&gt;Series&amp;nbsp;11&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;With hypertension notifications, sleep score, speedy 5G, and up to 24 hours of battery life.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;tooltip&quot;:&quot;Hypertension notifications are not intended for use by people under 22 years old, those who have been previously diagnosed with hypertension, or pregnant persons. Battery life varies by use and configuration. See apple.com/watch/battery for more information.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/connected-smartwatches/apple-watch-series-11/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-brandpagetile-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-brandpagetile-m&quot;},{&quot;uniqueID&quot;:&quot;do_q3_apple_lp_ipad_pro_13_10_23&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;iPad Pro&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;Built for Apple Intelligence. Powered by the Apple M5 chip, delivers outrageous performance for effortless productivity and advanced AI workflows.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;tooltip&quot;:&quot;Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see support.apple.com/121115.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/tablets/apple-ipad-pro-13-inch-m5&quot;,&quot;legalCopyColor&quot;:&quot;#000000&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_13_10_23_hptile_d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_13_10_23_hptile_m&quot;}">
+    <div class="carousel-scroll-container u-paddingTop--xs40 u-paddingTop--lg64 u-paddingBottom--xs40 u-paddingBottom--md64 scroll-target--nextHidden">
+      
+
+      <div class="carousel-content prospectCarousel" tab-index="-1">
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="1">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="iPhone 17 Pro" templateid="ct_pod15" data-impression-contentkey="q3_apple_iphone_17_pro_po_9_12" href="/wireless-devices/apple/smartphones/apple-iphone-17-pro/" aria-labelledby="iphone-first-slider-promo-tile-link-1" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l3|p1||||||q3_apple_iphone_17_pro_po_9_12:iPhone 17 Pro|tile&quot;}">
+        <span class="u-screenReaderOnly" id="iphone-first-slider-promo-tile-link-1">iPhone 17 Pro</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-image: url(&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-pro-po-9-12-brandpagetile-d?fmt=webp-alpha&amp;scl=2&quot;);" data-desktop-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-pro-po-9-12-brandpagetile-d?fmt=webp-alpha" data-tablet-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-pro-po-9-12-brandpagetile-m?fmt=webp-alpha" data-mobile-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-pro-po-9-12-brandpagetile-m?fmt=webp-alpha" data-background-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-pro-po-9-12-brandpagetile-d?fmt=webp-alpha&amp;scl=2" data-loaded="true">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            iPhone&nbsp;17&nbsp;Pro
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">The most powerful iPhone ever. Brilliant 6.3-inch display, aluminum unibody design, A19 Pro chip, all 48MP rear cameras, and breakthrough battery life.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="The most powerful iPhone ever. Brilliant 6.3-inch display, aluminum unibody design, A19 Pro chip, all 48MP rear cameras, and breakthrough battery life." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" tabindex="0" aria-expanded="false" aria-label="More information on The most powerful iPhone ever. Brilliant 6.3-inch display, aluminum unibody design, A19 Pro chip, all 48MP rear cameras, and breakthrough battery life. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="2">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="Apple WatchSeries 11" templateid="ct_pod15" data-impression-contentkey="q3_apple_lp_watch_11_nopromo_9_12" href="/wireless-devices/apple/connected-smartwatches/apple-watch-series-11/" aria-labelledby="iphone-first-slider-promo-tile-link-2" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l3|p2||||||q3_apple_lp_watch_11_nopromo_9_12:Apple WatchSeries 11|tile&quot;}">
+        <span class="u-screenReaderOnly" id="iphone-first-slider-promo-tile-link-2">Apple WatchSeries 11</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-image: url(&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-brandpagetile-d?fmt=webp-alpha&amp;scl=2&quot;);" data-desktop-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-brandpagetile-d?fmt=webp-alpha" data-tablet-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-brandpagetile-m?fmt=webp-alpha" data-mobile-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-brandpagetile-m?fmt=webp-alpha" data-background-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-brandpagetile-d?fmt=webp-alpha&amp;scl=2" data-loaded="true">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            Apple&nbsp;Watch
+<br aria-hidden="true">Series&nbsp;11
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">With hypertension notifications, sleep score, speedy 5G, and up to 24 hours of battery life.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="Hypertension notifications are not intended for use by people under 22 years old, those who have been previously diagnosed with hypertension, or pregnant persons. Battery life varies by use and configuration. See apple.com/watch/battery for more information." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="With hypertension notifications, sleep score, speedy 5G, and up to 24 hours of battery life." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" tabindex="0" aria-expanded="false" aria-label="More information on With hypertension notifications, sleep score, speedy 5G, and up to 24 hours of battery life. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">Hypertension notifications are not intended for use by people under 22 years old, those who have been previously diagnosed with hypertension, or pregnant persons. Battery life varies by use and configuration. See apple.com/watch/battery for more information.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="3">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="iPad Pro" templateid="ct_pod15" data-impression-contentkey="do_q3_apple_lp_ipad_pro_13_10_23" href="/wireless-devices/apple/tablets/apple-ipad-pro-13-inch-m5/" aria-labelledby="iphone-first-slider-promo-tile-link-3" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l3|p3||||||do_q3_apple_lp_ipad_pro_13_10_23:iPad Pro|tile&quot;}">
+        <span class="u-screenReaderOnly" id="iphone-first-slider-promo-tile-link-3">iPad Pro</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-image: url(&quot;https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_13_10_23_hptile_d?fmt=webp-alpha&amp;scl=2&quot;);" data-desktop-image="https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_13_10_23_hptile_d?fmt=webp-alpha" data-tablet-image="https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_13_10_23_hptile_m?fmt=webp-alpha" data-mobile-image="https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_13_10_23_hptile_m?fmt=webp-alpha" data-background-image="https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_13_10_23_hptile_d?fmt=webp-alpha&amp;scl=2" data-loaded="true">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            iPad Pro
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">Built for Apple Intelligence. Powered by the Apple M5 chip, delivers outrageous performance for effortless productivity and advanced AI workflows.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see support.apple.com/121115." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="Built for Apple Intelligence. Powered by the Apple M5 chip, delivers outrageous performance for effortless productivity and advanced AI workflows." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" tabindex="0" aria-expanded="false" aria-label="More information on Built for Apple Intelligence. Powered by the Apple M5 chip, delivers outrageous performance for effortless productivity and advanced AI workflows. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see support.apple.com/121115.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+      </div>
+
+    </div>
+  </div>
+</section></div>
+<div class="spacer aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs96 u-paddingTop--lg128">
+</div></div>
+<div class="section aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+  <section id="iphone-16-level3" class=" overflow     ">
+
+    
+      
+  
+  
+
+  <div class="Container  overflow ">
+    
+
+
+
+
+    
+    
+    <div class="sectionHeader">
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+ 
+  
+    <div translate="yes" class="u-colorBackgroundSecondary u-colorPrimary u-textCenter u-textxsCenter     ">
+      <div class="cmp-wrapper">
+          <div class="Grid u-paddingY--16 u-paddingY--lg20 u-flexAlignContentStart--md">
+            
+              
+  
+  <div class="Col Col--12 u-positionRelative content-wrap">
+    <div class="headlineWrap u-marginBottom--xs16 u-marginBottom--lg20  ">
+      <h2 class=" u-fontDisplay u-textLineHeightTight u-text--xs32 u-text--md u-text--lg64 u-textBold u-displayInline">
+        iPhone on Verizon
+<br aria-hidden="true">Built for Apple Intelligence
+      </h2>
+      
+    </div>
+    
+
+    <div class="btn-wrap u-marginTop--24 u-marginTop--lg32">
+      
+      
+      
+    </div>
+  </div>
+
+
+            
+          </div>
+      </div>
+    </div>
+  
+</div>
+
+
+    
+    
+    <div class="spacer">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs32 u-paddingTop--lg40">
+</div></div>
+
+
+    
+    
+    <div class="hero">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+  
+
+  <div data-cmp="vzrf-hero">
+
+    
+        <section data-loading="eager" translate="yes" style=" --bgMobile:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-pro-banner-po-9-12-hero-m?fmt=webp-alpha&amp;scl=2'); --bgMobile2x:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-pro-banner-po-9-12-hero-m?fmt=webp-alpha&amp;scl=1'); --bgTablet:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-pro-banner-po-9-12-hero-d?fmt=webp-alpha&amp;scl=2'); --bgTablet2x:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-pro-banner-po-9-12-hero-d?fmt=webp-alpha&amp;scl=1'); --bgDesktop:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-pro-banner-po-9-12-hero-d?fmt=webp-alpha&amp;scl=2'); --bgDesktop2x:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-pro-banner-po-9-12-hero-d?fmt=webp-alpha&amp;scl=1');" class="rounded-corner  background-image background-cover--lg extended-bg background-cover--xs background-cover--md background-positionX--lg50 background-positionX--md50 background-positionX--xs50 u-colorBackgroundPrimary">
+    
+    
+    <div class="Container u-marginLeft--0">
+    
+      <div data-height-css="" style="--height--xs:560px;--height--md:340px;--height--lg:480px;" class="Grid u-paddingTop--xs32 u-paddingBottom--xs56 u-paddingLeft--xs0 u-paddingRight--xs16 u-paddingBottom--md48 u-paddingLeft--md4 u-paddingRight--md20 u-paddingTop--md84 u-paddingBottom--lg48 u-paddingRight--lg168 u-paddingTop--lg89 non-extended-hero">
+        <div class="u-positionRelative--xs u-positionRelative--md Col Col--xs12 Col--md6 Col--lg8">
+    
+    
+
+
+        <div class="header">
+          <div class="u-colorSecondary u-paddingBottom--xs12 u-paddingTop--xs0 u-paddingLeft--xs0 u-paddingRight--xs12 u-paddingBottom--lg16 u-paddingTop--lg0 u-paddingLeft--lg4 u-paddingRight--lg0">
+
+            <h2 class=" u-fontDisplay u-marginAllNone u-text--xs32 u-lineHeight--xs32 u-text--md48 u-lineHeight--md48 u-text--lg48 u-lineHeight--lg48">
+                
+              <span class="promo-data-header">
+                <span style="color: rgb(255,255,255);">iPhone&nbsp;17&nbsp;Pro</span>
+              </span>
+
+              
+
+              </h2>
+
+
+            </div>
+
+        </div>
+
+        <div class="sub-header">
+          <div class="u-colorSecondary u-paddingBottom--xs0 u-paddingTop--xs0 u-paddingLeft--xs0 u-paddingRight--xs0 u-paddingBottom--lg0 u-paddingTop--lg0 u-paddingLeft--lg4 u-paddingRight--lg0">
+              <p class=" u-textLineHeightNormal u-textRegular u-text--xs16 u-lineHeight--xs20 u-text--md16 u-lineHeight--md20 u-text--lg20 u-lineHeight--lg24"><span style="color: rgb(255,255,255);">The most powerful iPhone ever. Brilliant 6.3-inch display,
+<br class="u-showForLargeUp" aria-hidden="true">aluminum unibody design, A19 Pro chip, all 48MP rear
+<br class="u-showForLargeUp" aria-hidden="true">cameras, and breakthrough battery life.</span><span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less." data-tooltip-type="icon" data-aria-label="iPhone 17 Pro" data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" tabindex="0" aria-expanded="false" aria-label="More information on iPhone 17 Pro tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less.</span>
+  </span>
+            </span>
+              </p>
+            </div>
+
+        </div>
+
+        <div>
+
+          <div class="cta_button">
+
+              <span class="button">
+                
+                  <a href="/wireless-devices/apple/smartphones/apple-iphone-17-pro/" class="Button Button--inverse u-textBreakNoWrap   u-marginRight--8 u-marginY--24 u-marginY--lg32  u-paddingY--12 u-paddingX--24  u-text--16 u-lineHeight--20" data-description="Buy now" aria-label="Buy now iPhone 17 Pro" data-campaign-id="2025_SEP_LA_1_NPI_IPHONE17PRO" data-impression-category="Phone-Apple" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l6|p1|Phone-Apple|||||2025_SEP_LA_1_NPI_IPHONE17PRO|Buy now&quot;}">
+                    Buy now
+                  </a>
+                
+
+                
+              </span>
+
+
+              
+
+
+            
+
+
+          </div>
+        </div>
+
+
+       
+      </div>
+      
+      </div>
+      </div>
+    </section>
+  </div>
+
+
+</div>
+
+
+
+  </div>
+
+    
+  </section>
+</div>
+<div class="spacer aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs32 u-paddingTop--lg64">
+</div></div>
+<div class="personalizedPromoTilesCarousel aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+<section translate="yes">
+  <div class="vui-carousel" data-cmp="vui-personalized-promo-tiles-carousel" data-config-prospect="" data-count="9" data-prospect="{&quot;uniqueID&quot;:&quot;q3_apple_lp_iphone_17_nopromo_9_12&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;iPhone&amp;nbsp;17&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;More delightful. More durable. 6.3-inch ProMotion display, Ceramic Shield 2, all 48 MP rear cameras, Center Stage front camera, A19 chip.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;tooltip&quot;:&quot;The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/smartphones/apple-iphone-17/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-nopromo-9-12-brandpagetile-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-nopromo-9-12-brandpagetile-m&quot;},{&quot;uniqueID&quot;:&quot;q3_apple_iphone_17_promax_nopromo_9_12&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;iPhone&amp;nbsp;17&amp;nbsp;Pro&amp;nbsp;Max&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;The most powerful iPhone ever. Brilliant 6.9-inch display, aluminum unibody design, A19 Pro chip, all 48MP rear cameras, and best-ever battery life.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;tooltip&quot;:&quot;The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/smartphones/apple-iphone-17-pro-max/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-promax-nopromo-9-12-o-brandpagetile-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-promax-nopromo-9-12-o-brandpagetile-m&quot;},{&quot;uniqueID&quot;:&quot;q4_apple_lp_featured_tile_1&quot;,&quot;headlineCopy&quot;:&quot;iPhone 16 Pro&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;Built for Apple Intelligence. Featuring a stunning titanium design. Camera Control. 4K 120 fps Dolby Vision. And A18 Pro chip.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;tooltip&quot;:&quot;Apple Intelligence will be available in beta on all iPhone 16 models, iPhone 15 Pro, and iPhone 15 Pro Max, with Siri and device language set to U.S. English, as an iOS 18 update in fall 2024. Some features and additional languages will be coming over the course of the next year.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/smartphones/apple-iphone-16-pro/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-iphone-1-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-iphone-1-m&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;},{&quot;uniqueID&quot;:&quot;q1_apple_lp_iphone_17e_nopromo_3_4&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;iPhone 17e&quot;,&quot;subheadCopy&quot;:&quot;A beautiful 6.1-inch Super Retina XDR display, the fast and capable A19 chip, all-day battery life, and 256GB starting storage.&quot;,&quot;tooltip&quot;:&quot;The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches (iPhone 17e), 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less. All battery claims depend on network configuration and many other factors; actual results will vary. Battery has limited recharge cycles and may eventually need to be replaced. Battery life and charge cycles vary by use and settings. See apple.com/batteries and apple.com/iphone/battery.html for more information.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/smartphones/apple-iphone-17e/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_iphone_17e_nopromo_3_4-tileimage-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_iphone_17e_nopromo_3_4-tileimage-m&quot;},{&quot;uniqueID&quot;:&quot;q4_apple_lp_iphone_tile_4&quot;,&quot;headlineCopy&quot;:&quot;Shop iPhone&lt;br&gt;accessories&quot;,&quot;headlineCopyColor&quot;:&quot;#FFFFFF&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/products/phone-accessories/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-1-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-1-m&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;}" role="group" aria-label="Carousel with 5 slides">
+    <div class="carousel-scroll-container u-paddingTop--xs40 u-paddingTop--lg64 u-paddingBottom--xs40 u-paddingBottom--md64 scroll-target--nextHidden"><div class="carousel-arrow-wrap carousel-arrow-prev-wrap"><button class="arrow-prev carousel-arrow Icon Icon--left-arrow u-marginTop--xs0 u-marginTop--lg0 disabled" aria-label="Previous" aria-disabled="true"></button></div>
+      
+
+      <div class="carousel-content prospectCarousel" tab-index="-1">
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide scroll-to active" data-slide-index="1" role="group" aria-label="Slide 1 of 5" aria-hidden="false">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="iPhone 17" templateid="ct_pod15" data-impression-contentkey="q3_apple_lp_iphone_17_nopromo_9_12" href="/wireless-devices/apple/smartphones/apple-iphone-17/" aria-labelledby="-promo-tile-link-1" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l7|p1||||||q3_apple_lp_iphone_17_nopromo_9_12:iPhone 17|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-1">iPhone 17</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-nopromo-9-12-brandpagetile-d?fmt=webp-alpha" data-tablet-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-nopromo-9-12-brandpagetile-m?fmt=webp-alpha" data-mobile-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-nopromo-9-12-brandpagetile-m?fmt=webp-alpha" data-background-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-iphone-17-nopromo-9-12-brandpagetile-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            iPhone&nbsp;17
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">More delightful. More durable. 6.3-inch ProMotion display, Ceramic Shield 2, all 48 MP rear cameras, Center Stage front camera, A19 chip.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="More delightful. More durable. 6.3-inch ProMotion display, Ceramic Shield 2, all 48 MP rear cameras, Center Stage front camera, A19 chip." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" aria-expanded="false" aria-label="More information on More delightful. More durable. 6.3-inch ProMotion display, Ceramic Shield 2, all 48 MP rear cameras, Center Stage front camera, A19 chip. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="2" role="group" aria-label="Slide 2 of 5" aria-hidden="false">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="iPhone 17 Pro Max" templateid="ct_pod15" data-impression-contentkey="q3_apple_iphone_17_promax_nopromo_9_12" href="/wireless-devices/apple/smartphones/apple-iphone-17-pro-max/" aria-labelledby="-promo-tile-link-2" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l7|p2||||||q3_apple_iphone_17_promax_nopromo_9_12:iPhone 17 Pro Max|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-2">iPhone 17 Pro Max</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-promax-nopromo-9-12-o-brandpagetile-d?fmt=webp-alpha" data-tablet-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-promax-nopromo-9-12-o-brandpagetile-m?fmt=webp-alpha" data-mobile-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-promax-nopromo-9-12-o-brandpagetile-m?fmt=webp-alpha" data-background-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-iphone-17-promax-nopromo-9-12-o-brandpagetile-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            iPhone&nbsp;17&nbsp;Pro&nbsp;Max
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">The most powerful iPhone ever. Brilliant 6.9-inch display, aluminum unibody design, A19 Pro chip, all 48MP rear cameras, and best-ever battery life.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="The most powerful iPhone ever. Brilliant 6.9-inch display, aluminum unibody design, A19 Pro chip, all 48MP rear cameras, and best-ever battery life." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" aria-expanded="false" aria-label="More information on The most powerful iPhone ever. Brilliant 6.9-inch display, aluminum unibody design, A19 Pro chip, all 48MP rear cameras, and best-ever battery life. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="3" role="group" aria-label="Slide 3 of 5" aria-hidden="false">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="iPhone 16 Pro" templateid="ct_pod15" data-impression-contentkey="q4_apple_lp_featured_tile_1" href="/wireless-devices/apple/smartphones/apple-iphone-16-pro/" aria-labelledby="-promo-tile-link-3" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l7|p3||||||q4_apple_lp_featured_tile_1:iPhone 16 Pro|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-3">iPhone 16 Pro</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-iphone-1-d?fmt=webp-alpha" data-tablet-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-iphone-1-m?fmt=webp-alpha" data-mobile-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-iphone-1-m?fmt=webp-alpha" data-background-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-iphone-1-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            iPhone 16 Pro
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">Built for Apple Intelligence. Featuring a stunning titanium design. Camera Control. 4K 120 fps Dolby Vision. And A18 Pro chip.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="Apple Intelligence will be available in beta on all iPhone 16 models, iPhone 15 Pro, and iPhone 15 Pro Max, with Siri and device language set to U.S. English, as an iOS 18 update in fall 2024. Some features and additional languages will be coming over the course of the next year." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="Built for Apple Intelligence. Featuring a stunning titanium design. Camera Control. 4K 120 fps Dolby Vision. And A18 Pro chip." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" aria-expanded="false" aria-label="More information on Built for Apple Intelligence. Featuring a stunning titanium design. Camera Control. 4K 120 fps Dolby Vision. And A18 Pro chip. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">Apple Intelligence will be available in beta on all iPhone 16 models, iPhone 15 Pro, and iPhone 15 Pro Max, with Siri and device language set to U.S. English, as an iOS 18 update in fall 2024. Some features and additional languages will be coming over the course of the next year.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide scroll-to" data-slide-index="4" role="group" aria-label="Slide 4 of 5" aria-hidden="true">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="iPhone 17e" templateid="ct_pod15" data-impression-contentkey="q1_apple_lp_iphone_17e_nopromo_3_4" href="/wireless-devices/apple/smartphones/apple-iphone-17e/" aria-labelledby="-promo-tile-link-4" tabindex="-1" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l7|p4||||||q1_apple_lp_iphone_17e_nopromo_3_4:iPhone 17e|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-4">iPhone 17e</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_iphone_17e_nopromo_3_4-tileimage-d?fmt=webp-alpha" data-tablet-image="https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_iphone_17e_nopromo_3_4-tileimage-m?fmt=webp-alpha" data-mobile-image="https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_iphone_17e_nopromo_3_4-tileimage-m?fmt=webp-alpha" data-background-image="https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_iphone_17e_nopromo_3_4-tileimage-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: !important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            iPhone 17e
+          </h3>
+          
+          <p style="color: !important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">A beautiful 6.1-inch Super Retina XDR display, the fast and capable A19 chip, all-day battery life, and 256GB starting storage.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches (iPhone 17e), 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less. All battery claims depend on network configuration and many other factors; actual results will vary. Battery has limited recharge cycles and may eventually need to be replaced. Battery life and charge cycles vary by use and settings. See apple.com/batteries and apple.com/iphone/battery.html for more information." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="A beautiful 6.1-inch Super Retina XDR display, the fast and capable A19 chip, all-day battery life, and 256GB starting storage." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" tabindex="-1" aria-expanded="false" aria-label="More information on A beautiful 6.1-inch Super Retina XDR display, the fast and capable A19 chip, all-day battery life, and 256GB starting storage. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 6.06 inches (iPhone 17e), 6.27 inches (iPhone 17, iPhone 17 Pro), 6.55 inches (iPhone Air), or 6.86 inches (iPhone 17 Pro Max) diagonally. Actual viewable area is less. All battery claims depend on network configuration and many other factors; actual results will vary. Battery has limited recharge cycles and may eventually need to be replaced. Battery life and charge cycles vary by use and settings. See apple.com/batteries and apple.com/iphone/battery.html for more information.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="5" role="group" aria-label="Slide 5 of 5" aria-hidden="true">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="Shop iPhoneaccessories" templateid="ct_pod15" data-impression-contentkey="q4_apple_lp_iphone_tile_4" href="/wireless-devices/apple/products/phone-accessories/" aria-labelledby="-promo-tile-link-5" tabindex="-1" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l7|p5||||||q4_apple_lp_iphone_tile_4:Shop iPhoneaccessories|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-5">Shop iPhoneaccessories</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad u-colorBackgroundPrimary" style="background-color: !important;" data-desktop-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-1-d?fmt=webp-alpha" data-tablet-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-1-m?fmt=webp-alpha" data-mobile-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-1-m?fmt=webp-alpha" data-background-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-1-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #FFFFFF!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            Shop iPhone
+<br aria-hidden="true">accessories
+          </h3>
+          
+          
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+      </div>
+
+    <div class="carousel-arrow-wrap carousel-arrow-next-wrap"><button class="arrow-next carousel-arrow Icon Icon--right-arrow u-marginTop--xs0 u-marginTop--lg0" aria-label="Next" aria-disabled="false"></button></div></div>
+  <div class="scroll-scrubber-wrap"><div class="scroll-scrubber-track"><div class="scroll-scrubber" style="width: 69.7368%;"></div></div></div></div>
+</section></div>
+<div class="section aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+  <section id="section">
+
+    
+      
+  
+  
+
+  <div class="Container   ">
+    
+
+
+
+
+    
+    
+    <div class="grid">
+
+
+
+
+
+
+
+
+  <div data-height-css="" style="--height--xs:auto;--height--md:auto;--height--lg:auto;" class="Grid lozad u-colorBackgroundSecondary        u-paddingTop--xs32 u-paddingRight--xs0 u-paddingBottom--xs0 u-paddingLeft--xs0 u-paddingTop--md  u-paddingRight--md u-paddingBottom--md u-paddingLeft--md u-paddingTop--lg48 u-paddingRight--lg0 u-paddingBottom--lg0 u-paddingLeft--lg0 u-flexAlignContentStart--xs u-flexAlignContentStart--md u-flexAlignContentStart--lg ">
+
+    
+      
+  
+  
+
+  
+    
+  
+    
+  
+    
+      
+        <div class="Col Col--xs12 Col--md12 Col--lg12  u-positionRelative--xs u-positionRelative--md ">
+          
+          
+          
+
+
+
+
+    
+    
+    <div class="u-textCenter">
+
+
+
+
+
+
+    
+    
+    <div class="html">
+  
+    
+
+  
+
+
+  
+   <div>
+              
+              <a href="/wireless-devices/apple/smartphones/apple/" class=" Button u-text--xs16 u-text--md16 u-textBold u-marginBottom--xs0 u-marginBottom--lg0 u-fontDisplay " aria-label="Shop for smartwatches" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l8|p1|||||||Shop for smartwatches&quot;}">
+              Shop all
+            </a>
+
+ <a href="/wireless-devices/apple/wireless-devices/smartphones/iphone-compare/" class=" Button--secondary  Button--transparent Button u-text--xs16u-text--md16 u-textBold u-marginBottom--xs0 u-flexAlignContentCenter--lg0 u-fontDisplay u-marginRight--0" aria-label="compare" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l8|p2|||||||compare&quot;}">
+              Compare
+            </a>
+</div>
+  
+</div>
+
+
+</div>
+
+
+
+        </div>
+      
+    
+  
+
+    
+  </div>
+</div>
+
+
+
+  </div>
+
+    
+  </section>
+</div>
+<div class="spacer aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs96 u-paddingTop--lg128">
+</div></div>
+<div class="section aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+  <section id="apple-watch-level4">
+
+    
+      
+  
+  
+
+  <div class="Container  overflow ">
+    
+
+
+
+
+    
+    
+    <div class="sectionHeader">
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+ 
+  
+    <div translate="yes" class="u-colorBackgroundSecondary u-colorPrimary u-textCenter u-textxsCenter     ">
+      <div class="cmp-wrapper">
+          <div class="Grid u-paddingY--16 u-paddingY--lg20 u-flexAlignContentStart--md">
+            
+              
+  
+  <div class="Col Col--12 u-positionRelative content-wrap">
+    <div class="headlineWrap u-marginBottom--xs16 u-marginBottom--lg20  ">
+      <h2 class=" u-fontDisplay u-textLineHeightTight u-text--xs32 u-text--md u-text--lg64 u-textBold u-displayInline">
+        Apple Watch
+<br aria-hidden="true">
+For a healthy life
+      </h2>
+      
+    </div>
+    
+
+    <div class="btn-wrap u-marginTop--24 u-marginTop--lg32">
+      
+      
+      
+    </div>
+  </div>
+
+
+            
+          </div>
+      </div>
+    </div>
+  
+</div>
+
+
+    
+    
+    <div class="spacer">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs32 u-paddingTop--lg40">
+</div></div>
+
+
+    
+    
+    <div class="hero">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+  
+
+  <div data-cmp="vzrf-hero">
+
+    
+        <section data-loading="eager" translate="yes" style=" --bgMobile:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-hero-m?fmt=webp-alpha&amp;scl=2'); --bgMobile2x:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-hero-m?fmt=webp-alpha&amp;scl=1'); --bgTablet:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-hero-d?fmt=webp-alpha&amp;scl=2'); --bgTablet2x:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-hero-d?fmt=webp-alpha&amp;scl=1'); --bgDesktop:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-hero-d?fmt=webp-alpha&amp;scl=2'); --bgDesktop2x:url('https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-11-nopromo-9-12-hero-d?fmt=webp-alpha&amp;scl=1');" class="rounded-corner  background-image background-cover--lg extended-bg background-cover--xs background-cover--md background-positionX--lg75 background-positionX--md50 background-positionX--xs50 u-colorBackgroundSecondary">
+    
+    
+    <div class="Container u-marginLeft--0">
+    
+      <div data-height-css="" style="--height--xs:560px;--height--md:340px;--height--lg:480px;" class="Grid u-paddingTop--xs32 u-paddingBottom--xs56 u-paddingLeft--xs0 u-paddingRight--xs16 u-paddingBottom--md48 u-paddingLeft--md4 u-paddingRight--md20 u-paddingTop--md84 u-paddingBottom--lg48 u-paddingRight--lg168 u-paddingTop--lg89 non-extended-hero">
+        <div class="u-positionRelative--xs u-positionRelative--md Col Col--xs12 Col--md6 Col--lg8">
+    
+    
+
+
+        <div class="header">
+          <div class="u-colorPrimary u-paddingBottom--xs12 u-paddingTop--xs0 u-paddingLeft--xs0 u-paddingRight--xs12 u-paddingBottom--lg16 u-paddingTop--lg0 u-paddingLeft--lg4 u-paddingRight--lg0">
+
+            <h2 class=" u-fontDisplay u-marginAllNone u-text--xs32 u-lineHeight--xs32 u-text--md48 u-lineHeight--md48 u-text--lg48 u-lineHeight--lg48">
+                
+              <span class="promo-data-header">
+                Apple&nbsp;Watch
+<br aria-hidden="true">Series&nbsp;11
+              </span>
+
+              
+
+              </h2>
+
+
+            </div>
+
+        </div>
+
+        <div class="sub-header">
+          <div class="u-colorPrimary u-paddingBottom--xs0 u-paddingTop--xs0 u-paddingLeft--xs0 u-paddingRight--xs0 u-paddingBottom--lg0 u-paddingTop--lg0 u-paddingLeft--lg4 u-paddingRight--lg0">
+              <p class=" u-textLineHeightNormal u-textRegular u-text--xs16 u-lineHeight--xs20 u-text--md16 u-lineHeight--md20 u-text--lg20 u-lineHeight--lg24">With hypertension notifications, sleep score,
+<br class="u-showForLargeUp" aria-hidden="true">speedy 5G, and up to 24 hours of battery life.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="Hypertension notifications are not intended for use by people under 22 years old, those who have been previously diagnosed with hypertension, or pregnant persons. Battery life varies by use and configuration. See apple.com/watch/battery for more information." data-tooltip-type="icon" data-aria-label="Apple WatchSeries 11" data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" tabindex="0" aria-expanded="false" aria-label="More information on Apple WatchSeries 11 tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">Hypertension notifications are not intended for use by people under 22 years old, those who have been previously diagnosed with hypertension, or pregnant persons. Battery life varies by use and configuration. See apple.com/watch/battery for more information.</span>
+  </span>
+            </span>
+              </p>
+            </div>
+
+        </div>
+
+        <div>
+
+          <div class="cta_button">
+
+              <span class="button">
+                
+                  <a href="/wireless-devices/apple/connected-smartwatches/apple-watch-series-11/" class="Button u-colorBackgroundPrimary u-textBreakNoWrap   u-marginRight--8 u-marginY--24 u-marginY--lg32  u-paddingY--12 u-paddingX--24  u-text--16 u-lineHeight--20" data-description="Buy now" aria-label="Buy now Apple WatchSeries 11" data-campaign-id="2025_SEP_LA_1_NPI_APPLEWATCH" data-impression-category="Watch-Apple" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l11|p1|Watch-Apple|||||2025_SEP_LA_1_NPI_APPLEWATCH|Buy now&quot;}">
+                    Buy now
+                  </a>
+                
+
+                
+              </span>
+
+
+              
+
+
+            
+
+
+          </div>
+        </div>
+
+
+       
+      </div>
+      
+      </div>
+      </div>
+    </section>
+  </div>
+
+
+</div>
+
+
+
+  </div>
+
+    
+  </section>
+</div>
+<div class="spacer aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs32 u-paddingTop--lg64">
+</div></div>
+<div class="personalizedPromoTilesCarousel aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+<section translate="yes">
+  <div class="vui-carousel" data-cmp="vui-personalized-promo-tiles-carousel" data-config-prospect="" data-count="9" data-prospect="{&quot;uniqueID&quot;:&quot;q3_apple_lp_watch_ultra_nopromo_9_12&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;Apple&amp;nbsp;Watch&lt;br&gt;Ultra&amp;nbsp;3&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;With built-in satellite communications, multiday battery life, advanced metrics, dual-frequency GPS—it's the ultimate sport and adventure watch.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;tooltip&quot;:&quot;Emergency SOS, Find My, and Messages via satellite are included for free for two years with the activation of Apple Watch Ultra 3. Connection and response times vary based on location, site conditions, and other factors. Find My and Messages via satellite require a carrier plan. To send and receive SMS/MMS from cellular models of Apple Watch over satellite, your paired iPhone must be powered on and connected to Wi-Fi or an active cellular network, but your iPhone doesn’t need to be nearby. SMS message rates may apply. Satellite connectivity provided by Globalstar and its affiliates. See support.apple.com/123924 for more information. Battery life varies by use and configuration. See apple.com/watch/battery for more information. When angled away from the user as compared with Apple Watch Ultra or Ultra 2.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/connected-smartwatches/apple-watch-ultra-3/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-ultra-nopromo-9-12-brandpagetile-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-ultra-nopromo-9-12-brandpagetile-m&quot;},{&quot;uniqueID&quot;:&quot;q3_apple_lp_watch_se_nopromo_9_12&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;Apple&amp;nbsp;Watch&amp;nbsp;SE&amp;nbsp;3&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;Packed with essentials like sleep score, Always-On display, Activity rings, and more. All for a great value.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/connected-smartwatches/apple-watch-se-3/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-se-nopromo-9-12-brandpagetile-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-se-nopromo-9-12-brandpagetile-m&quot;},{&quot;uniqueID&quot;:&quot;q4_apple_lp_featured_tile_2&quot;,&quot;headlineCopy&quot;:&quot;Apple Watch&lt;br&gt;Series 10&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;Featuring a bigger display with more screen area and a thinner, lighter design.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/connected-smartwatches/apple-watch-series-10/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-applewatch-1-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-applewatch-1-m&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;},{&quot;uniqueID&quot;:&quot;q4_apple_lp_watch_tile_4&quot;,&quot;headlineCopy&quot;:&quot;Shop Apple Watch&lt;br&gt;accessories&quot;,&quot;headlineCopyColor&quot;:&quot;#FFFFFF&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/products/watch-accessories/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-2-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-2-m&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;}" role="group" aria-label="Carousel with 4 slides">
+    <div class="carousel-scroll-container u-paddingTop--xs40 u-paddingTop--lg64 u-paddingBottom--xs40 u-paddingBottom--md64 scroll-target--nextHidden"><div class="carousel-arrow-wrap carousel-arrow-prev-wrap"><button class="arrow-prev carousel-arrow Icon Icon--left-arrow u-marginTop--xs0 u-marginTop--lg0 disabled" aria-label="Previous" aria-disabled="true"></button></div>
+      
+
+      <div class="carousel-content prospectCarousel" tab-index="-1">
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide scroll-to active" data-slide-index="1" role="group" aria-label="Slide 1 of 4" aria-hidden="false">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="Apple WatchUltra 3" templateid="ct_pod15" data-impression-contentkey="q3_apple_lp_watch_ultra_nopromo_9_12" href="/wireless-devices/apple/connected-smartwatches/apple-watch-ultra-3/" aria-labelledby="-promo-tile-link-1" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l12|p1||||||q3_apple_lp_watch_ultra_nopromo_9_12:Apple WatchUltra 3|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-1">Apple WatchUltra 3</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-ultra-nopromo-9-12-brandpagetile-d?fmt=webp-alpha" data-tablet-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-ultra-nopromo-9-12-brandpagetile-m?fmt=webp-alpha" data-mobile-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-ultra-nopromo-9-12-brandpagetile-m?fmt=webp-alpha" data-background-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-ultra-nopromo-9-12-brandpagetile-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            Apple&nbsp;Watch
+<br aria-hidden="true">Ultra&nbsp;3
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">With built-in satellite communications, multiday battery life, advanced metrics, dual-frequency GPS—it's the ultimate sport and adventure watch.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="Emergency SOS, Find My, and Messages via satellite are included for free for two years with the activation of Apple Watch Ultra 3. Connection and response times vary based on location, site conditions, and other factors. Find My and Messages via satellite require a carrier plan. To send and receive SMS/MMS from cellular models of Apple Watch over satellite, your paired iPhone must be powered on and connected to Wi-Fi or an active cellular network, but your iPhone doesn’t need to be nearby. SMS message rates may apply. Satellite connectivity provided by Globalstar and its affiliates. See support.apple.com/123924 for more information. Battery life varies by use and configuration. See apple.com/watch/battery for more information. When angled away from the user as compared with Apple Watch Ultra or Ultra 2." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="With built-in satellite communications, multiday battery life, advanced metrics, dual-frequency GPS—it's the ultimate sport and adventure watch." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" aria-expanded="false" aria-label="More information on With built-in satellite communications, multiday battery life, advanced metrics, dual-frequency GPS—it's the ultimate sport and adventure watch. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">Emergency SOS, Find My, and Messages via satellite are included for free for two years with the activation of Apple Watch Ultra 3. Connection and response times vary based on location, site conditions, and other factors. Find My and Messages via satellite require a carrier plan. To send and receive SMS/MMS from cellular models of Apple Watch over satellite, your paired iPhone must be powered on and connected to Wi-Fi or an active cellular network, but your iPhone doesn’t need to be nearby. SMS message rates may apply. Satellite connectivity provided by Globalstar and its affiliates. See support.apple.com/123924 for more information. Battery life varies by use and configuration. See apple.com/watch/battery for more information. When angled away from the user as compared with Apple Watch Ultra or Ultra 2.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="2" role="group" aria-label="Slide 2 of 4" aria-hidden="false">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="Apple Watch SE 3" templateid="ct_pod15" data-impression-contentkey="q3_apple_lp_watch_se_nopromo_9_12" href="/wireless-devices/apple/connected-smartwatches/apple-watch-se-3/" aria-labelledby="-promo-tile-link-2" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l12|p2||||||q3_apple_lp_watch_se_nopromo_9_12:Apple Watch SE 3|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-2">Apple Watch SE 3</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-se-nopromo-9-12-brandpagetile-d?fmt=webp-alpha" data-tablet-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-se-nopromo-9-12-brandpagetile-m?fmt=webp-alpha" data-mobile-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-se-nopromo-9-12-brandpagetile-m?fmt=webp-alpha" data-background-image="https://s7.vzw.com/is/image/VerizonWireless/q3-apple-lp-watch-se-nopromo-9-12-brandpagetile-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            Apple&nbsp;Watch&nbsp;SE&nbsp;3
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">
+            Packed with essentials like sleep score, Always-On display, Activity rings, and more. All for a great value.
+            
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="3" role="group" aria-label="Slide 3 of 4" aria-hidden="false">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="Apple WatchSeries 10" templateid="ct_pod15" data-impression-contentkey="q4_apple_lp_featured_tile_2" href="/wireless-devices/apple/connected-smartwatches/apple-watch-series-10/" aria-labelledby="-promo-tile-link-3" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l12|p3||||||q4_apple_lp_featured_tile_2:Apple WatchSeries 10|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-3">Apple WatchSeries 10</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-applewatch-1-d?fmt=webp-alpha" data-tablet-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-applewatch-1-m?fmt=webp-alpha" data-mobile-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-applewatch-1-m?fmt=webp-alpha" data-background-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-applewatch-1-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            Apple Watch
+<br aria-hidden="true">Series 10
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">
+            Featuring a bigger display with more screen area and a thinner, lighter design.
+            
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide scroll-to" data-slide-index="4" role="group" aria-label="Slide 4 of 4" aria-hidden="true">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="Shop Apple Watchaccessories" templateid="ct_pod15" data-impression-contentkey="q4_apple_lp_watch_tile_4" href="/wireless-devices/apple/products/watch-accessories/" aria-labelledby="-promo-tile-link-4" tabindex="-1" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l12|p4||||||q4_apple_lp_watch_tile_4:Shop Apple Watchaccessories|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-4">Shop Apple Watchaccessories</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad u-colorBackgroundPrimary" style="background-color: !important;" data-desktop-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-2-d?fmt=webp-alpha" data-tablet-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-2-m?fmt=webp-alpha" data-mobile-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-2-m?fmt=webp-alpha" data-background-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-2-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #FFFFFF!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            Shop Apple Watch
+<br aria-hidden="true">accessories
+          </h3>
+          
+          
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+      </div>
+
+    <div class="carousel-arrow-wrap carousel-arrow-next-wrap"><button class="arrow-next carousel-arrow Icon Icon--right-arrow u-marginTop--xs0 u-marginTop--lg0" aria-label="Next" aria-disabled="false"></button></div></div>
+  <div class="scroll-scrubber-wrap"><div class="scroll-scrubber-track"><div class="scroll-scrubber" style="width: 86.8852%;"></div></div></div></div>
+</section></div>
+<div class="section aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+  <section id="section_534731947">
+
+    
+      
+  
+  
+
+  <div class="Container   ">
+    
+
+
+
+
+    
+    
+    <div class="grid">
+
+
+
+
+
+
+
+
+  <div data-height-css="" style="--height--xs:auto;--height--md:auto;--height--lg:auto;" class="Grid lozad u-colorBackgroundSecondary        u-paddingTop--xs32 u-paddingRight--xs0 u-paddingBottom--xs0 u-paddingLeft--xs0 u-paddingTop--md  u-paddingRight--md u-paddingBottom--md u-paddingLeft--md u-paddingTop--lg48 u-paddingRight--lg0 u-paddingBottom--lg0 u-paddingLeft--lg0 u-flexAlignContentStart--xs u-flexAlignContentStart--md u-flexAlignContentStart--lg ">
+
+    
+      
+  
+  
+
+  
+    
+  
+    
+  
+    
+      
+        <div class="Col Col--xs12 Col--md12 Col--lg12  u-positionRelative--xs u-positionRelative--md ">
+          
+          
+          
+
+
+
+
+    
+    
+    <div class="u-textCenter">
+
+
+
+
+
+
+    
+    
+    <div class="html">
+  
+    
+
+  
+
+
+  
+   <div>
+              
+              <a href="/wireless-devices/apple/connected-smartwatches/apple/" class="  Button u-text--xs16 u-text--md16 u-textBold u-marginBottom--xs0 u-fontDisplay" aria-label="Shop for smartwatches" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l13|p1|||||||Shop for smartwatches&quot;}">
+              Shop all
+            </a>
+
+ <a href="/wireless-devices/apple/wireless-devices/smart-watches/apple-watch-compare/" class="  Button--secondary  Button--transparent Button u-text--xs16u-text--md16 u-textBold u-marginBottom--xs0 u-flexAlignContentCenter--lg u-fontDisplay u-marginRight--0" aria-label="compare" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l13|p2|||||||compare&quot;}">
+              Compare
+            </a>
+</div>
+  
+</div>
+
+
+</div>
+
+
+
+        </div>
+      
+    
+  
+
+    
+  </div>
+</div>
+
+
+
+  </div>
+
+    
+  </section>
+</div>
+<div class="spacer aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs96 u-paddingTop--lg128">
+</div></div>
+<div class="section aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+  <section id="ipad-pro">
+
+    
+      
+  
+  
+
+  <div class="Container  overflow ">
+    
+
+
+
+
+    
+    
+    <div class="sectionHeader">
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+ 
+  
+    <div translate="yes" class="u-colorBackgroundSecondary u-colorPrimary u-textCenter u-textxsCenter     ">
+      <div class="cmp-wrapper">
+          <div class="Grid u-paddingY--16 u-paddingY--lg20 u-flexAlignContentStart--md">
+            
+              
+  
+  <div class="Col Col--12 u-positionRelative content-wrap">
+    <div class="headlineWrap u-marginBottom--xs16 u-marginBottom--lg20  ">
+      <h2 class=" u-fontDisplay u-textLineHeightTight u-text--xs32 u-text--md u-text--lg64 u-textBold u-displayInline">
+        iPad
+<br aria-hidden="true">Powerful. Portable. Magical.
+      </h2>
+      
+    </div>
+    
+
+    <div class="btn-wrap u-marginTop--24 u-marginTop--lg32">
+      
+      
+      
+    </div>
+  </div>
+
+
+            
+          </div>
+      </div>
+    </div>
+  
+</div>
+
+
+    
+    
+    <div class="hero">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+  
+
+  <div data-cmp="vzrf-hero">
+
+    
+        <section data-loading="eager" translate="yes" style=" --bgMobile:url('https://ss7.vzw.com/is/image/VerizonWireless/1025_q3_apple_lp_ipad_pro_13_banner_10_23_hero2025_m?fmt=webp-alpha&amp;scl=2'); --bgMobile2x:url('https://ss7.vzw.com/is/image/VerizonWireless/1025_q3_apple_lp_ipad_pro_13_banner_10_23_hero2025_m?fmt=webp-alpha&amp;scl=1'); --bgTablet:url('https://ss7.vzw.com/is/image/VerizonWireless/1025_q3_apple_lp_ipad_pro_13_banner_10_23_hero2025_d?fmt=webp-alpha&amp;scl=2'); --bgTablet2x:url('https://ss7.vzw.com/is/image/VerizonWireless/1025_q3_apple_lp_ipad_pro_13_banner_10_23_hero2025_d?fmt=webp-alpha&amp;scl=1'); --bgDesktop:url('https://ss7.vzw.com/is/image/VerizonWireless/1025_q3_apple_lp_ipad_pro_13_banner_10_23_hero2025_d?fmt=webp-alpha&amp;scl=2'); --bgDesktop2x:url('https://ss7.vzw.com/is/image/VerizonWireless/1025_q3_apple_lp_ipad_pro_13_banner_10_23_hero2025_d?fmt=webp-alpha&amp;scl=1');" class="rounded-corner  background-image background-contain--lg extended-bg background-cover--xs background-contain--md background-positionX--lg50 background-positionX--md50 background-positionX--xs50 u-colorBackgroundPrimary">
+    
+    
+    <div class="Container u-marginLeft--0">
+    
+      <div data-height-css="" style="--height--xs:560px;--height--md:380px;--height--lg:480px;" class="Grid u-paddingTop--xs32 u-paddingBottom--xs56 u-paddingLeft--xs0 u-paddingRight--xs16 u-paddingBottom--md48 u-paddingLeft--md4 u-paddingRight--md20 u-paddingTop--md84 u-paddingBottom--lg48 u-paddingRight--lg168 u-paddingTop--lg89 non-extended-hero">
+        <div class="u-positionRelative--xs u-positionRelative--md Col Col--xs12 Col--md6 Col--lg8">
+    
+    
+
+
+        <div class="header">
+          <div class="u-colorSecondary u-paddingBottom--xs12 u-paddingTop--xs0 u-paddingLeft--xs0 u-paddingRight--xs12 u-paddingBottom--lg16 u-paddingTop--lg0 u-paddingLeft--lg4 u-paddingRight--lg0">
+
+            <h2 class=" u-fontDisplay u-marginAllNone u-text--xs32 u-lineHeight--xs32 u-text--md48 u-lineHeight--md48 u-text--lg48 u-lineHeight--lg48">
+                
+              <span class="promo-data-header">
+                iPad Pro
+              </span>
+
+              
+
+              </h2>
+
+
+            </div>
+
+        </div>
+
+        <div class="sub-header">
+          <div class="u-colorSecondary u-paddingBottom--xs0 u-paddingTop--xs0 u-paddingLeft--xs0 u-paddingRight--xs0 u-paddingBottom--lg0 u-paddingTop--lg0 u-paddingLeft--lg4 u-paddingRight--lg0">
+              <p class=" u-textLineHeightNormal u-textRegular u-text--xs16 u-lineHeight--xs20 u-text--md16 u-lineHeight--md20 u-text--lg20 u-lineHeight--lg24">With a stunning Ultra Retina XDR display, superfast Wi-Fi 7
+<br class="u-showForLargeUp" aria-hidden="true">and 5G Cellular, Neural Accelerators for AI workloads, and
+<br class="u-showForLargeUp" aria-hidden="true">a redesigned iPadOS, there’s no limit to what you can do
+<br class="u-showForLargeUp" aria-hidden="true">with iPad Pro.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="Wi‑Fi 7 available in countries and regions where supported. Data plan required. 5G is available in select markets and through select carriers. Speeds vary based on site conditions and carrier. For details on 5G support, contact your carrier and see apple.com/ipad/cellular." data-tooltip-type="icon" data-aria-label="iPad Pro" data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" tabindex="0" aria-expanded="false" aria-label="More information on iPad Pro tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">Wi‑Fi 7 available in countries and regions where supported. Data plan required. 5G is available in select markets and through select carriers. Speeds vary based on site conditions and carrier. For details on 5G support, contact your carrier and see apple.com/ipad/cellular.</span>
+  </span>
+            </span>
+              </p>
+            </div>
+
+        </div>
+
+        <div>
+
+          <div class="cta_button">
+
+              <span class="button">
+                
+                  <a href="/wireless-devices/apple/tablets/apple-ipad-pro-13-inch-m5/" class="Button Button--inverse u-textBreakNoWrap   u-marginRight--8 u-marginY--24 u-marginY--lg32  u-paddingY--12 u-paddingX--24  u-text--16 u-lineHeight--20" data-description="Buy now" aria-label="Buy now iPad Pro" data-campaign-id="2025_OCT_LA_1_NPI_IPAD" data-impression-category="Tablet-Apple" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l16|p1|Tablet-Apple|||||2025_OCT_LA_1_NPI_IPAD|Buy now&quot;}">
+                    Buy now
+                  </a>
+                
+
+                
+              </span>
+
+
+              
+
+
+            
+
+
+          </div>
+        </div>
+
+
+       
+      </div>
+      
+      </div>
+      </div>
+    </section>
+  </div>
+
+
+</div>
+
+
+
+  </div>
+
+    
+  </section>
+</div>
+<div class="spacer aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs32 u-paddingTop--lg64">
+</div></div>
+<div class="personalizedPromoTilesCarousel aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+<section translate="yes">
+  <div class="vui-carousel" data-cmp="vui-personalized-promo-tiles-carousel" data-config-prospect="" data-count="9" data-prospect="{&quot;uniqueID&quot;:&quot;q1_apple_lp_ipadair_m4_nopromo_3_4&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;iPad Air (M4)&quot;,&quot;subheadCopy&quot;:&quot;Built for Apple Intelligence. iPad Air, now supercharged by the Apple M4 chip. Powerfully capable and affordable.&quot;,&quot;tooltip&quot;:&quot;Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see support.apple.com/121115.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/tablets/apple-ipad-air-13-inch-m4/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_ipadair_m4_nopromo_3_4-tileimage-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_ipadair_m4_nopromo_3_4-tileimage-m&quot;},{&quot;uniqueID&quot;:&quot;do_q3_apple_lp_ipad_pro_11_10_23&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;,&quot;headlineCopy&quot;:&quot;iPad Pro 11-inch&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;With a stunning Ultra Retina XDR display, superfast Wi-Fi 7 and 5G Cellular, Neural Accelerators for AI workloads, and a redesigned iPadOS, there’s no limit to what you can do with iPad Pro.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;tooltip&quot;:&quot;Wi‑Fi 7 available in countries and regions where supported. Data plan required. 5G is available in select markets and through select carriers. Speeds vary based on site conditions and carrier. For details on 5G support, contact your carrier and see apple.com/ipad/cellular.&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/tablets/apple-ipad-pro-11-inch-m5&quot;,&quot;legalCopyColor&quot;:&quot;#000000&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_11_10_23_hptile_d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_11_10_23_hptile_m&quot;},{&quot;uniqueID&quot;:&quot;q1_apple_lp_ipad_a16_tile&quot;,&quot;headlineCopy&quot;:&quot;iPad (A16)&quot;,&quot;headlineCopyColor&quot;:&quot;#000000&quot;,&quot;subheadCopy&quot;:&quot;The 11-inch iPad is now more capable than ever with the superfast A16 chip, Liquid Retina display, advanced cameras, fast Wi-Fi 6 and 5G, USB-C connector, and four gorgeous colors.&quot;,&quot;subheadCopyColor&quot;:&quot;#000000&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/tablets/apple-ipad-a16/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-ipad-4-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-ipad-4-m&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;},{&quot;uniqueID&quot;:&quot;q4_apple_lp_ipad_tile_4&quot;,&quot;headlineCopy&quot;:&quot;Shop iPad&lt;br&gt;accessories&quot;,&quot;headlineCopyColor&quot;:&quot;#FFFFFF&quot;,&quot;primaryCTAWebDestination&quot;:&quot;/products/tablet-accessories/&quot;,&quot;backgroundImageURLWeb&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-3-d&quot;,&quot;backgroundImageURLAndroid&quot;:&quot;https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-3-m&quot;,&quot;templateID&quot;:&quot;ct_pod15&quot;}" role="group" aria-label="Carousel with 4 slides">
+    <div class="carousel-scroll-container u-paddingTop--xs40 u-paddingTop--lg64 u-paddingBottom--xs40 u-paddingBottom--md64 scroll-target--nextHidden"><div class="carousel-arrow-wrap carousel-arrow-prev-wrap"><button class="arrow-prev carousel-arrow Icon Icon--left-arrow u-marginTop--xs0 u-marginTop--lg0 disabled" aria-label="Previous" aria-disabled="true"></button></div>
+      
+
+      <div class="carousel-content prospectCarousel" tab-index="-1">
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide scroll-to active" data-slide-index="1" role="group" aria-label="Slide 1 of 4" aria-hidden="false">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="iPad Air (M4)" templateid="ct_pod15" data-impression-contentkey="q1_apple_lp_ipadair_m4_nopromo_3_4" href="/wireless-devices/apple/tablets/apple-ipad-air-13-inch-m4/" aria-labelledby="-promo-tile-link-1" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l17|p1||||||q1_apple_lp_ipadair_m4_nopromo_3_4:iPad Air (M4)|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-1">iPad Air (M4)</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_ipadair_m4_nopromo_3_4-tileimage-d?fmt=webp-alpha" data-tablet-image="https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_ipadair_m4_nopromo_3_4-tileimage-m?fmt=webp-alpha" data-mobile-image="https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_ipadair_m4_nopromo_3_4-tileimage-m?fmt=webp-alpha" data-background-image="https://s7.vzw.com/is/image/VerizonWireless/q1_apple_lp_ipadair_m4_nopromo_3_4-tileimage-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: !important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            iPad Air (M4)
+          </h3>
+          
+          <p style="color: !important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">Built for Apple Intelligence. iPad Air, now supercharged by the Apple M4 chip. Powerfully capable and affordable.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see support.apple.com/121115." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="Built for Apple Intelligence. iPad Air, now supercharged by the Apple M4 chip. Powerfully capable and affordable." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" aria-expanded="false" aria-label="More information on Built for Apple Intelligence. iPad Air, now supercharged by the Apple M4 chip. Powerfully capable and affordable. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see support.apple.com/121115.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="2" role="group" aria-label="Slide 2 of 4" aria-hidden="false">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="iPad Pro 11-inch" templateid="ct_pod15" data-impression-contentkey="do_q3_apple_lp_ipad_pro_11_10_23" href="/wireless-devices/apple/tablets/apple-ipad-pro-11-inch-m5/" aria-labelledby="-promo-tile-link-2" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l17|p2||||||do_q3_apple_lp_ipad_pro_11_10_23:iPad Pro 11-inch|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-2">iPad Pro 11-inch</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_11_10_23_hptile_d?fmt=webp-alpha" data-tablet-image="https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_11_10_23_hptile_m?fmt=webp-alpha" data-mobile-image="https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_11_10_23_hptile_m?fmt=webp-alpha" data-background-image="https://ss7.vzw.com/is/image/VerizonWireless/1025_do_q3_apple_lp_ipad_pro_11_10_23_hptile_d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            iPad Pro 11-inch
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">With a stunning Ultra Retina XDR display, superfast Wi-Fi 7 and 5G Cellular, Neural Accelerators for AI workloads, and a redesigned iPadOS, there’s no limit to what you can do with iPad Pro.<span class="tooltip">​
+              <span class="vzrf-tooltip" data-tooltip-content="Wi‑Fi 7 available in countries and regions where supported. Data plan required. 5G is available in select markets and through select carriers. Speeds vary based on site conditions and carrier. For details on 5G support, contact your carrier and see apple.com/ipad/cellular." data-tooltip-type="icon" data-tooltip-label="see details" data-aria-label="With a stunning Ultra Retina XDR display, superfast Wi-Fi 7 and 5G Cellular, Neural Accelerators for AI workloads, and a redesigned iPadOS, there’s no limit to what you can do with iPad Pro." data-cmp-vzrf-initialized="true">
+    <button class="Icon Icon--info u-textDecorationNone u-text--xs14 u-text--lg16" aria-expanded="false" aria-label="More information on With a stunning Ultra Retina XDR display, superfast Wi-Fi 7 and 5G Cellular, Neural Accelerators for AI workloads, and a redesigned iPadOS, there’s no limit to what you can do with iPad Pro. tooltip">
+      
+    </button>
+    <span class="u-screenReaderOnly" aria-hidden="true">Wi‑Fi 7 available in countries and regions where supported. Data plan required. 5G is available in select markets and through select carriers. Speeds vary based on site conditions and carrier. For details on 5G support, contact your carrier and see apple.com/ipad/cellular.</span>
+  </span>
+            </span>
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide" data-slide-index="3" role="group" aria-label="Slide 3 of 4" aria-hidden="false">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="iPad (A16)" templateid="ct_pod15" data-impression-contentkey="q1_apple_lp_ipad_a16_tile" href="/wireless-devices/apple/tablets/apple-ipad-a16/" aria-labelledby="-promo-tile-link-3" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l17|p3||||||q1_apple_lp_ipad_a16_tile:iPad (A16)|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-3">iPad (A16)</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad" style="background-color: !important;" data-desktop-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-ipad-4-d?fmt=webp-alpha" data-tablet-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-ipad-4-m?fmt=webp-alpha" data-mobile-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-ipad-4-m?fmt=webp-alpha" data-background-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-ipad-4-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #000000!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            iPad (A16)
+          </h3>
+          
+          <p style="color: #000000!important;" class="u-fontDisplay u-textLineHeightNormal u-colorPrimary u-text--xs16  u-marginBottom--xs0">
+            The 11-inch iPad is now more capable than ever with the superfast A16 chip, Liquid Retina display, advanced cameras, fast Wi-Fi 6 and 5G, USB-C connector, and four gorgeous colors.
+            
+          </p>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+          
+          
+  
+  
+  
+
+  <div class="u-positionRelative promo-tile-main-container carousel-slide scroll-to" data-slide-index="4" role="group" aria-label="Slide 4 of 4" aria-hidden="true">
+    <div class="carousel-slide-content">
+      <a class="promo-tile-link" data-description="Shop iPadaccessories" templateid="ct_pod15" data-impression-contentkey="q4_apple_lp_ipad_tile_4" href="/wireless-devices/apple/products/tablet-accessories/" aria-labelledby="-promo-tile-link-4" tabindex="-1" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l17|p4||||||q4_apple_lp_ipad_tile_4:Shop iPadaccessories|tile&quot;}">
+        <span class="u-screenReaderOnly" id="-promo-tile-link-4">Shop iPadaccessories</span>
+      </a>
+      <div class="promo-tile promo-tile-section alignTextLeft ">
+        <div class="tile fed-drop-shadow u-paddingAll--xs24 background-tabletImg_1440 background-image background-cover lozad u-colorBackgroundPrimary" style="background-color: !important;" data-desktop-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-3-d?fmt=webp-alpha" data-tablet-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-3-m?fmt=webp-alpha" data-mobile-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-3-m?fmt=webp-alpha" data-background-image="https://ss7.vzw.com/is/image/VerizonWireless/apple-lp-lifestyle-3-d?fmt=webp-alpha&amp;scl=2">
+          <h3 style="color: #FFFFFF!important;" class="u-fontDisplay u-textLineHeightTight u-colorPrimary u-text--xs32 u-textBold u-marginBottom--xs12 u-textLeft ">
+            Shop iPad
+<br aria-hidden="true">accessories
+          </h3>
+          
+          
+
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        
+      </div>
+
+    <div class="carousel-arrow-wrap carousel-arrow-next-wrap"><button class="arrow-next carousel-arrow Icon Icon--right-arrow u-marginTop--xs0 u-marginTop--lg0" aria-label="Next" aria-disabled="false"></button></div></div>
+  <div class="scroll-scrubber-wrap"><div class="scroll-scrubber-track"><div class="scroll-scrubber" style="width: 86.8852%;"></div></div></div></div>
+</section></div>
+<div class="section aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+  <section id="section_1153648442">
+
+    
+      
+  
+  
+
+  <div class="Container   ">
+    
+
+
+
+
+    
+    
+    <div class="grid">
+
+
+
+
+
+
+
+
+  <div data-height-css="" style="--height--xs:auto;--height--md:auto;--height--lg:auto;" class="Grid lozad u-colorBackgroundSecondary        u-paddingTop--xs32 u-paddingRight--xs0 u-paddingBottom--xs0 u-paddingLeft--xs0 u-paddingTop--md  u-paddingRight--md u-paddingBottom--md u-paddingLeft--md u-paddingTop--lg48 u-paddingRight--lg0 u-paddingBottom--lg0 u-paddingLeft--lg0 u-flexAlignContentStart--xs u-flexAlignContentStart--md u-flexAlignContentStart--lg ">
+
+    
+      
+  
+  
+
+  
+    
+  
+    
+  
+    
+      
+        <div class="Col Col--xs12 Col--md12 Col--lg12  u-positionRelative--xs u-positionRelative--md ">
+          
+          
+          
+
+
+
+
+    
+    
+    <div class="u-textCenter">
+
+
+
+
+
+
+    
+    
+    <div class="html">
+  
+    
+
+  
+
+
+  <style>@media screen and (max-width: 913px) {
+          .Grid>.Col {
+    padding: 0px 8px;
+}
+    }
+
+
+.Button, a.Button, button {
+font-size: 16px !important;
+}</style>
+   <div>
+              
+              <a href="/wireless-devices/apple/tablets/apple/" class="Button u-textBold u-marginBottom--xs0 u-fontDisplay" aria-label="Shop for tables" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l18|p1|||||||Shop for tables&quot;}">
+              Shop all
+            </a>
+
+ <a href="/wireless-devices/apple/wireless-devices/tablets/ipad-compare/" class="Button--secondary  Button--transparent Button u-text--xs16 u-text--lg16 u-textBold u-marginBottom--xs0 u-flexAlignContentCenter--lg u-fontDisplay u-marginRight--0" aria-label="compare" data-track="{&quot;type&quot;:&quot;impression&quot;,&quot;name&quot;:&quot;l18|p2|||||||compare&quot;}">
+              Compare
+            </a>
+</div>
+  
+</div>
+
+
+</div>
+
+
+
+        </div>
+      
+    
+  
+
+    
+  </div>
+</div>
+
+
+
+  </div>
+
+    
+  </section>
+</div>
+<div class="spacer aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+
+
+<div data-cmp="vzrf-spacer" class="u-paddingTop--xs96 u-paddingTop--lg128">
+</div></div>
+<div class="html aem-GridColumn aem-GridColumn--default--12">
+  
+    
+
+  
+
+
+  <style>a.Button{
+
+letter-spacing: 0.03125rem;
+}</style>
+  
+  
+</div>
+<div class="html aem-GridColumn aem-GridColumn--default--12">
+  
+    
+
+  
+
+
+  <style>.hero [data-cmp="vzrf-hero"] .Container .sub-header p {
+font-family: Verizon-NHG-eDS,Helvetica,Arial,sans-serif;
+}</style>
+  
+  
+</div>
+
+  
+</div></main>
+
+<footer id="vz-gf20"><div class="xf-page-unified xfpage page basicpage">
+<div class="gnav20 " data-exp-name="Master">
+     <input type="hidden" id="cradle-context">
+    <div class="gnav20-sticky-content">    	
+     	
+
+
+
+
+    
+    
+    <div class="gnav20-footercontainer">
+<div class="gnav20-footer-container gnav20-white-focus gnav20-mobile-footer-accordion" data-gnav20-container="footer">
+	<div class="gnav20-main-container">
+		<div class="gnav20-footer-level-one">
+			<div class="gnav20-footer-wrapper gnav20-four ">
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Shop</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Shop menu list">
+					
+						<li>
+							<a href="/smartphones/">Devices</a>
+						</li>
+					
+						<li>
+							<a href="/products/">Accessories</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Top Device Brands</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Top Device Brands menu list">
+					
+						<li>
+							<a href="/wireless-devices/samsung/">Samsung</a>
+						</li>
+					
+						<li>
+							<a href="/wireless-devices/apple/">Apple</a>
+						</li>
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Support</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Support menu list">
+					
+						<li>
+							<a href="/support/">Support overview</a>
+						</li>
+					
+						<li>
+							<a href="/support/return-policy/">Return policy</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">About Verizon</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="About Verizon menu list">
+					
+						<li>
+							<a href="/about/">About us</a>
+						</li>
+					
+						<li>
+							<a href="https://mycareer.verizon.com/" target="_blank" rel="noopener noreferrer">Careers</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+			</div>
+			<div class="gnav20-footer-wrapper gnav20-four">			
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Most Popular</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Most Popular menu list">
+					
+						<li>
+							<a href="/smartphones/apple-iphone-17/">Apple iPhone 17</a>
+						</li>
+					
+						<li>
+							<a href="/smartphones/apple-iphone-17e/">Apple iPhone 17e</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Top Accessory Brands</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Top Accessory Brands menu list">
+					
+						<li>
+							<a href="/products/otterbox/">Otterbox</a>
+						</li>
+					
+						<li>
+							<a href="/products/zagg/">ZAGG</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading"> Important Consumer Information</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label=" Important Consumer Information menu list">
+					
+						<li>
+							<a href="/about/terms-conditions/overview/">Legal Terms &amp; Notices</a>
+						</li>
+					
+						<li>
+							<a href="https://ss7.vzw.com/is/content/VerizonWireless/Device-Payment-Agreement-Template" target="_blank" rel="noopener noreferrer">Device Payment Terms &amp; Conditions</a>
+						</li>
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-socialfooter">
+<div class="gnav20-hero-wrapper">
+	<div class="gnav20-hero-footer-heading">Follow Verizon</div>
+	<div class="gnav20-border-content gnav20-social-icon">
+		<ul aria-label="Follow Verizon menu list">
+			
+			<li>
+				<a class="gnav20-social-media" href="https://www.facebook.com/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Facebook" title="Opens New Window">
+					<span>facebook-official</span>
+					<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1017.78"><path fill="#fff" d="M1024,512C1024,229.23,794.77,0,512,0S0,229.23,0,512c0,255.55,187.23,467.37,432,505.78v-357.78h-130v-148h130v-112.8c0-128.32,76.44-199.2,193.39-199.2,56.02,0,114.61,10,114.61,10v126h-64.56c-63.6,0-83.44,39.47-83.44,79.96v96.04h142l-22.7,148h-119.3v357.78c244.77-38.41,432-250.22,432-505.78Z"></path></svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://twitter.com/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Twitter" title="Opens New Window">
+					<span>twitter</span>
+					<svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://www.youtube.com/user/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Youtube" title="Opens New Window">
+					<span>you-tube</span>
+					<svg focusable="false" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.5 18" style="enable-background:new 0 0 18.5 18;" xml:space="preserve">
+						<path fill="#FFF" d="M17.8,4.8C17.6,4,17,3.4,16.2,3.2c-1.4-0.4-7-0.4-7-0.4s-5.6,0-7,0.4C1.4,3.4,0.8,4.1,0.6,4.8C0.2,6.3,0.2,9.2,0.2,9.2
+							s0,2.9,0.4,4.4c0.2,0.7,0.8,1.4,1.6,1.6c1.4,0.4,7,0.4,7,0.4s5.6,0,7-0.4c0.8-0.2,1.4-0.8,1.6-1.6c0.4-1.5,0.4-4.4,0.4-4.4
+							S18.2,6.3,17.8,4.8z M7.4,11.9V6.5l4.7,2.7L7.4,11.9z"></path>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://www.instagram.com/verizon/" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Instagram" title="Opens New Window">
+					<span>instagram</span>
+					<svg focusable="false" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+						<g>
+							<path fill="#FFF" d="M18,5.3c0-1-0.2-1.6-0.4-2.2c-0.2-0.6-0.5-1.1-1-1.6c-0.5-0.5-1-0.8-1.6-1c-0.6-0.2-1.2-0.4-2.2-0.4C11.8,0,11.4,0,9,0
+								S6.3,0,5.3,0c-1,0-1.6,0.2-2.2,0.4C2.5,0.7,2,1,1.5,1.5s-0.8,1-1,1.6C0.3,3.7,0.1,4.3,0.1,5.3C0,6.2,0,6.6,0,9c0,2.4,0,2.8,0.1,3.7
+								c0,1,0.2,1.6,0.4,2.2c0.2,0.6,0.5,1.1,1,1.6s1,0.8,1.6,1c0.6,0.2,1.2,0.4,2.2,0.4C6.3,18,6.6,18,9,18s2.8,0,3.7-0.1
+								c1,0,1.6-0.2,2.2-0.4c0.6-0.2,1.1-0.5,1.6-1c0.5-0.5,0.8-1,1-1.6c0.2-0.6,0.4-1.2,0.4-2.2c0-1,0.1-1.3,0.1-3.7
+								C18,6.6,18,6.2,18,5.3z M16.3,12.6c0,0.9-0.2,1.4-0.3,1.7c-0.2,0.4-0.4,0.7-0.7,1s-0.6,0.5-1,0.7c-0.3,0.1-0.8,0.3-1.7,0.3
+								c-0.9,0-1.2,0.1-3.6,0.1s-2.7,0-3.6-0.1c-0.9,0-1.4-0.2-1.7-0.3c-0.4-0.2-0.7-0.4-1-0.7s-0.5-0.6-0.7-1c-0.1-0.3-0.3-0.8-0.3-1.7
+								c0-0.9-0.1-1.2-0.1-3.6c0-2.4,0-2.7,0.1-3.6C1.7,4.5,1.9,4,2,3.7c0.2-0.4,0.4-0.7,0.7-1C3,2.3,3.3,2.1,3.7,2C4,1.9,4.5,1.7,5.4,1.7
+								c0.9,0,1.2-0.1,3.6-0.1c2.4,0,2.7,0,3.6,0.1c0.9,0,1.4,0.2,1.7,0.3c0.4,0.2,0.7,0.4,1,0.7s0.5,0.6,0.7,1c0.1,0.3,0.3,0.8,0.3,1.7
+								c0,0.9,0.1,1.2,0.1,3.6C16.4,11.4,16.4,11.7,16.3,12.6z"></path>
+							<path fill="#FFF" d="M9,4.4C6.5,4.4,4.4,6.4,4.4,9c0,2.6,2.1,4.6,4.6,4.6s4.6-2.1,4.6-4.6C13.6,6.4,11.6,4.4,9,4.4z M9,12c-1.7,0-3-1.3-3-3
+								c0-1.7,1.3-3,3-3c1.7,0,3,1.3,3,3C12,10.7,10.7,12,9,12z"></path>
+							<path fill="#FFF" d="M13.8,3.1c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1c0.6,0,1.1-0.5,1.1-1.1C14.9,3.6,14.4,3.1,13.8,3.1z"></path>
+						</g>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://www.tiktok.com/@verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on TikTok" title="Opens New Window">
+					<span>TikTok</span>
+					<svg xmlns="http://www.w3.org/2000/svg" height="19" viewBox="0 0 16 18">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M9.2984 0.7758H11.5884C11.8091 1.9405 12.5165 2.9399 13.4965 3.5643L13.4975 3.5655C14.1797 4 14.9931 4.2535 15.8663 4.2535V4.934L15.8664 7.31C14.2444 7.31 12.7414 6.8029 11.5146 5.9423V12.1547C11.5146 15.2573 8.9319 17.7814 5.7572 17.7814C4.5305 17.7814 3.3929 17.4033 2.4578 16.7616L2.4562 16.76C0.9724 15.7412 0 14.0571 0 12.1541C0 9.0516 2.5827 6.5274 5.7574 6.5274C6.0208 6.5274 6.279 6.5486 6.5332 6.5823V7.3065L6.5331 9.7037C6.2875 9.6286 6.0279 9.5849 5.7572 9.5849C4.3074 9.5849 3.1279 10.7378 3.1279 12.1547C3.1279 13.1414 3.7007 13.9987 4.5376 14.4291C4.9025 14.6168 5.317 14.7244 5.7571 14.7244C7.1735 14.7244 8.3289 13.6233 8.3815 12.2514L8.3865 0H11.5145C11.5145 0.265 11.5407 0.524 11.5884 0.7758H9.2984Z" fill="#161823"></path>
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+
+
+    
+    
+    <div class="gnav20-socialfooter">
+<div class="gnav20-hero-wrapper">
+	<div class="gnav20-hero-footer-heading">Verizon Support</div>
+	<div class="gnav20-border-content gnav20-social-icon">
+		<ul aria-label="Verizon Support menu list">
+			
+			
+			<li>
+				<a class="gnav20-social-media" href="https://x.com/verizonsupport" target="_blank" rel="noopener noreferrer" aria-label="Verizon Support on Twitter" title="Opens New Window">
+					<span>twitter</span>
+					<svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path>
+					</svg>
+				</a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+</div>
+</div>
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="gnav20-footer-level-two gnav20-custom-margin-left">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-logo">
+
+    
+    
+    <div class="gnav20-logo-wrapper gnav20-relative-index">
+        
+        <a class="gnav20-logoBlackBg" title="Verizon Home Page" href="/"></a>
+        
+    </div>
+</div>
+
+
+    
+    
+    <div class="gnav20-footerlink">
+
+
+	<ul aria-label="Policies and notices menu list" class="gnav20-footer-list ">
+		<li>
+			<a href="/about/privacy/">
+				Privacy Policy
+			</a>
+		</li>
+	
+		<li>
+			<a data-hide-for="appid:communitykh" href="/privacy/your-privacy-choices/">
+				Your Privacy Choices <span style="height:10px;width:28px;display:inline-block;position:relative;"><svg style="position:absolute;width:28px;bottom:-2px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 14" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0066FF;}.st2{fill:#FFFFFF;}.st3{fill:#0066FF;}</style><g><g id="final---dec.11-2020_1_"><g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)"><path class="st0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"></path></g></g></g><g id="final---dec.11-2020"><g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)"><path class="st1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8 h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"></path><path id="x" class="st2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0 l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8 c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"></path><path id="y" class="st3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0 L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"></path></g></g></g></g></svg></span>
+			</a>
+		</li>
+	
+		<li class="gnav20-hide">
+			<a data-show-for="appid:communitykh" href="https://community.verizon.com/t5/custom/page/page-id/yourprivacychoices">
+				Your Privacy Choices <span style="height:10px;width:28px;display:inline-block;position:relative;"><svg style="position:absolute;width:28px;bottom:-2px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 14" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0066FF;}.st2{fill:#FFFFFF;}.st3{fill:#0066FF;}</style><g><g id="final---dec.11-2020_1_"><g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)"><path class="st0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"></path></g></g></g><g id="final---dec.11-2020"><g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)"><path class="st1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8 h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"></path><path id="x" class="st2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0 l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8 c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"></path><path id="y" class="st3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0 L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"></path></g></g></g></g></svg></span>
+			</a>
+		</li>
+	
+		
+	
+		<li>
+			<a href="/about/our-company/open-internet/">
+				Open Internet
+			</a>
+		</li>
+	
+		<li>
+			<a href="/support/website-use-legal/">
+				Website Terms of Use
+			</a>
+		</li>
+	</ul>
+
+	<div class="copyright-section">
+		<div class="copyright-text">
+			© <span id="copyright-year">2026</span> Verizon
+		</div>
+    <div id="visual-cue"><div></div><div></div><div></div></div></div>
+</div>
+
+
+
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+     </div>
+	<div class="gnav20-sticky-header  gnav20-with-promo"></div>
+</div>
+
+
+
+</div>
+</footer>
+
+
+<div class="gnav20-click-div"></div></body></html>

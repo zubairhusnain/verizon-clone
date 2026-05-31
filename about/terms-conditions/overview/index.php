@@ -1,0 +1,1321 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/../../../base-url.php';
+vz_start_output_rewrite();
+?>
+<!DOCTYPE html><html lang="en"><head>
+<style id="offline-terms-overview-layout">
+  #offline-l2-links { display: none !important; }
+  header#vz-gh20 style#gnav20-preload,
+  header#vz-gh20 #gnav20-header-end,
+  header#vz-gh20 .gnav20-preload { display: none !important; }
+  .external-link-modal-container { display: none !important; }
+  main[role="main"] .breadcrumb { margin-bottom: 1rem; }
+  main[role="main"] .row { display: flex; flex-wrap: wrap; }
+  main[role="main"] .col-md-6 { flex: 0 0 100%; max-width: 100%; }
+  @media (min-width: 768px) {
+    main[role="main"] .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+  }
+</style>
+
+<!-- offline: marketing stripped -->
+<style id="nav-simplify-offline">
+.gnav20-sticky-content .gnav20-apicomponentnewdesign,
+.gnav20-apicomponentnewdesign { opacity: 1 !important; }
+.gnav20-sub-header-menu,
+.gnav20-vzhmoverlay,
+.gnav20-mega-drawer,
+.gnav20-nav-mask { display: none !important; }
+.gnav20-search-utility,
+.gnav20-account-utility,
+.gnav20-unifiedcart,
+.gnav20-localization { display: none !important; }
+.gnav20-primary-menu button.gnav20-menu-label-button { display: none !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation,
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility { opacity: 1 !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two { display: block !important; width: 100% !important; height: 88px !important; padding: 0 20px !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-grid1-wrapper { position: absolute !important; width: auto !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation { width: 100% !important; height: 88px !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation { padding: 34px 0 !important; margin: 0 !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-navigation-list {
+  width: 80% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+}
+.gnav20 .gnav20-new-search-style .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation .gnav20-navigation-list {
+  margin: 0 auto 0 145px !important;
+  justify-content: flex-start !important;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation-item .gnav20-primary-menu { margin: 0 8px !important; }
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-navigation .gnav20-navigation a.gnav20-menu-label-button {
+  visibility: visible !important;
+  color: #000 !important;
+  display: inline !important;
+  position: relative !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  padding: 0 0 2px !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  font-weight: bold !important;
+  z-index: 4502 !important;
+}
+.gnav20 .gnav20-desktop .gnav20-row-two .gnav20-utility { display: none !important; }
+.gnav20 .gnav20-mobile .gnav20-menu-label-link { display: none !important; }
+.gnav20 .gnav20-mobile a.gnav20-menu-label-button,
+.gnav20 .gnav20-mobile.gnav20-stacked-utility #gnav20-ulwrapper .gnav20-navigation-item a.gnav20-menu-label-button {
+  display: block !important;
+  visibility: visible !important;
+  color: #000 !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  padding: 18px 16px !important;
+  border-bottom: 1px solid #d8dada !important;
+  text-decoration: none !important;
+  position: relative !important;
+  opacity: 1 !important;
+}
+</style>
+
+
+<style id="offline-target-flexpage">
+  .off-canvas-content,
+  .off-canvas-wrapper,
+  .dialog-off-canvas-main-canvas {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  #__next { display: block !important; height: auto !important; overflow: visible !important; }
+  main.main-content,
+  main[role="main"] {
+    display: block !important;
+    position: relative !important;
+    z-index: 1;
+    min-height: 40vh;
+    margin-top: 0 !important;
+  }
+  .center-container,
+  .inner-content {
+    width: 100% !important;
+    max-width: 1272px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .fp_hero_display_one_digital-component .comp-type-mini-hero-display {
+    min-height: 180px !important;
+  }
+  .react-multi-carousel-list,
+  .react-multi-carousel-track {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    transform: none !important;
+  }
+  .react-multi-carousel-item {
+    flex: 1 1 240px !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+  .fp_media_cta_one_digital-component .video-content,
+  .fp_media_cta_one_digital-component .video-thumb,
+  .fp_media_cta_one_digital-component #divRenderImage {
+    min-height: 280px !important;
+    position: relative !important;
+  }
+  .fp_media_cta_one_digital-component #icRenderImage,
+  .fp_media_cta_one_digital-component #icRenderImage > span {
+    position: relative !important;
+    display: block !important;
+    min-height: 280px !important;
+  }
+  .fp_media_cta_one_digital-component img.mode-desktop {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 240px !important;
+    object-fit: cover !important;
+  }
+</style>
+<style id="offline-target-pages-layout">
+  header#vz-gh20 + .gnav20-sticky-header,
+  header#vz-gh20 ~ .gnav20-sticky-header:not(footer .gnav20-sticky-header),
+  .off-canvas-content > .gnav20-sticky-header {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+  footer#vz-gf20,
+  footer#vz-gf20 .xf-page-unified,
+  footer#vz-gf20 .gnav20,
+  footer#vz-gf20 .gnav20 .gnav20-sticky-content {
+    max-height: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  style#gnav20-preload { display: none !important; }
+  .gnav20-sticky-content .gnav20-apicomponentnewdesign,
+  header#vz-gh20 .gnav20-apicomponentnewdesign {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  header#vz-gh20 {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 120px !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  header#vz-gh20 .gnav20-apicomponentnewdesign {
+    min-height: 120px !important;
+  }
+  header#vz-gh20 .gnav20,
+  header#vz-gh20 .gnav20 .gnav20-sticky-content {
+    max-height: none !important;
+    height: auto !important;
+  }
+  #onetrust-consent-sdk,
+  #onetrust-banner-sdk,
+  .onetrust-pc-dark-filter { display: none !important; visibility: hidden !important; }
+  .external-link-modal-container {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+</style>
+<style id="offline-hide-lang">
+.gnav20-localization { display: none !important; }
+</style><style id="offline-about-layout">
+  #onetrust-consent-sdk,
+  #onetrust-banner-sdk,
+  .onetrust-pc-dark-filter,
+  #ot-sdk-btn,
+  #ot-sdk-cookie-policy,
+  #ot-sync-ntfy { display: none !important; visibility: hidden !important; }
+  body { margin: 0; overflow-x: auto; }
+  header#vz-gh20 {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 120px !important;
+    max-height: none !important;
+  }
+  header#vz-gh20 .gnav20-apicomponentnewdesign {
+    min-height: 120px !important;
+  }
+  header#vz-gh20 .gnav20-sticky-header {
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+  main {
+    display: block !important;
+    position: relative;
+    z-index: 1;
+  }
+  main + footer#vz-gf20 { margin-top: 0; }
+</style>
+<style id="offline-layout-fixes">
+  main[role="main"], [role="main"], #mainGWSection, #SupportContentWrapper, #page,
+  #__next, main, [data-testid="Gridwall"], [data-testid="reviewWrapper"] {
+    display: block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    min-height: 40vh;
+  }
+  #mainGWSection, [data-testid="Gridwall"], [class*="GridWall__GWWrapper"],
+  #productListContainer, #gridwall-filter-buttons {
+    width: 100%;
+  }
+  #productListContainer, #gridwall-filter-buttons { visibility: visible !important; }
+  .gnav20-click-div { display: none !important; }
+  main > header#vz-gh20 {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  header.cta > header#vz-gh20 { display: none !important; }
+  .prescr + header.cta, header.cta { display: block !important; }
+  div[role="main"].min-h-\[300px\] { min-height: 50vh !important; max-width: 100% !important; }
+</style><base href="/verizon-clone/verizon_offline/"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta charset="utf-8" data-next-head=""><meta name="viewport" content="width=device-width" data-next-head=""><meta http-equiv="X-UA-Compatible" content="IE=edge" data-next-head=""><title data-next-head="">Legal terms and notices | About Verizon</title><link rel="canonical" href="about/terms-conditions/overview/" data-next-head=""><link rel="shortlink" href="about/node/918769/" data-next-head=""><link rel="icon" href="assets/www.verizon.com/aboutsites/default/files/favicon.ico" data-next-head=""><meta name="robots" content="index, follow" data-next-head=""><meta name="keywords" data-next-head=""><meta name="description" content="Explore Verizon's Legal Terms of Use. Learn about the terms of our technology as well as legal notices, announcements, user guides, state-specific tariffs, network disclosures and more." data-next-head=""><meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-next-head=""><meta name="generator" content="Drupal 8 (http://drupal.org)" data-next-head=""><meta name="twitter:card" content="summary_large_image" data-next-head=""><meta name="twitter:creator" content="@verizon" data-next-head=""><meta name="twitter:image" content="" data-next-head=""><meta name="twitter:image:src" content="" data-next-head=""><meta property="twitter:text:title" content="Legal terms and notices " data-next-head=""><meta property="og:image" content="" data-next-head=""><meta property="og:image:secure_url" content="" data-next-head=""><meta name="twitter:description" content="Explore Verizon's Legal Terms of Use. Learn about the terms of our technology as well as legal notices, announcements, user guides, state-specific tariffs, network disclosures and more." data-next-head=""><meta name="twitter:site" content="@verizon" data-next-head=""><meta name="twitter:title" content="Legal terms and notices " data-next-head=""><meta name="twitter:text:title" content="Legal terms and notices " data-next-head=""><meta name="twitter:url" content="about/terms-conditions/overview" data-next-head=""><meta property="og:description" content="Explore Verizon's Legal Terms of Use. Learn about the terms of our technology as well as legal notices, announcements, user guides, state-specific tariffs, network disclosures and more." data-next-head=""><meta property="og:site_name" content="" data-next-head=""><meta property="og:title" content="Legal terms and notices " data-next-head=""><meta property="og:type" content="website" data-next-head=""><meta property="og:url" content="about/terms-conditions/overview" data-next-head=""><meta property="og:updated_time" content="2026-02-27T15:13:13-05:00" data-next-head=""><meta property="article:modified_time" content="2026-02-27T15:13:13-05:00" data-next-head=""><meta property="article:published_time" content="" data-next-head=""><meta name="featuredarticle-category" content="" data-next-head=""><meta name="newsauthorcontact" content="" data-next-head=""><meta name="news-businessunit" content="" data-next-head=""><meta name="news-content-format" content="" data-next-head=""><meta name="newsemployeecontenttopic" content="" data-next-head=""><meta name="newsmediacontact" content="" data-next-head=""><meta name="newsmediacontacts" content="" data-next-head=""><meta name="date" content="" data-next-head=""><meta name="newstag" content="" data-next-head=""><meta property="og:image:width" content="" data-next-head=""><meta property="og:image:height" content="" data-next-head=""><meta property="og:video" content="" data-next-head=""><meta name="twitter:player" content="" data-next-head=""><meta name="twitter:player:width" content="360" data-next-head=""><meta name="twitter:player:height" content="200" data-next-head=""><link rel="preload" href="about/fonts/3.0/VerizonNHGeDS-Bold.ttf/" as="font" crossorigin=""><link rel="preload" href="about/fonts/3.0/VerizonNHGeDS-Regular.ttf/" as="font" crossorigin=""><link rel="preload" href="about/fonts/3.0/VerizonNHGeTX-Bold.ttf/" as="font" crossorigin=""><link rel="preload" href="about/fonts/3.0/VerizonNHGeTX-Regular.ttf/" as="font" crossorigin=""><link rel="preload" href="about/fonts/Neue-haas/text-italic-56.woff2" as="font" crossorigin=""><link rel="preload" href="about/fonts/fontawesome-webfont.eot/" as="font" crossorigin=""><link rel="preload" href="about/fonts/fontawesome-webfont.woff" as="font" crossorigin=""><link rel="preload" href="about/fonts/fontawesome-webfont.woff2" as="font" crossorigin=""><link rel="preload" href="about/fonts/fontawesome-webfont.ttf/" as="font" crossorigin=""><link rel="preload" href="about/fonts/fontawesome-webfont.svg" as="font" crossorigin=""><link rel="stylesheet" href="assets/www.verizon.com/etc/designs/vzwcom/gnav20/core.css" type="text/css"><script>var gnavdl = {"bu": "corporate", "appid": "corpweb", "impltype":"ssi", "options":{"sticky":"true"}};console.log(gnavdl);</script><link data-next-font="" rel="preconnect" href="/" crossorigin="anonymous"><link rel="preload" href="about/_next/static/css/d478ed4bac015ce8.css" as="style"><link rel="stylesheet" href="about/_next/static/css/d478ed4bac015ce8.css" data-n-g=""><link rel="preload" href="about/_next/static/css/efef11b190205f4c.css" as="style"><link rel="stylesheet" href="about/_next/static/css/efef11b190205f4c.css" data-n-p=""><noscript data-n-css=""></noscript><script defer="" nomodule="" src="about/_next/static/chunks/polyfills-42372ed130431b0a.js"></script><script defer="" src="about/_next/static/chunks/9370.e842fb349df50b72.js"></script><script defer="" src="about/_next/static/chunks/6144.673442aa38f18f6c.js"></script><script defer="" src="about/_next/static/chunks/3775.c1108b0c5b95c62d.js"></script><script defer="" src="about/_next/static/chunks/8240.a1e144cc97b37842.js"></script><script defer="" src="about/_next/static/chunks/1143.ff8c75e3d866d6ea.js"></script><script defer="" src="about/_next/static/chunks/7214.831e147327d6cbed.js"></script><script defer="" src="about/_next/static/chunks/8934.30e017ead90f6b89.js"></script><script src="about/_next/static/chunks/webpack-5c1a8c77d0a71283.js" defer=""></script><script src="about/_next/static/chunks/framework-b9fd9bcc3ecde907.js" defer=""></script><script src="about/_next/static/chunks/main-35a1ce7c1209f4d4.js" defer=""></script><script src="about/_next/static/chunks/pages/_app-189c1ee5753db185.js" defer=""></script><script src="about/_next/static/chunks/97ba3d34-96c080d0ea1151db.js" defer=""></script><script src="about/_next/static/chunks/8827-d7510e0dabb385f8.js" defer=""></script><script src="about/_next/static/chunks/8993-c098952cfb5601b6.js" defer=""></script><script src="about/_next/static/chunks/2987-d98b6e12f1136ad0.js" defer=""></script><script src="about/_next/static/chunks/99-e1d4ad05939369ed.js" defer=""></script><script src="about/_next/static/chunks/2761-a81f4259d640ecbd.js" defer=""></script><script src="about/_next/static/chunks/5352-da20049c1cbe35f9.js" defer=""></script><script src="about/_next/static/chunks/3962-4352fcc5c2389d95.js" defer=""></script><script src="about/_next/static/chunks/2823-a7c2fa3c681f0a2e.js" defer=""></script><script src="about/_next/static/chunks/1379-ae64d803aaf129a5.js" defer=""></script><script src="about/_next/static/chunks/6669-1eda17b2786ab3f6.js" defer=""></script><script src="about/_next/static/chunks/9701-f27df0ba23074677.js" defer=""></script><script src="about/_next/static/chunks/8886-51153fa8298bb7e7.js" defer=""></script><script src="about/_next/static/chunks/6445-98e8ecf7b294966c.js" defer=""></script><script src="about/_next/static/chunks/907-c7f7c9a3db12837f.js" defer=""></script><script src="about/_next/static/chunks/8027-6975e232ac4cedd2.js" defer=""></script><script src="about/_next/static/chunks/2049-dfb4f21a9a8350d9.js" defer=""></script><script src="about/_next/static/chunks/9983-d124a0141e623d43.js" defer=""></script><script src="about/_next/static/chunks/2-e1c5424d098d8976.js" defer=""></script><script src="about/_next/static/chunks/542-4639d5cf8295adc4.js" defer=""></script><script src="about/_next/static/chunks/pages/about/%5B...segment%5D-dc9148c38268f653.js" defer=""></script><script src="about/_next/static/Et1hnmvoKBkWSI45yuofB/_buildManifest.js" defer=""></script><script src="about/_next/static/Et1hnmvoKBkWSI45yuofB/_ssgManifest.js" defer=""></script><style id="__jsx-9a8d40b3160de063">@font-face{font-family:"VerizonNHGeDS-Bold";src:url(about/fonts/3.0/VerizonNHGeDS-Bold.ttf);font-display:swap}@font-face{font-family:"VerizonNHGeDS-Regular";src:url(about/fonts/3.0/VerizonNHGeDS-Regular.ttf);font-display:swap}@font-face{font-family:"VerizonNHGeTX-Bold";src:url(about/fonts/3.0/VerizonNHGeTX-Bold.ttf);font-display:swap}@font-face{font-family:"VerizonNHGeTX-Regular";src:url(about/fonts/3.0/VerizonNHGeTX-Regular.ttf);font-display:swap}@font-face{font-family:"nhg-text-italic";src:url(about/fonts/Neue-haas/text-italic-56.eot?#iefix);src:url(about/fonts/Neue-haas/text-italic-56.eot?#iefix)format("eot"),url(about/fonts/Neue-haas/text-italic-56.woff2)format("woff2"),url(about/fonts/Neue-haas/text-italic-56.woff)format("woff"),url(about/fonts/Neue-haas/text-italic-56.ttf)format("truetype"),url(about/fonts/Neue-haas/text-italic-56.svg)format("svg#text-italic-56");font-weight:400;font-style:italic;letter-spacing:.025em;font-display:swap}@font-face{font-family:"FontAwesome";src:url("about/fonts/fontawesome-webfont.eot?v=4.7.0");src:url("about/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0")format("embedded-opentype"),url("about/fonts/fontawesome-webfont.woff2?v=4.7.0")format("woff2"),url("about/fonts/fontawesome-webfont.woff?v=4.7.0")format("woff"),url("about/fonts/fontawesome-webfont.ttf?v=4.7.0")format("truetype"),url("about/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular")format("svg");font-weight:normal;font-style:normal;font-display:swap}</style><style type="text/css">.scroll-to-top {
+  background-color: white;
+  right: 40px;
+  bottom: 40px;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
+  border: none;
+}
+
+.scroll-to-top:active {
+  transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+}
+</style><style data-styled="active" data-styled-version="5.3.11"></style><script src="assets/www.verizon.com/etc/designs/vzwcom/gnav20/personal.js" type="text/javascript" defer=""></script>
+</head><body class="node-918769 node-type-flexpage terms-conditions overview"><header id="vz-gh20"><div class="xf-page-unified xfpage page basicpage">
+<div class="gnav20 gnav20-sticky" data-exp-name="Mobile">
+     <input type="hidden" id="cradle-context">
+    <div class="gnav20-sticky-content">    	
+     	
+
+
+
+
+    
+    
+    <div class="gnav20-apicomponentnewdesign">
+
+
+<a class="gnav20-header-accessibility" tabindex="0" href="/accessibility/" data-track="global nav:accessibility resource center">
+	<span>Accessibility Resource Center</span>
+</a>
+<a class="gnav20-header-accessibility" href="#gnav20-header-end" tabindex="0" id="gnav20-skip-to-main-content-id" data-track="global nav:skip to main content">
+	<span>Skip to main content</span>
+</a>
+
+<div class="gnav20-width-wrapper gnav20-new-design gnav20-new-search-style gnav20-promo-bottom gnav20-featured" data-gnav20-container="header">
+	
+	
+	<div class="gnav20-vzhmoverlay" style="height: 0px;"></div>
+	<div class="gnav20-main">
+		
+
+
+
+
+    
+    
+    <div class="gnav20-gnav-new-design">
+
+<div class="gnav20-desktop" item-title="all">
+	<div class="gnav20-row-one opacityOne">
+		<div class="gnav20-grid1-wrapper">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-eyebrow">
+
+<div class="gnav20-eyebrow-link-list" item-title="eyebrow">
+    <div class="gnav20-eyebrow-link-list-item gnav20-two">
+        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
+    
+        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Business" href="/business/" data-label="Business" aria-label="Verizon Business Services HomePage" class="gnav20-main-header " data-track="global nav:business">Business</a>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+		</div>		
+		<div class="gnav20-utility">		
+			
+
+
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="tollfree">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Call Verizon 1-833-VERIZON for sales and support assistance." href="tel:+18338374966" data-label="1-833-VERIZON" data-track="global nav:1-833-verizon">
+			
+			1-833-VERIZON
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="contactus">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Contact us" href="/support/contact-us/" data-label="Contact us" data-track="global nav:contact us">
+			
+			Contact us
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="support">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Support" href="/support/" data-label="Support" data-track="global nav:support">
+			
+			Support
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="store">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Stores" href="/stores/" data-label="Stores" data-track="global nav:stores">
+			
+			Stores
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-store">
+
+<div class="gnav20-utility-wrapper" item-title="coveragemap">
+	<div>
+				
+		<a x-cq-linkchecker="skip" aria-label="Coverage map" href="/coverage-map/" data-label="Coverage map" data-track="global nav:coverage map">
+			
+			Coverage map
+			
+		</a>			
+		
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-localization">
+
+    
+		<div class="gnav20-utility-wrapper " item-title="localization">
+			
+				
+				<a class="gnav20-lang-link" aria-label="Cámbiate al sitio web en español" data-href="/" href="/" data-lang="Español" mporgnav="" data-label="Español" lang="es" data-track="global nav:espanol">Español</a>
+					
+			
+		</div>
+    
+
+</div>
+
+
+
+        </div>
+    </div>
+	<div class="gnav20-row-two">
+		<div class="gnav20-grid1-wrapper">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-logo">
+
+    
+    
+    <div class="gnav20-logo-wrapper gnav20-relative-index">
+        <a class="gnav20-logoWhiteBg" title="Verizon Home Page" href="/" target="_self" data-track="global nav:verizon home page"></a>
+        
+        
+    </div>
+</div>
+
+
+
+		</div>
+		<div class="gnav20-navigation opacityOne">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-navigation opacityOne">
+<div class="gnav20-global-nav-list gnav20-navigation-list" item-title="L1">
+
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/home/internet/#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
+	</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+	</div>
+    <div class="gnav20-utility opacityOne">
+        
+
+
+
+
+    
+    
+    <div class="gnav20-search-utility">
+
+	<div class="gnav20-utility-wrapper" item-title="search">
+		<div class="gnav20-search-wrapper">
+			
+				<input tabindex="-1" style="display:none;" type="hidden" id="gnav20-search-context-mobile" name="isProd" value="true">
+			
+			<button class="gnav20-search-icon" id="gnav20-search-icon-mobile" aria-label="Search Verizon" data-placeholder-text="Search Verizon" data-track="global nav:search verizon"></button>
+		</div>
+	</div>
+</div>
+
+
+    
+    
+    <div class="gnav20-account-utility">
+
+<div class="gnav20-utility-wrapper " item-title="signIn">
+	<div class="gnav20-account-box" id="gnav20-account-menu-mobile">
+		
+		
+		
+			
+				<button id="gnav20-sign-id-mobile" class="gnav20-sign-in gnav20-hasDropdown  " aria-expanded="false" aria-label="Sign in dropdown menu" data-track="global nav:sign in dropdown menu">
+					<span>
+						<span>
+							Sign in
+						</span>
+					</span>
+				</button>
+			
+		
+
+		
+		<div class="gnav20-dropdown-menu gnav20-hide " id="gnav20-sign-in-mobile"><button class="gnav20-close-account-utility" aria-label="close the Sign In Menu" tabindex="0" data-track="global nav:close the sign in menu">Close</button>
+			<p class="gnav20-signin-content-title"></p>
+			<ul class="gnav20-dropdown gnav20-fixed-top gnav20-navigation-item">
+				
+					<li class="gnav20-dropdown-list gnav20-hide-on-desktop gnav20-goback">
+						<button class="gnav20-back-to-menu " aria-label="Back to Menu" tabindex="0" data-track="global nav:back to menu:go back">Back to Menu</button>
+					</li>
+				
+				<li class="gnav20-dropdown-list">
+					<a data-hide-for="appid:vpd" id="gnav20-sign-id-list-item-1-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin" tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list gnav20-hide">
+					<a data-show-for="appid:vpd" id="gnav20-sign-id-list-item-2-mobile" class="gnav20-dropdown-list-item" href="/about/privacy/" tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-3-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin?goto=https%3A%2F%2Fwww.verizon.com%2Ffeatured%2Fintent%2F%3Fintent%3Dpaybill" tabindex="0" data-track="global nav:sign in menu:pay bill">Pay bill</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-4-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin?action=otp" tabindex="0" data-track="global nav:sign in menu:make a one-time payment">Make a one-time payment</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-5-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/account/register/start" tabindex="0" data-track="global nav:sign in menu:register">Register</a>
+				</li>
+			
+				
+				<li class="gnav20-dropdown-list ">
+					<a id="gnav20-sign-id-list-item-6-mobile" class="gnav20-dropdown-list-item" href="https://mblogin.verizonwireless.com/account/business/signin" tabindex="0" data-track="global nav:sign in menu:business log in">Business Log in</a>
+				</li>
+			</ul>	
+					
+		</div>
+		<div class="gnav20-vzmoverlay"></div>
+	</div>
+</div></div>
+
+
+    
+    
+    <div class="gnav20-unifiedcart">
+
+<div class="gnav20-utility-wrapper" item-title="unifiedCart">
+	
+		
+	<div>
+		<button id="gnav20-cart-icon-mobile" class="gnav20-cart" aria-label="Shopping Cart Menu 0 items in the cart" aria-expanded="false" data-track="global nav:cart menu:shopping cart menu 0 items in the cart">
+			<span class="gnav20-unifiedcart-bubble" style="display: none;">0</span>
+		</button>
+		<div id="gnav20-my-side-nav-mobile" class="gnav20-unified-cart gnav20-hide gnav20-unified-cart-right gnav20-flyout-cart-enabled gnav20-auth-flyout-cart"><button id="gnav20-cclosex-mobile" class="gnav20-closex" tabindex="0" aria-label="Close Shopping Cart" data-track="global nav:close shopping cart"></button>
+			<p class="gnav20-cart-content-title">Choose your cart:</p>
+			<ul class="gnav20-content-lists">
+				
+					<li class="gnav20-content-list">
+						
+							<a id="gnav20-cart-list-item-1-mobile" class="gnav20-content-list-arrow gnav20-mobile-cart-count" href="#" data-track="global nav:cart menu:mobile solutions">Mobile solutions</a>
+						
+					</li>
+				
+					<li class="gnav20-content-list">
+						
+							<a id="gnav20-cart-list-item-2-mobile" class="gnav20-content-list-arrow gnav20-home-cart-count" href="/home/internet/" data-track="global nav:cart menu:home solutions">Home solutions</a>
+						
+					</li>
+				
+			</ul>
+			
+            
+				<div class="cart-button-container">
+					<a href="#" class="cart-button" data-track="global nav:cart menu:go to cart">Go To Cart</a>
+				</div>
+        	
+		</div>
+		<div class="gnav20-vzmoverlay"></div>
+	</div>
+
+	
+	
+</div></div>
+
+
+
+        <button id="gnav20-nav-toggle" data-menuitem="vzmobilemenu" tabindex="0" aria-label="Menu for navigation opens a modal overlay" data-track="global nav:menu for navigation opens a modal overlay">
+		</button>
+    </div>
+    <nav id="gnav20-mobile-menu" class="gnav20-mobile-menu gnav20-hide">
+        <button id="gnav20-closex" class="gnav20-closex" aria-label="close the Menu" tabindex="0" data-track="global nav:close the menu">Close</button>
+        <div id="gnav20-ulwrapper"><a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal-mobile" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
+			
+			<div class="gnav20-navigation-placeholder">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-navigation">
+<div class="gnav20-global-nav-list gnav20-navigation-list" item-title="L1">
+
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/home/internet/#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
+	</div>
+</div>
+    <div class="gnav20-navigation-item">
+	<div class="gnav20-primary-menu">
+		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
+	</div>
+</div>
+
+</div>
+
+
+            
+			</div>
+        </div>
+        
+		
+    </nav>
+</div></div>
+
+
+		
+	</div>
+	<div>
+		
+		<div>
+
+
+
+
+    
+    
+    <div class="subnavcontent">
+
+<div class="gnav20-sub-nav" item-title="callsales">
+    <div class="gnav20-sub-nav-content gnav20-hide-on-desktop" style="display: flex !important;">
+        <a x-cq-linkchecker="skip" class="gnav20-sub-nav-call-link" href="tel:+18008374966" data-track="global nav:call us: 1-800-verizon">
+            Call Us: 1-800-VERIZON
+        </a>
+        <a x-cq-linkchecker="skip" class="gnav20-sub-nav-button" href="tel:+18008374966" aria-label="Buy now" data-track="global nav:buy now">
+            Buy now
+        </a>
+    </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+		
+	</div>
+	
+	
+	
+		<input type="hidden" id="gnav20-prod-context" name="isProd" value="true">
+			
+	<div id="gnav20-promo-placeholder" class="enableAuthPZN">
+		<div>
+
+
+
+
+    
+    
+    <div class="gnav20-ribbontext">
+<div class="gnav20-promo-ribbon-wrapper gnav20-clearfix">
+	<div class="gnav20-promo" aria-label="Verizon Promos with 2 promotions" role="group">
+		
+		<button class="gnav20-slide-arrow gnav20-slide-arrow-prev" aria-label="previous promo message 2 of 2" data-track="global nav:promo ribbon:promo message 2 of 2" style="display: block;"></button>
+		<div class="gnav20-promotext opacityOne" item-title="promoRibbon"><div class="gnav20-promo-ribbon gnav20-active-promo" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="/smartphones/" aria-label="Promo 1 of 2 Add a new smartphone line and we" data-track="global nav:promo ribbon:promo 1 of 2 add a new smartphone line and we">&nbsp;</a>Add a new smartphone line and we'll waive the activation fee. Online only. With myPlan.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="/smartphones/" aria-label="Add a new smartphone line and we" data-track="global nav:promo ribbon:shop now"><u>Shop now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" data-track="global nav:promo ribbon:details">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">$40.00 activation fee applied as one-time bill credit (w/in 1-2 bill cycles) when you add a new smartphone line or bring your own smartphone on Unlimited Welcome, postpaid Unlimited Plus or Unlimited Ultimate plan req'd.</div><div class="gnav20-modal-cta"></div></div></div><div class="gnav20-promo-ribbon" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="/switch-to-verizon/" aria-label="Promo 2 of 2 AT&amp;T Customers: Bring in your bill and we’ll give you a better deal." data-track="global nav:promo ribbon:promo 2 of 2 at&amp;t customers: bring in your bill and we’ll give you a better deal.">&nbsp;</a>AT&amp;T Customers: Bring in your bill and we’ll give you a better deal.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="/switch-to-verizon/" aria-label="AT&amp;T Customers: Bring in your bill and we’ll give you a better deal. link to Switch now" data-track="global nav:promo ribbon:at&amp;t customers: bring in your bill and we’ll give you a better deal. link to switch now"><u>Switch now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" aria-label="Offer details for bring your bill" data-track="global nav:promo ribbon:offer details for bring your bill">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">To qualify, must provide a postpaid consumer mobile bill from T-Mobile, AT&amp;T, Xfinity or Spectrum, dated within the past 45 days; bill must be in the same name as the person redeeming the deal. Add'l terms apply. See <a style="text-decoration: underline !important;" href="/switch-to-verizon/" aria-label="Switch now" data-track="global nav:promo ribbon:modal:www.verizon.com/switch-to-verizon">www.verizon.com/switch-to-verizon</a>.</div><div class="gnav20-modal-cta"></div></div></div></div>
+		<button class="gnav20-slide-arrow gnav20-slide-arrow-next" aria-label="next promo message 2 of 2" data-track="global nav:promo ribbon:promo message 2 of 2" style="display: block;"></button>
+	</div>
+	<div class="gnav20-modal" id="gnav20-modal">
+		<div class="gnav20-modal-overlay" tabindex="-1" data-modal-hide=""></div>
+		<div class="gnav20-modal-content" aria-labelledby="gnav20-modal-heading" aria-describedby="gnav20-modal-sub-heading" role="dialog">
+			<button id="gnav20-close-icon" class="gnav20-promo-close-icon" tabindex="0" aria-label="Click here or press escape key to Close Modal Dialog" data-modal-hide="" data-track="global nav:promo ribbon:modal:click here or press escape key to close modal dialog">
+			</button>
+			<div class="gnav20-modal-content-wrapper"></div>
+		</div>
+	</div>
+</div></div>
+
+
+</div>
+	</div>
+</div>
+<div name="headerEnd" id="gnav20-header-end" role="none" aria-hidden="true" tabindex="-1" aria-label="end of navigation menu">
+end of navigation menu</div>
+<style id="gnav20-preload">
+     .gnav20{
+     max-height: 165px;
+     border-bottom: solid 1px #d8dada;
+     }
+     .gnav20 .gnav20-sticky-content{
+     max-width: 1272px;
+     margin: 0 auto;
+     background-size: 124px 29px;
+     background-position: 20px 59px;
+     background-repeat: no-repeat;
+     background-image: url(data:image/svg+xml;charset=utf-8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA2MDEuMDYgMTM0Ljc0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MDEuMDYgMTM0Ljc0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0Y1MEEyMzt9LnN0MXtmaWxsOnVybCgjU1ZHSURfMV8pO308L3N0eWxlPjxzd2l0Y2g+PGc+PGcgaWQ9IkxheWVyXzEiPjxnPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01MDguNDUsMTMxLjdoMjkuNlY3Ny42MmMwLTEyLjM0LDcuMjEtMjEuMDcsMTcuODQtMjEuMDdjMTAuMjUsMCwxNS41Niw3LjIxLDE1LjU2LDE3LjQ2djU3LjY5aDI5LjYgVjY4LjMyYzAtMjEuNDUtMTIuOS0zNi42My0zMy43OC0zNi42M2MtMTMuMjgsMC0yMi41OCw1LjY5LTI5LjYsMTYuMTNoLTAuNTdWMzQuNTRoLTI4LjY1VjEzMS43eiBNNDUwLjM4LDMxLjg4IGMtMzAuOTMsMC01MS42MiwyMi4yLTUxLjYyLDUxLjQzYzAsMjkuMDQsMjAuNjgsNTEuNDMsNTEuNjIsNTEuNDNTNTAyLDExMi4zNSw1MDIsODMuMzFDNTAyLDU0LjA5LDQ4MS4zMiwzMS44OCw0NTAuMzgsMzEuODh6IE00NTAuMTksMTEyLjkxYy0xNC4wNCwwLTIxLjQ0LTExLjc2LTIxLjQ0LTI5LjZjMC0xOC4wMyw3LjQtMjkuNiwyMS40NC0yOS42YzE0LjA0LDAsMjEuODIsMTEuNTgsMjEuODIsMjkuNiBDNDcyLjAyLDEwMS4xNSw0NjQuMjQsMTEyLjkxLDQ1MC4xOSwxMTIuOTF6IE0zMTQuNTEsMTMxLjdoODMuMTJ2LTIzLjM0aC00Ny4wNnYtMC41N2w0NC45Ny01MC40OFYzNC41NGgtODEuMDN2MjMuMzRoNDUuNTQgdjAuNTdsLTQ1LjU0LDUwLjg2VjEzMS43eiBNMjc2LjU1LDEzMS43aDI5Ljc5VjM0LjU0aC0yOS43OVYxMzEuN3ogTTIwNy40OCwxMzEuN2gyOS42Vjg3LjExYzAtMjAuMzEsMTIuMTUtMjkuMjMsMzAuNzQtMjYuNzYgaDAuNTdWMzQuNzNjLTEuNTItMC41Ny0zLjIzLTAuNzYtNi4wNy0wLjc2Yy0xMS41OCwwLTE5LjM2LDUuMzEtMjYsMTYuN2gtMC41N1YzNC41NGgtMjguMjdWMTMxLjd6IE0xNTMuMDEsMTEzLjExIGMtMTMuMDksMC0yMS4wNi04LjU0LTIyLjU4LTIxLjYzaDcwLjAyYzAuMTktMjAuODgtNS4zMS0zNy41OC0xNi44OS00OC4wMWMtOC4xNi03LjU5LTE4Ljk4LTExLjc3LTMyLjY0LTExLjc3IGMtMjkuMjIsMC00OS41MywyMi4yLTQ5LjUzLDUxLjI0YzAsMjkuMjIsMTkuMzYsNTEuNjIsNTEuNDMsNTEuNjJjMTIuMTUsMCwyMS44Mi0zLjIzLDI5Ljc5LTguNzMgYzguNTQtNS44OCwxNC42MS0xNC40MiwxNi4zMi0yMi45NmgtMjguNDZDMTY3LjYzLDEwOS4zMSwxNjEuNzQsMTEzLjExLDE1My4wMSwxMTMuMTF6IE0xNTEuNSw1Mi45NSBjMTAuNDQsMCwxNy42NSw3Ljc4LDE4Ljc5LDE5LjE3aC0zOS42NkMxMzIuOSw2MC41NCwxMzkuMTYsNTIuOTUsMTUxLjUsNTIuOTV6IE0yNzYuNTUsMGgyOS43OXYyNi4zOGgtMjkuNzlWMHoiLz48L2c+PC9nPjxnPjxyYWRpYWxHcmFkaWVudCBpZD0iU1ZHSURfMV8iIGN4PSI3MC4wMTE0IiBjeT0iMTA1LjY2NiIgcj0iNTMuODc5NyIgZng9IjM3LjMwNzQiIGZ5PSIxMDUuMzE2NSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgwLjM1ODQgLTAuOTMzNiAxLjEwMjMgMC40MjMyIC03MS41NTkgMTI2LjMxNDYpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3AgIG9mZnNldD0iMC4wNTczIiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIi8+PHN0b3AgIG9mZnNldD0iMC4yOTM5IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGRjFFIi8+PHN0b3AgIG9mZnNldD0iMC4zMDM4IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVGQTFFIi8+PHN0b3AgIG9mZnNldD0iMC40ODY1IiBzdHlsZT0ic3RvcC1jb2xvcjojRjVBNjIwIi8+PHN0b3AgIG9mZnNldD0iMC42NDgiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTYzMjEiLz48c3RvcCAgb2Zmc2V0PSIwLjc4MjMiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTMzMjIiLz48c3RvcCAgb2Zmc2V0PSIwLjg4NDMiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTE1MjMiLz48c3RvcCAgb2Zmc2V0PSIwLjk0MjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNGNTBBMjMiLz48L3JhZGlhbEdyYWRpZW50PjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLDM0LjU0bDM2Ljg0LDk1Ljk2YzAuMjgsMC43MywwLjk4LDEuMjEsMS43NiwxLjIxaDI5Ljg5Yy0wLjc4LDAtMS40OC0wLjQ4LTEuNzYtMS4yMUwyOS44OSwzNC41NEgweiIvPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDcuMDksMzQuNTRMNzAuMjUsMTMwLjVjLTAuMjgsMC43My0wLjk4LDEuMjEtMS43NiwxLjIxSDM4LjZjMC43OCwwLDEuNDgtMC40OCwxLjc2LTEuMjFMNzcuMiwzNC41NCBIMTA3LjA5eiIvPjwvZz48L2c+PC9nPjwvc3dpdGNoPjwvc3ZnPg==)}
+     .gnav20-sticky-content .gnav20-apicomponentnewdesign { opacity: 0;}
+     @media (max-width: 1020.5px), (pointer: coarse) {
+          .gnav20{
+               max-height: 132px;
+          }
+          .gnav20 .gnav20-sticky-content{
+               background-size: 94px 21px;
+               background-position: 16px 26px;
+          }
+     }
+</style>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="__next"><main role="main" class=" no-rule-left-right"><div class="center-container" id="main-content"><div class="inner-content"><div class="main-navigation"><nav class="" aria-label="breadcrumb"><ol class="breadcrumb bg-none"><li class="breadcrumb-item"><a href="about/">About</a><i class="fa fa-slash-forward" data-unicode="f107"></i></li><li class="breadcrumb-item active" aria-current="page">Legal terms and notices</li> </ol></nav></div> <div class="component-start"><div class="fp_hero_display_one_digital-component background-color-black text-color-white link-type-cta btn-color-black borderline-both"><div class="component-inner"><div class="card"><div class="card-body"><div class="row"><div class="col-md-12"><div id="" class="comp-type-mini-hero-display align-left no-mobile-view no-tablet-view"><div class="w-50"><div class="sizzle-video_content "><div class="row"><div class="col"><div class="card-title"><h1 class="font-size-84">Legal terms <br aria-hidden="true"> and notices</h1></div></div></div><div class="row"><div class="col-md-12"><div class="descprition-cta">  </div></div></div></div></div></div></div></div></div></div></div></div><div class="fp_body_one_digital-component background-color-white borderline-none"><div class="component-inner"><div class="card"><div class="card-body"><div class="row"><div class="col-md-12"><div class="card-body-content"><span class="ckeditor-content"><div class="bodycopy-1d-left">Thank you for using our products and services. When you use our technologies, you agree to certain terms, which can be found in this section. We also provide you with information about state-specific tariffs, an archive of network disclosures and a guide on our network management principles.</div></span></div></div></div></div></div></div></div><div class="fp_manual_re_cir_one_digital-component background-color-white text-color-black link-type-button btn-color-clear borderline-dark-bottom margin-bottom-desktop-24 margin-bottom-mobile-32 call-out-box"><div class="component-inner"><div class="card"><div class="card-body"><div class="row"><div class="col-md-12"><div class="row comp-call-out-box" id=""><div class="col-md-12 col-sm-12 right-head"><div class="row"><div class="col"><div class="card-title"><h2 class="font-size-64">Terms of service</h2></div></div></div><div class="link-cta"><a class="" title="" aria-label="Read the Verizon Terms of Use " target="_blank" rel="noopener noreferrer" href="about/terms-conditions/terms-of-use/" aria-describedby="" data-airgap-id="5">Site terms of use<span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div></div><div class="col-md-12 col-sm-12"><div class="react-multi-carousel-list carousel-container comp-28101 " dir="ltr"><ul class="react-multi-carousel-track " role="presentation" style="transition: none; overflow: unset; transform: translate3d(0px, 0px, 0px);"><li data-index="0" aria-hidden="false" class="react-multi-carousel-item react-multi-carousel-item--active carousel-item-padding-40-px" style="flex: 1 1 auto; position: relative; width: 318px;"><div class="link-callout"><div class="onclicklink" title="" aria-label="" style="cursor: pointer;"><div class="image-carousel"><h3>Residential</h3><span class="ckeditor-content" id="cke_desc_28101"><p>View terms and user guides for Verizon fios and broadband&nbsp;services.</p></span></div><div class="link-cta"><a class="" title="" aria-label="Go to the residential terms of service web page" rel="" href="about/terms-conditions/residential-terms-service/" aria-describedby="" data-airgap-id="17"><span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div></div></div></li><li data-index="1" aria-hidden="false" class="react-multi-carousel-item react-multi-carousel-item--active carousel-item-padding-40-px" style="flex: 1 1 auto; position: relative; width: 318px;"><div class="link-callout"><div class="onclicklink" title="" aria-label="" style="cursor: pointer;"><div class="image-carousel"><h3>Business</h3><span class="ckeditor-content" id="cke_desc_28101"><p>View terms and user guides for Verizon Business services.</p></span></div><div class="link-cta"><a class="" title="" aria-label="Go to the Business Terms of Service web page" rel="" href="about/terms-conditions/business-terms-of-service/" aria-describedby="" data-airgap-id="18"><span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div></div></div></li><li data-index="2" aria-hidden="false" class="react-multi-carousel-item react-multi-carousel-item--active carousel-item-padding-40-px" style="flex: 1 1 auto; position: relative; width: 318px;"><div class="link-callout"><div class="onclicklink" title="" aria-label="" style="cursor: pointer;"><div class="image-carousel"><h3>Mobile</h3><span class="ckeditor-content" id="cke_desc_28101"><p>Go to the Verizon website to view terms for mobile services.</p></span></div><div class="link-cta"><a class="" title="" aria-label="Go to the Mobile Wireless legal notices web section" target="_blank" rel="noopener noreferrer" href="support/other-wireless-topics/legal-notices-and-industry-info/" aria-describedby="" data-airgap-id="19"><span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div></div></div></li><li data-index="3" aria-hidden="false" class="react-multi-carousel-item react-multi-carousel-item--active carousel-item-padding-40-px" style="flex: 1 1 auto; position: relative; width: 318px;"><div class="link-callout"><div class="onclicklink" title="" aria-label="" style="cursor: pointer;"><div class="image-carousel"><h3>My Verizon Customer Agreement</h3><span class="ckeditor-content" id="cke_desc_28101"><p>Find important information about your wireless service.</p></span></div><div class="link-cta"><a class="" title="" aria-label="Read the My Verizon Customer Agreement" target="_blank" rel="noopener noreferrer" href="support/customer-agreement/" aria-describedby="" data-airgap-id="20"><span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div></div></div></li></ul><div class="mobile-btn"><a class="left-btn-mb" href="javascript:void(0);" aria-label="Go to previous slide" customclickattr="0"></a><span>1/4</span><a class="right-btn-mb" href="javascript:void(0);" aria-label="Go to next slide" customclickattr="0"></a></div></div></div></div></div></div></div></div></div></div><div class="fp_media_cta_one_digital-component background-color-white text-color-black link-type-button btn-color-clear borderline-rounded-corner margin-bottom-desktop-24 margin-bottom-mobile-32"><div class="component-inner"><div class="card"><div class="card-body"><div class="row"><div class="col-md-12"><div class="media_cta-Desktop"><div class="row"><div class="col-md-6"><div class="mediacta left"><div class="row"><div class="col"><div class="card-title"><h2 class="font-size-32" tabindex="">User guides &amp; legal updates</h2></div></div></div><div class="media_cta_desc"><span class="ckeditor-content"><p>Access Verizon user guides and legal updates. Easily print or download official documents and resources today.</p></span></div> <div class="link-cta"><a class="" title="" aria-label="" rel="" href="about/terms-conditions/user-guides/" aria-describedby="" data-airgap-id="6">Browse user guides<span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div><div class="link-cta"><a class="" title="" aria-label="Legal notices &amp; announcements" target="_blank" rel="noopener noreferrer" href="support/legal-notices/" aria-describedby="" data-airgap-id="7">Legal notices &amp; announcements<span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div></div></div><div class="col-md-6"><div class="video-content"><div class="video-thumb"><div class="div-scroll-videoplay"><span class="span-scroll-videoplay"> </span></div><div id="divRenderImage"><div id="icRenderImage" class="sc-gEvEer cpYRZB"><span style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img alt="" aria-label="" aria-hidden="true" tabindex="-1" id="iRenderImage" src="assets/www.verizon.com/aboutsites/default/files/styles/webp_style/public/2026-02/verizon-small-business-digital-4-media-cta-644x362.webp" decoding="async" data-nimg="fill" class="mode-desktop" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain; object-position: center top;" data-airgap-id="8"><noscript></noscript></span></div></div></div></div></div></div> </div></div></div></div></div></div></div><div class="fp_media_cta_one_digital-component background-color-white text-color-black link-type-button btn-color-clear borderline-rounded-corner margin-bottom-desktop-0 margin-bottom-mobile-0"><div class="component-inner"><div class="card"><div class="card-body"><div class="row"><div class="col-md-12"><div class="media_cta-Desktop"><div class="row"><div class="col-md-6"><div class="video-content"><div class="video-thumb"><div class="div-scroll-videoplay"><span class="span-scroll-videoplay"> </span></div><div id="divRenderImage"><div id="icRenderImage" class="sc-gEvEer cpYRZB"><span style="box-sizing: border-box; display: block; overflow: hidden; width: initial; height: initial; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: absolute; inset: 0px;"><img alt="" aria-label="" aria-hidden="true" tabindex="-1" id="iRenderImage" src="assets/www.verizon.com/aboutsites/default/files/styles/webp_style/public/2024-02/Connections-644x362jpg.webp" decoding="async" data-nimg="fill" class="mode-desktop" style="position: absolute; inset: 0px; box-sizing: border-box; padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain; object-position: center top;" data-airgap-id="9"><noscript></noscript></span></div></div></div></div></div><div class="col-md-6"><div class="mediacta right"><div class="row"><div class="col"><div class="card-title"><h2 class="font-size-32" tabindex="">Network disclosures</h2></div></div></div><div class="media_cta_desc"><span class="ckeditor-content"><p>Browse Verizon network disclosures and historical updates across the U.S. from 2003 to present, available for download.</p></span></div> <div class="link-cta"><a class="" title="" aria-label="2025 - 2026 network disclosures" rel="" href="about/terms-conditions/network-disclosures/" aria-describedby="" data-airgap-id="10">Latest disclosures<span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div><div class="link-cta"><a class="" title="" aria-label="Browse network disclosures archives" rel="" href="about/terms-conditions/network-disclosures/archives/" aria-describedby="" data-airgap-id="11">Disclosures archives<span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div></div></div></div> </div></div></div></div></div></div></div><div class="fp_sticky_cta_one_digital-component background-color-white text-color-black link-type-button btn-color-clear borderline-rounded-corner margin-bottom-desktop-24 margin-bottom-mobile-32 non-sticky content-align-left"><div class="component-inner"><div class="card"><div class="card-body"><div class="row"><div class="col-md-12"><div class="row"><div class="col"><div class="card-title"><h2 class="font-size-32">Consumer resources</h2></div></div></div><div class="content"><span class="sticky-body"><span class="ckeditor-content"><p>NMLS consumer access (ID #1165814)</p></span></span><div class="link-cta"><a class="" title="" aria-label="Visit NMLS consumer access site (ID #1165814)" target="_blank" rel="noopener noreferrer" href="https://www.nmlsconsumeraccess.org/" aria-describedby="" data-airgap-id="12">Visit website<span> <i class="arrow-right pl-2" data-unicode="f054"></i></span></a></div></div></div></div></div></div></div></div></div></div></div></main>
+
+
+
+
+<div role="dialog" class="external-link-modal-container popup_PopupBGContainer__z72KX"><div class="popup_PopupContainer__WIkdL"><button id="extLnkCloseBtn"></button><div><p> Whether you are raising a concern or have only a question, we want you to know it’s important to us. You are about to visit a third-party website, and the information you provide will be submitted directly to Verizon Ethics. If you have any questions about how the information you share will be used, please view our <a href="about/our-company/verizon-ethics-privacy-notice/" class="popup_clickHere__6D1lT" target="_blank">Ethics Privacy Notice</a>.</p>    <div class="link-cta"><a id="extLnkMdlBtn" class="popup_extLnkProceedBtn____kAJ" title="" aria-label="" target="_blank" rel="" href="javascript:void(0)" aria-describedby="" data-airgap-id="13">Proceed</a>
+
+<footer id="vz-gf20"><div class="xf-page-unified xfpage page basicpage">
+<div class="gnav20 " data-exp-name="Master">
+     <input type="hidden" id="cradle-context">
+    <div class="gnav20-sticky-content">    	
+     	
+
+
+
+
+    
+    
+    <div class="gnav20-footercontainer">
+<div class="gnav20-footer-container gnav20-white-focus gnav20-mobile-footer-accordion" data-gnav20-container="footer">
+	<div class="gnav20-main-container">
+		<div class="gnav20-footer-level-one">
+			<div class="gnav20-footer-wrapper gnav20-four ">
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Shop</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Shop menu list">
+					
+						<li>
+							<a href="/smartphones/">Devices</a>
+						</li>
+					
+						<li>
+							<a href="/products/">Accessories</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Top Device Brands</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Top Device Brands menu list">
+					
+						<li>
+							<a href="/wireless-devices/samsung/">Samsung</a>
+						</li>
+					
+						<li>
+							<a href="/wireless-devices/apple/">Apple</a>
+						</li>
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Support</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Support menu list">
+					
+						<li>
+							<a href="/support/">Support overview</a>
+						</li>
+					
+						<li>
+							<a href="/support/return-policy/">Return policy</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">About Verizon</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="About Verizon menu list">
+					
+						<li>
+							<a href="/about/">About us</a>
+						</li>
+					
+						<li>
+							<a href="https://mycareer.verizon.com/" target="_blank" rel="noopener noreferrer">Careers</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+			</div>
+			<div class="gnav20-footer-wrapper gnav20-four">			
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Most Popular</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Most Popular menu list">
+					
+						<li>
+							<a href="/smartphones/apple-iphone-17/">Apple iPhone 17</a>
+						</li>
+					
+						<li>
+							<a href="/smartphones/apple-iphone-17e/">Apple iPhone 17e</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading">Top Accessory Brands</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label="Top Accessory Brands menu list">
+					
+						<li>
+							<a href="/products/otterbox/">Otterbox</a>
+						</li>
+					
+						<li>
+							<a href="/products/zagg/">ZAGG</a>
+						</li>
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-herofooter">
+
+	<div class="gnav20-hero-wrapper">
+		<div class="gnav20-hero-footer-heading"> Important Consumer Information</div>
+		<div class="gnav20-border-content">
+			
+				<ul class="gnav20-footer-list" aria-label=" Important Consumer Information menu list">
+					
+						<li>
+							<a href="/about/terms-conditions/overview/">Legal Terms &amp; Notices</a>
+						</li>
+					
+						<li>
+							<a href="https://ss7.vzw.com/is/content/VerizonWireless/Device-Payment-Agreement-Template" target="_blank" rel="noopener noreferrer">Device Payment Terms &amp; Conditions</a>
+						</li>
+					
+						
+					
+				</ul>
+			
+		</div>
+	</div>	
+
+</div>
+
+
+
+				</div>
+				<div class="gnav20-col-wrapper">
+					
+
+
+
+
+    
+    
+    <div class="gnav20-socialfooter">
+<div class="gnav20-hero-wrapper">
+	<div class="gnav20-hero-footer-heading">Follow Verizon</div>
+	<div class="gnav20-border-content gnav20-social-icon">
+		<ul aria-label="Follow Verizon menu list">
+			
+			<li>
+				<a class="gnav20-social-media" href="https://www.facebook.com/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Facebook" title="Opens New Window">
+					<span>facebook-official</span>
+					<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1017.78"><path fill="#fff" d="M1024,512C1024,229.23,794.77,0,512,0S0,229.23,0,512c0,255.55,187.23,467.37,432,505.78v-357.78h-130v-148h130v-112.8c0-128.32,76.44-199.2,193.39-199.2,56.02,0,114.61,10,114.61,10v126h-64.56c-63.6,0-83.44,39.47-83.44,79.96v96.04h142l-22.7,148h-119.3v357.78c244.77-38.41,432-250.22,432-505.78Z"></path></svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://twitter.com/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Twitter" title="Opens New Window">
+					<span>twitter</span>
+					<svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://www.youtube.com/user/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Youtube" title="Opens New Window">
+					<span>you-tube</span>
+					<svg focusable="false" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.5 18" style="enable-background:new 0 0 18.5 18;" xml:space="preserve">
+						<path fill="#FFF" d="M17.8,4.8C17.6,4,17,3.4,16.2,3.2c-1.4-0.4-7-0.4-7-0.4s-5.6,0-7,0.4C1.4,3.4,0.8,4.1,0.6,4.8C0.2,6.3,0.2,9.2,0.2,9.2
+							s0,2.9,0.4,4.4c0.2,0.7,0.8,1.4,1.6,1.6c1.4,0.4,7,0.4,7,0.4s5.6,0,7-0.4c0.8-0.2,1.4-0.8,1.6-1.6c0.4-1.5,0.4-4.4,0.4-4.4
+							S18.2,6.3,17.8,4.8z M7.4,11.9V6.5l4.7,2.7L7.4,11.9z"></path>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://www.instagram.com/verizon/" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Instagram" title="Opens New Window">
+					<span>instagram</span>
+					<svg focusable="false" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+						<g>
+							<path fill="#FFF" d="M18,5.3c0-1-0.2-1.6-0.4-2.2c-0.2-0.6-0.5-1.1-1-1.6c-0.5-0.5-1-0.8-1.6-1c-0.6-0.2-1.2-0.4-2.2-0.4C11.8,0,11.4,0,9,0
+								S6.3,0,5.3,0c-1,0-1.6,0.2-2.2,0.4C2.5,0.7,2,1,1.5,1.5s-0.8,1-1,1.6C0.3,3.7,0.1,4.3,0.1,5.3C0,6.2,0,6.6,0,9c0,2.4,0,2.8,0.1,3.7
+								c0,1,0.2,1.6,0.4,2.2c0.2,0.6,0.5,1.1,1,1.6s1,0.8,1.6,1c0.6,0.2,1.2,0.4,2.2,0.4C6.3,18,6.6,18,9,18s2.8,0,3.7-0.1
+								c1,0,1.6-0.2,2.2-0.4c0.6-0.2,1.1-0.5,1.6-1c0.5-0.5,0.8-1,1-1.6c0.2-0.6,0.4-1.2,0.4-2.2c0-1,0.1-1.3,0.1-3.7
+								C18,6.6,18,6.2,18,5.3z M16.3,12.6c0,0.9-0.2,1.4-0.3,1.7c-0.2,0.4-0.4,0.7-0.7,1s-0.6,0.5-1,0.7c-0.3,0.1-0.8,0.3-1.7,0.3
+								c-0.9,0-1.2,0.1-3.6,0.1s-2.7,0-3.6-0.1c-0.9,0-1.4-0.2-1.7-0.3c-0.4-0.2-0.7-0.4-1-0.7s-0.5-0.6-0.7-1c-0.1-0.3-0.3-0.8-0.3-1.7
+								c0-0.9-0.1-1.2-0.1-3.6c0-2.4,0-2.7,0.1-3.6C1.7,4.5,1.9,4,2,3.7c0.2-0.4,0.4-0.7,0.7-1C3,2.3,3.3,2.1,3.7,2C4,1.9,4.5,1.7,5.4,1.7
+								c0.9,0,1.2-0.1,3.6-0.1c2.4,0,2.7,0,3.6,0.1c0.9,0,1.4,0.2,1.7,0.3c0.4,0.2,0.7,0.4,1,0.7s0.5,0.6,0.7,1c0.1,0.3,0.3,0.8,0.3,1.7
+								c0,0.9,0.1,1.2,0.1,3.6C16.4,11.4,16.4,11.7,16.3,12.6z"></path>
+							<path fill="#FFF" d="M9,4.4C6.5,4.4,4.4,6.4,4.4,9c0,2.6,2.1,4.6,4.6,4.6s4.6-2.1,4.6-4.6C13.6,6.4,11.6,4.4,9,4.4z M9,12c-1.7,0-3-1.3-3-3
+								c0-1.7,1.3-3,3-3c1.7,0,3,1.3,3,3C12,10.7,10.7,12,9,12z"></path>
+							<path fill="#FFF" d="M13.8,3.1c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1c0.6,0,1.1-0.5,1.1-1.1C14.9,3.6,14.4,3.1,13.8,3.1z"></path>
+						</g>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="gnav20-social-media" href="https://www.tiktok.com/@verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on TikTok" title="Opens New Window">
+					<span>TikTok</span>
+					<svg xmlns="http://www.w3.org/2000/svg" height="19" viewBox="0 0 16 18">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M9.2984 0.7758H11.5884C11.8091 1.9405 12.5165 2.9399 13.4965 3.5643L13.4975 3.5655C14.1797 4 14.9931 4.2535 15.8663 4.2535V4.934L15.8664 7.31C14.2444 7.31 12.7414 6.8029 11.5146 5.9423V12.1547C11.5146 15.2573 8.9319 17.7814 5.7572 17.7814C4.5305 17.7814 3.3929 17.4033 2.4578 16.7616L2.4562 16.76C0.9724 15.7412 0 14.0571 0 12.1541C0 9.0516 2.5827 6.5274 5.7574 6.5274C6.0208 6.5274 6.279 6.5486 6.5332 6.5823V7.3065L6.5331 9.7037C6.2875 9.6286 6.0279 9.5849 5.7572 9.5849C4.3074 9.5849 3.1279 10.7378 3.1279 12.1547C3.1279 13.1414 3.7007 13.9987 4.5376 14.4291C4.9025 14.6168 5.317 14.7244 5.7571 14.7244C7.1735 14.7244 8.3289 13.6233 8.3815 12.2514L8.3865 0H11.5145C11.5145 0.265 11.5407 0.524 11.5884 0.7758H9.2984Z" fill="#161823"></path>
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+
+
+    
+    
+    <div class="gnav20-socialfooter">
+<div class="gnav20-hero-wrapper">
+	<div class="gnav20-hero-footer-heading">Verizon Support</div>
+	<div class="gnav20-border-content gnav20-social-icon">
+		<ul aria-label="Verizon Support menu list">
+			
+			
+			<li>
+				<a class="gnav20-social-media" href="https://x.com/verizonsupport" target="_blank" rel="noopener noreferrer" aria-label="Verizon Support on Twitter" title="Opens New Window">
+					<span>twitter</span>
+					<svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path>
+					</svg>
+				</a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+</div>
+</div>
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="gnav20-footer-level-two gnav20-custom-margin-left">
+			
+
+
+
+
+    
+    
+    <div class="gnav20-logo">
+
+    
+    
+    <div class="gnav20-logo-wrapper gnav20-relative-index">
+        
+        <a class="gnav20-logoBlackBg" title="Verizon Home Page" href="/"></a>
+        
+    </div>
+</div>
+
+
+    
+    
+    <div class="gnav20-footerlink">
+
+
+	<ul aria-label="Policies and notices menu list" class="gnav20-footer-list ">
+		<li>
+			<a href="/about/privacy/">
+				Privacy Policy
+			</a>
+		</li>
+	
+		<li>
+			<a data-hide-for="appid:communitykh" href="/privacy/your-privacy-choices/">
+				Your Privacy Choices <span style="height:10px;width:28px;display:inline-block;position:relative;"><svg style="position:absolute;width:28px;bottom:-2px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 14" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0066FF;}.st2{fill:#FFFFFF;}.st3{fill:#0066FF;}</style><g><g id="final---dec.11-2020_1_"><g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)"><path class="st0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"></path></g></g></g><g id="final---dec.11-2020"><g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)"><path class="st1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8 h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"></path><path id="x" class="st2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0 l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8 c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"></path><path id="y" class="st3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0 L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"></path></g></g></g></g></svg></span>
+			</a>
+		</li>
+	
+		<li class="gnav20-hide">
+			<a data-show-for="appid:communitykh" href="https://community.verizon.com/t5/custom/page/page-id/yourprivacychoices">
+				Your Privacy Choices <span style="height:10px;width:28px;display:inline-block;position:relative;"><svg style="position:absolute;width:28px;bottom:-2px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 14" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0066FF;}.st2{fill:#FFFFFF;}.st3{fill:#0066FF;}</style><g><g id="final---dec.11-2020_1_"><g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)"><path class="st0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"></path></g></g></g><g id="final---dec.11-2020"><g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)"><path class="st1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8 h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"></path><path id="x" class="st2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0 l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8 c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"></path><path id="y" class="st3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0 L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"></path></g></g></g></g></svg></span>
+			</a>
+		</li>
+	
+		
+	
+		<li>
+			<a href="/about/our-company/open-internet/">
+				Open Internet
+			</a>
+		</li>
+	
+		<li>
+			<a href="/support/website-use-legal/">
+				Website Terms of Use
+			</a>
+		</li>
+	</ul>
+
+	<div class="copyright-section">
+		<div class="copyright-text">
+			© <span id="copyright-year">2026</span> Verizon
+		</div>
+    <div id="visual-cue"><div></div><div></div><div></div></div></div>
+</div>
+
+
+
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+     </div>
+	<div class="gnav20-sticky-header  gnav20-with-promo"></div>
+</div>
+
+
+
+</div>
+</footer>
+</div></div></div></div>
+
+<script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"errorCode":0,"contentData":{"nid":[{"value":918769}],"type":[{"target_id":"flexpage","target_type":"node_type","target_uuid":"2015e926-0bcd-4b23-8412-9094ab92f52e"}],"status":[{"value":true}],"moderation_state":[{"value":"published"}],"metatag":{"value":{"title":"Legal terms and notices | About Verizon","twitter_cards_type":"summary_large_image","shortlink":"http://corpweb-api.verizon.com/about/node/918769","canonical_url":"http://corpweb-api.verizon.com/about/terms-conditions/overview","twitter_cards_title":"Legal terms and notices","description":"Explore Verizon's Legal Terms of Use. Learn about the terms of our technology as well as legal notices, announcements, user guides, state-specific tariffs, network disclosures and more.","raw_value":{"description":"Explore Verizon's Legal Terms of Use. Learn about the terms of our technology as well as legal notices, announcements, user guides, state-specific tariffs, network disclosures and more."},"twitter_cards_creator":"@verizon","og_title":"Legal terms and notices","twitter_cards_page_url":"http://corpweb-api.verizon.com/about/terms-conditions/overview","og_updated_time":"2026-02-27T15:13:13-05:00"}},"path":[{"alias":"/terms-conditions/overview","pid":272649,"langcode":"en"}],"rh_redirect_fallback_action":[],"field_first_published":[{"value":1592591211}],"field_fp_black_background":[{"value":false}],"field_fp_override_tax_term":[],"field_fp_page_components":{"0":{"target_id":113507,"target_revision_id":726091,"target_type":"paragraph","target_uuid":"aafe210c-bae6-42de-b428-30adbfb1b832"},"1":{"target_id":28097,"target_revision_id":726093,"target_type":"paragraph","target_uuid":"7fe6d831-6dcb-45d2-af09-af29af254019"},"2":{"target_id":28099,"target_revision_id":726095,"target_type":"paragraph","target_uuid":"7ede8376-20e0-44b6-81d6-359169e30697"},"3":{"target_id":28101,"target_revision_id":726097,"target_type":"paragraph","target_uuid":"ceed81e4-6e77-4388-b903-92fee28e2ad3"},"4":{"target_id":35145,"target_revision_id":726099,"target_type":"paragraph","target_uuid":"1d70886f-3786-4ff4-b14d-472abb010215"},"5":{"target_id":125015,"target_revision_id":726101,"target_type":"paragraph","target_uuid":"aae30ead-aa0f-40b4-9653-d64d082786b0"},"6":{"target_id":125017,"target_revision_id":726103,"target_type":"paragraph","target_uuid":"aacb69a4-4849-4b0e-a29a-e5f7a89df03d"},"paragraph":[{"id":[{"value":113507}],"type":[{"target_id":"custom_breadcrumb","target_type":"paragraphs_type","target_uuid":"376c28b7-5d29-4c68-b7c0-fcdfb3b46db3"}],"field_custom_breadcrumb":{"0":{"target_id":113505,"target_revision_id":726089,"target_type":"paragraph","target_uuid":"5b385e5d-16c5-47db-b059-9ee02666147e"},"paragraph":[{"id":[{"value":113505}],"type":[{"target_id":"breadcrumb_item","target_type":"paragraphs_type","target_uuid":"e0530f80-72b7-4893-a14f-d4a1d727baab"}],"field_breadcrumb_level":[],"field_breadcrumb_link":[{"uri":"route:\u003cnolink\u003e","title":"Legal terms and notices","options":[]}]}]}},{"id":[{"value":28097}],"type":[{"target_id":"fp_hero_display_one_digital","target_type":"paragraphs_type","target_uuid":"ad65381a-642f-428b-ad3c-5534c4b8f0e5"}],"field_common_1d_background_color":[{"value":false}],"field_common_1d_border_line":[{"value":"both"}],"field_common_1d_button_color":[{"value":"Black"}],"field_common_1d_headline":[{"value":"Legal terms |and notices"}],"field_common_1d_headline_display":[{"value":"h1-84-48"}],"field_common_1d_headline_font":[{"value":"default"}],"field_common_1d_link":[],"field_common_1d_link_type":[{"value":false}],"field_common_1d_mobile_media":[],"field_common_1d_overide_bg_color":[],"field_common_1d_text_color":[{"value":true}],"field_common_margin_bottom":[],"field_common_padding_bottom":[],"field_common_padding_top":[],"field_common_video_loop":[{"value":false}],"field_element_id":[],"field_fp_hd_onedigital_alignment":[{"value":"1"}],"field_fp_hd_onedigital_bg_media":[],"field_fp_hd_onedigital_comp_type":[{"value":"mini-hero-display"}],"field_fp_hd_onedigital_desc":[],"field_fp_hd_onedigital_mobview":[{"value":false}],"field_fp_hd_onedigital_tabview":[{"value":false}],"field_fp_hd_onedigital_vcaptn":[],"field_fp_hd_onedigital_video":[],"field_fp_hd_onedigital_videothum":[],"field_fp_overlay_btn_color":[],"field_fp_overlay_cta_aria_label":[],"field_fp_overlay_cta_text":[],"field_fp_overlay_cta_type":[{"value":false}],"field_hd_menu":[]},{"id":[{"value":28099}],"type":[{"target_id":"fp_body_one_digital","target_type":"paragraphs_type","target_uuid":"de51f205-92f5-483e-bc48-0fb5405e9193"}],"field_common_1d_overide_bg_color":[],"field_element_id":[],"field_common_1d_background_color":[{"value":true}],"field_common_1d_border_line":[{"value":"none"}],"field_common_margin_bottom":[],"field_common_padding_bottom":[],"field_common_padding_top":[],"field_fb_body_one_digital":[{"value":"\u003cdiv class=\"bodycopy-1d-left\"\u003eThank you for using our products and services. When you use our technologies, you agree to certain terms, which can be found in this section. We also provide you with information about state-specific tariffs, an archive of network disclosures and a guide on our network management principles.\u003c/div\u003e\r\n","format":"editor","processed":"\u003cdiv class=\"bodycopy-1d-left\"\u003eThank you for using our products and services. When you use our technologies, you agree to certain terms, which can be found in this section. We also provide you with information about state-specific tariffs, an archive of network disclosures and a guide on our network management principles.\u003c/div\u003e\n"}]},{"id":[{"value":28101}],"type":[{"target_id":"fp_manual_re_cir_one_digital","target_type":"paragraphs_type","target_uuid":"ef77265a-fc1f-4792-ad98-3a1fb5a2a92d"}],"field_common_padding_bottom":[],"field_fp_one_digital_recir_ic":[],"field_fp_one_digital_recir_pp":[],"field_fp_one_digital_recir_stkpp":[{"value":false}],"field_one_digital_recir_comptype":[{"value":"call-out-box"}],"field_cob_stack_mobile":[{"value":false}],"field_common_1d_background_color":[{"value":true}],"field_common_1d_border_line":[{"value":"dark-bottom"}],"field_common_1d_button_color":[{"value":"Clear"}],"field_common_1d_headline":[{"value":"Terms of service"}],"field_common_1d_headline_display":[{"value":"h2-64-84"}],"field_common_1d_link":[{"uri":"about/terms-conditions/terms-of-use","title":"Site terms of use","options":{"attributes":{"target":"_blank","class":[""],"aria-label":"Read the Verizon Terms of Use "}}}],"field_common_1d_link_type":[{"value":true}],"field_common_1d_overide_bg_color":[],"field_common_1d_text_color":[{"value":false}],"field_common_margin_bottom":[{"value":"24-32"}],"field_common_padding_top":[],"field_element_id":[],"field_fp_one_digital_cta_recir":[],"field_fp_one_digital_recir_attrb":[],"field_fp_one_digital_recir_bgimg":[],"field_fp_one_digital_recir_cbclr":[{"value":"Black"}],"field_fp_one_digital_recir_cob":{"0":{"target_id":10841,"target_type":"page_component","target_uuid":"cec4f9fb-e205-401e-884e-29648e128bfc","url":"/about/page_component/10841"},"1":{"target_id":10843,"target_type":"page_component","target_uuid":"9f9a158b-34af-4efd-88f8-b81b7e8b16f5","url":"/about/page_component/10843"},"2":{"target_id":10845,"target_type":"page_component","target_uuid":"9934f997-a429-4efb-ba7c-3db0d449bbdb","url":"/about/page_component/10845"},"3":{"target_id":10847,"target_type":"page_component","target_uuid":"d326c087-98d3-4089-8cd8-a5ea2d239651","url":"/about/page_component/10847"},"page_component":[{"id":[{"value":10841}],"type":[{"target_id":"call_out_boxes_one_digital","target_type":"page_component_type","target_uuid":"fbef6474-1815-459d-aba5-4e577ec4f286"}],"title":[{"value":"COB - In Home"}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"| About Verizon"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/page_component/10841"}}],"field_pc_cob_onedigital_desc":[{"value":"\u003cp\u003eView terms and user guides for Verizon fios and broadband\u0026nbsp;services.\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eView terms and user guides for Verizon fios and broadband services.\u003c/p\u003e\n"}],"field_pc_cob_onedigital_headline":[{"value":"Residential"}],"field_pc_cob_onedigital_link":[{"uri":"internal:/terms-conditions/residential-terms-service","title":"","options":{"attributes":{"class":[""],"aria-label":"Go to the residential terms of service web page"}}}],"field_pc_cob_onedigital_media":[],"field_pc_cob_one_headline_disply":[]},{"id":[{"value":10843}],"type":[{"target_id":"call_out_boxes_one_digital","target_type":"page_component_type","target_uuid":"fbef6474-1815-459d-aba5-4e577ec4f286"}],"title":[{"value":"COB - Business"}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"| About Verizon"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/page_component/10843"}}],"field_pc_cob_onedigital_desc":[{"value":"\u003cp\u003eView terms and user guides for Verizon Business services.\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eView terms and user guides for Verizon Business services.\u003c/p\u003e\n"}],"field_pc_cob_onedigital_headline":[{"value":"Business"}],"field_pc_cob_onedigital_link":[{"uri":"internal:/terms-conditions/business-terms-of-service","title":"","options":{"attributes":{"class":[""],"aria-label":"Go to the Business Terms of Service web page"}}}],"field_pc_cob_onedigital_media":[],"field_pc_cob_one_headline_disply":[]},{"id":[{"value":10845}],"type":[{"target_id":"call_out_boxes_one_digital","target_type":"page_component_type","target_uuid":"fbef6474-1815-459d-aba5-4e577ec4f286"}],"title":[{"value":"COB - Mobile"}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"| About Verizon"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/page_component/10845"}}],"field_pc_cob_onedigital_desc":[{"value":"\u003cp\u003eGo to the Verizon website to view terms for mobile services.\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eGo to the Verizon website to view terms for mobile services.\u003c/p\u003e\n"}],"field_pc_cob_onedigital_headline":[{"value":"Mobile"}],"field_pc_cob_onedigital_link":[{"uri":"support/other-wireless-topics/legal-notices-and-industry-info/","title":"","options":{"attributes":{"target":"_blank","class":[""],"aria-label":"Go to the Mobile Wireless legal notices web section"}}}],"field_pc_cob_onedigital_media":[],"field_pc_cob_one_headline_disply":[]},{"id":[{"value":10847}],"type":[{"target_id":"call_out_boxes_one_digital","target_type":"page_component_type","target_uuid":"fbef6474-1815-459d-aba5-4e577ec4f286"}],"title":[{"value":"COB - My Verizon Customer Agreement"}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"| About Verizon"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/page_component/10847"}}],"field_pc_cob_onedigital_desc":[{"value":"\u003cp\u003eFind important information about your wireless service.\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eFind important information about your wireless service.\u003c/p\u003e\n"}],"field_pc_cob_onedigital_headline":[{"value":"My Verizon Customer Agreement"}],"field_pc_cob_onedigital_link":[{"uri":"support/customer-agreement/","title":"","options":{"attributes":{"target":"_blank","class":[""],"aria-label":"Read the My Verizon Customer Agreement"}}}],"field_pc_cob_onedigital_media":[],"field_pc_cob_one_headline_disply":[]}]},"field_fp_one_digital_recir_desc":[],"field_fp_one_digital_recir_video":[]},{"id":[{"value":35145}],"type":[{"target_id":"fp_media_cta_one_digital","target_type":"paragraphs_type","target_uuid":"b5631734-b27e-42f2-b879-68ac3395474d"}],"field_common_1d_background_color":[{"value":true}],"field_common_1d_border_line":[{"value":"rounded-corner"}],"field_common_1d_headline_display":[{"value":"h2-32-68"}],"field_common_1d_headline_font":[{"value":"default"}],"field_common_1d_link":[{"uri":"internal:/terms-conditions/user-guides","title":"Browse user guides","options":{"attributes":{"class":[""]}}},{"uri":"support/legal-notices/","title":"Legal notices \u0026 announcements","options":{"attributes":{"target":"_blank","class":[""],"aria-label":"Legal notices \u0026 announcements"}}}],"field_common_1d_link_type":[{"value":true}],"field_common_1d_overide_bg_color":[],"field_common_1d_text_color":[{"value":false}],"field_common_margin_bottom":[{"value":"24-32"}],"field_common_padding_bottom":[],"field_common_padding_top":[],"field_element_id":[],"field_fp_hd_onedigital_poll":[{"value":false}],"field_fp_hd_onedigital_video":[],"field_fp_overlay_btn_color":[],"field_fp_overlay_cta_aria_label":[],"field_fp_overlay_cta_text":[],"field_fp_overlay_cta_type":[{"value":false}],"field_media_cta_1d_alignment":[{"value":false}],"field_media_cta_1d_description":[{"value":"\u003cp\u003eAccess Verizon user guides and legal updates. Easily print or download official documents and resources today.\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eAccess Verizon user guides and legal updates. Easily print or download official documents and resources today.\u003c/p\u003e\n"}],"field_media_cta_1d_media":{"0":{"target_id":68977,"target_type":"media","target_uuid":"a7bbdc6a-a7ff-42de-b80d-5096698044ba","url":"/about/media/68977"},"media":[{"mid":[{"value":68977}],"bundle":[{"target_id":"image","target_type":"media_type","target_uuid":"d3dbfef2-99be-4550-8e97-19bc216b6d28"}],"name":[{"value":"verizon-small-business-digital-4-media-cta-644x362.jpg"}],"field_media_image":{"0":{"target_id":77475,"alt":"","title":"","width":644,"height":362,"target_type":"file","target_uuid":"cc21bbc3-9322-4526-b95d-c683ba72e612","url":"/about/files/verizon-small-business-digital-4-media-cta-644x362jpg-1"},"file":{"type":[{"target_id":"image","target_type":"file_type","target_uuid":"a41fdf5a-e4cc-438a-b2da-d3eebeef9002"}],"filename":[{"value":"verizon-small-business-digital-4-media-cta-644x362.jpg"}],"uri":[{"value":"public://2026-02/verizon-small-business-digital-4-media-cta-644x362.jpg","url":"/about/sites/default/files/2026-02/verizon-small-business-digital-4-media-cta-644x362.jpg"}],"filemime":[{"value":"image/jpeg"}],"path":[{"alias":"/files/verizon-small-business-digital-4-media-cta-644x362jpg-1","pid":315115,"langcode":"en"}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"| About Verizon"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/files/verizon-small-business-digital-4-media-cta-644x362jpg-1"}}],"field_file_image_alt_text":[],"field_file_image_title_text":[],"field_image_alt_text":[],"field_image_title_text":[],"mobile_image":"/about/sites/default/files/styles/hero_mobile/public/2026-02/verizon-small-business-digital-4-media-cta-644x362.jpg","mobile_webp_image":"/about/sites/default/files/styles/hero_mobile/public/2026-02/verizon-small-business-digital-4-media-cta-644x362.webp","tablet_image":"/about/sites/default/files/styles/hero_tablet/public/2026-02/verizon-small-business-digital-4-media-cta-644x362.jpg","tablet_webp_image":"/about/sites/default/files/styles/hero_tablet/public/2026-02/verizon-small-business-digital-4-media-cta-644x362.webp","webp_image":"/about/sites/default/files/styles/webp_style/public/2026-02/verizon-small-business-digital-4-media-cta-644x362.webp","token_uri":[{"value":"/file/77475/download?token=xZo1rVTv"}]}},"field_show_original_uploaded_ima":[{"value":false}],"field_media_display_org_image":[{"value":true}]}]},"field_media_cta_1d_title":[{"value":"User guides \u0026 legal updates"}],"field_media_cta_1d_title_display":[{"value":"h2-32-68"}],"field_media_cta_1d_title_font":[{"value":"default"}],"field_media_cta_1d_video_thumb":[],"field_common_1d_button_color":[{"value":"Clear"}],"field_common_1d_headline":[]},{"id":[{"value":125015}],"type":[{"target_id":"fp_media_cta_one_digital","target_type":"paragraphs_type","target_uuid":"b5631734-b27e-42f2-b879-68ac3395474d"}],"field_common_1d_background_color":[{"value":true}],"field_common_1d_border_line":[{"value":"rounded-corner"}],"field_common_1d_headline_display":[{"value":"h2-32-68"}],"field_common_1d_headline_font":[{"value":"default"}],"field_common_1d_link":[{"uri":"internal:/terms-conditions/network-disclosures","title":"Latest disclosures","options":{"attributes":{"class":[""],"aria-label":"2025 - 2026 network disclosures"}}},{"uri":"internal:/terms-conditions/network-disclosures/archives","title":"Disclosures archives","options":{"attributes":{"class":[""],"aria-label":"Browse network disclosures archives"}}}],"field_common_1d_link_type":[{"value":true}],"field_common_1d_overide_bg_color":[],"field_common_1d_text_color":[{"value":false}],"field_common_margin_bottom":[{"value":"0-0"}],"field_common_padding_bottom":[],"field_common_padding_top":[],"field_element_id":[],"field_fp_hd_onedigital_poll":[{"value":false}],"field_fp_hd_onedigital_video":[],"field_fp_overlay_btn_color":[{"value":"Black"}],"field_fp_overlay_cta_aria_label":[],"field_fp_overlay_cta_text":[{"value":"Watch the video"}],"field_fp_overlay_cta_type":[{"value":true}],"field_media_cta_1d_alignment":[{"value":true}],"field_media_cta_1d_description":[{"value":"\u003cp\u003eBrowse Verizon network disclosures and historical updates across the U.S. from 2003 to present, available for download.\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eBrowse Verizon network disclosures and historical updates across the U.S. from 2003 to present, available for download.\u003c/p\u003e\n"}],"field_media_cta_1d_media":{"0":{"target_id":63077,"target_type":"media","target_uuid":"5643b68e-ae61-4463-a155-f183d780cc0f","url":"/about/media/63077"},"media":[{"mid":[{"value":63077}],"bundle":[{"target_id":"image","target_type":"media_type","target_uuid":"d3dbfef2-99be-4550-8e97-19bc216b6d28"}],"name":[{"value":"Connections-644x362jpg.jpg"}],"field_media_image":{"0":{"target_id":69983,"alt":"","title":"","width":644,"height":362,"target_type":"file","target_uuid":"4ec33ca4-5200-4f6d-90a5-34d15ac9d574","url":"/about/files/connections-644x362jpgjpg"},"file":{"type":[{"target_id":"image","target_type":"file_type","target_uuid":"a41fdf5a-e4cc-438a-b2da-d3eebeef9002"}],"filename":[{"value":"Connections-644x362jpg.jpg"}],"uri":[{"value":"public://2024-02/Connections-644x362jpg.jpg","url":"/about/sites/default/files/2024-02/Connections-644x362jpg.jpg"}],"filemime":[{"value":"image/jpeg"}],"path":[{"alias":"/files/connections-644x362jpgjpg","pid":304381,"langcode":"en"}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"| About Verizon"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/files/connections-644x362jpgjpg"}}],"field_file_image_alt_text":[],"field_file_image_title_text":[],"field_image_alt_text":[],"field_image_title_text":[],"mobile_image":"/about/sites/default/files/styles/hero_mobile/public/2024-02/Connections-644x362jpg.jpg","mobile_webp_image":"/about/sites/default/files/styles/hero_mobile/public/2024-02/Connections-644x362jpg.webp","tablet_image":"/about/sites/default/files/styles/hero_tablet/public/2024-02/Connections-644x362jpg.jpg","tablet_webp_image":"/about/sites/default/files/styles/hero_tablet/public/2024-02/Connections-644x362jpg.webp","webp_image":"/about/sites/default/files/styles/webp_style/public/2024-02/Connections-644x362jpg.webp","token_uri":[{"value":"/file/69983/download?token=zAYh1K4w"}]}},"field_show_original_uploaded_ima":[],"field_media_display_org_image":[{"value":true}]}]},"field_media_cta_1d_title":[{"value":"Network disclosures"}],"field_media_cta_1d_title_display":[{"value":"h2-32-68"}],"field_media_cta_1d_title_font":[{"value":"default"}],"field_media_cta_1d_video_thumb":[],"field_common_1d_button_color":[{"value":"Clear"}],"field_common_1d_headline":[]},{"id":[{"value":125017}],"type":[{"target_id":"fp_sticky_cta_one_digital","target_type":"paragraphs_type","target_uuid":"330fc62a-50dd-42e2-a167-5c31b80f2894"}],"field_common_1d_background_color":[{"value":true}],"field_common_1d_button_color":[{"value":"Clear"}],"field_common_1d_headline_display":[{"value":"h2-32-68"}],"field_common_1d_link_type":[{"value":true}],"field_common_1d_text_color":[{"value":false}],"field_sticky_cta_1d_desc_mobile":[{"value":"\u003cp\u003eNMLS consumer access (ID #1165814)\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eNMLS consumer access (ID #1165814)\u003c/p\u003e\n"}],"field_sticky_cta_1d_fullwidth":[{"value":false}],"field_sticky_cta_1d_link_mobview":[{"value":true}],"field_sticky_cta_1d_position":[{"value":"top"}],"field_common_1d_border_line":[{"value":"rounded-corner"}],"field_common_1d_close_button":[{"value":false}],"field_common_1d_headline":[{"value":"Consumer resources"}],"field_common_1d_link":[{"uri":"https://www.nmlsconsumeraccess.org/","title":"Visit website","options":{"attributes":{"target":"_blank","class":[""],"aria-label":"Visit NMLS consumer access site (ID #1165814)"}}}],"field_common_1d_overide_bg_color":[],"field_common_margin_bottom":[{"value":"24-32"}],"field_content_alignment":[{"value":"left"}],"field_sticky_cta_1d_desc_desktop":[{"value":"\u003cp\u003eNMLS consumer access (ID #1165814)\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eNMLS consumer access (ID #1165814)\u003c/p\u003e\n"}],"field_sticky_cta_1d_devices":[{"value":"none"}],"field_sticky_cta_1d_sticky":[{"value":false}]}]},"field_language_dropdown":[],"field_left_and_right_rule":[{"value":true}],"field_metatag":[{"value":"{\"description\":\"Explore Verizon\\u0027s Legal Terms of Use. Learn about the terms of our technology as well as legal notices, announcements, user guides, state-specific tariffs, network disclosures and more.\",\"title\":\"Legal terms and notices | About Verizon\"}"}],"entity_type":"node","bitlylink":"https://vz.to/3fGJSi9"},"siteUrl":"https://www.verizon.com","query":{"segment":["terms-conditions","overview"]},"ssrHost":"https://corpweb-api.verizon.com","urlAlias":"terms-conditions/overview","previewMode":false},"aboutPage":true,"gtmtagStatus":"active","menunavData":[{"key":"b0fdc585-152c-4d59-ab0a-638605d46211","title":"About Us","description":null,"uri":"about/index.html","alias":null,"external":true,"absolute":"about/index.html","relative":"about/index.html","existing":true,"weight":"-49","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["company_site","company_site","company_site","company_site","company_site","company_site","company_site"]},"external":true},"below":[{"key":"88f6ed94-68ef-4722-bbdc-d951089f5f27","title":"Who We Are","description":null,"uri":"node/927803","alias":"our-company/who-we-are","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/who-we-are","relative":"/about/our-company/who-we-are","existing":true,"weight":"-47","expanded":false,"enabled":true,"uuid":"44140c28-4831-4cad-9de3-955fa54b5154","options":{"attributes":{"class":[""]}},"below":[{"key":"e64ed3dc-ed4f-463c-bec7-1ba64446c54f","title":"Our Culture","description":null,"uri":"node/928989","alias":"our-company/our-culture","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/our-culture","relative":"/about/our-company/our-culture","existing":true,"weight":"-27","expanded":false,"enabled":true,"uuid":"046ade54-6646-4400-9d68-a63967953c82","options":{"attributes":{"class":[""]}}},{"key":"5f393265-3554-4100-983f-b485c12f85cb","title":"History and Timeline","description":null,"uri":"node/870077","alias":"our-company/history-and-timeline","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/history-and-timeline","relative":"/about/our-company/history-and-timeline","existing":true,"weight":"-26","expanded":false,"enabled":true,"uuid":"0c5fd0f6-6af3-4cae-8b85-d68249d1287b","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}}},{"key":"d8304adc-afcf-4e3b-a75f-ce49041242e3","title":"Headquarters \u0026 Contact Info","description":null,"uri":"node/910751","alias":"our-company/verizon-corporate-headquarters","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/verizon-corporate-headquarters","relative":"/about/our-company/verizon-corporate-headquarters","existing":true,"weight":"-24","expanded":false,"enabled":true,"uuid":"4d7c63f7-ddc2-498d-867f-74ab45e3e716","options":{"attributes":{"class":[""]}}},{"key":"96e2c0ef-7b75-490f-9a61-b69b698e6a5a","title":"Verizon Fact Sheet","description":null,"uri":"node/917095","alias":"our-company/verizon-fact-sheet","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/verizon-fact-sheet","relative":"/about/our-company/verizon-fact-sheet","existing":true,"weight":"-23","expanded":false,"enabled":true,"uuid":"8acc6797-6090-4733-b295-eee75679e557","options":{"attributes":[],"item_attributes":{"id":"","class":"","style":""},"html":true}},{"key":"1cf8b8eb-a84b-4c1c-9898-0df0d14877c5","title":"Leadership","description":null,"uri":"node/916669","alias":"our-company/executive-bios","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/executive-bios","relative":"/about/our-company/executive-bios","existing":true,"weight":"-22","expanded":false,"enabled":true,"uuid":"eed89cfc-752b-4917-84ef-108c2cf13f87","options":{"attributes":{"class":["","col1","col1"]}}}]},{"key":"619100a0-cbe4-4f28-a305-338880a709e8","title":"What We Do","description":null,"uri":"node/927805","alias":"our-company/what-we-do","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/what-we-do","relative":"/about/our-company/what-we-do","existing":true,"weight":"-44","expanded":false,"enabled":true,"uuid":"1eb53fa4-a4c5-4aac-91d7-f0d15a02ed1d","options":{"attributes":{"class":["","col2","","col2","col2  col2"]}},"below":[{"key":"4a4a37f0-3a1e-4b44-8d8d-7f2e09d37570","title":"Innovation Labs","description":null,"uri":"node/925399","alias":"our-company/innovation-labs","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs","relative":"/about/our-company/innovation-labs","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":"10800a93-7b38-4727-af2a-e19c0378e741","options":{"attributes":{"class":[""]},"query":[]},"below":[{"key":"825477ff-f0ca-424a-8f15-64f717ef7f38","title":"Innovation Labs Research \u0026 Development","description":null,"uri":"node/928323","alias":"our-company/innovation-labs/research-development","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs/research-development","relative":"/about/our-company/innovation-labs/research-development","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":"2abe620f-d885-4a05-a212-80098b50c7ee","options":{"attributes":{"class":[""]},"query":[]}},{"key":"165ddd5a-67ec-4f89-a605-c0390cc26e67","title":"Innovation Labs as a Service","description":null,"uri":"node/928303","alias":"our-company/innovation-labs/labs-service","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs/labs-service","relative":"/about/our-company/innovation-labs/labs-service","existing":true,"weight":"4","expanded":false,"enabled":true,"uuid":"8d0df4e2-6065-467c-bcca-ad9b17bd21a5","options":{"attributes":{"class":[""]},"query":[]}},{"key":"3f5d22e7-551c-4af4-8c74-b1eb26a632b8","title":"Innovation Labs Enterprise Workshops","description":null,"uri":"node/928325","alias":"our-company/innovation-labs/enterprise-workshops","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs/enterprise-workshops","relative":"/about/our-company/innovation-labs/enterprise-workshops","existing":true,"weight":"5","expanded":false,"enabled":true,"uuid":"77c7baba-3404-4299-963b-3c0e3e3d07b4","options":{"attributes":{"class":[""]},"query":[]}},{"key":"95bdd323-d040-42f7-b9e4-cd8bc01fb52b","title":"Connecting ISR capabilities in the sky","description":null,"uri":"node/928331","alias":"our-company/innovation-labs/case-study-lockheed-martin","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs/case-study-lockheed-martin","relative":"/about/our-company/innovation-labs/case-study-lockheed-martin","existing":true,"weight":"6","expanded":false,"enabled":true,"uuid":"316c9499-a8ca-482d-9c8a-980ea05dc310","options":{"attributes":{"class":[""]},"query":[]}},{"key":"10957ea0-3107-4797-af6e-f9d48c51f581","title":"Racing gets an upgrade","description":null,"uri":"node/928327","alias":"our-company/innovation-labs/case-study-f1","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs/case-study-f1","relative":"/about/our-company/innovation-labs/case-study-f1","existing":true,"weight":"7","expanded":false,"enabled":true,"uuid":"45701e93-7ad5-444d-a7a6-ecc7fc1a8476","options":{"attributes":{"class":[""]},"query":[]}},{"key":"705e3dfb-9bba-4d21-8adb-ce5acbd520c5","title":"Making game time decisions easier","description":null,"uri":"node/928329","alias":"our-company/innovation-labs/case-study-nfl","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs/case-study-nfl","relative":"/about/our-company/innovation-labs/case-study-nfl","existing":true,"weight":"8","expanded":false,"enabled":true,"uuid":"16ff0d6f-16bc-4f12-9877-872fa3d8eae3","options":{"attributes":{"class":[""]},"query":[]}},{"key":"80e31d0d-1abe-4fb4-beea-0be638b7dd51","title":"Verizon API Early Access Program","description":null,"uri":"node/929001","alias":"our-company/innovation-labs/verizon-api-early-access-program","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs/verizon-api-early-access-program","relative":"/about/our-company/innovation-labs/verizon-api-early-access-program","existing":true,"weight":"9","expanded":false,"enabled":true,"uuid":"47708a8f-0e76-4515-90fc-700f920ba7b4","options":{"attributes":{"class":[""]}}},{"key":"20183710-3f02-48c8-b6c9-90ab8264e590","title":"Los Angeles Innovation Lab","description":null,"uri":"node/928341","alias":"our-company/innovation-labs/los-angeles","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs/los-angeles","relative":"/about/our-company/innovation-labs/los-angeles","existing":true,"weight":"11","expanded":false,"enabled":true,"uuid":"09da4c86-980b-48ad-adeb-02a8cd8e9636","options":{"attributes":{"class":[""]},"query":[]}},{"key":"0223de71-6707-406d-8a31-01a08981bf08","title":"San Francisco Innovation Lab","description":null,"uri":"node/928345","alias":"our-company/innovation-labs/san-francisco","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/innovation-labs/san-francisco","relative":"/about/our-company/innovation-labs/san-francisco","existing":true,"weight":"12","expanded":false,"enabled":true,"uuid":"6ec9827d-fe5b-4bf3-9d9c-580131d26365","options":{"attributes":{"class":[""]},"query":[]}}]},{"key":"3e1165ae-908e-481d-a8c0-454ed01fb010","title":"Broadband \u0026 Fiber","description":null,"uri":"node/870039","alias":"our-company/high-speed-broadband","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/high-speed-broadband","relative":"/about/our-company/high-speed-broadband","existing":true,"weight":"13","expanded":false,"enabled":true,"uuid":"3198ad70-f148-461f-bc97-baf4822ce3dc","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}}},{"key":"456c4b81-eb4e-4943-aa4e-2408a23413ce","title":"Internet of Things","description":null,"uri":"node/870049","alias":"our-company/internet-things","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/internet-things","relative":"/about/our-company/internet-things","existing":true,"weight":"15","expanded":false,"enabled":true,"uuid":"29df54cc-e70e-4285-993d-a208e564a4da","options":{"attributes":[],"item_attributes":{"id":"","class":"","style":""},"html":true}},{"key":"ca0e6d91-7d59-4fde-a969-f97554510c3a","title":"Managed Security","description":null,"uri":"node/870051","alias":"our-company/managed-security","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/managed-security","relative":"/about/our-company/managed-security","existing":true,"weight":"16","expanded":false,"enabled":true,"uuid":"184b604b-47b9-4ac1-8253-34316045a8f3","options":[]},{"key":"641a2242-a1dd-4481-976c-9501b16f6aad","title":"Verizon Ventures","description":null,"uri":"node/926633","alias":"our-company/verizon-ventures","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/verizon-ventures","relative":"/about/our-company/verizon-ventures","existing":true,"weight":"17","expanded":false,"enabled":true,"uuid":"d931bb10-7e16-4b42-975f-0a1014351de5","options":{"attributes":{"class":[""]}},"below":[{"key":"18a1e9e3-bfd5-436e-9fed-40f0fd3d6663","title":"Portfolio Companies","description":null,"uri":"node/926587","alias":"our-company/verizon-ventures/portfolio-companies","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/verizon-ventures/portfolio-companies","relative":"/about/our-company/verizon-ventures/portfolio-companies","existing":true,"weight":"9","expanded":false,"enabled":true,"uuid":"5dbc1fa4-b62f-4e20-996a-05b702e44ef2","options":{"attributes":{"class":[""]}}}]}]},{"key":"66d66fc6-8659-46cc-acd5-24740ff4c048","title":"How We Lead","description":null,"uri":"node/927811","alias":"our-company/how-we-operate","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/how-we-operate","relative":"/about/our-company/how-we-operate","existing":true,"weight":"-42","expanded":false,"enabled":true,"uuid":"52495a4d-5aad-4bbc-a391-2cd9a73e667e","options":{"attributes":{"class":["","col3","col3","col3","col3"]}},"below":[{"key":"7d9fc281-3676-4409-9ad9-9ebb31210f6f","title":"Code of Conduct","description":null,"uri":"node/870055","alias":"our-company/code-conduct","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/code-conduct","relative":"/about/our-company/code-conduct","existing":true,"weight":"-48","expanded":false,"enabled":true,"uuid":"9a82099e-6601-43d0-94cd-090373ef599c","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}},"below":[{"key":"7e88ebfc-3a07-422b-8416-6e529a789e23","title":"Verizon Ethics Privacy Notice","description":null,"uri":"about/our-company/verizon-ethics-privacy-notice","alias":null,"external":true,"absolute":"about/our-company/verizon-ethics-privacy-notice","relative":"about/our-company/verizon-ethics-privacy-notice","existing":true,"weight":"0","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"9afe3629-b22c-45bd-8be0-a5bdfde9b557","title":"Open Internet","description":null,"uri":"node/872987","alias":"our-company/open-internet","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/open-internet","relative":"/about/our-company/open-internet","existing":true,"weight":"-47","expanded":false,"enabled":true,"uuid":"5bdb1b69-884b-4666-897a-e24936cd3ed9","options":{"attributes":[],"item_attributes":{"id":"","class":"","style":""},"html":true},"below":[{"key":"430d43d7-adf1-49dd-b54c-bde83c9a34e7","title":"Network Management","description":null,"uri":"node/918775","alias":"our-company/network-management","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/network-management","relative":"/about/our-company/network-management","existing":true,"weight":"-46","expanded":false,"enabled":true,"uuid":"55aa5a24-ff29-4d70-8fdb-090a502f8c79","options":{"attributes":{"class":[""]},"query":[]}},{"key":"662100e4-cfda-41ea-b989-f0daffdc2f1d","title":"Network Performance","description":null,"uri":"node/913053","alias":"our-company/network-performance","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/network-performance","relative":"/about/our-company/network-performance","existing":true,"weight":"-45","expanded":false,"enabled":true,"uuid":"a9a8b795-dd94-4faf-8784-6f4a577d2fed","options":{"attributes":{"class":[""]},"query":[]}}]},{"key":"cc3f6453-81b0-4dec-af27-adcdd7e43eba","title":"Policies","description":null,"uri":"node/870065","alias":"our-company/company-policies","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/company-policies","relative":"/about/our-company/company-policies","existing":true,"weight":"-46","expanded":false,"enabled":true,"uuid":"75578f5a-50a7-46f2-a49c-425fe4748147","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}},"below":[{"key":"7df98619-cc29-414e-9fce-845dbd7e90c1","title":"Content Policies","description":null,"uri":"about/our-company/company-policies/content-policies","alias":null,"external":true,"absolute":"about/our-company/company-policies/content-policies","relative":"about/our-company/company-policies/content-policies","existing":true,"weight":"0","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"48e09d24-3aea-4a9e-b6b9-b893e3b4cfa9","title":"Digital Safety","description":null,"uri":"about/our-company/company-policies/digital-safety","alias":null,"external":true,"absolute":"about/our-company/company-policies/digital-safety","relative":"about/our-company/company-policies/digital-safety","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"9f835230-c42d-4d76-aa18-b25eb7c23d8d","title":"Child exploitation FAQs","description":null,"uri":"about/our-company/company-policies/verizons-efforts-combat-online-child-exploitation-faqs","alias":null,"external":true,"absolute":"about/our-company/company-policies/verizons-efforts-combat-online-child-exploitation-faqs","relative":"about/our-company/company-policies/verizons-efforts-combat-online-child-exploitation-faqs","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"85d2dc41-b441-4fb7-b87c-2861e5aa4328","title":"beSAFE Values","description":null,"uri":"about/our-company/company-policies/besafe-values-lifesaving-principles","alias":null,"external":true,"absolute":"about/our-company/company-policies/besafe-values-lifesaving-principles","relative":"about/our-company/company-policies/besafe-values-lifesaving-principles","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"813d0141-82c9-4a81-bca4-0dde4eb13669","title":"Human Rights Statement","description":null,"uri":"about/our-company/how-we-lead/policies/human-rights-statement","alias":null,"external":true,"absolute":"about/our-company/how-we-lead/policies/human-rights-statement","relative":"about/our-company/how-we-lead/policies/human-rights-statement","existing":true,"weight":"4","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["",""]},"external":true}},{"key":"8fa0ad24-587d-4104-81f8-63fc99c8b9c5","title":"Verizon disability accommodations","description":null,"uri":"about/our-company/company-policies/verizon-disability-accommodations","alias":null,"external":true,"absolute":"about/our-company/company-policies/verizon-disability-accommodations","relative":"about/our-company/company-policies/verizon-disability-accommodations","existing":true,"weight":"5","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"8d56c557-ed25-4d96-b3bd-d43d8d48ed41","title":"Affirmative Action Policy \u0026 Equal Employment","description":null,"uri":"about/our-company/how-we-lead/policies/equal-opportunity-employment","alias":null,"external":true,"absolute":"about/our-company/how-we-lead/policies/equal-opportunity-employment","relative":"about/our-company/how-we-lead/policies/equal-opportunity-employment","existing":true,"weight":"6","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["",""]},"external":true}},{"key":"0cc01bdc-5fbe-4e46-aad8-dc38458f41f0","title":"Commitment to Pay Equity","description":null,"uri":"about/our-company/company-policies/commitment-to-pay-equity","alias":null,"external":true,"absolute":"about/our-company/company-policies/commitment-to-pay-equity","relative":"about/our-company/company-policies/commitment-to-pay-equity","existing":true,"weight":"7","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"396bcb41-f988-42fb-9d34-d1ff711f7c88","title":"Affordable Care Act","description":null,"uri":"about/our-company/company-policies/affordable-care-act-transparency-in-coverage","alias":null,"external":true,"absolute":"about/our-company/company-policies/affordable-care-act-transparency-in-coverage","relative":"about/our-company/company-policies/affordable-care-act-transparency-in-coverage","existing":true,"weight":"8","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"00847d08-69a7-41cb-b339-c1b5cf1d804c","title":"Universal Design Principles","description":null,"uri":"about/our-company/company-policies/universal-design-principles","alias":null,"external":true,"absolute":"about/our-company/company-policies/universal-design-principles","relative":"about/our-company/company-policies/universal-design-principles","existing":true,"weight":"9","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"8edc790a-9038-4de8-8f0f-be57b5a58623","title":"Conflict Mineral Policy","description":null,"uri":"about/our-company/company-policies/conflict-mineral","alias":null,"external":true,"absolute":"about/our-company/company-policies/conflict-mineral","relative":"about/our-company/company-policies/conflict-mineral","existing":true,"weight":"10","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"e965e577-ad73-4f2e-bee7-9afb87811372","title":"Environmental Health and Safety Policy","description":null,"uri":"about/our-company/company-policies/environmental-health-safety","alias":null,"external":true,"absolute":"about/our-company/company-policies/environmental-health-safety","relative":"about/our-company/company-policies/environmental-health-safety","existing":true,"weight":"11","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"7bdced57-4ec9-45eb-8e4d-0c42cf6d79bc","title":"Paper Sourcing and Use Policy","description":null,"uri":"about/our-company/company-policies/paper-sourcing-and-use-policy","alias":null,"external":true,"absolute":"about/our-company/company-policies/paper-sourcing-and-use-policy","relative":"about/our-company/company-policies/paper-sourcing-and-use-policy","existing":true,"weight":"12","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"f1344af2-aa38-4cbf-bded-4ab05a2b3f06","title":"Global Tax Policy","description":null,"uri":"about/our-company/company-policies/global-tax-policy","alias":null,"external":true,"absolute":"about/our-company/company-policies/global-tax-policy","relative":"about/our-company/company-policies/global-tax-policy","existing":true,"weight":"13","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"61dd9a1f-b164-4d34-be5b-654ed136df9e","title":"Retiree Information","description":null,"uri":"node/871025","alias":"our-company/retiree-information","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/retiree-information","relative":"/about/our-company/retiree-information","existing":true,"weight":"-45","expanded":false,"enabled":true,"uuid":"1d5ba8df-2b8a-4bab-b203-4e16989b2e63","options":{"attributes":{"class":[""]}}},{"key":"5943a07f-7a9a-4a54-ba08-6d97ed890e4b","title":"State Government Affairs","description":null,"uri":"node/870271","alias":"our-company/state-government-affairs","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/state-government-affairs","relative":"/about/our-company/state-government-affairs","existing":true,"weight":"-44","expanded":false,"enabled":true,"uuid":"ea46069d-aa99-4a2f-8d78-b08e46b12eb4","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}}},{"key":"5799f876-01be-4234-94de-8e4d486a9dbe","title":"Washington, DC Notices","description":null,"uri":"node/917011","alias":"our-company/dc-notices","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/dc-notices","relative":"/about/our-company/dc-notices","existing":true,"weight":"-43","expanded":false,"enabled":true,"uuid":"15ab32a9-98ff-4e85-8847-0e0a628adca7","options":{"attributes":{"class":[""]}}},{"key":"ad387f76-7a81-4f53-ae57-45eb39dd74e7","title":"New Jersey Notices","description":null,"uri":"node/922041","alias":"our-company/nj-notices","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/nj-notices","relative":"/about/our-company/nj-notices","existing":true,"weight":"-42","expanded":false,"enabled":true,"uuid":"f44e3ee5-4b57-4d57-85f5-686048a326b6","options":{"attributes":{"class":[""]}}},{"key":"8a85d796-9dac-42df-8953-2fa0edbeb3df","title":"White Pages","description":null,"uri":"node/915019","alias":"our-company/white-pages","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/white-pages","relative":"/about/our-company/white-pages","existing":true,"weight":"-41","expanded":false,"enabled":true,"uuid":"a1d63486-8b97-44d5-98c2-f9cabb05460a","options":{"attributes":{"class":[""]}}},{"key":"981bb789-0dc5-4b44-9b28-191ab7a817d2","title":"Supplier Code of Conduct","description":null,"uri":"about/our-companysupplier-diversity/supplier-code-of-conduct","alias":null,"external":true,"absolute":"about/our-companysupplier-diversity/supplier-code-of-conduct","relative":"about/our-companysupplier-diversity/supplier-code-of-conduct","existing":true,"weight":"-40","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"8b6c9d5b-6b08-4d27-a720-7c0cd8042e73","title":"Verizon Ethics","description":null,"uri":"node/923479","alias":"verizon-ethics","external":false,"absolute":"http://corpweb-api.verizon.com/about/verizon-ethics","relative":"/about/verizon-ethics","existing":true,"weight":"-38","expanded":false,"enabled":true,"uuid":"0719088e-855d-45c3-9650-6576356c14fc","options":{"attributes":{"class":[""]}}},{"key":"88916326-5226-44d1-9f75-ba424d54a758","title":"Management Governance","description":null,"uri":"node/916611","alias":"our-company/how-we-lead/management-governance","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/how-we-lead/management-governance","relative":"/about/our-company/how-we-lead/management-governance","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":"f71396b0-6b3a-475a-9524-54ad42bb37c7","options":{"attributes":[],"item_attributes":{"id":"","class":"","style":""},"html":true},"below":[{"key":"a447491d-7745-42ea-a42f-ea97db91b553","title":"Verizon Broadband Commitment","description":null,"uri":"about/our-company/verizon-broadband-commitment/index.html","alias":null,"external":true,"absolute":"about/our-company/verizon-broadband-commitment/index.html","relative":"about/our-company/verizon-broadband-commitment/index.html","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]}]}]},{"key":"3e262aba-2e11-45eb-a2c7-88d2b666124a","title":"News","description":null,"uri":"node/920777","alias":"news-0","external":false,"absolute":"http://corpweb-api.verizon.com/about/news-0","relative":"/about/news-0","existing":true,"weight":"-48","expanded":false,"enabled":true,"uuid":"18faaef4-9e03-4580-9150-807cbb43d762","options":{"attributes":{"class":["news_site","news_site","news_site","news_site"]}},"below":[{"key":"1e5cf394-1a83-496d-b37a-80fb7bcd3e1d","title":"News Center","description":null,"uri":"node/920777","alias":"news-0","external":false,"absolute":"http://corpweb-api.verizon.com/about/news-0","relative":"/about/news-0","existing":true,"weight":"-47","expanded":false,"enabled":true,"uuid":"18faaef4-9e03-4580-9150-807cbb43d762","options":{"attributes":{"class":[""]}},"below":[{"key":"b2d223b1-008e-4812-bc55-2a4fbff55c2a","title":"Networks \u0026 platforms","description":null,"uri":"node/920781","alias":"news-category/networks-platforms","external":false,"absolute":"http://corpweb-api.verizon.com/about/news-category/networks-platforms","relative":"/about/news-category/networks-platforms","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":"65ca1345-5bef-4bbe-95ba-fb247ca1eadd","options":{"attributes":{"class":[""]}}},{"key":"83d39135-b60a-4050-91c0-954135f4dada","title":"Products \u0026 plans","description":null,"uri":"node/920797","alias":"news-category/products-plans","external":false,"absolute":"http://corpweb-api.verizon.com/about/news-category/products-plans","relative":"/about/news-category/products-plans","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":"e4d124b6-9fd9-40e5-9b6a-04d6abb757cf","options":{"attributes":{"class":[""]}}},{"key":"63430982-dcb9-48ab-b93f-c90bf8101d49","title":"Responsible business","description":null,"uri":"node/920785","alias":"news-category/corporate-responsibility","external":false,"absolute":"http://corpweb-api.verizon.com/about/news-category/corporate-responsibility","relative":"/about/news-category/corporate-responsibility","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":"3aaf1087-0d8d-4cd3-8f0d-477dee67877c","options":{"attributes":{"class":[""]}}},{"key":"4e1812ac-39f9-4adb-9d23-fd8babbcbeef","title":"Public safety","description":null,"uri":"node/920805","alias":"news-category/public-safety","external":false,"absolute":"http://corpweb-api.verizon.com/about/news-category/public-safety","relative":"/about/news-category/public-safety","existing":true,"weight":"4","expanded":false,"enabled":true,"uuid":"c8b4c0ff-e7ee-49c0-9eee-23aed4d526e9","options":{"attributes":{"class":[""]}}},{"key":"521d5302-b740-4c12-ab3f-8481a903208d","title":"Financial","description":null,"uri":"node/920789","alias":"news-category/financial","external":false,"absolute":"http://corpweb-api.verizon.com/about/news-category/financial","relative":"/about/news-category/financial","existing":true,"weight":"5","expanded":false,"enabled":true,"uuid":"dc015750-35f7-4c76-af6d-c45fedd3188b","options":[]},{"key":"eae3e233-f3c2-42c2-9459-41673edf17cd","title":"Noticias","description":null,"uri":"node/926631","alias":"news-category/noticias","external":false,"absolute":"http://corpweb-api.verizon.com/about/news-category/noticias","relative":"/about/news-category/noticias","existing":true,"weight":"7","expanded":false,"enabled":true,"uuid":"94e4024a-c095-4a1f-b98d-485611d8a254","options":{"attributes":{"class":[""]}}},{"key":"c08c749b-14ac-47cf-ade5-f27495a1e8d7","title":"News Alerts Signup","description":"News Alerts Signup","uri":"about/news/news-alert-signup","alias":null,"external":true,"absolute":"about/news/news-alert-signup","relative":"about/news/news-alert-signup","existing":true,"weight":"8","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["",""]},"external":true}}]},{"key":"eb139343-8060-4cb8-9795-36b1b8da83af","title":"Press Releases","description":null,"uri":"node/920779","alias":"news/press-releases","external":false,"absolute":"http://corpweb-api.verizon.com/about/news/press-releases","relative":"/about/news/press-releases","existing":true,"weight":"-46","expanded":false,"enabled":true,"uuid":"7d00ad86-dc84-4767-b142-7d81f22944b4","options":{"attributes":{"class":[""]}},"below":[{"key":"418be9e7-26fd-40e4-879c-72070d6ea779","title":"Media Contacts","description":null,"uri":"node/870137","alias":"news/media-contacts","external":false,"absolute":"http://corpweb-api.verizon.com/about/news/media-contacts","relative":"/about/news/media-contacts","existing":true,"weight":"-31","expanded":false,"enabled":true,"uuid":"ac453b98-937d-42cc-a9c5-da7dc59fc97b","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}}},{"key":"670b4673-c0c1-4f71-935f-6d0e7ce7f289","title":"B-roll and images","description":null,"uri":"about/news/media-resources","alias":null,"external":true,"absolute":"about/news/media-resources","relative":"about/news/media-resources","existing":true,"weight":"-30","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"dff35949-1ff9-4599-b421-65cff30e1314","title":"RSS Feeds","description":null,"uri":"node/872779","alias":"news/rss-feeds","external":false,"absolute":"http://corpweb-api.verizon.com/about/news/rss-feeds","relative":"/about/news/rss-feeds","existing":true,"weight":"-29","expanded":false,"enabled":true,"uuid":"0e430c37-9627-4ae6-9cb7-320917cdf4d2","options":{"attributes":{"class":[""]}}},{"key":"4216cf11-fec4-403e-a355-26ecffd62038","title":"Verizon Fact Sheet","description":null,"uri":"node/917095","alias":"our-company/verizon-fact-sheet","external":false,"absolute":"http://corpweb-api.verizon.com/about/our-company/verizon-fact-sheet","relative":"/about/our-company/verizon-fact-sheet","existing":true,"weight":"-28","expanded":false,"enabled":true,"uuid":"8acc6797-6090-4733-b295-eee75679e557","options":{"attributes":[],"item_attributes":{"id":"","class":"","style":""},"html":true}},{"key":"4f92658d-1c12-424a-ba38-8a74b81a67c4","title":"Emergency Resource Center","description":null,"uri":"node/914909","alias":"news/emergency-resource-center","external":false,"absolute":"http://corpweb-api.verizon.com/about/news/emergency-resource-center","relative":"/about/news/emergency-resource-center","existing":true,"weight":"-27","expanded":false,"enabled":true,"uuid":"8443b15f-683a-498b-a050-0e6cace76c1b","options":{"attributes":{"class":["","col2"]}},"below":[{"key":"29f19335-063a-4389-bdee-1fc37d5b5c55","title":"Verizon Relief Offers","description":null,"uri":"node/929005","alias":"news/emergency-resource-center/verizon-relief-offers","external":false,"absolute":"http://corpweb-api.verizon.com/about/news/emergency-resource-center/verizon-relief-offers","relative":"/about/news/emergency-resource-center/verizon-relief-offers","existing":true,"weight":"-35","expanded":false,"enabled":true,"uuid":"a8b09999-83fe-4375-a7c3-9222f301ed22","options":{"attributes":{"class":[""]}}},{"key":"d588cb3d-47bc-432c-9332-940bc2419263","title":"Network Upgrade Notifications","description":null,"uri":"node/925283","alias":"news/network-upgrade-notifications","external":false,"absolute":"http://corpweb-api.verizon.com/about/news/network-upgrade-notifications","relative":"/about/news/network-upgrade-notifications","existing":true,"weight":"-34","expanded":false,"enabled":true,"uuid":"ad6655d1-3c88-4de9-8383-c8f76f89be3f","options":{"attributes":{"class":["","col2"]}}},{"key":"1a04e853-a8c1-4631-bd12-13315bc2fef2","title":"Cable Facts","description":null,"uri":"about/cable-facts","alias":null,"external":true,"absolute":"about/cable-facts","relative":"about/cable-facts","existing":true,"weight":"-33","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"bfbd0925-c4cc-448a-b4fd-6b0847e95b61","title":"Disaster Information Reports","description":null,"uri":"node/919365","alias":"news/disaster-information-reports","external":false,"absolute":"http://corpweb-api.verizon.com/about/news/disaster-information-reports","relative":"/about/news/disaster-information-reports","existing":true,"weight":"-32","expanded":false,"enabled":true,"uuid":"9eba71f6-3d24-42c3-a2b9-4015ebd90fd6","options":{"attributes":{"class":["","col2"]}}},{"key":"ab78bdcc-ea78-45ff-a3bc-6be3ee172be7","title":"California Outage Map","description":null,"uri":"node/924625","alias":"california-outage-map","external":false,"absolute":"http://corpweb-api.verizon.com/about/california-outage-map","relative":"/about/california-outage-map","existing":true,"weight":"-31","expanded":false,"enabled":true,"uuid":"336dd0d2-2f77-4cb8-806f-ce8814f06313","options":{"attributes":{"class":["","col2"]}}},{"key":"75c38ab1-3288-4884-9718-b94dd49562fa","title":"Cybersecurity Media Resources","description":null,"uri":"node/928209","alias":"news/cybersecurity-media-resources","external":false,"absolute":"http://corpweb-api.verizon.com/about/news/cybersecurity-media-resources","relative":"/about/news/cybersecurity-media-resources","existing":true,"weight":"-30","expanded":false,"enabled":true,"uuid":"4f406486-3696-427a-a552-bf42fe1f1eb6","options":{"attributes":{"class":[""]},"query":[]}},{"key":"46449885-f491-4bec-81c0-8581833239b5","title":"Super Bowl","description":null,"uri":"about/news/superbowl","alias":null,"external":true,"absolute":"about/news/superbowl","relative":"about/news/superbowl","existing":true,"weight":"-29","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["","col2"]},"external":true}},{"key":"a5c0fe97-9607-46fd-8015-7d18b9b6fd5c","title":"NFL Season Media Hub","description":null,"uri":"node/928031","alias":"nfl-season","external":false,"absolute":"http://corpweb-api.verizon.com/about/nfl-season","relative":"/about/nfl-season","existing":true,"weight":"-28","expanded":false,"enabled":true,"uuid":"c4e5099a-e885-45bf-82bf-97d217046ed6","options":{"attributes":{"class":[""]},"query":[]}},{"key":"793befee-d375-4909-91ba-65df992ff054","title":"Holiday Media Hub","description":null,"uri":"node/926649","alias":"news/holiday/holiday-media-hub","external":false,"absolute":"http://corpweb-api.verizon.com/about/news/holiday/holiday-media-hub","relative":"/about/news/holiday/holiday-media-hub","existing":true,"weight":"-27","expanded":false,"enabled":true,"uuid":"a774471b-540c-4867-924e-30ec1219240f","options":{"attributes":{"class":["","col2","col2"]}}},{"key":"be22f0f8-55cb-4079-8346-afe2a7a19c67","title":"Cybersecurity Media Resources","description":null,"uri":"about/news/cybersecurity-media-resources","alias":null,"external":true,"absolute":"about/news/cybersecurity-media-resources","relative":"about/news/cybersecurity-media-resources","existing":true,"weight":"-26","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"6676f17b-d12a-4e35-9236-5291afc64e12","title":"Verizon Consumer Connections Report","description":null,"uri":"about/connections","alias":null,"external":true,"absolute":"about/connections","relative":"about/connections","existing":true,"weight":"-26","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true},"below":[{"key":"61615626-9af0-4419-a686-0863f1ead23d","title":"Fixed Wireless Access","description":null,"uri":"about/fixed-wireless-access","alias":null,"external":true,"absolute":"about/fixed-wireless-access","relative":"about/fixed-wireless-access","existing":true,"weight":"0","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"fd99efc3-e8de-40e8-83d6-91cdecb97740","title":"Small Business Survey","description":null,"uri":"about/news/small-business-survey","alias":null,"external":true,"absolute":"about/news/small-business-survey","relative":"about/news/small-business-survey","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"0cbc1589-22a8-4fab-abc2-24da413d3681","title":"Frontline Public Safety Survey 2024","description":null,"uri":"about/news/frontline-public-safety-communications-2024","alias":null,"external":true,"absolute":"about/news/frontline-public-safety-communications-2024","relative":"about/news/frontline-public-safety-communications-2024","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"3c26b76b-04ae-4182-b5f8-e77048db0f5b","title":"Frontline Public Safety Survey 2023","description":null,"uri":"about/news/frontline-public-safety-communications-2023","alias":null,"external":true,"absolute":"about/news/frontline-public-safety-communications-2023","relative":"about/news/frontline-public-safety-communications-2023","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]}]}]},{"key":"09d0ae59-8c0a-4525-8ee1-cd26e9482a39","title":"Responsibility","description":null,"uri":"about/responsibility","alias":null,"external":true,"absolute":"about/responsibility","relative":"about/responsibility","existing":true,"weight":"-47","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["response_site","response_site"]},"external":true},"below":[{"key":"3ef4b30d-ed2e-4d56-8b5f-02d19a7e7c5e","title":"Responsibility Overview","description":null,"uri":"about/responsibility","alias":null,"external":true,"absolute":"about/responsibility","relative":"about/responsibility","existing":true,"weight":"0","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"aa1efd70-c4e3-437d-a9ec-22772154b9c2","title":"Digital Inclusion","description":null,"uri":"about/responsibility/digital-inclusion","alias":null,"external":true,"absolute":"about/responsibility/digital-inclusion","relative":"about/responsibility/digital-inclusion","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true},"below":[{"key":"de570426-1074-4ebd-9a28-a49d93807349","title":"Verizon Innovative Learning","description":null,"uri":"about/responsibility/digital-inclusion/verizon-innovative-learning","alias":null,"external":true,"absolute":"about/responsibility/digital-inclusion/verizon-innovative-learning","relative":"about/responsibility/digital-inclusion/verizon-innovative-learning","existing":true,"weight":"-50","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["","col1","col1"]},"external":true}},{"key":"5acf7b90-f61d-4d5b-a69a-e4ab69b5aec6","title":"Small Business Program","description":null,"uri":"about/responsibility/digital-inclusion/small-business-program","alias":null,"external":true,"absolute":"about/responsibility/digital-inclusion/small-business-program","relative":"about/responsibility/digital-inclusion/small-business-program","existing":true,"weight":"-49","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["","col1","col1","col1"]},"external":true}},{"key":"862aaa3f-660f-4e3f-ab5f-830866538367","title":"Digital Wellness","description":null,"uri":"about/responsibility/digital-inclusion/digital-wellness","alias":null,"external":true,"absolute":"about/responsibility/digital-inclusion/digital-wellness","relative":"about/responsibility/digital-inclusion/digital-wellness","existing":true,"weight":"-48","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"677cc482-1e7f-4cc2-98c5-48f7305b9754","title":"Value Cares","description":null,"uri":"about/responsibility/digital-inclusion/value-cares","alias":null,"external":true,"absolute":"about/responsibility/digital-inclusion/value-cares","relative":"about/responsibility/digital-inclusion/value-cares","existing":true,"weight":"-47","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"a3b85fc4-6ae3-43a0-a12b-1a97f90cc6d0","title":"Environmental Responsibility","description":null,"uri":"node/918823","alias":"responsibility/environmental-responsibility","external":false,"absolute":"http://corpweb-api.verizon.com/about/responsibility/environmental-responsibility","relative":"/about/responsibility/environmental-responsibility","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":"d91bb0da-23b2-474c-ace0-7b92beda231a","options":{"attributes":{"class":[""]}},"below":[{"key":"3da09810-93f8-43cf-a7df-2e064431acd7","title":"Community Disaster Resilience","description":null,"uri":"about/responsibility/environmental-responsibility/community-disaster-resilience","alias":null,"external":true,"absolute":"about/responsibility/environmental-responsibility/community-disaster-resilience","relative":"about/responsibility/environmental-responsibility/community-disaster-resilience","existing":true,"weight":"-32","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"ad6b2e57-6662-42e4-8d6e-ea827dbcadd9","title":"Community Disaster Resilience Innovation","description":null,"uri":"about/responsibility/environmental-responsibility/community-disaster-resilience-innovation","alias":null,"external":true,"absolute":"about/responsibility/environmental-responsibility/community-disaster-resilience-innovation","relative":"about/responsibility/environmental-responsibility/community-disaster-resilience-innovation","existing":true,"weight":"-31","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"c02e7f2a-9c7f-4b3f-9f78-ab048adefb5b","title":"Sustainability","description":null,"uri":"about/responsibility/sustainability","alias":null,"external":true,"absolute":"about/responsibility/sustainability","relative":"about/responsibility/sustainability","existing":true,"weight":"-30","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"2f05a221-a0fd-4b52-8dda-92fd4dc31994","title":"Human Prosperity","description":null,"uri":"about/responsibility/human-prosperity","alias":null,"external":true,"absolute":"about/responsibility/human-prosperity","relative":"about/responsibility/human-prosperity","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true},"below":[{"key":"c3f9d7db-2841-4c2f-b1e8-062166b76368","title":"Workforce development","description":null,"uri":"about/responsibility/human-prosperity/workforce-development","alias":null,"external":true,"absolute":"about/responsibility/human-prosperity/workforce-development","relative":"about/responsibility/human-prosperity/workforce-development","existing":true,"weight":"0","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"758567ae-29e5-4222-8d9d-16881c98d4a6","title":"Small Business Supplier Program","description":null,"uri":"about/our-companysmall-business-supplier","alias":null,"external":true,"absolute":"about/our-companysmall-business-supplier","relative":"about/our-companysmall-business-supplier","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"2d04b9e0-37cc-4a02-9e2b-f49f9e17b7a0","title":"Employee Volunteers","description":null,"uri":"about/responsibility/employee-volunteers","alias":null,"external":true,"absolute":"about/responsibility/employee-volunteers","relative":"about/responsibility/employee-volunteers","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"1374ce16-267f-4546-a4a4-a78f1a77ad89","title":"Sharing our Success","description":null,"uri":"about/responsibility/giving-and-grants","alias":null,"external":true,"absolute":"about/responsibility/giving-and-grants","relative":"about/responsibility/giving-and-grants","existing":true,"weight":"4","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["","col2","col2","col2"]},"external":true},"below":[{"key":"b2696423-4457-4877-8179-4eb5b03dcc2a","title":"Giving and Grants","description":null,"uri":"about/responsibility/grant-requirements","alias":null,"external":true,"absolute":"about/responsibility/grant-requirements","relative":"about/responsibility/grant-requirements","existing":true,"weight":"0","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"b50e56eb-6b49-4392-ac57-7f97b2d805c1","title":"Product Responsibility","description":null,"uri":"about/responsibility/product-responsibility","alias":null,"external":true,"absolute":"about/responsibility/product-responsibility","relative":"about/responsibility/product-responsibility","existing":true,"weight":"5","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["","col2","col2"]},"external":true},"below":[{"key":"64c86318-e4f5-46c1-953d-a09384b1f2dd","title":"Account Security","description":null,"uri":"about/account-security/overview","alias":null,"external":true,"absolute":"about/account-security/overview","relative":"about/account-security/overview","existing":true,"weight":"-39","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"a91795f2-0f93-4cf8-8881-889b78422a71","title":"Privacy Policy","description":null,"uri":"about/privacy/index.html","alias":null,"external":true,"absolute":"about/privacy/index.html","relative":"about/privacy/index.html","existing":true,"weight":"-37","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"59051f3f-d275-4d3c-9b50-da85accc17ca","title":"Parenting in a Digital World","description":null,"uri":"node/924021","alias":"parenting/parenting-in-a-digital-world","external":false,"absolute":"http://corpweb-api.verizon.com/about/parenting/parenting-in-a-digital-world","relative":"/about/parenting/parenting-in-a-digital-world","existing":true,"weight":"6","expanded":false,"enabled":true,"uuid":"612ee9b1-d6fb-4138-8f2a-c0c3e8317a46","options":{"attributes":{"class":["","col2"]}},"below":[{"key":"93ce8bfa-f436-4e63-83db-43effd15078d","title":"Digital Parenting 101","description":null,"uri":"node/924063","alias":"parenting/digital-parenting-101","external":false,"absolute":"http://corpweb-api.verizon.com/about/parenting/digital-parenting-101","relative":"/about/parenting/digital-parenting-101","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":"3eae0e33-053f-4d1e-a59d-2a069674b7d9","options":{"attributes":{"class":[""]}}},{"key":"7c48115e-b35b-4ec2-8158-8914c06da3e2","title":"Young children 3-8","description":null,"uri":"node/924023","alias":"parenting/young-children","external":false,"absolute":"http://corpweb-api.verizon.com/about/parenting/young-children","relative":"/about/parenting/young-children","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":"807f4198-faf7-451c-9482-72da7372c7d4","options":{"attributes":{"class":[""]}}},{"key":"e0f20d7a-4406-4e2b-af54-9a1bf30d8448","title":"Preteens 9-12","description":null,"uri":"node/924037","alias":"parenting/preteens","external":false,"absolute":"http://corpweb-api.verizon.com/about/parenting/preteens","relative":"/about/parenting/preteens","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":"2ac2150f-0fbc-4875-b462-1ebe2a4a2af8","options":{"attributes":{"class":[""]}}},{"key":"f09d7b8f-31f4-4fef-8186-4185a06ecdff","title":"Teenagers 13-18","description":null,"uri":"node/924041","alias":"parenting/teenagers","external":false,"absolute":"http://corpweb-api.verizon.com/about/parenting/teenagers","relative":"/about/parenting/teenagers","existing":true,"weight":"4","expanded":false,"enabled":true,"uuid":"ed1854ce-8de3-42a0-a024-23ae4d942667","options":{"attributes":{"class":[""]}}},{"key":"dfd408f7-af15-42a6-b6e0-949241452532","title":"By Topic","description":null,"uri":"node/924025","alias":"parenting/parenting-tips","external":false,"absolute":"http://corpweb-api.verizon.com/about/parenting/parenting-tips","relative":"/about/parenting/parenting-tips","existing":true,"weight":"5","expanded":false,"enabled":true,"uuid":"7c7aae36-76f4-4e7c-b794-27e2fe33f8e0","options":{"attributes":{"class":[""]}}},{"key":"b42430a1-bd51-4f69-b435-00c4413c62e4","title":"Meet the editorial team","description":null,"uri":"node/924027","alias":"parenting/meet-the-experts","external":false,"absolute":"http://corpweb-api.verizon.com/about/parenting/meet-the-experts","relative":"/about/parenting/meet-the-experts","existing":true,"weight":"12","expanded":false,"enabled":true,"uuid":"1ec6d4fd-0063-402d-92fb-363d5d9454b2","options":{"attributes":{"class":[""]}}}]}]},{"key":"6da77c49-44e0-401b-932d-ef8b2479c794","title":"Investors","description":null,"uri":"node/869953","alias":"investors","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors","relative":"/about/investors","existing":true,"weight":"-46","expanded":false,"enabled":true,"uuid":"958c4420-530b-45f4-b577-8745d08de0bd","options":{"html":true,"attributes":{"id":"aFirstLevelMenu4","class":["investors_site"]},"item_attributes":{"id":"","class":"","style":""}},"below":[{"key":"e6637abe-4017-4eea-94ae-9705e86f8110","title":"Financial Reporting","description":null,"uri":"node/871647","alias":"investors/financial-reporting","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/financial-reporting","relative":"/about/investors/financial-reporting","existing":true,"weight":"-48","expanded":false,"enabled":true,"uuid":"ff57d002-d99e-4af1-bfc6-f1f7beba0e14","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}},"below":[{"key":"0c43cb5f-514d-475d-8cfa-558b1454a456","title":"SEC Filings","description":null,"uri":"node/870159","alias":"investors/sec-filings","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/sec-filings","relative":"/about/investors/sec-filings","existing":true,"weight":"-50","expanded":false,"enabled":true,"uuid":"92e187b2-0a25-4350-9fa5-48128ab55c78","options":{"attributes":[],"item_attributes":{"id":"","class":"","style":""},"html":true}},{"key":"90fae878-aac6-441d-8444-bcd795a5bb14","title":"Annual Reports","description":null,"uri":"node/870161","alias":"investors/annual-report","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/annual-report","relative":"/about/investors/annual-report","existing":true,"weight":"-49","expanded":false,"enabled":true,"uuid":"caf2c8d3-835c-433d-8515-2e1e7108037e","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}}},{"key":"0432f1a1-ecc6-4c3f-8c4e-78e8b10ecd22","title":"Quarterly Earnings","description":null,"uri":"node/870163","alias":"investors/quarterly-earnings","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/quarterly-earnings","relative":"/about/investors/quarterly-earnings","existing":true,"weight":"-48","expanded":false,"enabled":true,"uuid":"d5cd6c27-5a8d-4188-ae5f-60e37e2b65f3","options":{"attributes":[],"item_attributes":{"id":"","class":"","style":""},"html":true}},{"key":"511be9c8-46ee-4ddf-ba6d-d12f760e1666","title":"Stock Information","description":null,"uri":"node/870115","alias":"investors/stock-information","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/stock-information","relative":"/about/investors/stock-information","existing":true,"weight":"-46","expanded":false,"enabled":true,"uuid":"2409d60f-e8c7-4f1e-b5a1-7236741cf2b5","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}}},{"key":"3a0d8b23-3c0d-4ef5-a8cb-66a286f22dc2","title":"Dividend History","description":null,"uri":"node/870167","alias":"investors/dividend-history","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/dividend-history","relative":"/about/investors/dividend-history","existing":true,"weight":"-45","expanded":false,"enabled":true,"uuid":"f2dbf7ed-56c4-4c55-82ba-2a58a2de690e","options":{"attributes":[],"item_attributes":{"id":"","class":"","style":""},"html":true}},{"key":"9a74e6d2-d805-47e0-9829-5b8a67bd2748","title":"Fixed Income","description":null,"uri":"node/870169","alias":"investors/fixed-income","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/fixed-income","relative":"/about/investors/fixed-income","existing":true,"weight":"-44","expanded":false,"enabled":true,"uuid":"5444a618-f6a8-4c9b-acc3-03b52711d38c","options":{"attributes":[],"item_attributes":{"id":"","class":"","style":""},"html":true}},{"key":"ce20fdac-3c6e-4b38-808f-e1c1e0c2037e","title":"Tax Information","description":null,"uri":"node/873123","alias":"investors/tax-information","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/tax-information","relative":"/about/investors/tax-information","existing":true,"weight":"-43","expanded":false,"enabled":true,"uuid":"01dd2799-43d1-45aa-bc07-7e0946b1d3d9","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}}},{"key":"f0c950e8-f68b-45d4-9e66-03e842e2da59","title":"Asset-backed Securitization","description":null,"uri":"node/927675","alias":"investors/asset-backed-securitization","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/asset-backed-securitization","relative":"/about/investors/asset-backed-securitization","existing":true,"weight":"51","expanded":false,"enabled":true,"uuid":"fb52f9a9-fb3c-4251-bf79-cc5c066748a0","options":[]}]},{"key":"6508ca96-08a9-4e51-894a-fe5826c3a0df","title":"Corporate Governance","description":null,"uri":"node/870121","alias":"investors/corporate-governance","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/corporate-governance","relative":"/about/investors/corporate-governance","existing":true,"weight":"-47","expanded":false,"enabled":true,"uuid":"049db26f-ee81-402c-84d7-23adda9e9038","options":{"attributes":{"class":["","col2"]}},"below":[{"key":"42e35cfa-61c5-4326-880e-77eaf821fd6b","title":"Board of Directors","description":null,"uri":"node/916719","alias":"investors/board-directors","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/board-directors","relative":"/about/investors/board-directors","existing":true,"weight":"-50","expanded":false,"enabled":true,"uuid":"b3fbd4bb-41a4-4aa9-8dba-14a9fd9ff85b","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}}},{"key":"c7912eb9-f652-406a-8e8e-7215f309a4d5","title":"Board Committees","description":null,"uri":"node/916721","alias":"investors/corporate-governance/board-committees","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/corporate-governance/board-committees","relative":"/about/investors/corporate-governance/board-committees","existing":true,"weight":"-47","expanded":false,"enabled":true,"uuid":"fa4fd2e1-e10f-4182-b0c4-2ced90b3dfa8","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}},"below":[{"key":"6ab43995-dbee-4d5a-8d3d-52303ae21188","title":"Audit Committee","description":null,"uri":"about/investors/corporate-governance/audit-committee-key-responsibilities","alias":null,"external":true,"absolute":"about/investors/corporate-governance/audit-committee-key-responsibilities","relative":"about/investors/corporate-governance/audit-committee-key-responsibilities","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"761341e5-f512-43e4-a906-2d0289b5bd59","title":"Corp Governance \u0026 Policy Committee","description":null,"uri":"about/investors/corporate-governance/corporate-governance-committee","alias":null,"external":true,"absolute":"about/investors/corporate-governance/corporate-governance-committee","relative":"about/investors/corporate-governance/corporate-governance-committee","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"701b0e72-dcbc-4dfd-a18a-3a383f34d634","title":"Human Resources Committee","description":null,"uri":"about/investors/corporate-governance/human-resources-committee","alias":null,"external":true,"absolute":"about/investors/corporate-governance/human-resources-committee","relative":"about/investors/corporate-governance/human-resources-committee","existing":true,"weight":"4","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"a051a7df-38b8-4205-89ac-2d67c6ae0e8d","title":"Finance Committee","description":null,"uri":"about/investors/corporate-governance/finance-committee","alias":null,"external":true,"absolute":"about/investors/corporate-governance/finance-committee","relative":"about/investors/corporate-governance/finance-committee","existing":true,"weight":"5","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"4334b0c6-8866-450a-83e7-00100636f945","title":"Selected Policies","description":null,"uri":"about/investors/selected-policies","alias":null,"external":true,"absolute":"about/investors/selected-policies","relative":"about/investors/selected-policies","existing":true,"weight":"6","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"5f2d9dcd-7cff-49ed-a406-6abced3af8dd","title":"ISG principles","description":null,"uri":"about/investors/corporate-governance/alignment-with-isg-principles","alias":null,"external":true,"absolute":"about/investors/corporate-governance/alignment-with-isg-principles","relative":"about/investors/corporate-governance/alignment-with-isg-principles","existing":true,"weight":"7","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"8cad8e8a-e17e-417f-a8bf-0e6a9901610e","title":"2024 Annual Meeting Voting","description":null,"uri":"about/investors/2024-annual-meeting-voting-results","alias":null,"external":true,"absolute":"about/investors/2024-annual-meeting-voting-results","relative":"about/investors/2024-annual-meeting-voting-results","existing":true,"weight":"8","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]}]},{"key":"721e7de6-d958-40a6-92d3-908179633c3e","title":"Shareowner Services","description":null,"uri":"node/870127","alias":"investors/shareowner-services","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/shareowner-services","relative":"/about/investors/shareowner-services","existing":true,"weight":"-46","expanded":false,"enabled":true,"uuid":"c68641fa-4d8c-411e-96e9-ea007b471019","options":{"attributes":{"class":["","col2"]}},"below":[{"key":"bbcc18db-dcfc-4ee7-98f7-abca7c4c1529","title":"Cost Basis Calculator","description":null,"uri":"node/871881","alias":"investors/cost-basis-calculator","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/cost-basis-calculator","relative":"/about/investors/cost-basis-calculator","existing":true,"weight":"-50","expanded":false,"enabled":true,"uuid":"4101e298-5283-44f1-a644-37d2d400b54f","options":{"attributes":{"class":[""]}}},{"key":"4d796612-f050-4bbf-975b-8fa5e7cdfe30","title":"Shareowner FAQs","description":null,"uri":"node/870135","alias":"investors/shareowner-faqs","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/shareowner-faqs","relative":"/about/investors/shareowner-faqs","existing":true,"weight":"-49","expanded":false,"enabled":true,"uuid":"a8d59ce0-c228-4508-b654-bb5086d99fc5","options":{"html":true,"attributes":[],"item_attributes":{"id":"","class":"","style":""}}}]},{"key":"7897a5f2-e1ef-4dd4-ad8f-9a8b39fd51c5","title":"Responsible Business Reporting","description":null,"uri":"node/928879","alias":"investors/responsible-business-reporting","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/responsible-business-reporting","relative":"/about/investors/responsible-business-reporting","existing":true,"weight":"-45","expanded":false,"enabled":true,"uuid":"b9a16d6a-ed91-49e4-ac3f-3ea5196b1bd7","options":{"attributes":{"class":["","col2","col2","col2","col2","col2","col2"]}},"below":[{"key":"8358b80d-2b9f-4820-a297-4dc91ecc4c73","title":"Human Rights Due Diligence Statements","description":null,"uri":"node/921057","alias":"investors/Human-Rights-Due-Diligence-Statements","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/Human-Rights-Due-Diligence-Statements","relative":"/about/investors/Human-Rights-Due-Diligence-Statements","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":"0c17e257-653e-4c28-bd43-82b09eb0195e","options":{"attributes":{"class":[""]}}},{"key":"58547d87-a4f5-444e-aede-35b5459d4bd8","title":"EEO-1 Reports","description":null,"uri":"node/922373","alias":"investors/EEO-1-reports","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/EEO-1-reports","relative":"/about/investors/EEO-1-reports","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":"3d616f70-8e92-4864-a575-0012acd02b5a","options":{"attributes":{"class":[""]}}},{"key":"e27719c2-9884-4f84-ad98-d3eebff86c4c","title":"Green Bond Reports","description":null,"uri":"node/919355","alias":"investors/green-bond-reports","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/green-bond-reports","relative":"/about/investors/green-bond-reports","existing":true,"weight":"4","expanded":false,"enabled":true,"uuid":"cd95ecc8-be0b-47da-abf0-b89b542fb6c6","options":{"attributes":{"class":[""]}}},{"key":"12c92bc3-6159-4fcb-bf1f-38040cf5ecd7","title":"ESG Report Archive","description":null,"uri":"node/921907","alias":"investors/transparency-report-archives","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/transparency-report-archives","relative":"/about/investors/transparency-report-archives","existing":true,"weight":"5","expanded":false,"enabled":true,"uuid":"53dca0b2-3457-4e6c-b845-916be1c56231","options":{"attributes":{"class":[""]}}},{"key":"76b24dbf-4ab4-43b6-a12c-dc18fb3a5cac","title":"Political Engagement Reports","description":null,"uri":"node/872195","alias":"investors/political-contributions-report-archive","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/political-contributions-report-archive","relative":"/about/investors/political-contributions-report-archive","existing":true,"weight":"6","expanded":false,"enabled":true,"uuid":"8cfdd793-0362-4f65-9688-d0b3d61e6f6f","options":{"attributes":{"class":[""]}}},{"key":"5d2f5b42-7bef-450f-ac14-73967f6a1abc","title":"Transparency reports","description":null,"uri":"node/921905","alias":"investors/transparency-report","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/transparency-report","relative":"/about/investors/transparency-report","existing":true,"weight":"7","expanded":false,"enabled":true,"uuid":"69d33415-cd0d-4457-9de4-0e423bc6a336","options":{"attributes":{"class":[""]}}},{"key":"1c31b79d-45ba-4e7e-b838-134cc85488fb","title":"Strategic human rights impact assessments","description":null,"uri":"about/investors/human-rights-impact-assessments","alias":null,"external":true,"absolute":"about/investors/human-rights-impact-assessments","relative":"about/investors/human-rights-impact-assessments","existing":true,"weight":"9","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"38f14afa-217e-4fc2-9de0-a7d1e3324168","title":"Responsible Artificial Intelligence","description":null,"uri":"about/investors/responsible-ai-program","alias":null,"external":true,"absolute":"about/investors/responsible-ai-program","relative":"about/investors/responsible-ai-program","existing":true,"weight":"10","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"10c0edf1-f33b-4608-a4e8-f9917d28445e","title":"Emissions Reporting","description":null,"uri":"node/924089","alias":"investors/verizon-emissions-and-energy-data","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/verizon-emissions-and-energy-data","relative":"/about/investors/verizon-emissions-and-energy-data","existing":true,"weight":"11","expanded":false,"enabled":true,"uuid":"fc1ee549-f889-4526-bff8-0217a4650f0a","options":{"attributes":{"class":[""]}}},{"key":"c6833e88-781b-4cb5-8c4a-e4dc8a2be9f8","title":"Human Rights at Verizon","description":null,"uri":"node/920213","alias":"investors/human-rights-at-verizon","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/human-rights-at-verizon","relative":"/about/investors/human-rights-at-verizon","existing":true,"weight":"12","expanded":false,"enabled":true,"uuid":"4c6f2000-06e3-4498-ae61-586bbb308eb7","options":{"attributes":{"class":[""]}}},{"key":"05af4c06-a2b3-44ee-9af8-eb1e2230a22d","title":"Externally Assured ESG Data","description":null,"uri":"node/917439","alias":"responsibility/externally-assured-responsible-business-data","external":false,"absolute":"http://corpweb-api.verizon.com/about/responsibility/externally-assured-responsible-business-data","relative":"/about/responsibility/externally-assured-responsible-business-data","existing":true,"weight":"13","expanded":false,"enabled":true,"uuid":"01136c5a-32db-433c-b531-18ce01e3d051","options":{"attributes":{"class":[""]}}}]},{"key":"c9ae97b8-6d89-4911-8347-de07016d5569","title":"News \u0026 Events","description":null,"uri":"about/investors/investor-news","alias":null,"external":true,"absolute":"about/investors/investor-news","relative":"about/investors/investor-news","existing":true,"weight":"-44","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["","col1"]},"external":true},"below":[{"key":"fb39327b-8a37-4676-af99-84f72384b735","title":"Investor Events \u0026 Webcasts","description":null,"uri":"node/916499","alias":"investors/investor-webcasts","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/investor-webcasts","relative":"/about/investors/investor-webcasts","existing":true,"weight":"0","expanded":false,"enabled":true,"uuid":"1f1b09eb-86e6-49a6-b263-345af5fd67b8","options":{"attributes":{"class":["","col1","col1"]}}},{"key":"2362a248-6eee-48d3-8f37-0f3222463a10","title":"Investor News","description":null,"uri":"node/916497","alias":"investors/investor-news","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/investor-news","relative":"/about/investors/investor-news","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":"d2a4f7c1-3707-43f6-8eb3-d711791f4802","options":{"attributes":{"class":["","col1","col1"]}}},{"key":"387096d6-b110-419c-b3ba-47dfd2797853","title":"Investor Calendar","description":null,"uri":"node/916921","alias":"investors/investor-calendar","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/investor-calendar","relative":"/about/investors/investor-calendar","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":"b6e95954-4e4e-445e-92c2-7a247ab8818c","options":{"attributes":{"class":[""]}}},{"key":"cbf3a315-8b98-453c-8ca5-04db8b500ca7","title":"Investor Email Alerts","description":null,"uri":"node/918693","alias":"investors/email-alerts","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/email-alerts","relative":"/about/investors/email-alerts","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":"76d6d1d9-5726-459c-a226-ce95f74f580f","options":{"attributes":{"class":[""]}}}]},{"key":"c42f8e2d-19f8-448d-899a-41185f86247a","title":"Contact Investor Relations","description":null,"uri":"node/870359","alias":"investors/contact-investor-relations","external":false,"absolute":"http://corpweb-api.verizon.com/about/investors/contact-investor-relations","relative":"/about/investors/contact-investor-relations","existing":true,"weight":"-42","expanded":false,"enabled":true,"uuid":"1c3cc383-9ca8-4009-a12a-0c78d698c1b8","options":{"attributes":{"class":["","col2"]}}}]},{"key":"70350e40-9749-4516-a79b-9e5f6c7b576b","title":"Terms and Conditions","description":null,"uri":"about/terms-conditions/overview","alias":null,"external":true,"absolute":"about/terms-conditions/overview","relative":"about/terms-conditions/overview","existing":true,"weight":"-45","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["","investors_site"]},"external":true},"below":[{"key":"07ac16cc-fc33-4ed5-bf55-57490089eb7d","title":"Terms and Conditions Overview","description":null,"uri":"about/terms-conditions/overview","alias":null,"external":true,"absolute":"about/terms-conditions/overview","relative":"about/terms-conditions/overview","existing":true,"weight":"0","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true},"below":[{"key":"f9b40bbc-01af-4dfb-9a45-170111b13d08","title":"Residential Terms and Conditions","description":null,"uri":"about/terms-conditions/residential-terms-service","alias":null,"external":true,"absolute":"about/terms-conditions/residential-terms-service","relative":"about/terms-conditions/residential-terms-service","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"626671d7-c78c-4c81-8815-b13191886088","title":"Business Terms and Conditions","description":null,"uri":"about/terms-conditions/business-terms-of-service","alias":null,"external":true,"absolute":"about/terms-conditions/business-terms-of-service","relative":"about/terms-conditions/business-terms-of-service","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"9db5a6c9-67fc-487b-a3e4-b96a2ceea48f","title":"Consumer and Business User Guides","description":null,"uri":"about/terms-conditions/user-guides","alias":null,"external":true,"absolute":"about/terms-conditions/user-guides","relative":"about/terms-conditions/user-guides","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true},"below":[{"key":"a445bd22-f2be-4405-87c0-04c5b534f42b","title":"Verizon payment handling","description":null,"uri":"about/paymenthandling/index.html","alias":null,"external":true,"absolute":"about/paymenthandling/index.html","relative":"about/paymenthandling/index.html","existing":true,"weight":"4","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"b6072a14-49b3-481c-844c-45379fdc41f5","title":"Website Terms of Use","description":null,"uri":"about/terms-conditions/terms-of-use/mobile","alias":null,"external":true,"absolute":"about/terms-conditions/terms-of-use/mobile","relative":"about/terms-conditions/terms-of-use/mobile","existing":true,"weight":"4","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"be77d625-01ee-409f-aec3-d7ca474b1291","title":"Acceptable Use Policy","description":null,"uri":"about/terms-conditions/acceptable-use-policy","alias":null,"external":true,"absolute":"about/terms-conditions/acceptable-use-policy","relative":"about/terms-conditions/acceptable-use-policy","existing":true,"weight":"5","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"e35c85a9-8366-40f0-a261-e51db19e1cfa","title":"Network Disclosures 2022-2024","description":null,"uri":"about/terms-conditions/network-disclosures","alias":null,"external":true,"absolute":"about/terms-conditions/network-disclosures","relative":"about/terms-conditions/network-disclosures","existing":true,"weight":"6","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"5b7600be-f500-4311-b4b5-7a765b00e463","title":"Network Disclosures 2017-2021","description":null,"uri":"about/terms-conditions/network-disclosures-2017-2021","alias":null,"external":true,"absolute":"about/terms-conditions/network-disclosures-2017-2021","relative":"about/terms-conditions/network-disclosures-2017-2021","existing":true,"weight":"7","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"d311731a-9849-42ef-9d49-b3dd5e60f8a5","title":"Network Disclosures 2014-2016","description":null,"uri":"about/network-disclosures-2014-2016","alias":null,"external":true,"absolute":"about/network-disclosures-2014-2016","relative":"about/network-disclosures-2014-2016","existing":true,"weight":"8","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"238ab2d3-826a-4f13-80bd-c925796edaab","title":"Network Disclosures 2011-2013","description":null,"uri":"about/terms-conditions/network-disclosures/2011-2013","alias":null,"external":true,"absolute":"about/terms-conditions/network-disclosures/2011-2013","relative":"about/terms-conditions/network-disclosures/2011-2013","existing":true,"weight":"9","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"632ae456-565d-4ff0-9b36-6e56fab72cc7","title":"Network Disclosures 2002-2007","description":null,"uri":"about/terms-conditions/network-disclosures/archive-2002-2007","alias":null,"external":true,"absolute":"about/terms-conditions/network-disclosures/archive-2002-2007","relative":"about/terms-conditions/network-disclosures/archive-2002-2007","existing":true,"weight":"10","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]}]},{"key":"d624abc5-b15f-485c-8441-daae825fe499","title":"Careers","description":null,"uri":"https://mycareer.verizon.com","alias":null,"external":true,"absolute":"https://mycareer.verizon.com","relative":"https://mycareer.verizon.com","existing":true,"weight":"-44","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":["careers_site","careers_site"]},"external":true},"below":[{"key":"1062faaf-1130-4578-a04d-cadfa3d3f44f","title":"Careers Sitemap","description":null,"uri":"https://mycareer.verizon.com/sitemap","alias":null,"external":true,"absolute":"https://mycareer.verizon.com/sitemap","relative":"https://mycareer.verizon.com/sitemap","existing":true,"weight":"-43","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]},{"key":"2ffca768-7ae0-4a6b-9456-ce98b9c78355","title":"Legacy Companies","description":null,"external":false,"existing":true,"weight":"-43","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]}},"below":[{"key":"c0c1a889-ae9c-4a83-ab82-82733bf86bdb","title":"Bell Atlantic","description":null,"uri":"aboutsites/default/files/bellatlantic/index.html","alias":null,"external":true,"absolute":"aboutsites/default/files/bellatlantic/index.html","relative":"aboutsites/default/files/bellatlantic/index.html","existing":true,"weight":"1","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"9266893e-c9f4-4351-a8d6-697ef3f1c1ae","title":"GTE","description":null,"uri":"aboutsites/default/files/gte/index.html","alias":null,"external":true,"absolute":"aboutsites/default/files/gte/index.html","relative":"aboutsites/default/files/gte/index.html","existing":true,"weight":"2","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}},{"key":"17f3d84a-43c9-4c80-8cae-5c99218582cf","title":"Worldcom MCI","description":null,"uri":"aboutsites/default/files/worldcom/index.html","alias":null,"external":true,"absolute":"aboutsites/default/files/worldcom/index.html","relative":"aboutsites/default/files/worldcom/index.html","existing":true,"weight":"3","expanded":false,"enabled":true,"uuid":null,"options":{"attributes":{"class":[""]},"external":true}}]}],"newscenterData":{"content_type":"news","taxonomy":["news_categories","news_tag"],"page_url":["press-releases","news-center","newscenter-press-release","newscenter-home","news-category","news-subcategory","careers-blog","careers/career-blog","news/media-contacts","news/rss-feeds","news/holiday-media-hub"],"top_filter_nav":{"id":33791,"compDetails":{"id":[{"value":33791}],"type":[{"target_id":"news_top_filter_navigation","target_type":"paragraphs_type","target_uuid":"64ea135c-8716-437d-80ed-b27d82987697"}],"field_common_1d_headline":[{"value":"News"}],"field_common_1d_headline_display":[{"value":"h1-84-48"}],"field_top_nav_category":{"0":{"target_id":23943,"target_type":"taxonomy_term","target_uuid":"90f447b2-f570-4fed-8923-8faf6f3962b7","url":"/about/news-categories/networks-platforms"},"1":{"target_id":23912,"target_type":"taxonomy_term","target_uuid":"cc7a7710-feef-485f-90d9-95e05aa6da73","url":"/about/news-categories/products-plans"},"2":{"target_id":23934,"target_type":"taxonomy_term","target_uuid":"6bff227a-c19e-46eb-a3b2-96b370af6f32","url":"/about/news-categories/responsible-business"},"3":{"target_id":23949,"target_type":"taxonomy_term","target_uuid":"2fc54773-11b4-48b3-9458-7d3226af7fbf","url":"/about/news-categories/public-safety"},"4":{"target_id":23928,"target_type":"taxonomy_term","target_uuid":"554a56cf-93f6-48eb-9a66-6dc1a7da6d50","url":"/about/news-categories/financial"},"5":{"target_id":24021,"target_type":"taxonomy_term","target_uuid":"555673bc-154e-447e-8616-f0fa1a8959b9","url":"/about/news-categories/noticias"},"taxonomy_term":[{"tid":[{"value":23943}],"vid":[{"target_id":"news_categories","target_type":"taxonomy_vocabulary","target_uuid":"303b2ceb-8b9f-43d7-a988-406441377249"}],"status":[{"value":true}],"name":[{"value":"Networks \u0026 platforms"}],"description":[{"value":"\u003cp\u003eNetworks and platforms\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eNetworks and platforms\u003c/p\u003e\n"}],"parent":[{"target_id":null}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"Networks \u0026 platforms | About Verizon"}},{"tag":"meta","attributes":{"name":"description","content":"Networks and platforms"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/news-categories/networks-platforms"}},{"tag":"link","attributes":{"rel":"shortlink","href":"http://corpweb-api.verizon.com/about/taxonomy/term/23943"}},{"tag":"meta","attributes":{"property":"og:title","content":"Networks \u0026 platforms"}},{"tag":"meta","attributes":{"property":"og:description","content":"Networks and platforms"}},{"tag":"meta","attributes":{"name":"twitter:card","content":"summary"}},{"tag":"meta","attributes":{"name":"twitter:description","content":"Networks and platforms"}},{"tag":"meta","attributes":{"name":"twitter:title","content":"Networks \u0026 platforms"}},{"tag":"meta","attributes":{"name":"twitter:creator","content":"@verizon"}}],"path":[{"alias":"/news-categories/networks-platforms","pid":281505,"langcode":"en"}],"field_news_category_pageurl":[{"uri":"internal:/news-category/networks-platforms","title":"Networks \u0026 platforms","options":{"attributes":{"class":[""]}}}]},{"tid":[{"value":23912}],"vid":[{"target_id":"news_categories","target_type":"taxonomy_vocabulary","target_uuid":"303b2ceb-8b9f-43d7-a988-406441377249"}],"status":[{"value":true}],"name":[{"value":"Products \u0026 plans"}],"description":[{"value":"\u003cp\u003eProducts and plans\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eProducts and plans\u003c/p\u003e\n"}],"parent":[{"target_id":null}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"Products \u0026 plans | About Verizon"}},{"tag":"meta","attributes":{"name":"description","content":"Products and plans"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/news-categories/products-plans"}},{"tag":"link","attributes":{"rel":"shortlink","href":"http://corpweb-api.verizon.com/about/taxonomy/term/23912"}},{"tag":"meta","attributes":{"property":"og:title","content":"Products \u0026 plans"}},{"tag":"meta","attributes":{"property":"og:description","content":"Products and plans"}},{"tag":"meta","attributes":{"name":"twitter:card","content":"summary"}},{"tag":"meta","attributes":{"name":"twitter:description","content":"Products and plans"}},{"tag":"meta","attributes":{"name":"twitter:title","content":"Products \u0026 plans"}},{"tag":"meta","attributes":{"name":"twitter:creator","content":"@verizon"}}],"path":[{"alias":"/news-categories/products-plans","pid":281515,"langcode":"en"}],"field_news_category_pageurl":[{"uri":"internal:/news-category/products-plans","title":"Products \u0026 plans","options":{"attributes":{"class":[""]}}}]},{"tid":[{"value":23934}],"vid":[{"target_id":"news_categories","target_type":"taxonomy_vocabulary","target_uuid":"303b2ceb-8b9f-43d7-a988-406441377249"}],"status":[{"value":true}],"name":[{"value":"Responsible business"}],"description":[{"value":"\u003cp\u003eResponsible business\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eResponsible business\u003c/p\u003e\n"}],"parent":[{"target_id":null}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"Responsible business | About Verizon"}},{"tag":"meta","attributes":{"name":"description","content":"Responsible business"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/news-categories/responsible-business"}},{"tag":"link","attributes":{"rel":"shortlink","href":"http://corpweb-api.verizon.com/about/taxonomy/term/23934"}},{"tag":"meta","attributes":{"property":"og:title","content":"Responsible business"}},{"tag":"meta","attributes":{"property":"og:description","content":"Responsible business"}},{"tag":"meta","attributes":{"name":"twitter:card","content":"summary"}},{"tag":"meta","attributes":{"name":"twitter:description","content":"Responsible business"}},{"tag":"meta","attributes":{"name":"twitter:title","content":"Responsible business"}},{"tag":"meta","attributes":{"name":"twitter:creator","content":"@verizon"}}],"path":[{"alias":"/news-categories/responsible-business","pid":281525,"langcode":"en"}],"field_news_category_pageurl":[{"uri":"internal:/news-category/corporate-responsibility","title":"Responsible business","options":{"attributes":{"class":[""]}}}]},{"tid":[{"value":23949}],"vid":[{"target_id":"news_categories","target_type":"taxonomy_vocabulary","target_uuid":"303b2ceb-8b9f-43d7-a988-406441377249"}],"status":[{"value":true}],"name":[{"value":"Public safety"}],"description":[{"value":"\u003cp\u003ePublic safety\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003ePublic safety\u003c/p\u003e\n"}],"parent":[{"target_id":null}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"Public safety | About Verizon"}},{"tag":"meta","attributes":{"name":"description","content":"Public safety"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/news-categories/public-safety"}},{"tag":"link","attributes":{"rel":"shortlink","href":"http://corpweb-api.verizon.com/about/taxonomy/term/23949"}},{"tag":"meta","attributes":{"property":"og:title","content":"Public safety"}},{"tag":"meta","attributes":{"property":"og:description","content":"Public safety"}},{"tag":"meta","attributes":{"name":"twitter:card","content":"summary"}},{"tag":"meta","attributes":{"name":"twitter:description","content":"Public safety"}},{"tag":"meta","attributes":{"name":"twitter:title","content":"Public safety"}},{"tag":"meta","attributes":{"name":"twitter:creator","content":"@verizon"}}],"path":[{"alias":"/news-categories/public-safety","pid":281537,"langcode":"en"}],"field_news_category_pageurl":[{"uri":"internal:/news-category/public-safety","title":"Public safety","options":{"attributes":{"class":[""]}}}]},{"tid":[{"value":23928}],"vid":[{"target_id":"news_categories","target_type":"taxonomy_vocabulary","target_uuid":"303b2ceb-8b9f-43d7-a988-406441377249"}],"status":[{"value":true}],"name":[{"value":"Financial"}],"description":[{"value":"\u003cp\u003eFinancial\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eFinancial\u003c/p\u003e\n"}],"parent":[{"target_id":null}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"Financial | About Verizon"}},{"tag":"meta","attributes":{"name":"description","content":"Financial"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/news-categories/financial"}},{"tag":"link","attributes":{"rel":"shortlink","href":"http://corpweb-api.verizon.com/about/taxonomy/term/23928"}},{"tag":"meta","attributes":{"property":"og:title","content":"Financial"}},{"tag":"meta","attributes":{"property":"og:description","content":"Financial"}},{"tag":"meta","attributes":{"name":"twitter:card","content":"summary"}},{"tag":"meta","attributes":{"name":"twitter:description","content":"Financial"}},{"tag":"meta","attributes":{"name":"twitter:title","content":"Financial"}},{"tag":"meta","attributes":{"name":"twitter:creator","content":"@verizon"}}],"path":[{"alias":"/news-categories/financial","pid":281553,"langcode":"en"}],"field_news_category_pageurl":[{"uri":"internal:/news-category/financial","title":"Financial","options":{"attributes":{"class":[""]}}}]},{"tid":[{"value":24021}],"vid":[{"target_id":"news_categories","target_type":"taxonomy_vocabulary","target_uuid":"303b2ceb-8b9f-43d7-a988-406441377249"}],"status":[{"value":true}],"name":[{"value":"Noticias"}],"description":[{"value":"\u003cp\u003eSpanish news category\u003c/p\u003e\r\n","format":"basic_editor","processed":"\u003cp\u003eSpanish news category\u003c/p\u003e\n"}],"parent":[{"target_id":null}],"metatag":[{"tag":"meta","attributes":{"name":"title","content":"Noticias | About Verizon"}},{"tag":"meta","attributes":{"name":"description","content":"Spanish news category"}},{"tag":"link","attributes":{"rel":"canonical","href":"http://corpweb-api.verizon.com/about/news-categories/noticias"}},{"tag":"link","attributes":{"rel":"shortlink","href":"http://corpweb-api.verizon.com/about/taxonomy/term/24021"}},{"tag":"meta","attributes":{"property":"og:title","content":"Noticias"}},{"tag":"meta","attributes":{"property":"og:description","content":"Spanish news category"}},{"tag":"meta","attributes":{"name":"twitter:card","content":"summary"}},{"tag":"meta","attributes":{"name":"twitter:description","content":"Spanish news category"}},{"tag":"meta","attributes":{"name":"twitter:title","content":"Noticias"}},{"tag":"meta","attributes":{"name":"twitter:creator","content":"@verizon"}}],"path":[{"alias":"/news-categories/noticias","pid":301999,"langcode":"en"}],"field_news_category_pageurl":[{"uri":"internal:/news-category/noticias","title":"Noticias","options":{"attributes":{"class":[""]}}}]}]},"field_top_nav_press_tools":[{"uri":"internal:/news/news-releases","title":"News Releases","options":{"attributes":[]}},{"uri":"internal:/news/media-contacts","title":"Media Contacts","options":{"attributes":[]}},{"uri":"about/news/media-resources","title":"B-roll and images","options":{"attributes":{"target":"_blank"}}},{"uri":"internal:/our-company/verizon-fact-sheet","title":"Verizon Fact Sheet","options":{"attributes":[]}},{"uri":"internal:/news/rss-feeds","title":"RSS Feeds","options":{"attributes":[]}},{"uri":"internal:/news/emergency-resource-center","title":"Emergency Resources","options":{"attributes":[]}},{"uri":"internal:/cable-facts ","title":"Cable Facts","options":{"attributes":[]}}]}},"vzw_archive":[23932,1575158340],"subcategory_parent":[{"sc23926":23955}]},"displayHeaderOnly":false,"displayFooterOnly":false,"footBall":"920521,927973,928031","soccerBall":"929099","confettiFireworks":"920521,928421","brokenLinkChecker":false},"page":"/about/[...segment]","query":{"segment":["terms-conditions","overview"]},"buildId":"Et1hnmvoKBkWSI45yuofB","assetPrefix":"about/index.html","runtimeConfig":{"CSR_API_URL":"","REST_API_URL":"https://corpweb-api.verizon.com","GMAPS_API_KEY":"pk.eyJ1IjoiY29ycHdlYiIsImEiOiJjbTFqazI0encxNGc4MnJva2V1cmgwenFmIn0.oyQA5V5Ta2GROhVEwZvDsA","RECAPTCHA_PUBLIC_KEY":"6LcyydcUAAAAAOS8vEiwE1FJWO9fHe-6Ga_VT7bW","SERVICE_URL":"https://www.verizon.com","GNAV_CSS_URL":"etc/designs/vzwcom/gnav20/core.css","GNAV_BAK_CSS_URL":"aboutsites/default/files/react_static/gnav_core.css","GNAV_JS_URL":"etc/designs/vzwcom/gnav20/corporate.js","GNAV_BAK_JS_URL":"aboutsites/default/files/react_static/gnav_corporate.js","GNAV_DATA_LAYER":"{\"bu\": \"corporate\", \"appid\": \"corpweb\", \"impltype\":\"ssi\", \"options\":{\"sticky\":\"true\"}}","GNAV_SSR_HEADER_URL":"one-digital/gnav/header/corporatecorpweb.external.html/index.html","GNAV_SSR_FOOTER_URL":"one-digital/gnav/footer/corporatecorpweb.external.html/index.html","VZLOGO_640_SOCIAL_IMG":"/about/sites/default/files/verizon-logo-640x400.jpg","VZLOGO_120_SOCIAL_IMG":"/about/sites/default/files/SocialVerizon-120x120.jpg","NODE_ENV":true,"WEBP_IMAGE_PATH":"field_media_image.file.webp_image"},"isFallback":false,"isExperimentalCompile":false,"dynamicIds":[52049,56144,48240,40542,66553],"gip":true,"appGip":true,"scriptLoader":[]}</script>
+<script type="text/javascript" src="about/terms-conditions/overview/etc/designs/vzwcom/gnav20/corporate.js"></script>
+<div class="gnav20-click-div"></div></body></html>
