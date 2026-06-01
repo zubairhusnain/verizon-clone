@@ -31,8 +31,7 @@ if (str_starts_with($path, '/assets/')) {
         readfile($localFs);
         exit;
     }
-    http_response_code(404);
-    exit;
+    vz_send_not_found($path);
 }
 
 if (str_ends_with($path, '.php')) {
@@ -47,6 +46,7 @@ if (str_ends_with($path, '.php')) {
         include $candidate;
         exit;
     }
+    vz_send_not_found($path);
 }
 
 $route = trim($path, '/');
@@ -56,6 +56,10 @@ if ($route === 'index.php' || $route === 'index.html') {
     exit;
 }
 
+if ($route === 'no-page' || str_starts_with($route, 'no-page/')) {
+    vz_render_not_found_page($path);
+}
+
 if ($route === '') {
     $target = __DIR__ . '/index.php';
 } else {
@@ -63,13 +67,40 @@ if ($route === '') {
 }
 
 if (!is_file($target)) {
-    if ($route !== 'no-page') {
-        $from = $path === '' ? '/' : $path;
-        header('Location: ' . VZ_BASE_URL . '/no-page/?from=' . rawurlencode($from), true, 302);
-        exit;
-    }
-    $target = __DIR__ . '/no-page/index.php';
+    vz_send_not_found($path === '' ? '/' : $path);
 }
 
 vz_start_output_rewrite();
 include $target;
+
+function vz_not_found_url(string $fromPath): string
+{
+    $from = $fromPath === '' ? '/' : $fromPath;
+
+    return VZ_BASE_URL . '/no-page/?from=' . rawurlencode($from);
+}
+
+function vz_send_not_found(string $fromPath): never
+{
+    header('Location: ' . vz_not_found_url($fromPath), true, 302);
+    exit;
+}
+
+function vz_render_not_found_page(string $fromPath): never
+{
+    if ($fromPath !== '' && $fromPath !== '/no-page' && $fromPath !== '/no-page/') {
+        $_GET['from'] = $fromPath;
+    }
+
+    $page = __DIR__ . '/no-page/index.php';
+    if (!is_file($page)) {
+        http_response_code(404);
+        header('Content-Type: text/plain; charset=utf-8');
+        echo '404 Not Found';
+        exit;
+    }
+
+    vz_start_output_rewrite();
+    include $page;
+    exit;
+}

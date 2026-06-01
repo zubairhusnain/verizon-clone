@@ -165,7 +165,7 @@ function vz_sanitize_html(string $html): string
 
     $html = preg_replace('~<style id="onetrust-style">[\s\S]*?</style>~i', '', $html) ?? $html;
     $html = preg_replace(
-        '~<div id="onetrust-consent-sdk"[\s\S]*?</div>\s*(?=<div style="visibility)~)i',
+        '~<div id="onetrust-consent-sdk"[\s\S]*?</div>\s*(?=<div style="visibility")~i',
         '',
         $html
     ) ?? $html;
