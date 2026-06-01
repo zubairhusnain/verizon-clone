@@ -164,7 +164,16 @@ vz_start_output_rewrite();
   position: relative !important;
   opacity: 1 !important;
 }
-</style><base href="/verizon-clone/verizon_offline/">
+</style><style id="offline-hide-eyebrow-lob">
+.gnav20-eyebrow,
+.gnav20-eyebrow-link-list,
+.gnav20-mobile-menu .gnav20-eyebrow-link-list {
+  display: none !important;
+}
+#gnav20-ulwrapper > a.gnav20-main-header {
+  display: none !important;
+}
+</style><base href="./">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta charset="UTF-8">
   <title>Verizon: Wireless, Internet, TV and Phone Services | Official Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -619,7 +628,7 @@ window.vzfed.cast.isReady = false;
     <div class="gnav20-apicomponentnewdesign">
 
 
-<a class="gnav20-header-accessibility" tabindex="0" href="/accessibility/" data-track="global nav:accessibility resource center">
+<a class="gnav20-header-accessibility" tabindex="0" href="accessibility/" data-track="global nav:accessibility resource center">
 	<span>Accessibility Resource Center</span>
 </a>
 <a class="gnav20-header-accessibility" href="#gnav20-header-end" tabindex="0" id="gnav20-skip-to-main-content-id" data-track="global nav:skip to main content">
@@ -654,10 +663,7 @@ window.vzfed.cast.isReady = false;
 
 <div class="gnav20-eyebrow-link-list" item-title="eyebrow">
     <div class="gnav20-eyebrow-link-list-item gnav20-two">
-        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
-    
-        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Business" href="/business/" data-label="Business" aria-label="Verizon Business Services HomePage" class="gnav20-main-header " data-track="global nav:business">Business</a>
-    </div>
+        </div>
 </div>
 
 
@@ -697,7 +703,7 @@ window.vzfed.cast.isReady = false;
 <div class="gnav20-utility-wrapper" item-title="contactus">
 	<div>
 				
-		<a x-cq-linkchecker="skip" aria-label="Contact us" href="/support/contact-us/" data-label="Contact us" data-track="global nav:contact us">
+		<a x-cq-linkchecker="skip" aria-label="Contact us" href="support/contact-us/" data-label="Contact us" data-track="global nav:contact us">
 			
 			Contact us
 			
@@ -714,7 +720,7 @@ window.vzfed.cast.isReady = false;
 <div class="gnav20-utility-wrapper" item-title="support">
 	<div>
 				
-		<a x-cq-linkchecker="skip" aria-label="Support" href="/support/" data-label="Support" data-track="global nav:support">
+		<a x-cq-linkchecker="skip" aria-label="Support" href="support/" data-label="Support" data-track="global nav:support">
 			
 			Support
 			
@@ -731,7 +737,7 @@ window.vzfed.cast.isReady = false;
 <div class="gnav20-utility-wrapper" item-title="store">
 	<div>
 				
-		<a x-cq-linkchecker="skip" aria-label="Stores" href="/stores/" data-label="Stores" data-track="global nav:stores">
+		<a x-cq-linkchecker="skip" aria-label="Stores" href="stores/" data-label="Stores" data-track="global nav:stores">
 			
 			Stores
 			
@@ -748,7 +754,7 @@ window.vzfed.cast.isReady = false;
 <div class="gnav20-utility-wrapper" item-title="coveragemap">
 	<div>
 				
-		<a x-cq-linkchecker="skip" aria-label="Coverage map" href="/coverage-map/" data-label="Coverage map" data-track="global nav:coverage map">
+		<a x-cq-linkchecker="skip" aria-label="Coverage map" href="coverage-map/" data-label="Coverage map" data-track="global nav:coverage map">
 			
 			Coverage map
 			
@@ -766,7 +772,7 @@ window.vzfed.cast.isReady = false;
 		<div class="gnav20-utility-wrapper " item-title="localization">
 			
 				
-				<a class="gnav20-lang-link" aria-label="Cámbiate al sitio web en español" data-href="/" href="/" data-lang="Español" mporgnav="" data-label="Español" lang="es" data-track="global nav:espanol">Español</a>
+				<a class="gnav20-lang-link" aria-label="Cámbiate al sitio web en español" data-href="./" href="./" data-lang="Español" mporgnav="" data-label="Español" lang="es" data-track="global nav:espanol">Español</a>
 					
 			
 		</div>
@@ -792,7 +798,7 @@ window.vzfed.cast.isReady = false;
     
     
     <div class="gnav20-logo-wrapper gnav20-relative-index">
-        <a class="gnav20-logoWhiteBg" title="Verizon Home Page" href="/" target="_self" data-track="global nav:verizon home page"></a>
+        <a class="gnav20-logoWhiteBg" title="Verizon Home Page" href="./" target="_self" data-track="global nav:verizon home page"></a>
         
         
     </div>
@@ -814,22 +820,22 @@ window.vzfed.cast.isReady = false;
 
     <div class="gnav20-navigation-item">
 	<div class="gnav20-primary-menu">
-		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
+		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1" class="gnav20-menu-label gnav20-menu-label-button" href="plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
 	</div>
 </div>
     <div class="gnav20-navigation-item">
 	<div class="gnav20-primary-menu">
-		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/home/internet/#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
+		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1" class="gnav20-menu-label gnav20-menu-label-button" href="home/internet#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
 	</div>
 </div>
     <div class="gnav20-navigation-item">
 	<div class="gnav20-primary-menu">
-		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
+		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1" class="gnav20-menu-label gnav20-menu-label-button" href="smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
 	</div>
 </div>
     <div class="gnav20-navigation-item">
 	<div class="gnav20-primary-menu">
-		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1" class="gnav20-menu-label gnav20-menu-label-button" href="/deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
+		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1" class="gnav20-menu-label gnav20-menu-label-button" href="deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
 	</div>
 </div>
 
@@ -891,32 +897,32 @@ window.vzfed.cast.isReady = false;
 					</li>
 				
 				<li class="gnav20-dropdown-list">
-					<a data-hide-for="appid:vpd" id="gnav20-sign-id-list-item-1-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin" tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</a>
+					<span class="offline-link-plain" data-hide-for="appid:vpd" id="gnav20-sign-id-list-item-1-mobile" class="gnav20-dropdown-list-item"  tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</span>
 				</li>
 			
 				
 				<li class="gnav20-dropdown-list gnav20-hide">
-					<a data-show-for="appid:vpd" id="gnav20-sign-id-list-item-2-mobile" class="gnav20-dropdown-list-item" href="/about/privacy/" tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</a>
+					<a data-show-for="appid:vpd" id="gnav20-sign-id-list-item-2-mobile" class="gnav20-dropdown-list-item" href="about/privacy/" tabindex="0" data-track="global nav:sign in menu:account overview">Account overview</a>
 				</li>
 			
 				
 				<li class="gnav20-dropdown-list ">
-					<a id="gnav20-sign-id-list-item-3-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin?goto=https%3A%2F%2Fwww.verizon.com%2Ffeatured%2Fintent%2F%3Fintent%3Dpaybill" tabindex="0" data-track="global nav:sign in menu:pay bill">Pay bill</a>
+					<span class="offline-link-plain" id="gnav20-sign-id-list-item-3-mobile" class="gnav20-dropdown-list-item"  tabindex="0" data-track="global nav:sign in menu:pay bill">Pay bill</span>
 				</li>
 			
 				
 				<li class="gnav20-dropdown-list ">
-					<a id="gnav20-sign-id-list-item-4-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/signin?action=otp" tabindex="0" data-track="global nav:sign in menu:make a one-time payment">Make a one-time payment</a>
+					<span class="offline-link-plain" id="gnav20-sign-id-list-item-4-mobile" class="gnav20-dropdown-list-item"  tabindex="0" data-track="global nav:sign in menu:make a one-time payment">Make a one-time payment</span>
 				</li>
 			
 				
 				<li class="gnav20-dropdown-list ">
-					<a id="gnav20-sign-id-list-item-5-mobile" class="gnav20-dropdown-list-item" href="https://secure.verizon.com/account/register/start" tabindex="0" data-track="global nav:sign in menu:register">Register</a>
+					<span class="offline-link-plain" id="gnav20-sign-id-list-item-5-mobile" class="gnav20-dropdown-list-item"  tabindex="0" data-track="global nav:sign in menu:register">Register</span>
 				</li>
 			
 				
 				<li class="gnav20-dropdown-list ">
-					<a id="gnav20-sign-id-list-item-6-mobile" class="gnav20-dropdown-list-item" href="https://mblogin.verizonwireless.com/account/business/signin" tabindex="0" data-track="global nav:sign in menu:business log in">Business Log in</a>
+					<span class="offline-link-plain" id="gnav20-sign-id-list-item-6-mobile" class="gnav20-dropdown-list-item"  tabindex="0" data-track="global nav:sign in menu:business log in">Business Log in</span>
 				</li>
 			</ul>	
 					
@@ -949,7 +955,7 @@ window.vzfed.cast.isReady = false;
 				
 					<li class="gnav20-content-list">
 						
-							<a id="gnav20-cart-list-item-2-mobile" class="gnav20-content-list-arrow gnav20-home-cart-count" href="/home/internet/" data-track="global nav:cart menu:home solutions">Home solutions</a>
+							<a id="gnav20-cart-list-item-2-mobile" class="gnav20-content-list-arrow gnav20-home-cart-count" href="home/internet/" data-track="global nav:cart menu:home solutions">Home solutions</a>
 						
 					</li>
 				
@@ -975,9 +981,7 @@ window.vzfed.cast.isReady = false;
     </div>
     <nav id="gnav20-mobile-menu" class="gnav20-mobile-menu gnav20-hide">
         <button id="gnav20-closex" class="gnav20-closex" aria-label="close the Menu" tabindex="0" data-track="global nav:close the menu">Close</button>
-        <div id="gnav20-ulwrapper"><a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal-mobile" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
-			
-			<div class="gnav20-navigation-placeholder">
+        <div id="gnav20-ulwrapper"><div class="gnav20-navigation-placeholder">
 			
 
 
@@ -990,22 +994,22 @@ window.vzfed.cast.isReady = false;
 
     <div class="gnav20-navigation-item">
 	<div class="gnav20-primary-menu">
-		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
+		<a x-cq-linkchecker="skip" id="gnav20-Mobile-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="plans/unlimited/" aria-label="Mobile" data-track="global nav:mobile">Mobile</a>
 	</div>
 </div>
     <div class="gnav20-navigation-item">
 	<div class="gnav20-primary-menu">
-		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/home/internet/#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
+		<a x-cq-linkchecker="skip" id="gnav20-Home-Internet-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="home/internet#checkavailability" aria-label="Home Internet" data-track="global nav:home internet">Home Internet</a>
 	</div>
 </div>
     <div class="gnav20-navigation-item">
 	<div class="gnav20-primary-menu">
-		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
+		<a x-cq-linkchecker="skip" id="gnav20-Shop-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="smartphones/" aria-label="Shop" data-track="global nav:shop">Shop</a>
 	</div>
 </div>
     <div class="gnav20-navigation-item">
 	<div class="gnav20-primary-menu">
-		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="/deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
+		<a x-cq-linkchecker="skip" id="gnav20-Deals-L1-mobile" class="gnav20-menu-label gnav20-menu-label-button" href="deals/" aria-label="Deals" data-track="global nav:deals">Deals</a>
 	</div>
 </div>
 
@@ -1071,7 +1075,7 @@ window.vzfed.cast.isReady = false;
 	<div class="gnav20-promo" aria-label="Verizon Promos with 2 promotions" role="group">
 		
 		<button class="gnav20-slide-arrow gnav20-slide-arrow-prev" aria-label="previous promo message 2 of 2" data-track="global nav:promo ribbon:promo message 2 of 2" style="display: block;"></button>
-		<div class="gnav20-promotext opacityOne" item-title="promoRibbon"><div class="gnav20-promo-ribbon gnav20-active-promo" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="/smartphones/" aria-label="Promo 1 of 2 Add a new smartphone line and we" data-track="global nav:promo ribbon:promo 1 of 2 add a new smartphone line and we">&nbsp;</a>Add a new smartphone line and we'll waive the activation fee. Online only. With myPlan.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="/smartphones/" aria-label="Add a new smartphone line and we" data-track="global nav:promo ribbon:shop now"><u>Shop now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" data-track="global nav:promo ribbon:details">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">$40.00 activation fee applied as one-time bill credit (w/in 1-2 bill cycles) when you add a new smartphone line or bring your own smartphone on Unlimited Welcome, postpaid Unlimited Plus or Unlimited Ultimate plan req'd.</div><div class="gnav20-modal-cta"></div></div></div><div class="gnav20-promo-ribbon" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="/switch-to-verizon/" aria-label="Promo 2 of 2 AT&amp;T Customers: Bring in your bill and we’ll give you a better deal." data-track="global nav:promo ribbon:promo 2 of 2 at&amp;t customers: bring in your bill and we’ll give you a better deal.">&nbsp;</a>AT&amp;T Customers: Bring in your bill and we’ll give you a better deal.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="/switch-to-verizon/" aria-label="AT&amp;T Customers: Bring in your bill and we’ll give you a better deal. link to Switch now" data-track="global nav:promo ribbon:at&amp;t customers: bring in your bill and we’ll give you a better deal. link to switch now"><u>Switch now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" aria-label="Offer details for bring your bill" data-track="global nav:promo ribbon:offer details for bring your bill">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">To qualify, must provide a postpaid consumer mobile bill from T-Mobile, AT&amp;T, Xfinity or Spectrum, dated within the past 45 days; bill must be in the same name as the person redeeming the deal. Add'l terms apply. See <a style="text-decoration: underline !important;" href="/switch-to-verizon/" aria-label="Switch now" data-track="global nav:promo ribbon:modal:www.verizon.com/switch-to-verizon">www.verizon.com/switch-to-verizon</a>.</div><div class="gnav20-modal-cta"></div></div></div></div>
+		<div class="gnav20-promotext opacityOne" item-title="promoRibbon"><div class="gnav20-promo-ribbon gnav20-active-promo" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="smartphones/" aria-label="Promo 1 of 2 Add a new smartphone line and we" data-track="global nav:promo ribbon:promo 1 of 2 add a new smartphone line and we">&nbsp;</a>Add a new smartphone line and we'll waive the activation fee. Online only. With myPlan.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="smartphones/" aria-label="Add a new smartphone line and we" data-track="global nav:promo ribbon:shop now"><u>Shop now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" data-track="global nav:promo ribbon:details">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">$40.00 activation fee applied as one-time bill credit (w/in 1-2 bill cycles) when you add a new smartphone line or bring your own smartphone on Unlimited Welcome, postpaid Unlimited Plus or Unlimited Ultimate plan req'd.</div><div class="gnav20-modal-cta"></div></div></div><div class="gnav20-promo-ribbon" data-nosnippet=""><div class="gnav20-promo-text gnav20-white-focus"><span><a class="gnav20-promo-slide-link" href="switch-to-verizon/" aria-label="Promo 2 of 2 AT&amp;T Customers: Bring in your bill and we’ll give you a better deal." data-track="global nav:promo ribbon:promo 2 of 2 at&amp;t customers: bring in your bill and we’ll give you a better deal.">&nbsp;</a>AT&amp;T Customers: Bring in your bill and we’ll give you a better deal.<span aria-hidden="true"> | </span><a class="gnav20-promo-link" href="switch-to-verizon/" aria-label="AT&amp;T Customers: Bring in your bill and we’ll give you a better deal. link to Switch now" data-track="global nav:promo ribbon:at&amp;t customers: bring in your bill and we’ll give you a better deal. link to switch now"><u>Switch now</u></a><span aria-hidden="true"> | </span><span class="gnav20-promo-icon"><a role="button" href="#" aria-label="Offer details for bring your bill" data-track="global nav:promo ribbon:offer details for bring your bill">Details</a></span></span></div><div class="gnav20-modal-content-placeholder" style="display:none;"><div class="gnav20-modal-sub-heading" id="gnav20-modal-sub-heading">To qualify, must provide a postpaid consumer mobile bill from T-Mobile, AT&amp;T, Xfinity or Spectrum, dated within the past 45 days; bill must be in the same name as the person redeeming the deal. Add'l terms apply. See <a style="text-decoration: underline !important;" href="switch-to-verizon/" aria-label="Switch now" data-track="global nav:promo ribbon:modal:www.verizon.com/switch-to-verizon">www.verizon.com/switch-to-verizon</a>.</div><div class="gnav20-modal-cta"></div></div></div></div>
 		<button class="gnav20-slide-arrow gnav20-slide-arrow-next" aria-label="next promo message 2 of 2" data-track="global nav:promo ribbon:promo message 2 of 2" style="display: block;"></button>
 	</div>
 	<div class="gnav20-modal" id="gnav20-modal">
@@ -1090,16 +1094,16 @@ window.vzfed.cast.isReady = false;
 </div>
 <div name="headerEnd" id="gnav20-header-end" role="none" aria-hidden="true" tabindex="-1" aria-label="end of navigation menu">
 <nav id="offline-l2-links" aria-label="Quick shop links">
-  <a href="/smartphones/">Phones</a>
-  <a href="/tablets/">Tablets</a>
-  <a href="/connected-smartwatches/">Watches</a>
-  <a href="/plans/unlimited/">Plans</a>
-  <a href="/home/internet/">Home Internet</a>
-  <a href="/deals/">Deals</a>
-  <a href="/shop/online/free-5g-phones/">Free 5G phones</a>
-  <a href="/support/">Support</a>
-  <a href="/support/contact-us/">Contact us</a>
-  <a href="/stores/">Stores</a>
+  <a href="smartphones/">Phones</a>
+  <a href="tablets/">Tablets</a>
+  <a href="connected-smartwatches/">Watches</a>
+  <a href="plans/unlimited/">Plans</a>
+  <a href="home/internet/">Home Internet</a>
+  <a href="deals/">Deals</a>
+  <a href="shop/online/free-5g-phones/">Free 5G phones</a>
+  <a href="support/">Support</a>
+  <a href="support/contact-us/">Contact us</a>
+  <a href="stores/">Stores</a>
 </nav>
 end of navigation menu</div>
 <style id="gnav20-preload">
@@ -1207,7 +1211,7 @@ end of navigation menu</div>
         
   <div class="vui:cmp-quicklinks__slide vui:carousel__slide" data-vui-cmp-quicklinks-link="1">
     <div class="vui:cmp-quicklinks__slide__content vui:carousel__slide-content">
-      <a href="/switch-to-verizon/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p1||||||quick links|Switch to Verizon&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <a href="switch-to-verizon/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p1||||||quick links|Switch to Verizon&quot;,&quot;type&quot;:&quot;impression&quot;}">
         <i class="vui:cmp-quicklinks__icon vui:icon" style="--vui-icon_mask-image: url('https://ss7.vzw.com/is/image/VerizonWireless/1025_NGD_Quicklinks_switch_to_verizon_d?&amp;fmt=webp-alpha&amp;scl=1')">
         </i>
         Switch to Verizon
@@ -1219,7 +1223,7 @@ end of navigation menu</div>
         
   <div class="vui:cmp-quicklinks__slide vui:carousel__slide" data-vui-cmp-quicklinks-link="2">
     <div class="vui:cmp-quicklinks__slide__content vui:carousel__slide-content">
-      <a href="/smartphones/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p2||||||quick links|Phones&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <a href="smartphones/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p2||||||quick links|Phones&quot;,&quot;type&quot;:&quot;impression&quot;}">
         <i class="vui:cmp-quicklinks__icon vui:icon" style="--vui-icon_mask-image: url('https://ss7.vzw.com/is/image/VerizonWireless/322401_NGD_Quicklinks_Phones_D?&amp;fmt=png-alpha&amp;scl=1')">
         </i>
         Phones
@@ -1231,7 +1235,7 @@ end of navigation menu</div>
         
   <div class="vui:cmp-quicklinks__slide vui:carousel__slide" data-vui-cmp-quicklinks-link="3">
     <div class="vui:cmp-quicklinks__slide__content vui:carousel__slide-content">
-      <a href="/deals/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p3||||||quick links|Deals&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <a href="deals/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p3||||||quick links|Deals&quot;,&quot;type&quot;:&quot;impression&quot;}">
         <i class="vui:cmp-quicklinks__icon vui:icon" style="--vui-icon_mask-image: url('https://ss7.vzw.com/is/image/VerizonWireless/322401_NGD_Quicklinks_FreePhones_D?&amp;fmt=png-alpha&amp;scl=1')">
         </i>
         Deals
@@ -1243,7 +1247,7 @@ end of navigation menu</div>
         
   <div class="vui:cmp-quicklinks__slide vui:carousel__slide" data-vui-cmp-quicklinks-link="4">
     <div class="vui:cmp-quicklinks__slide__content vui:carousel__slide-content">
-      <a href="/plans/unlimited/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p4||||||quick links|Mobile plans&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <a href="plans/unlimited/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p4||||||quick links|Mobile plans&quot;,&quot;type&quot;:&quot;impression&quot;}">
         <i class="vui:cmp-quicklinks__icon vui:icon" style="--vui-icon_mask-image: url('https://ss7.vzw.com/is/image/VerizonWireless/ngd_081825_existingcustomer_mobileplans_quicklink_dm?&amp;fmt=png-alpha&amp;scl=1')">
         </i>
         Mobile plans
@@ -1255,7 +1259,7 @@ end of navigation menu</div>
         
   <div class="vui:cmp-quicklinks__slide vui:carousel__slide" data-vui-cmp-quicklinks-link="5">
     <div class="vui:cmp-quicklinks__slide__content vui:carousel__slide-content">
-      <a href="/home/internet/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p5||||||quick links|Home Internet&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <a href="home/internet/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p5||||||quick links|Home Internet&quot;,&quot;type&quot;:&quot;impression&quot;}">
         <i class="vui:cmp-quicklinks__icon vui:icon" style="--vui-icon_mask-image: url('https://ss7.vzw.com/is/image/VerizonWireless/ngd_061325_existingcustomer_homeinternet_quicklink_dm?&amp;fmt=png-alpha&amp;scl=1')">
         </i>
         Home Internet
@@ -1267,7 +1271,7 @@ end of navigation menu</div>
         
   <div class="vui:cmp-quicklinks__slide vui:carousel__slide" data-vui-cmp-quicklinks-link="6">
     <div class="vui:cmp-quicklinks__slide__content vui:carousel__slide-content">
-      <a href="/bring-your-own-device/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p6||||||quick links|Bring a device&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <a href="bring-your-own-device/" data-header="quick links" class="vui:cmp-quicklinks__anchor vui:button vui:cmp-quicklinks__anchor__light_brand" draggable="false" data-track="{&quot;name&quot;:&quot;l1|p6||||||quick links|Bring a device&quot;,&quot;type&quot;:&quot;impression&quot;}">
         <i class="vui:cmp-quicklinks__icon vui:icon" style="--vui-icon_mask-image: url('https://ss7.vzw.com/is/image/VerizonWireless/322401_NGD_Quicklinks_BringADevice_D?&amp;fmt=png-alpha&amp;scl=1')">
         </i>
         Bring a device
@@ -1380,7 +1384,7 @@ end of navigation menu</div>
         </button>
       </p>
       <div>
-        <a class="vui:button vui:button--primary vui:is-stretched" data-impression-category="Dvc Bundle-Apple" data-campaign-id="2026_MAY_PR_1_DAD_IPHONE17" data-description="Get iPhone 17, iPad &amp; Apple Watch Series 11. Buy" aria-label="Get iPhone 17, iPad &amp; Apple Watch Series 11. Buy" href="/smartphones/apple-iphone-17/" data-track="{&quot;name&quot;:&quot;l2|p1|Dvc Bundle-Apple|||||2026_MAY_PR_1_DAD_IPHONE17|Get iPhone 17, iPad &amp; Apple Watch Series 11. Buy&quot;,&quot;type&quot;:&quot;impression&quot;}">
+        <a class="vui:button vui:button--primary vui:is-stretched" data-impression-category="Dvc Bundle-Apple" data-campaign-id="2026_MAY_PR_1_DAD_IPHONE17" data-description="Get iPhone 17, iPad &amp; Apple Watch Series 11. Buy" aria-label="Get iPhone 17, iPad &amp; Apple Watch Series 11. Buy" href="smartphones/apple-iphone-17/" data-track="{&quot;name&quot;:&quot;l2|p1|Dvc Bundle-Apple|||||2026_MAY_PR_1_DAD_IPHONE17|Get iPhone 17, iPad &amp; Apple Watch Series 11. Buy&quot;,&quot;type&quot;:&quot;impression&quot;}">
           Buy
         </a>
       </div>
@@ -1462,7 +1466,7 @@ end of navigation menu</div>
           </p>
         </div>
         <div class="vui:u-padding-right-12x@lg vui:u-padding-right-0x@xl">
-          <a href="/shop/online/free-5g-phones/" class="vui:button vui:button--primary vui:is-stretched" data-impression-category="Mobile Plan" data-campaign-id="2026_APR_PR_1_BESTPRICEEVER_FREEPHONE" data-description="Switch &amp; get 4 phones for $0, Shop" data-track="{&quot;name&quot;:&quot;l2|p2|Mobile Plan|||||2026_APR_PR_1_BESTPRICEEVER_FREEPHONE|Switch &amp; get 4 phones for $0, Shop&quot;,&quot;type&quot;:&quot;impression&quot;}">
+          <a href="shop/online/free-5g-phones/" class="vui:button vui:button--primary vui:is-stretched" data-impression-category="Mobile Plan" data-campaign-id="2026_APR_PR_1_BESTPRICEEVER_FREEPHONE" data-description="Switch &amp; get 4 phones for $0, Shop" data-track="{&quot;name&quot;:&quot;l2|p2|Mobile Plan|||||2026_APR_PR_1_BESTPRICEEVER_FREEPHONE|Switch &amp; get 4 phones for $0, Shop&quot;,&quot;type&quot;:&quot;impression&quot;}">
             Shop
           </a>
         </div>
@@ -1539,7 +1543,7 @@ end of navigation menu</div>
         </p>
       </div>
       <div class="vui:u-margin-right-24x@lg">
-        <a href="/smartphones/samsung-galaxy-s26/" class="vui:button vui:button--primary vui:is-stretched vui:u-margin-right-32x@lg" data-impression-category="Dvc Bundle-Samsung" data-campaign-id="2026_MAY_PR_1_DAD_SAMSUNGGS26" data-description="Learn more about Samsung products" aria-label="Learn more about Samsung products" data-track="{&quot;name&quot;:&quot;l2|p3|Dvc Bundle-Samsung|||||2026_MAY_PR_1_DAD_SAMSUNGGS26|Learn more about Samsung products&quot;,&quot;type&quot;:&quot;impression&quot;}">
+        <a href="smartphones/samsung-galaxy-s26/" class="vui:button vui:button--primary vui:is-stretched vui:u-margin-right-32x@lg" data-impression-category="Dvc Bundle-Samsung" data-campaign-id="2026_MAY_PR_1_DAD_SAMSUNGGS26" data-description="Learn more about Samsung products" aria-label="Learn more about Samsung products" data-track="{&quot;name&quot;:&quot;l2|p3|Dvc Bundle-Samsung|||||2026_MAY_PR_1_DAD_SAMSUNGGS26|Learn more about Samsung products&quot;,&quot;type&quot;:&quot;impression&quot;}">
           Buy
         </a>
       </div>
@@ -1619,7 +1623,7 @@ end of navigation menu</div>
           <h2 class="vui:text vui:text--title-medium vui:text--title-large@lg vui:text--bold"><span class="vui:theme--fg-brand">Now more people</span> <br aria-hidden="true" class="vui:u-display-block">
             can get a better deal
           </h2>
-          <a class="vui:button vui:button--primary vui:is-stretched" data-impression-category="Other-Brand" data-campaign-id="2026_APR_AW_1_SWITCHER_NA" href="/switch-to-verizon/" data-description="Now more people can get a better deal. Switch now" aria-label="Now more people can get a better deal. Switch now" data-track="{&quot;name&quot;:&quot;l2|p4|Other-Brand|||||2026_APR_AW_1_SWITCHER_NA|Now more people can get a better deal. Switch now&quot;,&quot;type&quot;:&quot;impression&quot;}">
+          <a class="vui:button vui:button--primary vui:is-stretched" data-impression-category="Other-Brand" data-campaign-id="2026_APR_AW_1_SWITCHER_NA" href="switch-to-verizon/" data-description="Now more people can get a better deal. Switch now" aria-label="Now more people can get a better deal. Switch now" data-track="{&quot;name&quot;:&quot;l2|p4|Other-Brand|||||2026_APR_AW_1_SWITCHER_NA|Now more people can get a better deal. Switch now&quot;,&quot;type&quot;:&quot;impression&quot;}">
             Switch now
           </a>
         </div>
@@ -1628,7 +1632,7 @@ end of navigation menu</div>
       <!-- ***** TOOLTIP ******* -->
       <!-- ******************** -->
       <span class="skinny-banner__tooltip vui:tooltip__trigger-wrap vui:u-position-relative vui:u-z-index-3">
-        <button class="vui:button-icon vui:tooltip__trigger" type="button" data-vui-tooltip="" data-vui-tooltip-copy="To qualify, must provide a postpaid consumer mobile bill from T-Mobile, AT&amp;T, Xfinity or Spectrum, dated within the past 45 days; bill must be in the same name as the person redeeming the deal. Add'l terms apply. See &lt;a href='/switch-to-verizon/'&gt;www.verizon.com/switch-to-verizon&lt;/a&gt;" aria-label="More information on more people can get a better deal. tooltip" id="vui-tooltip-n1hT_QQNva4jnHEAffa0q" aria-expanded="false">
+        <button class="vui:button-icon vui:tooltip__trigger" type="button" data-vui-tooltip="" data-vui-tooltip-copy="To qualify, must provide a postpaid consumer mobile bill from T-Mobile, AT&amp;T, Xfinity or Spectrum, dated within the past 45 days; bill must be in the same name as the person redeeming the deal. Add'l terms apply. See &lt;a href='switch-to-verizon/'&gt;www.verizon.com/switch-to-verizon&lt;/a&gt;" aria-label="More information on more people can get a better deal. tooltip" id="vui-tooltip-n1hT_QQNva4jnHEAffa0q" aria-expanded="false">
           <i class="vui:icon vui:icon--info vui:theme--fg-secondary"></i>
         </button>
       </span>
@@ -1978,7 +1982,7 @@ end of navigation menu</div>
       <div class="vui:tile vui:tile__clickable vui:fed__deals-tile vui:grid__col--6 vui:grid__col--4@md vui:grid__col--3@lg vui:u-position-relative">
         
             
-  <a href="/home/internet/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Home Plan" data-campaign-id="2026_JUN_PR_2_SAMSUNGTECH_HP" data-description="Get $400 off select Samsung products, on us" aria-label="Get $400 off select Samsung products, on us" data-track="{&quot;name&quot;:&quot;l3|p1|Home Plan|||||2026_JUN_PR_2_SAMSUNGTECH_HP|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
+  <a href="home/internet/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Home Plan" data-campaign-id="2026_JUN_PR_2_SAMSUNGTECH_HP" data-description="Get $400 off select Samsung products, on us" aria-label="Get $400 off select Samsung products, on us" data-track="{&quot;name&quot;:&quot;l3|p1|Home Plan|||||2026_JUN_PR_2_SAMSUNGTECH_HP|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
   <div class="vui:fed__deals-tile-content vui:theme__surface vui:theme--light-primary vui:u-position-relative vui:u-overflow-hidden vui:u-height-100 vui:u-width-100 vui:u-border-radius-400">
     <picture aria-hidden="true" class="vui:u-position-absolute vui:u-bottom-0 vui:u-height-100 vui:u-width-100">
       <source srcset="https://ss7.vzw.com/is/image/VerizonWireless/0526_vhi_hp_samsung_tech_credit_promo_tile_5_21_d?&amp;fmt=webp&amp;scl=2, https://ss7.vzw.com/is/image/VerizonWireless/0526_vhi_hp_samsung_tech_credit_promo_tile_5_21_d?&amp;fmt=webp&amp;scl=1 2x" media="(min-width: 990px)">
@@ -2011,7 +2015,7 @@ end of navigation menu</div>
       <div class="vui:tile vui:tile__clickable vui:fed__deals-tile vui:grid__col--6 vui:grid__col--4@md vui:grid__col--3@lg vui:u-position-relative">
         
             
-  <a href="/smartphones/samsung-galaxy-s26-plus/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Samsung" data-campaign-id="2026_MAY_PR_1_PROMOBAU_SAMSUNGGS26PLS" data-description="Samsung Galaxy S26+ for $0" aria-label="Samsung Galaxy S26+ for $0" data-track="{&quot;name&quot;:&quot;l3|p2|Phone-Samsung|||||2026_MAY_PR_1_PROMOBAU_SAMSUNGGS26PLS|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
+  <a href="smartphones/samsung-galaxy-s26-plus/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Samsung" data-campaign-id="2026_MAY_PR_1_PROMOBAU_SAMSUNGGS26PLS" data-description="Samsung Galaxy S26+ for $0" aria-label="Samsung Galaxy S26+ for $0" data-track="{&quot;name&quot;:&quot;l3|p2|Phone-Samsung|||||2026_MAY_PR_1_PROMOBAU_SAMSUNGGS26PLS|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
   <div class="vui:fed__deals-tile-content vui:theme__surface vui:theme--light-primary vui:u-position-relative vui:u-overflow-hidden vui:u-height-100 vui:u-width-100 vui:u-border-radius-400">
     <picture aria-hidden="true" class="vui:u-position-absolute vui:u-bottom-0 vui:u-height-100 vui:u-width-100">
       <source srcset="https://ss7.vzw.com/is/image/VerizonWireless/q1_samsung_galaxy_s26plus_2_25-d?&amp;fmt=webp&amp;scl=2, https://ss7.vzw.com/is/image/VerizonWireless/q1_samsung_galaxy_s26plus_2_25-d?&amp;fmt=webp&amp;scl=1 2x" media="(min-width: 990px)">
@@ -2044,7 +2048,7 @@ end of navigation menu</div>
       <div class="vui:tile vui:tile__clickable vui:fed__deals-tile vui:grid__col--6 vui:grid__col--4@md vui:grid__col--3@lg vui:u-position-relative">
         
             
-  <a href="/smartphones/google-pixel-10-pro/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Google" data-campaign-id="2026_MAY_PR_1_PROMOBAU_GOOGLEPIXEL10PRO" data-description="Google Pixel 10 Pro for $0" aria-label="Google Pixel 10 Pro for $0" data-track="{&quot;name&quot;:&quot;l3|p3|Phone-Google|||||2026_MAY_PR_1_PROMOBAU_GOOGLEPIXEL10PRO|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
+  <a href="smartphones/google-pixel-10-pro/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Google" data-campaign-id="2026_MAY_PR_1_PROMOBAU_GOOGLEPIXEL10PRO" data-description="Google Pixel 10 Pro for $0" aria-label="Google Pixel 10 Pro for $0" data-track="{&quot;name&quot;:&quot;l3|p3|Phone-Google|||||2026_MAY_PR_1_PROMOBAU_GOOGLEPIXEL10PRO|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
   <div class="vui:fed__deals-tile-content vui:theme__surface vui:theme--light-primary vui:u-position-relative vui:u-overflow-hidden vui:u-height-100 vui:u-width-100 vui:u-border-radius-400">
     <picture aria-hidden="true" class="vui:u-position-absolute vui:u-bottom-0 vui:u-height-100 vui:u-width-100">
       <source srcset="https://ss7.vzw.com/is/image/VerizonWireless/do_q3_google_fbmr_lead_8_20-deals_tile_d?&amp;fmt=webp&amp;scl=2, https://ss7.vzw.com/is/image/VerizonWireless/do_q3_google_fbmr_lead_8_20-deals_tile_d?&amp;fmt=webp&amp;scl=1 2x" media="(min-width: 990px)">
@@ -2077,7 +2081,7 @@ end of navigation menu</div>
       <div class="vui:tile vui:tile__clickable vui:fed__deals-tile vui:grid__col--6 vui:grid__col--4@md vui:grid__col--3@lg vui:u-position-relative">
         
             
-  <a href="/bring-your-own-device/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Mobile Plan BYOD" data-campaign-id="2026_MAY_PR_1_BYOD_BYOD400" data-description="Bring your phone and get up to $400, when you switch" aria-label="Bring your phone and get up to $400, when you switch" data-track="{&quot;name&quot;:&quot;l3|p4|Mobile Plan BYOD|||||2026_MAY_PR_1_BYOD_BYOD400|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
+  <a href="bring-your-own-device/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Mobile Plan BYOD" data-campaign-id="2026_MAY_PR_1_BYOD_BYOD400" data-description="Bring your phone and get up to $400, when you switch" aria-label="Bring your phone and get up to $400, when you switch" data-track="{&quot;name&quot;:&quot;l3|p4|Mobile Plan BYOD|||||2026_MAY_PR_1_BYOD_BYOD400|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
   <div class="vui:fed__deals-tile-content vui:theme__surface vui:theme--dark-primary vui:u-position-relative vui:u-overflow-hidden vui:u-height-100 vui:u-width-100 vui:u-border-radius-400">
     <picture aria-hidden="true" class="vui:u-position-absolute vui:u-bottom-0 vui:u-height-100 vui:u-width-100">
       <source srcset="https://ss7.vzw.com/is/image/VerizonWireless/Q1-2026-q1_byod_1line_45mo_1_8-HP-Tile-d?&amp;fmt=webp&amp;scl=2, https://ss7.vzw.com/is/image/VerizonWireless/Q1-2026-q1_byod_1line_45mo_1_8-HP-Tile-d?&amp;fmt=webp&amp;scl=1 2x" media="(min-width: 990px)">
@@ -2110,7 +2114,7 @@ end of navigation menu</div>
       <div class="vui:tile vui:tile__clickable vui:fed__deals-tile vui:grid__col--6 vui:grid__col--4@md vui:grid__col--3@lg vui:u-position-relative">
         
             
-  <a href="/certified-pre-owned/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Generic" data-campaign-id="2025_SEP_EV_1_CPO_NA" data-description="Save with a Certified Pre-Owned" aria-label="Save with a Certified Pre-Owned" data-track="{&quot;name&quot;:&quot;l3|p5|Phone-Generic|||||2025_SEP_EV_1_CPO_NA|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
+  <a href="certified-pre-owned/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Generic" data-campaign-id="2025_SEP_EV_1_CPO_NA" data-description="Save with a Certified Pre-Owned" aria-label="Save with a Certified Pre-Owned" data-track="{&quot;name&quot;:&quot;l3|p5|Phone-Generic|||||2025_SEP_EV_1_CPO_NA|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
   <div class="vui:fed__deals-tile-content vui:theme__surface vui:theme--dark-primary vui:u-position-relative vui:u-overflow-hidden vui:u-height-100 vui:u-width-100 vui:u-border-radius-400">
     <picture aria-hidden="true" class="vui:u-position-absolute vui:u-bottom-0 vui:u-height-100 vui:u-width-100">
       <source srcset="https://ss7.vzw.com/is/image/VerizonWireless/0630_cpo_6_30_ngd_hptile_2_d?&amp;fmt=webp&amp;scl=2, https://ss7.vzw.com/is/image/VerizonWireless/0630_cpo_6_30_ngd_hptile_2_d?&amp;fmt=webp&amp;scl=1 2x" media="(min-width: 990px)">
@@ -2139,7 +2143,7 @@ end of navigation menu</div>
       <div class="vui:tile vui:tile__clickable vui:fed__deals-tile vui:grid__col--6 vui:grid__col--4@md vui:grid__col--3@lg vui:u-position-relative">
         
             
-  <a href="/military/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Mobile Plan" data-campaign-id="2026_MAY_AW_1_MILITARY_MILITARYAPPRECIATION" data-description="Military and veteran families save up to $25/mo" aria-label="Military and veteran families save up to $25/mo" data-track="{&quot;name&quot;:&quot;l3|p6|Mobile Plan|||||2026_MAY_AW_1_MILITARY_MILITARYAPPRECIATION|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
+  <a href="military/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Mobile Plan" data-campaign-id="2026_MAY_AW_1_MILITARY_MILITARYAPPRECIATION" data-description="Military and veteran families save up to $25/mo" aria-label="Military and veteran families save up to $25/mo" data-track="{&quot;name&quot;:&quot;l3|p6|Mobile Plan|||||2026_MAY_AW_1_MILITARY_MILITARYAPPRECIATION|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
   <div class="vui:fed__deals-tile-content vui:theme__surface vui:theme--light-primary vui:u-position-relative vui:u-overflow-hidden vui:u-height-100 vui:u-width-100 vui:u-border-radius-400">
     <picture aria-hidden="true" class="vui:u-position-absolute vui:u-bottom-0 vui:u-height-100 vui:u-width-100">
       <source srcset="https://ss7.vzw.com/is/image/VerizonWireless/military-appreciation-hp-tile-d?&amp;fmt=webp&amp;scl=2, https://ss7.vzw.com/is/image/VerizonWireless/military-appreciation-hp-tile-d?&amp;fmt=webp&amp;scl=1 2x" media="(min-width: 990px)">
@@ -2172,7 +2176,7 @@ end of navigation menu</div>
       <div class="vui:tile vui:tile__clickable vui:fed__deals-tile vui:grid__col--6 vui:grid__col--4@md vui:grid__col--3@lg vui:u-position-relative">
         
             
-  <a href="/smartphones/apple-iphone-16-plus/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Apple" data-campaign-id="2026_FEB_PR_1_PROMOBAU_IPHONE16PLUS" data-description="iPhone 16 Plus. Get it on us " aria-label="iPhone 16 Plus. Get it on us " data-track="{&quot;name&quot;:&quot;l3|p7|Phone-Apple|||||2026_FEB_PR_1_PROMOBAU_IPHONE16PLUS|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
+  <a href="smartphones/apple-iphone-16-plus/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Apple" data-campaign-id="2026_FEB_PR_1_PROMOBAU_IPHONE16PLUS" data-description="iPhone 16 Plus. Get it on us " aria-label="iPhone 16 Plus. Get it on us " data-track="{&quot;name&quot;:&quot;l3|p7|Phone-Apple|||||2026_FEB_PR_1_PROMOBAU_IPHONE16PLUS|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
   <div class="vui:fed__deals-tile-content vui:theme__surface vui:theme--light-primary vui:u-position-relative vui:u-overflow-hidden vui:u-height-100 vui:u-width-100 vui:u-border-radius-400">
     <picture aria-hidden="true" class="vui:u-position-absolute vui:u-bottom-0 vui:u-height-100 vui:u-width-100">
       <source srcset="https://ss7.vzw.com/is/image/VerizonWireless/0625_do_q2_iphone_16_plus_onus_4lines_6_19_d?&amp;fmt=webp&amp;scl=2, https://ss7.vzw.com/is/image/VerizonWireless/0625_do_q2_iphone_16_plus_onus_4lines_6_19_d?&amp;fmt=webp&amp;scl=1 2x" media="(min-width: 990px)">
@@ -2205,7 +2209,7 @@ end of navigation menu</div>
       <div class="vui:tile vui:tile__clickable vui:fed__deals-tile vui:grid__col--6 vui:grid__col--4@md vui:grid__col--3@lg vui:u-position-relative">
         
             
-  <a href="/smartphones/motorola-razr-fifa-world-cup-26-edition/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Motorola" data-campaign-id="2026_FEB_PR_1_PROMOBAU_MOTORAZR" data-description="Get motorola razr FIFA World Cup 26TM Edition on us" aria-label="Get motorola razr FIFA World Cup 26TM Edition on us" data-track="{&quot;name&quot;:&quot;l3|p8|Phone-Motorola|||||2026_FEB_PR_1_PROMOBAU_MOTORAZR|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
+  <a href="smartphones/motorola-razr-fifa-world-cup-26-edition/" class="vui:tile__anchor vui:u-z-index-1 vui:u-width-100 vui:u-height-100 vui:u-top-0 vui:u-position-absolute" data-impression-category="Phone-Motorola" data-campaign-id="2026_FEB_PR_1_PROMOBAU_MOTORAZR" data-description="Get motorola razr FIFA World Cup 26TM Edition on us" aria-label="Get motorola razr FIFA World Cup 26TM Edition on us" data-track="{&quot;name&quot;:&quot;l3|p8|Phone-Motorola|||||2026_FEB_PR_1_PROMOBAU_MOTORAZR|tile&quot;,&quot;type&quot;:&quot;impression&quot;}"></a>
   <div class="vui:fed__deals-tile-content vui:theme__surface vui:theme--light-primary vui:u-position-relative vui:u-overflow-hidden vui:u-height-100 vui:u-width-100 vui:u-border-radius-400">
     <picture aria-hidden="true" class="vui:u-position-absolute vui:u-bottom-0 vui:u-height-100 vui:u-width-100">
       <source srcset="https://ss7.vzw.com/is/image/VerizonWireless/0126_moto_razr_fifa_ngd_hptile_d?&amp;fmt=webp&amp;scl=2, https://ss7.vzw.com/is/image/VerizonWireless/0126_moto_razr_fifa_ngd_hptile_d?&amp;fmt=webp&amp;scl=1 2x" media="(min-width: 990px)">
@@ -2239,7 +2243,7 @@ end of navigation menu</div>
   
   <div class="vui:grid vui:page-block vui:page-block--inset vui:u-padding-top-8x">
     <div class="vui:grid__col--12 vui:text--center">
-      <button data-href="/deals/" data-header="Show more deals" aria-labelledby="label-1392911817" aria-expanded="false" aria-controls="/deals/" data-expanded-label="Shop all deals" class="vui:text vui:text--bold vui:text--decoration-none vui:fed__show-more vui:fed__show-more-collapsed" data-track="{&quot;name&quot;:&quot;l3|p9||||||Show more deals|Show more deals&quot;,&quot;type&quot;:&quot;impression&quot;}"><span id="label-1392911817">Show more deals</span></button>
+      <button data-href="deals/" data-header="Show more deals" aria-labelledby="label-1392911817" aria-expanded="false" aria-controls="/deals/" data-expanded-label="Shop all deals" class="vui:text vui:text--bold vui:text--decoration-none vui:fed__show-more vui:fed__show-more-collapsed" data-track="{&quot;name&quot;:&quot;l3|p9||||||Show more deals|Show more deals&quot;,&quot;type&quot;:&quot;impression&quot;}"><span id="label-1392911817">Show more deals</span></button>
     </div>
     <div class="vui:screen-reader-only" id="expanded-div" tabindex="-1"></div>
   </div>
@@ -2314,7 +2318,7 @@ end of navigation menu</div>
     </div>
     <div class="vui:cmp-previewtiles__tile-foot">
       <div class="vui:cmp-previewtiles__button-wrap">
-        <a class="vui:cmp-previewtiles__button vui:button vui:is-stretched" href="/plans/unlimited/" aria-label="Get started with mobile plans" data-impression-category="Mobile Plan" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " data-track="{&quot;name&quot;:&quot;l4|p1|Mobile Plan|||||2025_JUN_EV_1_NAVIGATION_NA|Get started with mobile plans&quot;,&quot;type&quot;:&quot;impression&quot;}">
+        <a class="vui:cmp-previewtiles__button vui:button vui:is-stretched" href="plans/unlimited/" aria-label="Get started with mobile plans" data-impression-category="Mobile Plan" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " data-track="{&quot;name&quot;:&quot;l4|p1|Mobile Plan|||||2025_JUN_EV_1_NAVIGATION_NA|Get started with mobile plans&quot;,&quot;type&quot;:&quot;impression&quot;}">
           Get started
         </a>
       </div>
@@ -2337,7 +2341,7 @@ end of navigation menu</div>
     </div>
     <div class="vui:cmp-previewtiles__tile-foot">
       <div class="vui:cmp-previewtiles__button-wrap">
-        <a class="vui:cmp-previewtiles__button vui:button vui:is-stretched" href="/home/internet/" aria-label="Get started with home internet plans" data-impression-category="Home Plan" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " data-track="{&quot;name&quot;:&quot;l4|p2|Home Plan|||||2025_JUN_EV_1_NAVIGATION_NA|Get started with home internet plans&quot;,&quot;type&quot;:&quot;impression&quot;}">
+        <a class="vui:cmp-previewtiles__button vui:button vui:is-stretched" href="home/internet/" aria-label="Get started with home internet plans" data-impression-category="Home Plan" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " data-track="{&quot;name&quot;:&quot;l4|p2|Home Plan|||||2025_JUN_EV_1_NAVIGATION_NA|Get started with home internet plans&quot;,&quot;type&quot;:&quot;impression&quot;}">
           Get started
         </a>
       </div>
@@ -2360,7 +2364,7 @@ end of navigation menu</div>
     </div>
     <div class="vui:cmp-previewtiles__tile-foot">
       <div class="vui:cmp-previewtiles__button-wrap">
-        <a class="vui:cmp-previewtiles__button vui:button vui:is-stretched" href="/discounts/phone-home-internet-bundle/" aria-label="Get started with mobile and home internet plans" data-impression-category="Home Plan" data-campaign-id="2025_JUN_MOBILEANDHOME_1_NAVIGATION_NA " data-track="{&quot;name&quot;:&quot;l4|p3|Home Plan|||||2025_JUN_MOBILEANDHOME_1_NAVIGATION_NA|Get started with mobile and home internet plans&quot;,&quot;type&quot;:&quot;impression&quot;}">
+        <a class="vui:cmp-previewtiles__button vui:button vui:is-stretched" href="discounts/phone-home-internet-bundle/" aria-label="Get started with mobile and home internet plans" data-impression-category="Home Plan" data-campaign-id="2025_JUN_MOBILEANDHOME_1_NAVIGATION_NA " data-track="{&quot;name&quot;:&quot;l4|p3|Home Plan|||||2025_JUN_MOBILEANDHOME_1_NAVIGATION_NA|Get started with mobile and home internet plans&quot;,&quot;type&quot;:&quot;impression&quot;}">
           Get started
         </a>
       </div>
@@ -2444,7 +2448,7 @@ end of navigation menu</div>
   </picture>
 </div>
      <div class="vui:cmp-categorytilettes__anchor-wrapper">
-      <a href="/connected-smartwatches/" data-impression-category="Watch-Generic" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " aria-label="Watches" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p1|Watch-Generic|||||2025_JUN_EV_1_NAVIGATION_NA|Watches&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <a href="connected-smartwatches/" data-impression-category="Watch-Generic" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " aria-label="Watches" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p1|Watch-Generic|||||2025_JUN_EV_1_NAVIGATION_NA|Watches&quot;,&quot;type&quot;:&quot;impression&quot;}">
         Watches
       </a>
      </div>
@@ -2468,7 +2472,7 @@ end of navigation menu</div>
   </picture>
 </div>
      <div class="vui:cmp-categorytilettes__anchor-wrapper">
-      <a href="/tablets/" data-impression-category="Tablet-Generic" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " aria-label="Tablets" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p2|Tablet-Generic|||||2025_JUN_EV_1_NAVIGATION_NA|Tablets&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <a href="tablets/" data-impression-category="Tablet-Generic" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " aria-label="Tablets" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p2|Tablet-Generic|||||2025_JUN_EV_1_NAVIGATION_NA|Tablets&quot;,&quot;type&quot;:&quot;impression&quot;}">
         Tablets
       </a>
      </div>
@@ -2492,7 +2496,7 @@ end of navigation menu</div>
   </picture>
 </div>
      <div class="vui:cmp-categorytilettes__anchor-wrapper">
-      <a href="/products/" data-impression-category="Accy-Generic" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " aria-label="Accessories" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p3|Accy-Generic|||||2025_JUN_EV_1_NAVIGATION_NA|Accessories&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <a href="products/" data-impression-category="Accy-Generic" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " aria-label="Accessories" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p3|Accy-Generic|||||2025_JUN_EV_1_NAVIGATION_NA|Accessories&quot;,&quot;type&quot;:&quot;impression&quot;}">
         Accessories
       </a>
      </div>
@@ -2516,9 +2520,9 @@ end of navigation menu</div>
   </picture>
 </div>
      <div class="vui:cmp-categorytilettes__anchor-wrapper">
-      <a href="/products-perks/banking-cards/" data-impression-category="Adj-Svcs-Bnkg" data-campaign-id="2026_FEB_EV_1_NAVIGATION_NA" aria-label="Banking &amp; cards" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p4|Adj-Svcs-Bnkg|||||2026_FEB_EV_1_NAVIGATION_NA|Banking &amp; cards&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <span class="offline-link-plain"  data-impression-category="Adj-Svcs-Bnkg" data-campaign-id="2026_FEB_EV_1_NAVIGATION_NA" aria-label="Banking &amp; cards" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p4|Adj-Svcs-Bnkg|||||2026_FEB_EV_1_NAVIGATION_NA|Banking &amp; cards&quot;,&quot;type&quot;:&quot;impression&quot;}">
         Banking &amp; cards
-      </a>
+      </span>
      </div>
     </div>
     </div>
@@ -2540,9 +2544,9 @@ end of navigation menu</div>
   </picture>
 </div>
      <div class="vui:cmp-categorytilettes__anchor-wrapper">
-      <a href="/solutions-and-services/add-ons/entertainment/" data-impression-category="Adj-Svcs-Ent" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " aria-label="Entertainment services" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p5|Adj-Svcs-Ent|||||2025_JUN_EV_1_NAVIGATION_NA|Entertainment services&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <span class="offline-link-plain"  data-impression-category="Adj-Svcs-Ent" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA " aria-label="Entertainment services" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p5|Adj-Svcs-Ent|||||2025_JUN_EV_1_NAVIGATION_NA|Entertainment services&quot;,&quot;type&quot;:&quot;impression&quot;}">
         Entertainment services
-      </a>
+      </span>
      </div>
     </div>
     </div>
@@ -2564,9 +2568,9 @@ end of navigation menu</div>
   </picture>
 </div>
      <div class="vui:cmp-categorytilettes__anchor-wrapper">
-      <a href="/solutions-and-services/add-ons/home/" data-impression-category="Home Plan" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA" aria-label="Home services" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p6|Home Plan|||||2025_JUN_EV_1_NAVIGATION_NA|Home services&quot;,&quot;type&quot;:&quot;impression&quot;}">
+      <span class="offline-link-plain"  data-impression-category="Home Plan" data-campaign-id="2025_JUN_EV_1_NAVIGATION_NA" aria-label="Home services" class="vui:cmp-categorytilettes__anchor vui:text vui:text--micro vui:text--title-2xsmall@md vui:text--bold vui:text--center" data-track="{&quot;name&quot;:&quot;l5|p6|Home Plan|||||2025_JUN_EV_1_NAVIGATION_NA|Home services&quot;,&quot;type&quot;:&quot;impression&quot;}">
         Home services
-      </a>
+      </span>
      </div>
     </div>
     </div>
@@ -2636,11 +2640,11 @@ end of navigation menu</div>
 				<ul class="gnav20-footer-list" aria-label="Shop menu list">
 					
 						<li>
-							<a href="/smartphones/">Devices</a>
+							<a href="smartphones/">Devices</a>
 						</li>
 					
 						<li>
-							<a href="/products/">Accessories</a>
+							<a href="products/">Accessories</a>
 						</li>
 					
 						
@@ -2684,11 +2688,11 @@ end of navigation menu</div>
 				<ul class="gnav20-footer-list" aria-label="Top Device Brands menu list">
 					
 						<li>
-							<a href="/wireless-devices/samsung/">Samsung</a>
+							<a href="wireless-devices/samsung/">Samsung</a>
 						</li>
 					
 						<li>
-							<a href="/wireless-devices/apple/">Apple</a>
+							<a href="wireless-devices/apple/">Apple</a>
 						</li>
 					
 						
@@ -2722,11 +2726,11 @@ end of navigation menu</div>
 				<ul class="gnav20-footer-list" aria-label="Support menu list">
 					
 						<li>
-							<a href="/support/">Support overview</a>
+							<a href="support/">Support overview</a>
 						</li>
 					
 						<li>
-							<a href="/support/return-policy/">Return policy</a>
+							<a href="support/return-policy/">Return policy</a>
 						</li>
 					
 						
@@ -2774,11 +2778,11 @@ end of navigation menu</div>
 				<ul class="gnav20-footer-list" aria-label="About Verizon menu list">
 					
 						<li>
-							<a href="/about/">About us</a>
+							<a href="about/">About us</a>
 						</li>
 					
 						<li>
-							<a href="https://mycareer.verizon.com/" target="_blank" rel="noopener noreferrer">Careers</a>
+							<a href="./" target="_blank" rel="noopener noreferrer">Careers</a>
 						</li>
 					
 						
@@ -2824,11 +2828,11 @@ end of navigation menu</div>
 				<ul class="gnav20-footer-list" aria-label="Most Popular menu list">
 					
 						<li>
-							<a href="/smartphones/apple-iphone-17/">Apple iPhone 17</a>
+							<a href="smartphones/apple-iphone-17/">Apple iPhone 17</a>
 						</li>
 					
 						<li>
-							<a href="/smartphones/apple-iphone-17e/">Apple iPhone 17e</a>
+							<a href="smartphones/apple-iphone-17e/">Apple iPhone 17e</a>
 						</li>
 					
 						
@@ -2870,11 +2874,11 @@ end of navigation menu</div>
 				<ul class="gnav20-footer-list" aria-label="Top Accessory Brands menu list">
 					
 						<li>
-							<a href="/products/otterbox/">Otterbox</a>
+							<a href="products/otterbox/">Otterbox</a>
 						</li>
 					
 						<li>
-							<a href="/products/zagg/">ZAGG</a>
+							<a href="products/zagg/">ZAGG</a>
 						</li>
 					
 						
@@ -2913,13 +2917,9 @@ end of navigation menu</div>
 			
 				<ul class="gnav20-footer-list" aria-label=" Important Consumer Information menu list">
 					
-						<li>
-							<a href="/about/terms-conditions/overview/">Legal Terms &amp; Notices</a>
-						</li>
+						
 					
-						<li>
-							<a href="https://ss7.vzw.com/is/content/VerizonWireless/Device-Payment-Agreement-Template" target="_blank" rel="noopener noreferrer">Device Payment Terms &amp; Conditions</a>
-						</li>
+						
 					
 						
 					
@@ -2948,31 +2948,31 @@ end of navigation menu</div>
 		<ul aria-label="Follow Verizon menu list">
 			
 			<li>
-				<a class="gnav20-social-media" href="https://www.facebook.com/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Facebook" title="Opens New Window">
+				<span class="offline-link-plain" class="gnav20-social-media"  target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Facebook" title="Opens New Window">
 					<span>facebook-official</span>
 					<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1017.78"><path fill="#fff" d="M1024,512C1024,229.23,794.77,0,512,0S0,229.23,0,512c0,255.55,187.23,467.37,432,505.78v-357.78h-130v-148h130v-112.8c0-128.32,76.44-199.2,193.39-199.2,56.02,0,114.61,10,114.61,10v126h-64.56c-63.6,0-83.44,39.47-83.44,79.96v96.04h142l-22.7,148h-119.3v357.78c244.77-38.41,432-250.22,432-505.78Z"></path></svg>
-				</a>
+				</span>
 			</li>
 			<li>
-				<a class="gnav20-social-media" href="https://twitter.com/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Twitter" title="Opens New Window">
+				<span class="offline-link-plain" class="gnav20-social-media"  target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Twitter" title="Opens New Window">
 					<span>twitter</span>
 					<svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path>
 					</svg>
-				</a>
+				</span>
 			</li>
 			<li>
-				<a class="gnav20-social-media" href="https://www.youtube.com/user/verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Youtube" title="Opens New Window">
+				<span class="offline-link-plain" class="gnav20-social-media"  target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Youtube" title="Opens New Window">
 					<span>you-tube</span>
 					<svg focusable="false" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.5 18" style="enable-background:new 0 0 18.5 18;" xml:space="preserve">
 						<path fill="#FFF" d="M17.8,4.8C17.6,4,17,3.4,16.2,3.2c-1.4-0.4-7-0.4-7-0.4s-5.6,0-7,0.4C1.4,3.4,0.8,4.1,0.6,4.8C0.2,6.3,0.2,9.2,0.2,9.2
 							s0,2.9,0.4,4.4c0.2,0.7,0.8,1.4,1.6,1.6c1.4,0.4,7,0.4,7,0.4s5.6,0,7-0.4c0.8-0.2,1.4-0.8,1.6-1.6c0.4-1.5,0.4-4.4,0.4-4.4
 							S18.2,6.3,17.8,4.8z M7.4,11.9V6.5l4.7,2.7L7.4,11.9z"></path>
 					</svg>
-				</a>
+				</span>
 			</li>
 			<li>
-				<a class="gnav20-social-media" href="https://www.instagram.com/verizon/" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Instagram" title="Opens New Window">
+				<span class="offline-link-plain" class="gnav20-social-media"  target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on Instagram" title="Opens New Window">
 					<span>instagram</span>
 					<svg focusable="false" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
 						<g>
@@ -2990,15 +2990,15 @@ end of navigation menu</div>
 							<path fill="#FFF" d="M13.8,3.1c-0.6,0-1.1,0.5-1.1,1.1c0,0.6,0.5,1.1,1.1,1.1c0.6,0,1.1-0.5,1.1-1.1C14.9,3.6,14.4,3.1,13.8,3.1z"></path>
 						</g>
 					</svg>
-				</a>
+				</span>
 			</li>
 			<li>
-				<a class="gnav20-social-media" href="https://www.tiktok.com/@verizon" target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on TikTok" title="Opens New Window">
+				<span class="offline-link-plain" class="gnav20-social-media"  target="_blank" rel="noopener noreferrer" aria-label="Follow Verizon on TikTok" title="Opens New Window">
 					<span>TikTok</span>
 					<svg xmlns="http://www.w3.org/2000/svg" height="19" viewBox="0 0 16 18">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M9.2984 0.7758H11.5884C11.8091 1.9405 12.5165 2.9399 13.4965 3.5643L13.4975 3.5655C14.1797 4 14.9931 4.2535 15.8663 4.2535V4.934L15.8664 7.31C14.2444 7.31 12.7414 6.8029 11.5146 5.9423V12.1547C11.5146 15.2573 8.9319 17.7814 5.7572 17.7814C4.5305 17.7814 3.3929 17.4033 2.4578 16.7616L2.4562 16.76C0.9724 15.7412 0 14.0571 0 12.1541C0 9.0516 2.5827 6.5274 5.7574 6.5274C6.0208 6.5274 6.279 6.5486 6.5332 6.5823V7.3065L6.5331 9.7037C6.2875 9.6286 6.0279 9.5849 5.7572 9.5849C4.3074 9.5849 3.1279 10.7378 3.1279 12.1547C3.1279 13.1414 3.7007 13.9987 4.5376 14.4291C4.9025 14.6168 5.317 14.7244 5.7571 14.7244C7.1735 14.7244 8.3289 13.6233 8.3815 12.2514L8.3865 0H11.5145C11.5145 0.265 11.5407 0.524 11.5884 0.7758H9.2984Z" fill="#161823"></path>
 					</svg>
-				</a>
+				</span>
 			</li>
 		</ul>
 	</div>
@@ -3016,12 +3016,12 @@ end of navigation menu</div>
 			
 			
 			<li>
-				<a class="gnav20-social-media" href="https://x.com/verizonsupport" target="_blank" rel="noopener noreferrer" aria-label="Verizon Support on Twitter" title="Opens New Window">
+				<span class="offline-link-plain" class="gnav20-social-media"  target="_blank" rel="noopener noreferrer" aria-label="Verizon Support on Twitter" title="Opens New Window">
 					<span>twitter</span>
 					<svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path>
 					</svg>
-				</a>
+				</span>
 			</li>
 			
 			
@@ -3050,7 +3050,7 @@ end of navigation menu</div>
     
     <div class="gnav20-logo-wrapper gnav20-relative-index">
         
-        <a class="gnav20-logoBlackBg" title="Verizon Home Page" href="/"></a>
+        <a class="gnav20-logoBlackBg" title="Verizon Home Page" href="./"></a>
         
     </div>
 </div>
@@ -3063,19 +3063,19 @@ end of navigation menu</div>
 
 	<ul aria-label="Policies and notices menu list" class="gnav20-footer-list ">
 		<li>
-			<a href="/about/privacy/">
+			<a href="about/privacy/">
 				Privacy Policy
 			</a>
 		</li>
 	
 		<li>
-			<a data-hide-for="appid:communitykh" href="/privacy/your-privacy-choices/">
+			<a data-hide-for="appid:communitykh" href="privacy/your-privacy-choices/">
 				Your Privacy Choices <span style="height:10px;width:28px;display:inline-block;position:relative;"><svg style="position:absolute;width:28px;bottom:-2px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 14" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0066FF;}.st2{fill:#FFFFFF;}.st3{fill:#0066FF;}</style><g><g id="final---dec.11-2020_1_"><g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)"><path class="st0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"></path></g></g></g><g id="final---dec.11-2020"><g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)"><path class="st1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8 h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"></path><path id="x" class="st2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0 l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8 c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"></path><path id="y" class="st3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0 L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"></path></g></g></g></g></svg></span>
 			</a>
 		</li>
 	
 		<li class="gnav20-hide">
-			<a data-show-for="appid:communitykh" href="https://community.verizon.com/t5/custom/page/page-id/yourprivacychoices">
+			<a data-show-for="appid:communitykh" href="privacy/your-privacy-choices/">
 				Your Privacy Choices <span style="height:10px;width:28px;display:inline-block;position:relative;"><svg style="position:absolute;width:28px;bottom:-2px;" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 14" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#0066FF;}.st2{fill:#FFFFFF;}.st3{fill:#0066FF;}</style><g><g id="final---dec.11-2020_1_"><g id="_x30_208-our-toggle_2_" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2_2_" transform="translate(1275.000000, 200.000000)"><path class="st0" d="M7.4,12.8h6.8l3.1-11.6H7.4C4.2,1.2,1.6,3.8,1.6,7S4.2,12.8,7.4,12.8z"></path></g></g></g><g id="final---dec.11-2020"><g id="_x30_208-our-toggle" transform="translate(-1275.000000, -200.000000)"><g id="Final-Copy-2" transform="translate(1275.000000, 200.000000)"><path class="st1" d="M22.6,0H7.4c-3.9,0-7,3.1-7,7s3.1,7,7,7h15.2c3.9,0,7-3.1,7-7S26.4,0,22.6,0z M1.6,7c0-3.2,2.6-5.8,5.8-5.8 h9.9l-3.1,11.6H7.4C4.2,12.8,1.6,10.2,1.6,7z"></path><path id="x" class="st2" d="M24.6,4c0.2,0.2,0.2,0.6,0,0.8l0,0L22.5,7l2.2,2.2c0.2,0.2,0.2,0.6,0,0.8c-0.2,0.2-0.6,0.2-0.8,0 l0,0l-2.2-2.2L19.5,10c-0.2,0.2-0.6,0.2-0.8,0c-0.2-0.2-0.2-0.6,0-0.8l0,0L20.8,7l-2.2-2.2c-0.2-0.2-0.2-0.6,0-0.8 c0.2-0.2,0.6-0.2,0.8,0l0,0l2.2,2.2L23.8,4C24,3.8,24.4,3.8,24.6,4z"></path><path id="y" class="st3" d="M12.7,4.1c0.2,0.2,0.3,0.6,0.1,0.8l0,0L8.6,9.8C8.5,9.9,8.4,10,8.3,10c-0.2,0.1-0.5,0.1-0.7-0.1l0,0 L5.4,7.7c-0.2-0.2-0.2-0.6,0-0.8c0.2-0.2,0.6-0.2,0.8,0l0,0L8,8.6l3.8-4.5C12,3.9,12.4,3.9,12.7,4.1z"></path></g></g></g></g></svg></span>
 			</a>
 		</li>
@@ -3083,13 +3083,13 @@ end of navigation menu</div>
 		
 	
 		<li>
-			<a href="/about/our-company/open-internet/">
+			<a href="about/our-company/open-internet/">
 				Open Internet
 			</a>
 		</li>
 	
 		<li>
-			<a href="/support/website-use-legal/">
+			<a href="support/website-use-legal/">
 				Website Terms of Use
 			</a>
 		</li>

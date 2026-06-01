@@ -77,6 +77,15 @@ vz_start_output_rewrite();
   position: relative !important;
   opacity: 1 !important;
 }
+</style><style id="offline-hide-eyebrow-lob">
+.gnav20-eyebrow,
+.gnav20-eyebrow-link-list,
+.gnav20-mobile-menu .gnav20-eyebrow-link-list {
+  display: none !important;
+}
+#gnav20-ulwrapper > a.gnav20-main-header {
+  display: none !important;
+}
 </style><style id="offline-hide-lang">
 .gnav20-localization { display: none !important; }
 </style><base href="/verizon-clone/verizon_offline/">
@@ -143,10 +152,7 @@ a:hover{text-decoration:underline}
 
 <div class="gnav20-eyebrow-link-list" item-title="eyebrow">
     <div class="gnav20-eyebrow-link-list-item gnav20-two">
-        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
-    
-        <a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Business" href="/business/" data-label="Business" aria-label="Verizon Business Services HomePage" class="gnav20-main-header " data-track="global nav:business">Business</a>
-    </div>
+        </div>
 </div>
 
 
@@ -464,9 +470,7 @@ a:hover{text-decoration:underline}
     </div>
     <nav id="gnav20-mobile-menu" class="gnav20-mobile-menu gnav20-hide">
         <button id="gnav20-closex" class="gnav20-closex" aria-label="close the Menu" tabindex="0" data-track="global nav:close the menu">Close</button>
-        <div id="gnav20-ulwrapper"><a x-cq-linkchecker="skip" id="gnav20-eyebrow-link-Personal-mobile" href="/" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header gnav20-selected" data-track="global nav:personal">Personal</a>
-			
-			<div class="gnav20-navigation-placeholder">
+        <div id="gnav20-ulwrapper"><div class="gnav20-navigation-placeholder">
 			
 
 

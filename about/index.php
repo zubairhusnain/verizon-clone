@@ -3,7 +3,16 @@ declare(strict_types=1);
 require_once __DIR__ . '/../base-url.php';
 vz_start_output_rewrite();
 ?>
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en"><head><style id="offline-hide-eyebrow-lob">
+.gnav20-eyebrow,
+.gnav20-eyebrow-link-list,
+.gnav20-mobile-menu .gnav20-eyebrow-link-list {
+  display: none !important;
+}
+#gnav20-ulwrapper > a.gnav20-main-header {
+  display: none !important;
+}
+</style>
 <!-- offline: marketing stripped -->
 
 
@@ -3446,13 +3455,9 @@ $8.0B</p></div><div class="custom-tilelet_title__sPMfw"><p style="--base-text-co
 			
 				<ul class="gnav20-footer-list" aria-label=" Important Consumer Information menu list">
 					
-						<li>
-							<a href="/about/terms-conditions/overview/">Legal Terms &amp; Notices</a>
-						</li>
+						
 					
-						<li>
-							<a href="https://ss7.vzw.com/is/content/VerizonWireless/Device-Payment-Agreement-Template" target="_blank" rel="noopener noreferrer">Device Payment Terms &amp; Conditions</a>
-						</li>
+						
 					
 						
 					

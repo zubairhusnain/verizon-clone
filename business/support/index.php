@@ -3,7 +3,16 @@ declare(strict_types=1);
 require_once __DIR__ . '/../../base-url.php';
 vz_start_output_rewrite();
 ?>
-<!DOCTYPE html><html><head>
+<!DOCTYPE html><html><head><style id="offline-hide-eyebrow-lob">
+.gnav20-eyebrow,
+.gnav20-eyebrow-link-list,
+.gnav20-mobile-menu .gnav20-eyebrow-link-list {
+  display: none !important;
+}
+#gnav20-ulwrapper > a.gnav20-main-header {
+  display: none !important;
+}
+</style>
 <!-- offline: marketing stripped -->
 
 
@@ -138,10 +147,7 @@ vz_start_output_rewrite();
 
 <div class="gnav20-eyebrow-link-list">
     <div class="gnav20-eyebrow-link-list-item gnav20-two">
-        <a id="gnav20-eyebrow-link-Personal" href="/business/support/" data-stext="Switch to" data-label="Personal" aria-label="Verizon Personal Services HomePage" class="gnav20-main-header">Personal</a>
-    
-        <a id="gnav20-eyebrow-link-Business" href="/business/support/business/" data-stext="Switch to" data-label="Business" aria-label="Verizon Business Services HomePage" class="gnav20-main-header gnav20-selected">Business</a>
-    </div>
+        </div>
 </div>
 
 
@@ -520,22 +526,11 @@ vz_start_output_rewrite();
     </div>
     <nav id="gnav20-mobile-menu" class="gnav20-mobile-menu gnav20-hide">
         <button id="gnav20-closex" class="gnav20-closex" aria-label="close the Menu" tabindex="0">Close</button>
-        <div id="gnav20-ulwrapper"><a id="gnav20-eyebrow-link-Business-mobile" href="/business/support/business/" data-stext="Switch to" data-label="Business" aria-label="Verizon Business Services HomePage" class="gnav20-main-header gnav20-selected">Business</a>
-			
-
-
-
-
-    
-    
-    <div class="gnav20-eyebrow">
+        <div id="gnav20-ulwrapper"><div class="gnav20-eyebrow">
 
 <div class="gnav20-eyebrow-link-list">
     <div class="gnav20-eyebrow-link-list-item gnav20-two">
-        <a id="gnav20-eyebrow-link-Personal-mobile" href="/business/support/" data-stext="Switch to" data-label="Personal" aria-label="Switch to Verizon Personal Services HomePage" class="gnav20-main-header">Personal</a>
-    
-        
-    </div>
+        </div>
 </div>
 
 
@@ -1378,11 +1373,7 @@ end of navigation menu</div>
 			</a>
 		</li>
 	
-		<li>
-			<a href="/business/support/about/terms-conditions/overview/" data-loc="Footer Navigation: Terms &amp; Conditions">
-				Terms &amp; Conditions
-			</a>
-		</li>
+		
 	
 		<li>
 			<a href="/business/support/about/privacy/" data-loc="Footer Navigation: Privacy Policy">
