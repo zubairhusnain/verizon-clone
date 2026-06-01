@@ -1280,7 +1280,7 @@ end of navigation menu</div>
 	<div class="gnav20-border-content gnav20-social-icon">
 		<ul aria-label="Follow Verizon menu list">
 			<li>
-				<a class="gnav20-social-media" href="https://www.linkedin.com/company/verizonbusiness" rel="noopener noreferrer" aria-label="Follow Verizon on Linkedin" title="Opens New Window" data-loc="Footer Navigation: Follow Verizon on Linkedin">
+				<a class="gnav20-social-media" href="https://linkedin.com" rel="noopener noreferrer" aria-label="Follow Verizon on Linkedin" title="Opens New Window" data-loc="Footer Navigation: Follow Verizon on Linkedin">
 					<span>linkedin</span>
 					<svg viewBox="0 5 85 56" width="24" height="20" xmlns="http://www.w3.org/2000/svg">
 						<path fill="#fff" d="M 74.58 62.795 C 75.275 62.802 75.83 62.219 75.79 61.526 C 75.79 60.626 75.247 60.196 74.133 60.196 L 72.333 60.196 L 72.333 64.908 L 73.01 64.908 L 73.01 62.854 L 73.842 62.854 L 73.861 62.879 L 75.152 64.908 L 75.876 64.908 L 74.487 62.808 L 74.58 62.795 Z M 73.797 62.323 L 73.012 62.323 L 73.012 60.73 L 74.007 60.73 C 74.521 60.73 75.107 60.814 75.107 61.487 C 75.107 62.261 74.514 62.323 73.793 62.323 M 56.92 56.89 L 47.32 56.89 L 47.32 41.856 C 47.32 38.271 47.256 33.656 42.327 33.656 C 37.327 33.656 36.562 37.562 36.562 41.595 L 36.562 56.889 L 26.962 56.889 L 26.962 25.973 L 36.178 25.973 L 36.178 30.198 L 36.307 30.198 C 38.186 26.985 41.68 25.066 45.4 25.204 C 55.13 25.204 56.924 31.604 56.924 39.93 L 56.92 56.89 Z M 16.13 21.747 C 11.842 21.748 9.16 17.106 11.304 13.391 C 13.448 9.677 18.808 9.676 20.953 13.39 C 21.442 14.236 21.7 15.197 21.7 16.175 C 21.701 19.252 19.207 21.746 16.13 21.747 M 20.93 56.89 L 11.32 56.89 L 11.32 25.973 L 20.93 25.973 L 20.93 56.89 Z M 61.706 1.69 L 6.496 1.69 C 3.887 1.66 1.747 3.751 1.715 6.36 L 1.715 61.799 C 1.746 64.41 3.885 66.502 6.496 66.474 L 61.706 66.474 C 64.322 66.507 66.47 64.415 66.506 61.799 L 66.506 6.356 C 66.469 3.741 64.321 1.651 61.706 1.686"></path><path fill="#fff" d="M 73.879 58.097 C 70.478 58.13 68.388 61.832 70.117 64.76 C 71.846 67.689 76.097 67.648 77.769 64.687 C 79.422 61.758 77.327 58.129 73.964 58.097 L 73.879 58.097 M 73.879 66.427 C 70.897 66.477 68.98 63.28 70.428 60.673 C 71.876 58.065 75.603 58.003 77.137 60.561 C 77.487 61.144 77.677 61.809 77.688 62.489 L 77.688 62.554 C 77.733 64.647 76.073 66.38 73.98 66.425 L 73.88 66.425"></path>
@@ -1288,11 +1288,11 @@ end of navigation menu</div>
 				</a>
 			</li>
 			<li>
-				<a class="gnav20-social-media" href="https://www.facebook.com/verizonbusiness" rel="noopener noreferrer" aria-label="Follow Verizon on Facebook" title="Opens New Window" data-loc="Footer Navigation: Follow Verizon on Facebook"><span>facebook-official</span><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1017.78"><path fill="#fff" d="M1024,512C1024,229.23,794.77,0,512,0S0,229.23,0,512c0,255.55,187.23,467.37,432,505.78v-357.78h-130v-148h130v-112.8c0-128.32,76.44-199.2,193.39-199.2,56.02,0,114.61,10,114.61,10v126h-64.56c-63.6,0-83.44,39.47-83.44,79.96v96.04h142l-22.7,148h-119.3v357.78c244.77-38.41,432-250.22,432-505.78Z"></path></svg>
+				<a class="gnav20-social-media" href="https://facebook.combusiness" rel="noopener noreferrer" aria-label="Follow Verizon on Facebook" title="Opens New Window" data-loc="Footer Navigation: Follow Verizon on Facebook"><span>facebook-official</span><svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1017.78"><path fill="#fff" d="M1024,512C1024,229.23,794.77,0,512,0S0,229.23,0,512c0,255.55,187.23,467.37,432,505.78v-357.78h-130v-148h130v-112.8c0-128.32,76.44-199.2,193.39-199.2,56.02,0,114.61,10,114.61,10v126h-64.56c-63.6,0-83.44,39.47-83.44,79.96v96.04h142l-22.7,148h-119.3v357.78c244.77-38.41,432-250.22,432-505.78Z"></path></svg>
 				</a>
 			</li>
 			<li>
-				<a class="gnav20-social-media" href="https://twitter.com/verizonbusiness/" rel="noopener noreferrer" aria-label="Follow Verizon on Twitter" title="Opens New Window" data-loc="Footer Navigation: Follow Verizon on Twitter"><span>twitter</span><svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<a class="gnav20-social-media" href="https://twitter.combusiness/" rel="noopener noreferrer" aria-label="Follow Verizon on Twitter" title="Opens New Window" data-loc="Footer Navigation: Follow Verizon on Twitter"><span>twitter</span><svg width="18" height="20" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"></path>
 					</svg></a>
 			</li>
@@ -1304,7 +1304,7 @@ end of navigation menu</div>
 					</svg></a>
 			</li>
 			<li>
-				<a class="gnav20-social-media" href="https://www.instagram.com/verizonbusiness" rel="noopener noreferrer" aria-label="Follow Verizon on Instagram" title="Opens New Window" data-loc="Footer Navigation: Follow Verizon on Instagram"><span>instagram</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+				<a class="gnav20-social-media" href="https://instagram.combusiness" rel="noopener noreferrer" aria-label="Follow Verizon on Instagram" title="Opens New Window" data-loc="Footer Navigation: Follow Verizon on Instagram"><span>instagram</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
 						<g>
 							<path fill="#FFF" d="M18,5.3c0-1-0.2-1.6-0.4-2.2c-0.2-0.6-0.5-1.1-1-1.6c-0.5-0.5-1-0.8-1.6-1c-0.6-0.2-1.2-0.4-2.2-0.4C11.8,0,11.4,0,9,0
 								S6.3,0,5.3,0c-1,0-1.6,0.2-2.2,0.4C2.5,0.7,2,1,1.5,1.5s-0.8,1-1,1.6C0.3,3.7,0.1,4.3,0.1,5.3C0,6.2,0,6.6,0,9c0,2.4,0,2.8,0.1,3.7
