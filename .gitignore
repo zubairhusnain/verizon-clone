@@ -7,3 +7,6 @@ assets/ss7.vzw.com/is/content/
 
 # Playwright / npm (if ever added here)
 node_modules/
+
+# Local mail settings (copy from mail.config.example.php)
+mail.config.php

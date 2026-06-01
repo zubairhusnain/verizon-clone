@@ -35,15 +35,21 @@ if (str_starts_with($path, '/assets/')) {
 }
 
 if (str_ends_with($path, '.php')) {
-    $candidate = realpath(__DIR__ . $path);
+    $relativePhp = ltrim($path, '/');
+    $candidate = realpath(__DIR__ . '/' . $relativePhp);
     if (
         is_string($rootReal) &&
         is_string($candidate) &&
         str_starts_with($candidate, $rootReal . DIRECTORY_SEPARATOR) &&
         is_file($candidate)
     ) {
-        vz_start_output_rewrite();
-        include $candidate;
+        $isContactSend = str_ends_with($relativePhp, 'support/contact-us/send.php');
+        if ($isContactSend) {
+            include $candidate;
+        } else {
+            vz_start_output_rewrite();
+            include $candidate;
+        }
         exit;
     }
     vz_send_not_found($path);
